@@ -12,7 +12,7 @@ const IndexPage: React.FC<PageProps> = () => {
   const { value: isDark } = useDarkMode();
 
   return (
-    <div className={` ${isDark ? "bg-dark" : "bg-white"}`}>
+    <div className={` ${isDark ? "bg-dark" : "bg-white"} overflow-x-auto`}>
       <HeroSection />
       <Cards />
       <ProgressCards />

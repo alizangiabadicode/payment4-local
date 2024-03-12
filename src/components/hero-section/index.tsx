@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../images/svg";
-import { StaticImage } from "gatsby-plugin-image";
+import dashboardImg from "../../images/dashboard-light.jpg";
+import dashboardDarkImg from "../../images/dashboard-dark.png";
 import assetsLightImg from "../../images/assets.jpg";
 import assetsDarkImg from "../../images/assets-dark.png";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -56,15 +57,9 @@ const HeroSection = () => {
         </div>
         <div>
           {isDark ? (
-            <StaticImage
-              src="../../images/dashboard-dark.png"
-              alt="dashboard"
-            />
+            <img src={dashboardDarkImg} alt="dashboard" />
           ) : (
-            <StaticImage
-              src="../../images/dashboard-light.jpg"
-              alt="dashboard"
-            />
+            <img src={dashboardImg} alt="dashboard" />
           )}
         </div>
       </div>

@@ -21,3 +21,8 @@ export * from "./twenty-four-hour-support-img";
 export * from "./iphone-img";
 export * from "./darkmode-icon";
 export * from "./language-dark-icon";
+export * from "./iphone-dark-img";
+export * from "./x-dark-logo";
+export * from "./telegram-dark-icon";
+export * from "./youTube-dark-icon";
+export * from "./linkedin-dark-icon";
