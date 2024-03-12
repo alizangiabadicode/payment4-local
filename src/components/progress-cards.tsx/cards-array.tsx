@@ -1,6 +1,7 @@
 import * as React from "react";
 import { SignupIcon } from "../../images/svg/signup-icon";
 import SignupImage from "../../images/signup-image.png";
+import SignupDarkImage from "../../images/signup-dark-image.png";
 import GatewaySetupImage from "../../images/gateway-setup-image.png";
 import ApiOrPaylinkImage from "../../images/aPI-or-paylink-creation-image.png";
 import SettlementRequestImage from "../../images/settlement -requests-image.png";
@@ -11,6 +12,7 @@ import {
   SettlementRequestIcon,
 } from "../../images/svg";
 import ApiPaylinkCreationIcon from "../../images/svg/api-paylink-creation-icon";
+import useDarkMode from "use-dark-mode";
 
 export interface CardsArrayProps {
   title: string;
@@ -24,7 +26,7 @@ export const cardsArray: CardsArrayProps[] = [
     title: "Sign Up",
     desc: "The initial step for merchants to join the Payment4 platform. To get started, merchants need to sign up for an account. Merchants can sign up by entering their email and password or using the quick option of Google Sign-In.",
     icon: <SignupIcon color="#9E6DFF" />,
-    imageUrl: SignupImage,
+    imageUrl: SignupImage ,
   },
   {
     title: "Gateway Setup",
