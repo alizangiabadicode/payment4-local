@@ -77,11 +77,27 @@ module.exports = {
         "mobile-light-card": "url('../images/mobile-bg-light-card.jpg')",
         "mobile-dark-card": "url('../images/mobile-bg-dark-card.jpg')",
         "advertisement-card": "url('../images/advertisement-bg-img.jpg')",
-        "advertisement-card-dark": "url('../images/advertisement-bg-dark-img.png')",
+        "advertisement-card-dark":
+          "url('../images/advertisement-bg-dark-img.png')",
         "mobile-advertisement-card":
           "url('../images/advertisement-bg-mobile-img.jpg')",
         "mobile-advertisement-card-dark":
           "url('../images/advertisement-bg-mobile-dark-img.png')",
+        "contacts-light": "url('../images/bg-contacts.png')",
+        "contacts-dark": "url('../images/bg-contacts-dark.png')",
+        "contacts-form-light": "url('../images/contact-form.png')",
+        "contacts-form-dark": "url('../images/contact-form-dark.png')",
+        "about-us-light": "url('../images/bg-about-us-light.png')",
+        "about-us-mobile-light":
+          "url('../images/bg-about-us-mobile-light.png')",
+        "about-us-dark": "url('../images/bg-about-us-dark.png')",
+        "about-us-mobile-dark": "url('../images/bg-about-us-mobile-dark.png')",
+        "contacts-form-mobile-dark":
+          "url('../images/contact-form-mobile-dark.png')",
+        "contacts-form-mobile-light":
+          "url('../images/contact-form-mobile-light.png')",
+        "light-gradient":
+          "linear-gradient(to right, #F1EAFF, #f6f2ff, #F1EAFF)",
       },
     },
     darkMode: "class",

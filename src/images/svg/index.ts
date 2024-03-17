@@ -26,3 +26,11 @@ export * from "./x-dark-logo";
 export * from "./telegram-dark-icon";
 export * from "./youTube-dark-icon";
 export * from "./linkedin-dark-icon";
+export * from "./phone-icon";
+export * from "./clock-icon";
+export * from "./email-icon";
+export * from "./location-icon";
+export * from "./check-icon";
+export * from "./back-slash-icon";
+export * from "./check-cart-icon";
+export * from "./attach-icon"

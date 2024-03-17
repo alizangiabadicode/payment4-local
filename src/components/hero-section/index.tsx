@@ -11,8 +11,13 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
+
+
+
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const { value: isDark } = useDarkMode();
   return (
     <>
@@ -24,7 +29,7 @@ const HeroSection = () => {
                 isDark ? "text-white" : null
               }`}
             >
-              Welcome to Payment4
+              {t("welcomeToPayment4")}
             </p>
             <p
               className={`text-md sm:text-xl font-bold text-center ${
