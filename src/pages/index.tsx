@@ -7,10 +7,11 @@ import SliderCards from "../components/slider-cards/cards";
 import AdvertisementCard from "../components/advertisement";
 import Blogs from "../components/blog-slider/blogs";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from 'gatsby-plugin-react-i18next'
 
 const IndexPage: React.FC<PageProps> = () => {
   const { value: isDark } = useDarkMode();
-
+  const { t } = useTranslation();
   return (
     <div className={` ${isDark ? "bg-dark" : "bg-white"} overflow-x-auto`}>
       <HeroSection />
@@ -25,7 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
             isDark ? "text-white" : null
           }`}
         >
-          Crafting Payments for Every Business Case
+          {t('crafting')}
         </p>
       </div>
       <div className="flex justify-center">
