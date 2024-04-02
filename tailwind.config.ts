@@ -6,6 +6,7 @@ export const tailwindColors: ColorObject = {
   current: "currentColor",
   transparent: "transparent",
   white: "#FFFFFF",
+  black: "#121212",
   dark: "#0B0B0E",
   primary: "#864AFF",
   "primary-content": "#FFFFFF",

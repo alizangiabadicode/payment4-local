@@ -34,3 +34,5 @@ export * from "./check-icon";
 export * from "./back-slash-icon";
 export * from "./check-cart-icon";
 export * from "./attach-icon"
+export * from "./open.collapse"
+export * from "./close.collapse"

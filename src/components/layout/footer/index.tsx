@@ -18,7 +18,9 @@ const Footer = () => {
   return (
     <footer
       style={{ borderTopColor: "#E5E5E5" }}
-      className="border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8"
+      className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8 ${
+        isDark ? "bg-[#0B0B0E]" : "bg-white"
+      }`}
     >
       <div className="flex flex-col items-center sm:items-start md:pl-32">
         <div className="flex flex-col gap-y-4 sm:gap-y-4">
@@ -182,7 +184,7 @@ const Footer = () => {
               Terms of service
             </Link>
             <Link
-              to="privacy-policy"
+              to="/privacy-policy"
               style={{ fontSize: "12px" }}
               className={`${
                 isDark ? "text-white opacity-[63%]" : null
@@ -191,7 +193,7 @@ const Footer = () => {
               Privacy Policy
             </Link>
             <Link
-              to="faq"
+              to="/faq"
               style={{ fontSize: "12px" }}
               className={`${
                 isDark ? "text-white opacity-[63%]" : null

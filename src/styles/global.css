@@ -36,5 +36,6 @@
   }
   html {
     font-family: Poppins;
+    background-color: var(--background-color)
   }
 }

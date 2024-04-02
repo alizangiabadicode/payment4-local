@@ -21,8 +21,10 @@ const Header = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
   return (
-    <header>
-      <div className="container px-5 sm:px-50 flex items-center justify-between my-4">
+    <header className={`${isDark ? "bg-[#0B0B0E]" : "bg-white"}`}>
+      <div
+        className={`container px-5 sm:px-50 flex items-center justify-between my-4 `}
+      >
         <div className="flex gap-x-5 md:gap-0">
           <div>
             <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>

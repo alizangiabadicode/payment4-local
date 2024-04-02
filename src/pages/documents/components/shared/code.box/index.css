@@ -1,0 +1,31 @@
+.code-box {
+  padding: 14px;
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #282c34;
+  width: 70%;
+}
+
+.code-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ccc;
+}
+
+.code {
+  width: 100%;
+  height: 63dvh; 
+  resize: none;
+  background-color: #282c34;
+  color: #ccc;
+  border: none;
+  outline: none;
+}
+
+.copy-button {
+  margin-top: 5px;
+  cursor: pointer;
+}
