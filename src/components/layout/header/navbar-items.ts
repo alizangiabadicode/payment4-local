@@ -20,7 +20,7 @@ export const navbarItems: navbarItemsTypes[] = [
     path: "/blog/",
   },
   {
-    title: "Contact Us",
+    title: "Contact us",
     path: "/contact-us/",
   },
 ];

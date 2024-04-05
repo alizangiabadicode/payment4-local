@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
@@ -13,9 +14,7 @@ const ContactUsSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        We understand that questions and issues may arise while using our
-        service. Our dedicated support team is here to assist you promptly. For
-        any inquiries, assistance, or support requests, please contact us:
+        {t("docContactUs")}
       </p>
       <p
         className={`text-base font-semibold ${
@@ -33,8 +32,7 @@ const ContactUsSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Our team is committed to providing exceptional support to ensure a
-        smooth experience for our merchants.
+        {t("committedTeam")}
       </p>
     </div>
   );

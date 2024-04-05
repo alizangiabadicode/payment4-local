@@ -1,11 +1,50 @@
 import React from "react";
 import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../images/svg";
-import { CardsType } from "./cards-array";
 import useDarkMode from "use-dark-mode";
+import imgOne from "../../images/img-card-one.png";
+import imgTwo from "../../images/img-card-two.png";
+import imgThree from "../../images/img-card-three.png";
+import imgFour from "../../images/img-card-four.png";
+import { useTranslation } from "react-i18next";
+import { t } from "i18next";
 
+export interface CardsType {
+  title: string;
+  desc: string;
+  buttonText: string;
+  imageUrl: string;
+}
+
+export const cards: CardsType[] = [
+  {
+    title: t("cardOne"),
+    desc: t("cardOneDesc"),
+    buttonText: t("signup"),
+    imageUrl: imgOne,
+  },
+  {
+    title: t("cardTwo"),
+    desc: t("cardTwoDesc"),
+    buttonText: t("createPaymentPage"),
+    imageUrl: imgTwo,
+  },
+  {
+    title: t("cardThree"),
+    desc: t("cardThreeDesc"),
+    buttonText: t("createPaymentLink"),
+    imageUrl: imgThree,
+  },
+  {
+    title: t("cardFour"),
+    desc: t("cardFourDesc"),
+    buttonText: t("joinUs"),
+    imageUrl: imgFour,
+  },
+];
 const Card = (props: CardsType) => {
   const { value: isDark } = useDarkMode();
+
   return (
     <div
       className={`${isDark ? "bg-mobile-dark-card" : "bg-mobile-light-card"} ${

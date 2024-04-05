@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
@@ -13,14 +14,12 @@ export const WHMCSSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        This plugin is a powerful integration that extends the capabilities of
-        WHMCS to seamlessly handle cryptocurrency transactions, providing a
-        secure and efficient payment gateway for your web hosting and services.{" "}
+        {t("whmcsPluginDesc")}
         <a
           href={process.env.REACT_APP_WHMCS_PLUGIN_URL}
           className="text-blue-600"
         >
-          Here is the download link.
+          {t("hereIsTheDlLink")}
         </a>
       </p>
     </div>

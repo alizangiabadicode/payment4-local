@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
@@ -14,13 +15,7 @@ const TransactionSection = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            Every transaction follows a defined path from initiation to
-            settlement. The status of each transaction is meticulously recorded
-            at every stage, allowing for real-time tracking through the merchant
-            system. A unique token is assigned to each transaction, granting
-            access to its details. Transaction status is separately displayed in
-            the table below, and in Payment4's data models, it is represented as
-            the 'status.'
+            {t("transactionTxtOne")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -31,12 +26,7 @@ const TransactionSection = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            Testing and Sandbox Environment : Before going live with real
-            transactions, we encourage you to test your integration in a sandbox
-            environment. This allows you to simulate transactions and ensure
-            that everything works as expected. You can access our sandbox
-            environment by [instructions on how to access the sandbox
-            environment].
+            {t("transactionTxtTwo")}
           </p>
         </li>
       </ul>

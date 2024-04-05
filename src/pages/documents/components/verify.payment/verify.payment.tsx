@@ -2,6 +2,7 @@ import React from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
 import useDarkMode from "use-dark-mode";
+import { t } from "i18next";
 
 const VerifyPayment = () => {
   const { value: isDark } = useDarkMode();
@@ -16,9 +17,7 @@ const VerifyPayment = () => {
               : "text-[#121212C7] opacity-[78%]"
           }`}
         >
-          Verifying transactions in Payment4 is crucial to ensure accuracy and
-          security. Merchants can initiate this process by sending the following
-          data in the request body:
+          {t("titleVerifyPayment")}
         </p>
       </div>
       <div
@@ -45,7 +44,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        The API key must be included in the request header:
+        {t("requestDataVerifyPayment")}
       </p>
       <div
         className={`pb-1 rounded-lg ${
@@ -69,8 +68,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        Merchants should send their request by 'PUT' method to the address
-        below:
+        {t("apiHeaderVerifyPayment")}
       </p>
       <div
         className={`py-3 rounded-lg ${
@@ -90,7 +88,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        Payment4 Response
+        {t("payment4ResponseTitleVerifyPayment")}
       </h5>
       <p
         className={`text-base leading-8 ${
@@ -99,7 +97,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        Upon verification, Payment4 responds with:
+        {t("responseDescriptionVerifyPayment")}
       </p>
       <div
         className={`pb-1 rounded-lg ${
@@ -125,8 +123,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        You only receive 'amountDifference' when the payment status is
-        'ACCEPTABLE' or 'MISMATCH'.
+        {t("amountDifferenceDescVerifyPayment")}
       </p>
       <h5
         className={`text-lg leading-8 ${
@@ -135,7 +132,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        Types of errors
+        {t("errorsTitleVerifyPayment")}
       </h5>
       <p
         className={`text-base leading-8 ${
@@ -144,8 +141,7 @@ const VerifyPayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
-        In cases of verification errors, Payment4 provides detailed error
-        messages, including:
+        {t("errorsDescriptionVerifyPayment")}
       </p>
       <div className="bg-gray-100 rounded-lg p-4">
         <ErrorsTable errors={errors} />

@@ -16,6 +16,7 @@ import { WoocommerceSection } from "./components/plugins/woocommerce.section";
 import { WHMCSSection } from "./components/plugins/whmcs.section";
 import DevelopersSection from "./components/developers.section";
 import ContactUsSection from "./components/contact.us.section";
+import { t } from "i18next";
 
 interface SubItem {
   id: string;
@@ -32,32 +33,32 @@ export interface DocArrayInterface {
 export const docArray: DocArrayInterface[] = [
   {
     id: "Introduction",
-    title: "Introduction",
+    title: t("introduction"),
     content: <Introduction />,
   },
   {
     id: "Transaction",
-    title: "Transaction",
+    title: t("transaction"),
     content: <TransactionSection />,
   },
   {
     id: "Settlements",
-    title: "Settlements",
+    title: t("settlementsTitle"),
     content: <Settlements />,
   },
   {
     id: "SystemLimits",
-    title: "System limits",
+    title: t("systemLimits"),
     content: <SystemLimits />,
   },
   {
     id: "ApiKey",
-    title: "Api key",
+    title: t("apiKeyTitle"),
     content: <ApiKeySection />,
   },
   {
     id: "Security",
-    title: "Authentication and Security",
+    title: t("authenticationAndSecurity"),
     content: <SecuritySection />,
   },
   {
@@ -67,12 +68,12 @@ export const docArray: DocArrayInterface[] = [
     subItems: [
       {
         id: "createPayment",
-        title: "create payment",
+        title: t("createPayment"),
         content: <CreatePayment />,
       },
       {
         id: "verifyPayment",
-        title: "verify payment",
+        title: t("verifyPayment"),
         content: <VerifyPayment />,
       },
     ],
@@ -84,19 +85,19 @@ export const docArray: DocArrayInterface[] = [
     subItems: [
       {
         id: "NodeSDK",
-        title: "Node SDK",
+        title: t("nodeSDK"),
         content: <NodeSDKSection />,
       },
       {
         id: "LaravelSDK",
-        title: "Laravel SDK",
+        title: t("laravelSDK"),
         content: <LaravelSDKSection />,
       },
     ],
   },
   {
     id: "Plugins",
-    title: "Plugins",
+    title: t("plugins"),
     content: <PluginsSection />,
     subItems: [
       {
@@ -113,12 +114,12 @@ export const docArray: DocArrayInterface[] = [
   },
   {
     id: "Developers",
-    title: "Developers",
+    title: t("developers"),
     content: <DevelopersSection />,
   },
   {
     id: "Contact",
-    title: "Contact us",
+    title: t("contact us"),
     content: <ContactUsSection />,
   },
 ];

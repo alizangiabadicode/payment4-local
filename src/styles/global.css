@@ -34,8 +34,39 @@
     font-weight: 700;
     src: url("/fonts/Poppins-Bold.ttf") format("truetype");
   }
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 300;
+    src: url("/fonts/YekanBakh-Light.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 400;
+    src: url("/fonts/YekanBakh-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 500;
+    src: url("/fonts/YekanBakh-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 600;
+    src: url("/fonts/YekanBakh-SemiBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: YekanBakh;
+    font-style: normal;
+    font-weight: 700;
+    src: url("/fonts/YekanBakh-Bold.ttf") format("truetype");
+  }
   html {
-    font-family: Poppins;
-    background-color: var(--background-color)
+    font-family: Poppins, YekanBakh;
+    background-color: var(--background-color);
   }
 }

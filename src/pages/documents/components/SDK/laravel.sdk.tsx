@@ -11,6 +11,7 @@ import {
   webhookUrlCode,
 } from "./laravel.sdk.codes";
 import useDarkMode from "use-dark-mode";
+import { t } from "i18next";
 
 export const LaravelSDKSection = () => {
   const { value: isDark } = useDarkMode();
@@ -24,7 +25,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Introduction
+        {t("introduction")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -33,9 +34,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        This SDK allows merchants to seamlessly integrate Payment4's crypto
-        gateway into their systems, enabling secure and efficient cryptocurrency
-        transactions.
+        {t("sdkNodeDesc")}
       </p>
 
       <p
@@ -45,18 +44,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Installation
-      </p>
-      <p
-        className={`text-base font-normal mt-2 ${
-          isDark
-            ? "text-[#FFFFFFC7] opacity-[78%]"
-            : "text-[#121212C7] opacity-[78%]"
-        }`}
-      >
-        This SDK allows merchants to seamlessly integrate Payment4's crypto
-        gateway into their systems, enabling secure and efficient cryptocurrency
-        transactions.
+        {t("installation")}
       </p>
       <div className="command-box mt-2" style={{ textAlign: "left" }}>
         <span className="command-label">Run the following command :</span>
@@ -73,7 +61,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Requirements
+        {t("requirements")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -95,7 +83,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Configuration
+        {t("configuration")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -104,7 +92,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Add your APIKEY in Payment4 config.
+        {t("addApiKey")}
       </p>
       <CodeBox style={{ height: "7dvh" }} code={configurationCode} />
       <p
@@ -114,8 +102,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        You can add your APIKEY to .env file, please look at to following
-        example :
+        {t("addApiKeyDesc")}
       </p>
       <CodeBox
         style={{ height: "7dvh" }}
@@ -128,8 +115,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        If you use callbackUrl as a static URL you can set it here, otherwise,
-        leave it blank.
+        {t("usingCallbackUrl")}
       </p>
       <CodeBox style={{ height: "10dvh" }} code={callbackUrlCode} />
       <p
@@ -139,8 +125,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        If you use webhookUrl as a static URL you can set it here, otherwise,
-        leave it blank.
+        {t("usingWebhookUrl")}
       </p>
       <CodeBox style={{ height: "8dvh" }} code={webhookUrlCode} />
 
@@ -151,7 +136,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Usage{" "}
+        {t("usage")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -160,7 +145,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Create Payment4 instance
+        {t("createPayment4Instance")}
       </p>
       <CodeBox style={{ minHeight: "43dvh" }} code={instanceCode} />
 
@@ -180,7 +165,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Requesting a Payment
+        {t("requestingAPayment")}
       </p>
       <CodeBox style={{ minHeight: "116dvh" }} code={requestingPaymentCode} />
       <p
@@ -190,7 +175,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Supported Languages are 'en' and 'fa'
+        {t("nodeSdkSupportedLanguages")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -199,7 +184,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Supported Currencies are 'USD', 'EUR', 'TRY', 'GBP', 'AED', 'IRT'
+        {t("nodeSdkSupportedCurrencies")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -208,7 +193,7 @@ export const LaravelSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Verifying a Payment
+        {t("verifyingAPayment")}
       </p>
       <CodeBox style={{ height: "40dvh" }} code={verifyPaymentCode} />
     </div>

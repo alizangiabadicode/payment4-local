@@ -3,6 +3,7 @@ import Input from "../../components/shared/textField";
 import TextArea from "../../components/shared/textArea";
 import { Button } from "../../components/shared/button";
 import useDarkMode from "use-dark-mode";
+import { t } from "i18next";
 
 interface FormData {
   name: string;
@@ -44,7 +45,7 @@ const ContactForm = () => {
             isDark ? "text-white" : null
           } text-[18px] md:text-[24px] font-semibold`}
         >
-          Get in Touch
+          {t("getInTouch")}
         </p>
         <div className="flex flex-col gap-y-5 mt-[40px]">
           <Input
@@ -55,7 +56,7 @@ const ContactForm = () => {
               isDark ? "border-[#FFFFFF24]" : "border-[#12121224]"
             }`}
             type="text"
-            placeholder="Name"
+            placeholder={t("name")}
           />
           <Input
             name="email"
@@ -65,11 +66,11 @@ const ContactForm = () => {
               isDark ? "border-[#FFFFFF24]" : "border-[#12121224]"
             }`}
             type="text"
-            placeholder="Email"
+            placeholder={t("email")}
           />
           <TextArea
             name="message"
-            placeholder="Enter your message"
+            placeholder={t("enterYourMessage")}
             rows={4}
             value={formData.message}
             onChange={handleInputChange}
@@ -80,7 +81,7 @@ const ContactForm = () => {
         </div>
         <div className="flex justify-end">
           <Button type="submit" className="px-[24px] py-[5px]">
-            send
+            {t("send")}
           </Button>
         </div>
       </form>

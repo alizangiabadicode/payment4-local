@@ -2,6 +2,7 @@ import React from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
 import useDarkMode from "use-dark-mode";
+import { t } from "i18next";
 
 const CreatePayment = () => {
   const { value: isDark } = useDarkMode();
@@ -16,8 +17,7 @@ const CreatePayment = () => {
               : "text-[#121212C7] opacity-[78%]"
           }`}
         >
-          When sending transaction details to Payment4, merchants should
-          structure their request as follows:
+          {t("titleCreatePayment")}
         </p>
       </div>
       <div
@@ -53,7 +53,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Merchants must also include their API key in the request header:
+        {t("apiHeaderCreatePayment")}
       </p>
       <div
         className={`pb-1 rounded-lg ${
@@ -77,8 +77,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        The request should be sent using the 'POST' method to the following
-        address:
+        {t("requestSentToCreatePayment")}
       </p>
       <div
         className={`pb-1 rounded-lg py-4 ${
@@ -94,7 +93,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Definitions
+        {t("definitionsCreatePayment")}
       </p>
       <ul className="flex flex-col gap-y-4" style={{ listStyle: "outside" }}>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -105,10 +104,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            sandbox : This boolean parameter indicates whether the transaction
-            should be treated as a sandbox/test transaction (true) or a
-            live/real transaction (false). Setting it to 'false' means that the
-            transaction is a live one, and actual funds may be involved.
+            {t("sandboxCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -119,12 +115,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            currency : The 'currency' field specifies the currency in which the
-            transaction amount is expressed. It defines the monetary unit used
-            for the payment, such as US Dollars (USD), Euros (EUR), Turkish Lira
-            (TRY), British Pounds (GBP), United Arab Emirates Dirhams (AED), or
-            Iranian Rials (IRT). The selected currency determines the financial
-            denomination of the transaction.default value of currency is 'USD'
+            {t("currencyCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -135,11 +126,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            amount : This field specifies the transaction amount, which is the
-            monetary value of the payment. In this example, the amount is set to
-            5, which means the transaction involves a payment of $5.Any amount
-            property that is below the minimum equivalent in dollars will be
-            rejected.
+            {t("amountCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -150,10 +137,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            callbackUrl: This URL serves as the redirect destination for the
-            payment page after a successful payment. It's important to note that
-            it will be a GET request if you want to call an endpoint from the
-            backend.
+            {t("callbackUrlCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -164,9 +148,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            callbackParams : This is an object that allows merchants to include
-            additional parameters or data to be sent along with the callback to
-            their system.
+            {t("callbackParamsCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -177,9 +159,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            webhookUrl : Similar to the callback URL, this is the URL where
-            Payment4 will send webhook notifications, which can be used for more
-            real-time updates or automation.
+            {t("webhookUrlCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -190,9 +170,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            webhookParams : Just like the callbackParams, this object allows
-            merchants to send additional parameters along with the webhook
-            notification.
+            {t("webhookParamsCreatePayment")}
           </p>
         </li>
         <li className={`${isDark ? "text-white" : "text-black"}`}>
@@ -203,8 +181,7 @@ const CreatePayment = () => {
                 : "text-[#121212C7] opacity-[78%]"
             }`}
           >
-            language : This field specifies the language in which Payment4
-            should provide responses.
+            {t("languageCreatePayment")}
           </p>
         </li>
       </ul>
@@ -215,7 +192,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Payment4 Response:
+        {t("responseTitleCreatePayment")}
       </p>
       <div
         className={`pb-1 rounded-lg  ${
@@ -241,7 +218,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-5`}
       >
-        Types of errors
+        {t("errorsTitleCreatePayment")}
       </p>
       <p
         className={`text-base leading-8 ${
@@ -250,7 +227,7 @@ const CreatePayment = () => {
             : "text-[#121212C7] opacity-[78%]"
         } my-5`}
       >
-        In case of errors, Payment4 provides informative error messages.
+        {t("errorsDescriptionCreatePayment")}
       </p>
       <div className="pb-1 bg-gray-200 rounded-lg">
         <ErrorsTable errors={errors} />

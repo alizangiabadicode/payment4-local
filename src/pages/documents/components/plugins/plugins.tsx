@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
@@ -12,10 +13,7 @@ export const PluginsSection = () => {
           : "text-[#121212C7] opacity-[78%]"
       }`}
     >
-      The plugins were created to address a challenge that we and several
-      merchants were facing, which was a gateway that prioritizes customer
-      privacy, has no external redirects, allows seamless integration, incurs no
-      middleman fees, and we achieved it.
+      {t("pluginDesc")}
     </p>
   );
 };

@@ -1,7 +1,36 @@
 import React from "react";
-import { blogsArray } from "./blogs-array";
 import Blog from "./blog";
 import { Swiper, SwiperSlide } from "swiper/react";
+
+import blogOne from "../../images/blog-post-1.png";
+import blogTwo from "../../images/blog-post-2.png";
+import blogThree from "../../images/blog-post-3.png";
+import blogFour from "../../images/blog-post-4.png";
+import { t } from "i18next";
+
+export interface BlogsArrayInterface {
+  title: string;
+  imageUrl: string;
+}
+
+export const blogsArray: BlogsArrayInterface[] = [
+  {
+    title: t("blogTitleOne"),
+    imageUrl: blogOne,
+  },
+  {
+    title: t("blogTitleTwo"),
+    imageUrl: blogTwo,
+  },
+  {
+    title: t("blogTitleThree"),
+    imageUrl: blogThree,
+  },
+  {
+    title: t("blogTitleFour"),
+    imageUrl: blogFour,
+  },
+];
 
 const Blogs = () => {
   return (

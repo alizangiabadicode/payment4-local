@@ -30,7 +30,7 @@ export * from "./phone-icon";
 export * from "./clock-icon";
 export * from "./email-icon";
 export * from "./location-icon";
-export * from "./check-icon";
+export * from "./check-icon.light";
 export * from "./back-slash-icon";
 export * from "./check-cart-icon";
 export * from "./attach-icon"
