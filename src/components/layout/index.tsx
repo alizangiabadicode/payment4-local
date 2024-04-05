@@ -2,6 +2,8 @@ import React, { ReactNode, useEffect, useState } from "react";
 import Header from "./header";
 import Footer from "./footer";
 import useDarkMode from "use-dark-mode";
+import { I18nextProvider } from "react-i18next";
+import i18n from "../../i18n";
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,17 +20,19 @@ const Layout = ({ children }: LayoutProps) => {
     }
   }, [isDark]);
   return (
-    <div
-      className={` min-h-screen grid grid-rows-80px-1fr-auto ${
-        isDark ? "bg-[#0B0B0E]" : "bg-white"
-      }`}
-    >
-      <Header />
-      <div className={`${isDark ? "bg-[#0B0B0E]" : "bg-white"}`}>
-        {children}
+    <I18nextProvider i18n={i18n}>
+      <div
+        className={` min-h-screen grid grid-rows-80px-1fr-auto ${
+          isDark ? "bg-[#0B0B0E]" : "bg-white"
+        }`}
+      >
+        <Header />
+        <div className={`${isDark ? "bg-[#0B0B0E]" : "bg-white"}`}>
+          {children}
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </I18nextProvider>
   );
 };
 

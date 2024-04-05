@@ -18,31 +18,33 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { CardsArrayInterface } from "./cards-array";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
 const SliderCards = () => {
   const { value: isDark } = useDarkMode();
+  const { t } = useTranslation();
   const cardsArray: CardsArrayInterface[] = [
     {
       imageUrl: isDark ? globalSellingDark : globalSelling,
-      title: "Global Selling",
-      desc: "Expand worldwide, ensuring success in diverse markets without spatial restrictions.",
+      title: t("sliderOne"),
+      desc: t("sliderOneDesc"),
       logo: <ShoppingIcon color={isDark ? "#FFFFFF" : undefined} />,
     },
     {
       imageUrl: isDark ? instantSettlementDark : instantSettlement,
-      title: "Instant Settlement",
-      desc: "Fast checkout, available around the clock for seamless global transactions.",
+      title: t("sliderTwo"),
+      desc: t("sliderTwoDesc"),
       logo: <CreditCardImg color={isDark ? "#FFFFFF" : undefined} />,
     },
     {
       imageUrl: isDark ? twentyFourHourSupportDark : twentyFourHourSupport,
-      title: "24-hour support",
-      desc: "24-hour availability for uninterrupted guidance and seamless transaction experience.",
+      title: t("sliderThree"),
+      desc: t("sliderThreeDesc"),
       logo: <SupportIcon color={isDark ? "#FFFFFF" : undefined} />,
     },
     {
       imageUrl: isDark ? cryptoDiversityDark : cryptoDiversity,
-      title: "Crypto Diversity",
-      desc: "Support for various cryptocurrencies, unlocking endless business possibilities",
+      title: t("sliderFour"),
+      desc: t("sliderFourDesc"),
       logo: <DollarIcon color={isDark ? "#FFFFFF" : undefined} />,
     },
   ];

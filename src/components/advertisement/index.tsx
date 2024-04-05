@@ -2,9 +2,11 @@ import React from "react";
 import { Button } from "../shared/button";
 import { IphoneDarkImg, IphoneImg, RightArrowIcon } from "../../images/svg";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
 
 const AdvertisementCard = () => {
   const { value: isDark } = useDarkMode();
+  const { t } = useTranslation();
   return (
     <div
       className={`max-w-[300px] sm:max-w-none ${
@@ -21,7 +23,7 @@ const AdvertisementCard = () => {
             isDark ? "text-white" : null
           }`}
         >
-          Unlock the Future with Payment4
+          {t("adTitle")}
         </p>
         <div className="w-3/4 sm:w-1/2">
           <p
@@ -29,13 +31,12 @@ const AdvertisementCard = () => {
               isDark ? "text-white opacity-[36%]" : null
             }`}
           >
-            Ready to experience seamless cryptocurrency transactions? Join
-            Payment4 today and revolutionize your online payments.
+            {t("adDesc")}
           </p>
         </div>
         <div className="flex justify-start">
           <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg">
-            Get Started Now
+            {t("getStartedNow")}
             <RightArrowIcon />
           </Button>
         </div>

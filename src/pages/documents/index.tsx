@@ -3,8 +3,10 @@ import { DocArrayInterface, docArray } from "./data.array";
 import { CloseCollapse, OpenCollapse } from "../../images/svg";
 import useDarkMode from "use-dark-mode";
 import { useLocation } from "@reach/router";
+import { useTranslation } from "react-i18next";
 
 const DocumentPageLayout: React.FC = ({}) => {
+  const { i18n } = useTranslation();
   const [selectedSection, setSelectedSection] = useState<string>("");
   const { value: isDark } = useDarkMode();
   const location = useLocation();
@@ -48,9 +50,11 @@ const DocumentPageLayout: React.FC = ({}) => {
       }
     }
   }, []);
+  const direction =
+    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
 
   return (
-    <div className="container flex md:gap-[69px]">
+    <div style={{ direction }} className="container flex md:gap-[69px]">
       {/* Sidebar */}
       <div
         className={`hidden md:block md:w-1/4 ${

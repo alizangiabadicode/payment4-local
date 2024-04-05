@@ -12,12 +12,16 @@ import {
 } from "../../../images/svg";
 import { Link } from "gatsby";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
 
 const Footer = () => {
+  const { t, i18n } = useTranslation();
   const { value: isDark } = useDarkMode();
+  const direction =
+    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   return (
     <footer
-      style={{ borderTopColor: "#E5E5E5" }}
+      style={{ borderTopColor: "#E5E5E5", direction: direction }}
       className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8 ${
         isDark ? "bg-[#0B0B0E]" : "bg-white"
       }`}
@@ -33,9 +37,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[36%]" : null
               }`}
             >
-              With a focus on innovation, security, and user experience, we aim
-              to provide you with the best tools for cryptocurrency payments and
-              transactions.
+              {t("footerDesc")}
             </p>
           </div>
           <div className="hidden sm:flex gap-4">
@@ -60,7 +62,7 @@ const Footer = () => {
             style={{ fontSize: "14px", fontWeight: 700 }}
             className={`${isDark ? "text-white" : null}`}
           >
-            Menu
+            {t("menu")}
           </p>
           <div className="flex flex-col gap-2">
             <Link
@@ -70,7 +72,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Home
+              {t("home")}
             </Link>
             <Link
               to="/developers"
@@ -79,7 +81,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Developers
+              {t("developers")}
             </Link>
             <Link
               to="/documents"
@@ -88,7 +90,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Documents
+              {t("documents")}
             </Link>
             <Link
               to="/about"
@@ -97,7 +99,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              About
+              {t("about")}
             </Link>
             <Link
               to="/contact-us"
@@ -106,7 +108,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Contact Us
+              {t("contact us")}
             </Link>
           </div>
         </div>
@@ -115,7 +117,7 @@ const Footer = () => {
             style={{ fontSize: "14px", fontWeight: 700 }}
             className={`${isDark ? "text-white" : null}`}
           >
-            Follow us
+            {t("followUs")}
           </p>
           <div className="flex flex-col gap-2">
             <p
@@ -124,7 +126,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Linkedin
+              {t("linkedin")}
             </p>
             <p
               style={{ fontSize: "12px" }}
@@ -140,7 +142,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Twitter
+              {t("twitter")}
             </p>
             <p
               style={{ fontSize: "12px" }}
@@ -148,7 +150,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Instagram
+              {t("instagram")}
             </p>
           </div>
         </div>
@@ -171,7 +173,7 @@ const Footer = () => {
             style={{ fontSize: "14px", fontWeight: 700 }}
             className={`${isDark ? "text-white" : null}`}
           >
-            Resources
+            {t("resources")}
           </p>
           <div className="flex flex-col gap-2">
             <Link
@@ -181,7 +183,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Terms of service
+              {t("termsOfService")}
             </Link>
             <Link
               to="/privacy-policy"
@@ -190,7 +192,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Privacy Policy
+              {t("privacyPolicy")}
             </Link>
             <Link
               to="/faq"
@@ -199,7 +201,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              FAQ
+              {t("faq")}
             </Link>
           </div>
         </div>
@@ -208,7 +210,7 @@ const Footer = () => {
             style={{ fontSize: "14px", fontWeight: 700 }}
             className={`${isDark ? "text-white" : null}`}
           >
-            Company
+            {t("company")}
           </p>
           <div className="flex flex-col gap-2">
             <Link
@@ -218,7 +220,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              About
+              {t("about")}
             </Link>
             <Link
               to="/contact-us"
@@ -227,7 +229,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Contact Us
+              {t("contact us")}
             </Link>
             <Link
               to="/blog"
@@ -236,7 +238,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Blog
+              {t("blog")}
             </Link>
           </div>
         </div>
@@ -254,7 +256,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Log In
+              {t("logIn")}
             </p>
             <p
               style={{ fontSize: "12px" }}
@@ -262,7 +264,7 @@ const Footer = () => {
                 isDark ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
-              Sign Up
+              {t("signup")}
             </p>
           </div>
         </div>

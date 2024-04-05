@@ -6,6 +6,7 @@ import {
 } from "./node.sdk.codes";
 import { CodeBox } from "../shared/code.box/code.box";
 import useDarkMode from "use-dark-mode";
+import { t } from "i18next";
 
 export const NodeSDKSection = () => {
   const { value: isDark } = useDarkMode();
@@ -19,7 +20,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Introduction
+        {t("introduction")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -28,9 +29,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        This SDK allows merchants to seamlessly integrate Payment4's crypto
-        gateway into their systems, enabling secure and efficient cryptocurrency
-        transactions.
+        {t("sdkNodeDesc")}
       </p>
 
       <p
@@ -40,7 +39,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Installation
+        {t("installation")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -49,8 +48,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        To get started with the Crypto Gateway Node SDK, follow these simple
-        installation steps:
+        {t("nodeSdkStart")}
       </p>
       <div className="command-box mt-2" style={{ textAlign: "left" }}>
         <CodeBox code="npm install payment4" style={{ height: "auto" }} />
@@ -63,7 +61,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Configuration
+        {t("configuration")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -72,8 +70,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Configure the SDK with your merchant-specific settings by following
-        these steps:
+        {t("nodeSdkConfiguration")}
       </p>
       <CodeBox code={configurationCode} />
 
@@ -94,7 +91,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Requesting a Payment
+        {t("requestingAPayment")}
       </p>
       <CodeBox code={requestingPaymentCode} />
       <p
@@ -104,7 +101,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Supported Languages are 'en' and 'fa'
+        {t("nodeSdkSupportedLanguages")}
       </p>
       <p
         className={`text-base font-normal mt-2 ${
@@ -113,7 +110,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Supported Currencies are 'USD', 'EUR', 'TRY', 'GBP', 'AED', 'IRT'
+        {t("nodeSdkSupportedCurrencies")}
       </p>
 
       <p
@@ -123,7 +120,7 @@ export const NodeSDKSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        Verifying a Payment
+        {t("verifyingAPayment")}
       </p>
       <CodeBox code={verifyPaymentCode} />
     </div>

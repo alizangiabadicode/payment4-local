@@ -13,9 +13,6 @@ import { Autoplay } from "swiper/modules";
 import useDarkMode from "use-dark-mode";
 import { useTranslation } from "react-i18next";
 
-
-
-
 const HeroSection = () => {
   const { t } = useTranslation();
   const { value: isDark } = useDarkMode();
@@ -36,7 +33,7 @@ const HeroSection = () => {
                 isDark ? "text-white" : null
               }`}
             >
-              Your Cryptocurrency Payment Gateway
+              {t("yourCryptocurrencyPaymentGateway")}
             </p>
           </div>
           <div className="max-w-690">
@@ -45,9 +42,7 @@ const HeroSection = () => {
                 isDark ? "text-white opacity-[44%]" : null
               }`}
             >
-              Payment4 welcomes users to a secure cryptocurrency payment
-              gateway, simplifying transactions with integrated blockchains like
-              Ethereum and Binance Smart Chain.
+              {t("payment4WelcomesUsers")}
             </p>
           </div>
         </div>
@@ -56,7 +51,7 @@ const HeroSection = () => {
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             className="px-10 py-2 flex gap-x-2"
           >
-            Let’s get started
+            {t("letsGetStarted")}
             <RightArrowIcon />
           </Button>
         </div>
@@ -70,7 +65,7 @@ const HeroSection = () => {
       </div>
       <div className="flex justify-center my-16">
         <p className="text-16 sm:text-24 font-semibold">
-          Supported coins and blockchains
+          {t("supportedCoinsAndBlockchains")}
         </p>
       </div>
       <div className="container hidden sm:block my-10">

@@ -1,6 +1,6 @@
 import React from "react";
-import { cards } from "./cards-array";
 import Card from "./card";
+import { cards } from "./card";
 
 const Cards: React.FC = () => {
   return (

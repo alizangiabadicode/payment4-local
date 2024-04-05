@@ -1,6 +1,6 @@
 import React from "react";
 
-export const CheckIcon = () => {
+export const CheckIconLight = () => {
   return (
     <svg
       width="24"

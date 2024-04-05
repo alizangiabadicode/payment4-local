@@ -13,18 +13,25 @@ import useDarkMode from "use-dark-mode";
 import ContactForm from "./contact-form";
 import lightMap from "../../images/light-map-img.png";
 import darkMap from "../../images/dark-map-img.png";
+import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
   const { value: isDark } = useDarkMode();
+  const { t, i18n } = useTranslation();
+  const direction =
+    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   return (
-    <div className="flex flex-col gap-y-[64px] md:gap-y-[88px] mb-[100px]">
+    <div
+      style={{ direction }}
+      className="flex flex-col gap-y-[64px] md:gap-y-[88px] mb-[100px]"
+    >
       <div className="flex justify-center">
         <p
           className={`${
             isDark ? "text-white" : null
           } text-[18px] md:text-[24px] font-bold`}
         >
-          Contact Us
+          {t("contact us")}
         </p>
       </div>
       <div className="md:hidden flex flex-col gap-y-[24px] mx-[20px]">
@@ -37,7 +44,7 @@ const ContactUs = () => {
                   isDark ? "text-white" : null
                 } text-[16px] font-bold`}
               >
-                Phone
+                {t("phone")}
               </p>
               <p className={`text-[12px] ${isDark ? "text-white" : null} `}>
                 +989121212121
@@ -50,7 +57,7 @@ const ContactUs = () => {
                   isDark ? "text-white" : null
                 } text-[16px] font-bold`}
               >
-                Email
+                {t("email")}
               </p>
               <p className={`text-[12px] ${isDark ? "text-white" : null} `}>
                 Payment4@gmail.com
@@ -80,7 +87,7 @@ const ContactUs = () => {
                 Hour
               </p>
               <p className={`text-[12px] ${isDark ? "text-white" : null} `}>
-                Mon-Thu: 9am-6pm
+                {t("openTime")}
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -90,7 +97,7 @@ const ContactUs = () => {
                   isDark ? "text-white" : null
                 } text-[16px] font-bold`}
               >
-                Address
+                {t("address")}
               </p>
               <p className="text-[12px]">UAE , Sari</p>
             </div>
@@ -103,7 +110,7 @@ const ContactUs = () => {
           <p
             className={`${isDark ? "text-white" : null} text-[16px] font-bold`}
           >
-            Email
+            {t("email")}
           </p>
           <p className={`text-[14px] ${isDark ? "text-white" : null} `}>
             Payment4@gmail.com
@@ -119,7 +126,7 @@ const ContactUs = () => {
           <p
             className={`${isDark ? "text-white" : null} text-[16px] font-bold`}
           >
-            Address
+            {t("address")}
           </p>
           <p className={`text-[14px] ${isDark ? "text-white" : null} `}>
             UAE , Sari
@@ -135,7 +142,7 @@ const ContactUs = () => {
           <p
             className={`${isDark ? "text-white" : null} text-[16px] font-bold`}
           >
-            Phone
+            {t("phone")}
           </p>
           <p className={`text-[14px] ${isDark ? "text-white" : null} `}>
             +989121212121
@@ -151,10 +158,10 @@ const ContactUs = () => {
           <p
             className={`${isDark ? "text-white" : null} text-[16px] font-bold`}
           >
-            Hour
+            {t("hour")}
           </p>
           <p className={`text-[14px] ${isDark ? "text-white" : null} `}>
-            Mon-Thu: 9am-6pm
+            {t("openTime")}
           </p>
         </div>
       </div>
@@ -169,15 +176,15 @@ const ContactUs = () => {
               isDark ? "text-white" : null
             } md:text-[24px] font-semibold`}
           >
-            Join our
+            {t("joinOurSocialNetworks")}
           </p>
-          <p
+          {/* <p
             className={`${
               isDark ? "text-white" : null
             } md:text-[24px] font-semibold`}
           >
             social networks
-          </p>
+          </p> */}
         </div>
         <div className="flex md:hidden flex-col items-center justify-center mt-[50px]">
           <p
@@ -185,7 +192,7 @@ const ContactUs = () => {
               isDark ? "text-white" : null
             } md:text-[24px] font-semibold`}
           >
-            Join our social networks
+            {t("joinOurSocialNetworks")}
           </p>
         </div>
         <div className="flex gap-x-[60px] justify-center px-[15px]">

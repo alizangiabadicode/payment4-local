@@ -1,6 +1,6 @@
 import React from "react";
-import { BlogsArrayInterface } from "./blogs-array";
 import useDarkMode from "use-dark-mode";
+import { BlogsArrayInterface } from "./blogs";
 
 const Blog = (props: BlogsArrayInterface) => {
   const { value: isDark } = useDarkMode();

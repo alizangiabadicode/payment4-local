@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React from "react";
 import useDarkMode from "use-dark-mode";
 
@@ -13,11 +14,7 @@ const DevelopersSection = () => {
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
-        For in-depth information about the Payment4 API, including endpoint
-        details, request/response formats, error codes, and comprehensive
-        examples, please refer to our Developer URL. This document provides
-        technical guidance for integrating with Payment4 and can be found at
-        Developers item in the menu.
+        {t('developerDesc')}
       </p>
     </div>
   );

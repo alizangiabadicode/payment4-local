@@ -1,5 +1,5 @@
 import React from "react";
-import { CardsArrayProps } from "./cards-array";
+import { CardsArrayProps } from "./progress-cards";
 import {
   GatewaySetupIcon,
   SecurityMeasureIcon,
@@ -8,9 +8,11 @@ import {
 } from "../../images/svg";
 import ApiPaylinkCreationIcon from "../../images/svg/api-paylink-creation-icon";
 import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
 
 const ProgressCard: React.FC<CardsArrayProps> = (props) => {
   const { value: isDark } = useDarkMode();
+  const { t } = useTranslation();
   return (
     <div className="w-mobile-card sm:w-[1000px] grid grid-cols-1 sm:grid-cols-2 gap-y-6">
       <div className="sm:order-1">
@@ -51,7 +53,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Gateway Setup
+                {t("gatewaySetup")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -61,7 +63,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                API or Paylink Creation
+                {t("progressThree")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -71,7 +73,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Settlement Requests
+                {t("settlementRequests")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -81,7 +83,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Security Measures
+                {t("securityMeasures")}
               </p>
             </div>
           </div>
@@ -95,7 +97,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 isDark ? "text-white opacity-[36%]" : null
               }`}
             >
-              Sign Up
+              {t("signup")}
             </p>
           </div>
           <div
@@ -135,7 +137,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                API or Paylink Creation
+                {t("progressThree")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -145,7 +147,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Settlement Requests
+                {t("settlementRequests")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -155,7 +157,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Security Measures
+                {t("securityMeasures")}
               </p>
             </div>
           </div>
@@ -170,7 +172,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Sign Up
+                {t("signup")}
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
@@ -180,7 +182,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Gateway Setup
+                {t("gatewaySetup")}
               </p>
             </div>
           </div>
@@ -217,7 +219,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Settlement Requests
+                {t("settlementRequests")}
               </p>
             </div>
             <div className="flex items-center gap-x-3">
@@ -227,7 +229,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Security Measures
+                {t("securityMeasures")}
               </p>
             </div>
           </div>
@@ -314,7 +316,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Sign Up
+                {t("signup")}
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
@@ -324,7 +326,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Gateway Setup
+                {t("gatewaySetup")}
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
@@ -334,7 +336,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                API or Paylink Creation
+                {t("progressThree")}
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
@@ -344,7 +346,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   isDark ? "text-white opacity-[36%]" : null
                 }`}
               >
-                Settlement Requests
+                {t("settlementRequests")}
               </p>
             </div>
           </div>
