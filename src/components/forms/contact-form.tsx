@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Input from "../../components/shared/textField";
-import TextArea from "../../components/shared/textArea";
-import { Button } from "../../components/shared/button";
+import Input from "../shared/textField";
+import TextArea from "../shared/textArea";
+import { Button } from "../shared/button";
 import useDarkMode from "use-dark-mode";
 import { t } from "i18next";
 
