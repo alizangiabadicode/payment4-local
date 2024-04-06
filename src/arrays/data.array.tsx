@@ -1,21 +1,21 @@
 import * as React from "react";
-import Introduction from "./components/introduction";
-import TransactionSection from "./components/transaction";
-import Settlements from "./components/settlements";
-import SystemLimits from "./components/system.limits";
-import ApiKeySection from "./components/api.key";
-import SecuritySection from "./components/security";
-import ApiSection from "./components/api";
-import CreatePayment from "./components/create.payment/create.payment";
-import VerifyPayment from "./components/verify.payment/verify.payment";
-import { SDKSection } from "./components/SDK/sdk";
-import { LaravelSDKSection } from "./components/SDK/laravel.sdk";
-import { NodeSDKSection } from "./components/SDK/node.sdk";
-import { PluginsSection } from "./components/plugins/plugins";
-import { WoocommerceSection } from "./components/plugins/woocommerce.section";
-import { WHMCSSection } from "./components/plugins/whmcs.section";
-import DevelopersSection from "./components/developers.section";
-import ContactUsSection from "./components/contact.us.section";
+import Introduction from "../components/docs/components/introduction";
+import TransactionSection from "../components/docs/components/transaction";
+import Settlements from "../components/docs/components/settlements";
+import SystemLimits from "../components/docs/components/system.limits";
+import ApiKeySection from "../components/docs/components/api.key";
+import SecuritySection from "../components/docs/components/security";
+import ApiSection from "../components/docs/components/api";
+import CreatePayment from "../components/docs/components/create.payment/create.payment";
+import VerifyPayment from "../components/docs/components/verify.payment/verify.payment";
+import { SDKSection } from "../components/docs/components/SDK/sdk";
+import { LaravelSDKSection } from "../components/docs/components/SDK/laravel.sdk";
+import { NodeSDKSection } from "../components/docs/components/SDK/node.sdk";
+import { PluginsSection } from "../components/docs/components/plugins/plugins";
+import { WoocommerceSection } from "../components/docs/components/plugins/woocommerce.section";
+import { WHMCSSection } from "../components/docs/components/plugins/whmcs.section";
+import DevelopersSection from "../components/docs/components/developers.section";
+import ContactUsSection from "../components/docs/components/contact.us.section";
 import { t } from "i18next";
 
 interface SubItem {

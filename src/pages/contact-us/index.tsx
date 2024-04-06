@@ -10,7 +10,7 @@ import linkedin from "../../images/linkedin-contact.png";
 import x from "../../images/x-contact.png";
 import telegram from "../../images/telegram-contact.png";
 import useDarkMode from "use-dark-mode";
-import ContactForm from "./contact-form";
+import ContactForm from "../../components/forms/contact-form";
 import lightMap from "../../images/light-map-img.png";
 import darkMap from "../../images/dark-map-img.png";
 import { useTranslation } from "react-i18next";

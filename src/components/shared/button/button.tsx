@@ -3,6 +3,7 @@ import * as React from "react";
 import { Size } from "../types/size.type";
 import classNames from "classnames";
 import { ButtonProps, ButtonShape } from "./button.types";
+import useDarkMode from "use-dark-mode";
 
 const sizeClasses: Record<Size, string> = {
   xs: "py-2 px-2",
@@ -32,6 +33,7 @@ export const Button: React.FC<ButtonProps> = ({
   className,
   ...rest
 }: ButtonProps) => {
+  const { value: isDark } = useDarkMode();
   // const classes = classNames(
   //   "btn",
   //   className,
@@ -41,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
   //   { "btn-link": isLink },
   //   { [`${shapeClasses[shape]}`]: shape },
   //   { "animated-icon": animatedIcon },
-  //   { "pointer-events-none opacity-80": isLoading }
+  //   { "pointer-events-none opacity-80": isLoading }9e6dff
   // );
 
   return (
@@ -49,7 +51,8 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       disabled={isDisabled}
       className={`${sizeClasses[size]} ${className}
-      bg-primary text-white hover:bg-primary-focus rounded text-base font-normal
+      ${isDark ? "bg-[#9e6dff]" : "bg-primary"}
+       text-white hover:bg-primary-focus rounded text-base font-normal
       `}
       {...rest}
     >

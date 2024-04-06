@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { DocArrayInterface, docArray } from "./data.array";
+import { DocArrayInterface, docArray } from "../../arrays/data.array";
 import { CloseCollapse, OpenCollapse } from "../../images/svg";
 import useDarkMode from "use-dark-mode";
 import { useLocation } from "@reach/router";
 import { useTranslation } from "react-i18next";
+import i18n from "../../i18n";
 
-const DocumentPageLayout: React.FC = ({}) => {
-  const { i18n } = useTranslation();
+const DocumentPageLayout: React.FC = () => {
+  const direction = i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   const [selectedSection, setSelectedSection] = useState<string>("");
   const { value: isDark } = useDarkMode();
   const location = useLocation();
@@ -50,8 +51,6 @@ const DocumentPageLayout: React.FC = ({}) => {
       }
     }
   }, []);
-  const direction =
-    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
 
   return (
     <div style={{ direction }} className="container flex md:gap-[69px]">
