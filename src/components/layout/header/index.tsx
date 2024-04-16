@@ -6,6 +6,8 @@ import LanguageSelector from "../../shared/select.language/select.language";
 import ThemeSwitch from "@/components/shared/theme.swicher/theme.swicher";
 import { NavigationBar } from "./navigation";
 import i18next from "i18next";
+import { navbarItems } from "./navbar-items";
+import Link from "next/link";
 
 const Header = () => {
   const { t } = useTranslation();
