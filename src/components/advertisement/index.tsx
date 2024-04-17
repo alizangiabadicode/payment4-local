@@ -16,17 +16,19 @@ const AdvertisementCard = () => {
   return (
     <div
       className={`max-w-[300px] sm:max-w-none ${
-        isDark
+        isDark === "dark"
           ? "bg-mobile-advertisement-card-dark"
           : "bg-mobile-advertisement-card"
       } ${
-        isDark ? "sm:bg-advertisement-card-dark" : "sm:bg-advertisement-card"
+        isDark === "dark"
+          ? "sm:bg-advertisement-card-dark"
+          : "sm:bg-advertisement-card"
       } bg-no-repeat sm:py-[75px] rounded my-14 flex flex-col sm:flex-row sm:justify-center gap-y-10`}
     >
       <div className="flex flex-col gap-10 ml-[25px] sm:ml-[197px]">
         <p
           className={`text-[18px] sm:text-[24px] font-bold ${
-            isDark ? "text-white" : null
+            isDark === "dark" ? "text-white" : "text-black"
           }`}
         >
           {t("adTitle")}
@@ -34,7 +36,7 @@ const AdvertisementCard = () => {
         <div className="w-3/4 sm:w-1/2">
           <p
             className={`text-[12px] sm:text-[14px] text-primary-text ${
-              isDark ? "text-white opacity-[36%]" : null
+              isDark === "dark" ? "text-white opacity-[36%]" : "text-black"
             }`}
           >
             {t("adDesc")}
@@ -48,7 +50,7 @@ const AdvertisementCard = () => {
         </div>
       </div>
       <div className="-order-last sm:order-last flex justify-center sm:justify-evenly">
-        {isDark ? <IphoneDarkImg /> : <IphoneImg />}
+        {isDark === "dark" ? <IphoneDarkImg /> : <IphoneImg />}
       </div>
     </div>
   );

@@ -1,65 +1,74 @@
 "use client";
 
-import React from "react";
+import React, { use } from "react";
 import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../../public/images/svg";
 import { t } from "i18next";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
 export interface CardsType {
   title: string;
   desc: string;
   buttonText: string;
   imageUrl: string;
+  id?: number;
 }
 
-export const cards: CardsType[] = [
-  {
-    title: t("cardOne"),
-    desc: t("cardOneDesc"),
-    buttonText: t("signup"),
-    imageUrl: "/../../../public/images/img-card-one.png",
-  },
-  {
-    title: t("cardTwo"),
-    desc: t("cardTwoDesc"),
-    buttonText: t("createPaymentPage"),
-    imageUrl: "/../../../public/images/img-card-two.png",
-  },
-  {
-    title: t("cardThree"),
-    desc: t("cardThreeDesc"),
-    buttonText: t("createPaymentLink"),
-    imageUrl: "/../../../public/images/img-card-three.png",
-  },
-  {
-    title: t("cardFour"),
-    desc: t("cardFourDesc"),
-    buttonText: t("joinUs"),
-    imageUrl: "/../../../public/images/img-card-four.png",
-  },
-];
 const Card = (props: CardsType) => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
+  const cards: CardsType[] = [
+    {
+      id: 1,
+      title: t("cardOne"),
+      desc: t("cardOneDesc"),
+      buttonText: t("signup"),
+      imageUrl: "/../../../public/images/img-card-one.png",
+    },
+    {
+      id: 2,
+      title: t("cardTwo"),
+      desc: t("cardTwoDesc"),
+      buttonText: t("createPaymentPage"),
+      imageUrl: "/../../../public/images/img-card-two.png",
+    },
+    {
+      id: 3,
+      title: t("cardThree"),
+      desc: t("cardThreeDesc"),
+      buttonText: t("createPaymentLink"),
+      imageUrl: "/../../../public/images/img-card-three.png",
+    },
+    {
+      id: 4,
+      title: t("cardFour"),
+      desc: t("cardFourDesc"),
+      buttonText: t("joinUs"),
+      imageUrl: "/../../../public/images/img-card-four.png",
+    },
+  ];
 
   return (
     <div
-      className={`${isDark ? "bg-mobile-dark-card" : "bg-mobile-light-card"} ${
-        isDark ? "sm:bg-dark-card" : "sm:bg-light-card"
+      className={`${
+        isDark === "dark" ? "bg-mobile-dark-card" : "bg-mobile-light-card"
+      } ${
+        isDark === "dark" ? "sm:bg-dark-card" : "sm:bg-light-card"
       } grid grid-cols-1 sm:grid-cols-2 w-mobile-card h-mobile-card sm:w-card sm:h-card bg-no-repeat`}
     >
       <div className="flex flex-col gap-y-5 sm:gap-y-11 sm:pt-12 pl-10">
         <p
           className={`font-bold sm:text-24 text-16 ${
-            isDark ? "text-white" : null
+            isDark === "dark" ? "text-white" : null
           }`}
         >
           {props.title}
         </p>
         <p
-          className={`text-[12px] sm:text-16 text-primary-text sm:w-3/4 ${
-            isDark ? "text-white opacity-[49%]" : null
+          className={`text-[12px] sm:text-16  sm:w-3/4 ${
+            isDark === "dark" ? "text-white opacity-[49%]" : "text-primary-text"
           }`}
         >
           {props.desc}

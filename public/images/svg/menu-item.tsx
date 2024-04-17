@@ -12,7 +12,7 @@ export const MenuItemIcon: FC<MenuItemProps> = ({ color = "#FCFCFC" }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_1230_3123)">
+      <g clipPath="url(#clip0_1230_3123)">
         <path
           d="M23 11H1C0.447715 11 0 11.4477 0 12C0 12.5523 0.447715 13 1 13H23C23.5523 13 24 12.5523 24 12C24 11.4477 23.5523 11 23 11Z"
           fill={color}

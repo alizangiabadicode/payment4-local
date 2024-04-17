@@ -27,7 +27,7 @@ export default function ThemeSwitch() {
   if (resolvedTheme === "dark") {
     return (
       <div onClick={() => setTheme("light")}>
-        <LightModeIcon />;
+        <LightModeIcon />
       </div>
     );
   }

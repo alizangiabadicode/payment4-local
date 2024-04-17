@@ -8,22 +8,27 @@ import { t } from "i18next";
 export interface BlogsArrayInterface {
   title: string;
   imageUrl: string;
+  id?: number;
 }
 
 export const blogsArray: BlogsArrayInterface[] = [
   {
+    id: 1,
     title: t("blogTitleOne"),
     imageUrl: "/../../../public/images/blog-post-1.png",
   },
   {
+    id: 2,
     title: t("blogTitleTwo"),
     imageUrl: "/../../../public/images/blog-post-2.png",
   },
   {
+    id: 3,
     title: t("blogTitleThree"),
     imageUrl: "/../../../public/images/blog-post-3.png",
   },
   {
+    id: 4,
     title: t("blogTitleFour"),
     imageUrl: "/../../../public/images/blog-post-4.png",
   },
@@ -35,11 +40,7 @@ const Blogs = () => {
       <div className="hidden sm:flex justify-center">
         <div className="sm:grid sm:grid-cols-2 md:grid-cols-4 gap-[33px]">
           {blogsArray.map((blog) => (
-            <Blog
-              imageUrl={blog.imageUrl}
-              title={blog.title}
-              key={blog.title}
-            />
+            <Blog imageUrl={blog.imageUrl} title={blog.title} key={blog.id} />
           ))}
         </div>
       </div>

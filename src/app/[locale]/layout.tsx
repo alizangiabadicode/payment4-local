@@ -5,6 +5,8 @@ import { dir } from "i18next";
 import localFont from "next/font/local";
 import { Providers } from "./provider";
 import Header from "@/components/layout/header";
+import initTranslations from "../i18n";
+import TranslationsProvider from "@/configs/TranslationsProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -65,13 +67,15 @@ const yekanBakh = localFont({
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
-export default function RootLayout({
+const i18nNamespaces = ["translation"];
+export default async function RootLayout({
   children,
   params: { locale },
 }: Readonly<{
   children: React.ReactNode;
   params: { locale: string };
 }>) {
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
   return (
     <html
       lang={locale}
@@ -81,8 +85,14 @@ export default function RootLayout({
     >
       <body>
         <Providers>
-          <Header />
-          {children}
+          <TranslationsProvider
+            namespaces={i18nNamespaces}
+            locale={locale}
+            resources={resources}
+          >
+            <Header />
+            {children}
+          </TranslationsProvider>
         </Providers>
       </body>
     </html>
