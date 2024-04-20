@@ -1,7 +1,7 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import React, { FC, ReactNode } from "react";
+import { useTheme } from "next-themes";
 
 interface DrawerProps {
   isOpen: boolean;

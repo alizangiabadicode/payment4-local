@@ -8,24 +8,21 @@ import {
   RightArrowIcon,
 } from "../../../public/images/svg";
 import { useTheme } from "next-themes";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
 
 const AdvertisementCard = () => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
 
   return (
     <div
       className={`max-w-[300px] sm:max-w-none ${
         isDark === "dark"
-          ? "bg-mobile-advertisement-card-dark"
-          : "bg-mobile-advertisement-card"
-      } ${
-        isDark === "dark"
-          ? "sm:bg-advertisement-card-dark"
-          : "sm:bg-advertisement-card"
-      } bg-no-repeat sm:py-[75px] rounded my-14 flex flex-col sm:flex-row sm:justify-center gap-y-10`}
+          ? "bg-dark-gradient-ad-card"
+          : "bg-light-gradient-ad-card"
+      } sm:py-[75px] rounded my-14 flex flex-col sm:flex-row sm:justify-center gap-y-10 py-5`}
     >
-      <div className="flex flex-col gap-10 ml-[25px] sm:ml-[197px]">
+      <div className="flex flex-col gap-10 ml-[25px]">
         <p
           className={`text-[18px] sm:text-[24px] font-bold ${
             isDark === "dark" ? "text-white" : "text-black"

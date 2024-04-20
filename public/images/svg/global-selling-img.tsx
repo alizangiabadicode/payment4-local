@@ -65,7 +65,7 @@ export const GlobalSellingImg = () => {
           width="174.2"
           height="154.2"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -124,7 +124,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#A479FF" />
-          <stop offset="1" stop-color="#A479FF" stop-opacity="0.41" />
+          <stop offset="1" stop-color="#A479FF" stopOpacity="0.41" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1306_4092"
@@ -135,7 +135,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#A479FF" />
-          <stop offset="1" stop-color="#A479FF" stop-opacity="0.39" />
+          <stop offset="1" stop-color="#A479FF" stopOpacity="0.39" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1306_4092"
@@ -146,7 +146,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#A479FF" />
-          <stop offset="1" stop-color="#A479FF" stop-opacity="0.45" />
+          <stop offset="1" stop-color="#A479FF" stopOpacity="0.45" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1306_4092"
@@ -157,7 +157,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#C0A2FF" />
-          <stop offset="1" stop-color="#C0A2FF" stop-opacity="0.46" />
+          <stop offset="1" stop-color="#C0A2FF" stopOpacity="0.46" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_1306_4092"
@@ -168,7 +168,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#C0A2FF" />
-          <stop offset="1" stop-color="#C0A2FF" stop-opacity="0.46" />
+          <stop offset="1" stop-color="#C0A2FF" stopOpacity="0.46" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_1306_4092"
@@ -179,7 +179,7 @@ export const GlobalSellingImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#A479FF" />
-          <stop offset="1" stop-color="#A479FF" stop-opacity="0.49" />
+          <stop offset="1" stop-color="#A479FF" stopOpacity="0.49" />
         </linearGradient>
         <clipPath id="clip0_1306_4092">
           <rect

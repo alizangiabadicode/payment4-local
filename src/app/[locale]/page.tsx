@@ -12,7 +12,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
   const { t } = await initTranslations(locale, i18nNamespaces);
 
   return (
-    <div className="dark:bg-dark bg-white overflow-x-auto">
+    <div className="dark:bg-dark bg-white overflow-x-auto px-[20px] sm:px-0">
       <HeroSection />
       <Cards />
       <ProgressCards />
@@ -22,7 +22,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
       <div className="flex justify-center">
         <p
           className="text-[16px] sm:text-[24px] font-bold 
-              dark:text-white"
+              dark:text-white text-center"
         >
           {t("crafting")}
         </p>
@@ -30,12 +30,12 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
       <div className="flex justify-center">
         <SliderCards />
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center sm:px-[300px]">
         <AdvertisementCard />
       </div>
-      <div className="flex justify-center my-[128px]">
+      {/* <div className="flex justify-center my-[128px]">
         <Blogs />
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -168,14 +168,14 @@ export const CryptoDiversityImg = () => {
         fillOpacity="0.12"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M79.5211 71.7725L72.4288 75.9634L65.3335 71.7725L72.4288 60L79.5211 71.7725Z"
         fill="#864AFF"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M79.526 73.1172L72.4288 83.113L65.3335 73.1172L72.4288 77.3091L79.526 73.1172Z"
         fill="#864AFF"
       />
@@ -246,7 +246,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_1306_4203"
@@ -257,7 +257,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_1306_4203"
@@ -268,7 +268,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1306_4203"
@@ -279,7 +279,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_1306_4203"
@@ -290,7 +290,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_1306_4203"
@@ -301,7 +301,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_1306_4203"
@@ -312,7 +312,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_1306_4203"
@@ -323,7 +323,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_1306_4203"
@@ -334,7 +334,7 @@ export const CryptoDiversityImg = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#864AFF" />
-          <stop offset="1" stop-color="#864AFF" stop-opacity="0" />
+          <stop offset="1" stop-color="#864AFF" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_1306_4203">
           <rect

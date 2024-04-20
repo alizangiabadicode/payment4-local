@@ -7,6 +7,7 @@ import { Providers } from "./provider";
 import Header from "@/components/layout/header";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
+import Footer from "@/components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -92,6 +93,7 @@ export default async function RootLayout({
           >
             <Header />
             {children}
+            <Footer/>
           </TranslationsProvider>
         </Providers>
       </body>

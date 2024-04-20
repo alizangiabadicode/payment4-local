@@ -601,7 +601,7 @@ export const ImgCardOne = () => {
           width="334.183"
           height="351.754"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -636,7 +636,7 @@ export const ImgCardOne = () => {
           width="297.472"
           height="337.486"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -657,7 +657,7 @@ export const ImgCardOne = () => {
           width="330.308"
           height="330.308"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -678,7 +678,7 @@ export const ImgCardOne = () => {
           width="225.832"
           height="165.987"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -763,7 +763,7 @@ export const ImgCardOne = () => {
           width="281.567"
           height="310.236"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -798,7 +798,7 @@ export const ImgCardOne = () => {
           width="238.173"
           height="303.463"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -819,7 +819,7 @@ export const ImgCardOne = () => {
           width="330.279"
           height="330.279"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -840,7 +840,7 @@ export const ImgCardOne = () => {
           width="220.165"
           height="122.518"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -949,7 +949,7 @@ export const ImgCardOne = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#615040" />
-          <stop offset="1" stop-color="#615040" stop-opacity="0" />
+          <stop offset="1" stop-color="#615040" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_1284_1167"
@@ -960,7 +960,7 @@ export const ImgCardOne = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="white" />
-          <stop offset="1" stop-color="#0F0F0F" stop-opacity="0.01" />
+          <stop offset="1" stop-color="#0F0F0F" stopOpacity="0.01" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_1284_1167"
@@ -993,7 +993,7 @@ export const ImgCardOne = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="#615040" />
-          <stop offset="1" stop-color="#615040" stop-opacity="0" />
+          <stop offset="1" stop-color="#615040" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_1284_1167"
@@ -1004,7 +1004,7 @@ export const ImgCardOne = () => {
           gradientUnits="userSpaceOnUse"
         >
           <stop stop-color="white" />
-          <stop offset="1" stop-color="#0F0F0F" stop-opacity="0.01" />
+          <stop offset="1" stop-color="#0F0F0F" stopOpacity="0.01" />
         </linearGradient>
         <clipPath id="clip0_1284_1167">
           <rect

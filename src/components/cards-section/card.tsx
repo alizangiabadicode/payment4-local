@@ -53,10 +53,10 @@ const Card = (props: CardsType) => {
   return (
     <div
       className={`${
-        isDark === "dark" ? "bg-mobile-dark-card" : "bg-mobile-light-card"
+        isDark === "dark" ? "bg-mobile-dark-card" : "bg-light-gradient-card"
       } ${
-        isDark === "dark" ? "sm:bg-dark-card" : "sm:bg-light-card"
-      } grid grid-cols-1 sm:grid-cols-2 w-mobile-card h-mobile-card sm:w-card sm:h-card bg-no-repeat`}
+        isDark === "dark" ? "sm:bg-dark-card" : "sm:bg-light-gradient-card"
+      } grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px]`}
     >
       <div className="flex flex-col gap-y-5 sm:gap-y-11 sm:pt-12 pl-10">
         <p
@@ -87,7 +87,7 @@ const Card = (props: CardsType) => {
           "sm:mt-[76px]"
         } -order-last sm:order-1 w-[330px] sm:w-[384px]`}
       >
-        <Image width={100} height={100} src={props.imageUrl} alt="" />
+        <Image width={354} height={354} src={props.imageUrl} alt="" />
       </div>
     </div>
   );

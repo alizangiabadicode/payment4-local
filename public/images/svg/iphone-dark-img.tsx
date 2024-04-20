@@ -77,14 +77,14 @@ export const IphoneDarkImg = () => {
             fill="white"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M266.729 64.5394C267.444 64.5216 268.138 64.7788 268.668 65.2577C268.708 65.2947 268.77 65.2927 268.808 65.2532L269.171 64.868C269.19 64.848 269.2 64.8212 269.199 64.7936C269.198 64.766 269.187 64.74 269.166 64.7211C267.775 63.4536 265.631 63.5071 264.304 64.8425C264.285 64.8623 264.274 64.8889 264.275 64.9165C264.275 64.9441 264.287 64.9703 264.307 64.9894L264.689 65.356C264.728 65.3937 264.791 65.3926 264.829 65.3536C265.334 64.8487 266.015 64.5573 266.729 64.5394ZM266.76 65.7609C267.153 65.7511 267.535 65.8874 267.833 66.1435C267.873 66.1798 267.935 66.1775 267.972 66.1381L268.335 65.753C268.354 65.7328 268.365 65.7058 268.364 65.678C268.363 65.6502 268.351 65.624 268.33 65.6051C267.423 64.8037 266.051 64.8379 265.185 65.6836C265.166 65.7035 265.155 65.7303 265.156 65.7581C265.156 65.7859 265.168 65.8124 265.188 65.8316L265.569 66.1981C265.609 66.2356 265.671 66.2348 265.709 66.1965C265.993 65.9261 266.368 65.7709 266.76 65.7609ZM267.526 66.5649C267.528 66.5927 267.517 66.6199 267.498 66.6399L266.87 67.3054C266.852 67.3249 266.826 67.3363 266.799 67.337C266.773 67.3377 266.747 67.3276 266.727 67.309L266.067 66.6756C266.047 66.6566 266.035 66.63 266.035 66.6021C266.035 66.5742 266.046 66.5475 266.066 66.5283C266.469 66.1705 267.071 66.1554 267.491 66.4928C267.513 66.5109 267.525 66.537 267.526 66.5649Z"
             fill="white"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M262.325 64.0221L262.003 64.0301C261.826 64.0346 261.686 64.1819 261.69 64.3593L261.76 67.1428C261.764 67.3201 261.912 67.4603 262.089 67.4559L262.41 67.4479C262.588 67.4435 262.728 67.2961 262.723 67.1187L262.654 64.3353C262.649 64.1579 262.502 64.0177 262.325 64.0221ZM260.524 64.821L260.845 64.813C261.022 64.8086 261.17 64.9488 261.174 65.1262L261.225 67.1602C261.229 67.3376 261.089 67.485 260.912 67.4894L260.591 67.4974C260.413 67.5019 260.266 67.3617 260.261 67.1843L260.211 65.1502C260.206 64.9728 260.346 64.8255 260.524 64.821ZM259.364 65.5995L259.043 65.6076C258.865 65.612 258.725 65.7594 258.729 65.9367L258.761 67.2214C258.766 67.3988 258.913 67.539 259.091 67.5346L259.412 67.5265C259.589 67.5221 259.729 67.3747 259.725 67.1974L259.693 65.9127C259.688 65.7353 259.541 65.5951 259.364 65.5995ZM257.882 66.2762L257.561 66.2842C257.383 66.2886 257.243 66.436 257.248 66.6134L257.264 67.2557C257.268 67.4331 257.415 67.5733 257.593 67.5689L257.914 67.5609C258.091 67.5564 258.231 67.4091 258.227 67.2317L258.211 66.5893C258.207 66.412 258.059 66.2718 257.882 66.2762Z"
             fill="white"
           />
@@ -109,14 +109,14 @@ export const IphoneDarkImg = () => {
             />
           </g>
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M233.246 96.8357L228.438 98.9079L224.723 95.2154L230.525 87.9295L233.246 96.8357Z"
             fill="#76797C"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M233.073 97.7615L227.503 103.825L224.547 96.1406L228.261 99.8338L233.073 97.7615Z"
             fill="#76797C"
           />
@@ -210,7 +210,7 @@ export const IphoneDarkImg = () => {
           width="316.971"
           height="316.971"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -231,7 +231,7 @@ export const IphoneDarkImg = () => {
           width="34.4229"
           height="37.6729"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.67311" />
@@ -272,7 +272,7 @@ export const IphoneDarkImg = () => {
           width="34.4229"
           height="37.6729"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.67311" />
@@ -313,7 +313,7 @@ export const IphoneDarkImg = () => {
           width="34.4229"
           height="37.6729"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="2.67311" />
@@ -354,7 +354,7 @@ export const IphoneDarkImg = () => {
           width="219"
           height="28"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
@@ -376,10 +376,10 @@ export const IphoneDarkImg = () => {
           y2="367.818"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-opacity="0" />
+          <stop stopOpacity="0" />
           <stop offset="0.332695" />
           <stop offset="0.715149" />
-          <stop offset="1" stop-opacity="0" />
+          <stop offset="1" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_1198_2356">
           <rect width="385.822" height="385.822" fill="white" />

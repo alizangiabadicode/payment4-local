@@ -109,7 +109,7 @@ export const TwentyFourHourSupportImg = () => {
           width="14"
           height="20"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -144,7 +144,7 @@ export const TwentyFourHourSupportImg = () => {
           width="14"
           height="20"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -179,7 +179,7 @@ export const TwentyFourHourSupportImg = () => {
           width="20"
           height="14"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -214,7 +214,7 @@ export const TwentyFourHourSupportImg = () => {
           width="18.2427"
           height="18.2422"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -249,7 +249,7 @@ export const TwentyFourHourSupportImg = () => {
           width="18.2427"
           height="18.2422"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -284,7 +284,7 @@ export const TwentyFourHourSupportImg = () => {
           width="18.2427"
           height="18.2422"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -319,7 +319,7 @@ export const TwentyFourHourSupportImg = () => {
           width="18.2427"
           height="18.2422"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
@@ -354,7 +354,7 @@ export const TwentyFourHourSupportImg = () => {
           width="20"
           height="14"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
           <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feColorMatrix
