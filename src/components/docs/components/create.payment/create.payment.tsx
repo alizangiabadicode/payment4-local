@@ -1,11 +1,12 @@
+"use client";
 import React from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
-import useDarkMode from "use-dark-mode";
-import { t } from "i18next";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
-const CreatePayment = () => {
+export const CreatePayment = () => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
 
   return (
@@ -13,7 +14,7 @@ const CreatePayment = () => {
       <div className="flex flex-col my-5">
         <p
           className={`text-base leading-8 ${
-            isDark
+            isDark === "dark"
               ? "text-[#FFFFFFC7] opacity-[78%]"
               : "text-[#121212C7] opacity-[78%]"
           }`}
@@ -23,11 +24,11 @@ const CreatePayment = () => {
       </div>
       <div
         className={`pb-1 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
   "sandBox": false,
@@ -49,7 +50,7 @@ const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -58,11 +59,11 @@ const CreatePayment = () => {
       </p>
       <div
         className={`pb-1 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
     "x-api-key" : {api_key}
@@ -73,7 +74,7 @@ const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -82,14 +83,14 @@ const CreatePayment = () => {
       </p>
       <div
         className={`pb-1 rounded-lg py-4 ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">{`${process.env.BASE_URL}/api/v1/payment`}</pre>
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -97,10 +98,10 @@ const CreatePayment = () => {
         {t("definitionsCreatePayment")}
       </p>
       <ul className="flex flex-col gap-y-4" style={{ listStyle: "outside" }}>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -108,10 +109,10 @@ const CreatePayment = () => {
             {t("sandboxCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -119,10 +120,10 @@ const CreatePayment = () => {
             {t("currencyCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -130,10 +131,10 @@ const CreatePayment = () => {
             {t("amountCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -141,7 +142,7 @@ const CreatePayment = () => {
             {t("callbackUrlCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
               isDark
@@ -152,10 +153,10 @@ const CreatePayment = () => {
             {t("callbackParamsCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -163,10 +164,10 @@ const CreatePayment = () => {
             {t("webhookUrlCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -174,10 +175,10 @@ const CreatePayment = () => {
             {t("webhookParamsCreatePayment")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -197,11 +198,11 @@ const CreatePayment = () => {
       </p>
       <div
         className={`pb-1 rounded-lg  ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
   "id": 0,
@@ -214,7 +215,7 @@ const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-5`}
@@ -223,7 +224,7 @@ const CreatePayment = () => {
       </p>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-5`}
@@ -236,5 +237,3 @@ const CreatePayment = () => {
     </div>
   );
 };
-
-export default CreatePayment;

@@ -1,17 +1,19 @@
-import { t } from "i18next";
+"use client";
 import { useTheme } from "next-themes";
 import React from "react";
-import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
 
-const SystemLimits = () => {
+
+export const SystemLimits = () => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
   return (
     <div>
       <ul className="flex flex-col gap-y-6" style={{ listStyle: "outside" }}>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -19,10 +21,10 @@ const SystemLimits = () => {
             {t("systemLimitOne")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -34,5 +36,3 @@ const SystemLimits = () => {
     </div>
   );
 };
-
-export default SystemLimits;

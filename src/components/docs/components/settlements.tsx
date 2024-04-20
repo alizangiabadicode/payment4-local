@@ -1,15 +1,16 @@
-import { t } from "i18next";
-import { useTheme } from "next-themes";
+"use client";
 import React from "react";
-import useDarkMode from "use-dark-mode";
+import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
-const Settlements = () => {
+export const Settlements = () => {
   const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
   return (
     <div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -20,4 +21,3 @@ const Settlements = () => {
   );
 };
 
-export default Settlements;
