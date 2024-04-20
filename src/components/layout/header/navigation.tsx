@@ -1,3 +1,6 @@
+"use client";
+
+import { useTranslation } from "react-i18next";
 import { Drawer } from "@/components/shared";
 import { navbarItems } from "./navbar-items";
 import { useState } from "react";
@@ -6,14 +9,14 @@ import { usePathname } from "next/navigation";
 import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
 import Logo from "../../../../public/images/svg/logo";
 import { useTheme } from "next-themes";
-import { useTranslation } from "react-i18next";
+
 
 export const NavigationBar = () => {
-  const { t } = useTranslation();
+
   const pathname = usePathname();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { resolvedTheme: isDark } = useTheme();
-
+  const { t } = useTranslation();
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -42,7 +45,7 @@ export const NavigationBar = () => {
             onClick={() => setIsDrawerOpen(true)}
             className="md:hidden cursor-pointer"
           >
-            <MenuItemIcon color={isDark ? "white" : "#0B0B0E"} />
+            <MenuItemIcon color={isDark === "dark" ? "white" : "#0B0B0E"} />
           </div>
         </div>
         <div style={{ width: "110px", height: "24px" }}>

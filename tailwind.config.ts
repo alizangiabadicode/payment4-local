@@ -32,6 +32,12 @@ const config: Config = {
       backgroundImage: {
         "light-gradient":
           "linear-gradient(to right, #F1EAFF, #f6f2ff, #F1EAFF)",
+        "light-gradient-card":
+          "linear-gradient(to bottom right, #F1EAFF, white, #F1EAFF)",
+        "light-gradient-ad-card":
+          "linear-gradient(to right, white, #F1EAFF, white)",
+        "dark-gradient-ad-card":
+          "linear-gradient(to right, #0d0d0f, #16141e, #0d0d0f)",
       },
     },
   },

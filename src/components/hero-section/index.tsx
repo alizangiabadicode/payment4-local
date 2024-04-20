@@ -1,17 +1,15 @@
 "use client";
+
 import React from "react";
 import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../../public/images/svg";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Autoplay } from "swiper/modules";
 import Image from "next/image";
 import { useTheme } from "next-themes";
-import { t } from "i18next";
+import { useTranslation } from "react-i18next";
+import { SwiperSection } from "./swiper";
 
 const HeroSection = () => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
   return (
     <>
@@ -19,24 +17,24 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-y-5">
           <div className="flex flex-col items-center">
             <p
-              className={`text-md sm:text-xl font-bold ${
-                isDark ? "text-white" : null
+              className={`text-[20px] sm:text-[40px] font-bold ${
+                isDark === "dark" ? "text-white" : "text-black"
               }`}
             >
               {t("welcomeToPayment4")}
             </p>
             <p
-              className={`text-md sm:text-xl font-bold text-center ${
-                isDark ? "text-white" : null
+              className={`text-[20px] sm:text-[40px] font-bold text-center ${
+                isDark === "dark" ? "text-white" : "text-black"
               }`}
             >
               {t("yourCryptocurrencyPaymentGateway")}
             </p>
           </div>
-          <div className="max-w-690">
+          <div className="max-w-[700px]">
             <p
               className={`text-secondary-text text-center leading-8 ${
-                isDark ? "text-white opacity-[44%]" : null
+                isDark === "dark" ? "text-white opacity-[44%]" : "text-black"
               }`}
             >
               {t("payment4WelcomesUsers")}
@@ -53,90 +51,37 @@ const HeroSection = () => {
           </Button>
         </div>
         <div>
-          {isDark ? (
+          {isDark === "dark" ? (
             <Image
-              width={100}
-              height={100}
+              width={700}
+              height={500}
               src="/images/dashboard-dark.png"
               alt="dashboard"
             />
           ) : (
             <Image
-              width={100}
-              height={100}
-              src="/images/dashboard-light.jpg"
+              width={700}
+              height={500}
+              src="/images/dashboard.jpg"
               alt="dashboard"
             />
           )}
         </div>
       </div>
       <div className="flex justify-center my-16">
-        <p className="text-16 sm:text-24 font-semibold">
+        <p className="text-[16px] sm:text-[24px] font-semibold">
           {t("supportedCoinsAndBlockchains")}
         </p>
       </div>
-      <div className="container hidden sm:block my-10">
-        <Swiper
-          autoplay={{ delay: 0, disableOnInteraction: false }}
-          speed={3000}
-          loop={true}
-          modules={[Autoplay]}
-          spaceBetween={5}
-          slidesPerView={2}
-        >
-          <SwiperSlide>
-            {isDark ? (
-              <Image
-                width={100}
-                height={100}
-                src="/images/assets-dark.png"
-                alt=""
-              />
-            ) : (
-              <Image width={100} height={100} src="/images/assets.jpg" alt="" />
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {isDark ? (
-              <Image
-                width={100}
-                height={100}
-                src="/images/assets-dark.png"
-                alt=""
-              />
-            ) : (
-              <Image width={100} height={100} src="/images/assets.jpg" alt="" />
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {isDark ? (
-              <Image
-                width={100}
-                height={100}
-                src="/images/assets-dark.png"
-                alt=""
-              />
-            ) : (
-              <Image width={100} height={100} src="/images/assets.jpg" alt="" />
-            )}
-          </SwiperSlide>
-          <SwiperSlide>
-            {isDark ? (
-              <Image
-                width={100}
-                height={100}
-                src="/images/assets-dark.png"
-                alt=""
-              />
-            ) : (
-              <Image width={100} height={100} src="/images/assets.jpg" alt="" />
-            )}
-          </SwiperSlide>
-        </Swiper>
-      </div>
+      <SwiperSection />
       <div className="container sm:hidden my-10">
-        {isDark ? (
-          <Image width={100} height={100} src="/images/assets-dark.png" alt="" />
+        {isDark === "dark" ? (
+          <Image
+            width={100}
+            height={100}
+            src="/images/assets-dark.png"
+            alt=""
+          />
         ) : (
           <Image width={100} height={100} src="/images/assets.jpg" alt="" />
         )}

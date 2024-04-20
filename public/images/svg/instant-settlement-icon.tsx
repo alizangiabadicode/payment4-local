@@ -185,8 +185,8 @@ export const InstantSettlementIcon = () => {
         fill="black"
       />
       <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
+        fillRule="evenodd"
+        clipRule="evenodd"
         d="M146.08 104.02V107.26L148.53 105.64L146.08 104.02Z"
         fill="black"
       />

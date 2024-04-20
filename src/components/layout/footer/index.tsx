@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Logo from "../../../../public/images/svg/logo";
 import {
@@ -23,7 +24,7 @@ const Footer = () => {
     <footer
       style={{ borderTopColor: "#E5E5E5", direction: direction }}
       className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8 ${
-        isDark ? "bg-[#0B0B0E]" : "bg-white"
+        isDark === "dark" ? "bg-[#0B0B0E]" : "bg-white"
       }`}
     >
       <div className="flex flex-col items-center sm:items-start md:pl-32">
@@ -34,7 +35,7 @@ const Footer = () => {
           <div className="sm:max-w-64 flex">
             <p
               className={`text-sm text-primary-text leading-6 ${
-                isDark ? "text-white opacity-[36%]" : null
+                isDark === "dark" ? "text-white opacity-[36%]" : null
               }`}
             >
               {t("footerDesc")}
@@ -42,16 +43,16 @@ const Footer = () => {
           </div>
           <div className="hidden sm:flex gap-4">
             <div className="cursor-pointer">
-              {isDark ? <XDarkLogo /> : <XLogo />}
+              {isDark === "dark" ? <XDarkLogo /> : <XLogo />}
             </div>
             <div className="cursor-pointer">
-              {isDark ? <TelegramDarkIcon /> : <TelegramIcon />}
+              {isDark === "dark" ? <TelegramDarkIcon /> : <TelegramIcon />}
             </div>
             <div className="cursor-pointer">
-              {isDark ? <YoutubeDarkIcon /> : <YoutubeIcon />}
+              {isDark === "dark" ? <YoutubeDarkIcon /> : <YoutubeIcon />}
             </div>
             <div className="cursor-pointer">
-              {isDark ? <LinkedinDarkIcon /> : <LinkedinIcon />}
+              {isDark === "dark" ? <LinkedinDarkIcon /> : <LinkedinIcon />}
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className={`${isDark ? "text-white" : null}`}
+            className={`${isDark === "dark" ? "text-white" : null}`}
           >
             {t("menu")}
           </p>
@@ -69,7 +70,7 @@ const Footer = () => {
               href="/"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("home")}
@@ -78,7 +79,7 @@ const Footer = () => {
               href="/developers"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("developers")}
@@ -87,7 +88,7 @@ const Footer = () => {
               href="/documents"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("documents")}
@@ -96,7 +97,7 @@ const Footer = () => {
               href="/about"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("about")}
@@ -105,7 +106,7 @@ const Footer = () => {
               href="/contact-us"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("contact us")}
@@ -115,7 +116,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className={`${isDark ? "text-white" : null}`}
+            className={`${isDark === "dark" ? "text-white" : null}`}
           >
             {t("followUs")}
           </p>
@@ -123,7 +124,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("linkedin")}
@@ -131,7 +132,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               Telegram
@@ -139,7 +140,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("twitter")}
@@ -147,7 +148,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("instagram")}
@@ -156,22 +157,22 @@ const Footer = () => {
         </div>
         <div className="sm:hidden flex flex-col gap-4 items-center">
           <div className="cursor-pointer">
-            <XLogo />
+            {isDark === "dark" ? <XDarkLogo /> : <XLogo />}
           </div>
           <div className="cursor-pointer">
-            <TelegramIcon />
+            {isDark === "dark" ? <TelegramDarkIcon /> : <TelegramIcon />}
           </div>
           <div className="cursor-pointer">
-            <YoutubeIcon />
+            {isDark === "dark" ? <YoutubeDarkIcon /> : <YoutubeIcon />}
           </div>
           <div className="cursor-pointer">
-            <LinkedinIcon />
+            {isDark === "dark" ? <LinkedinDarkIcon /> : <LinkedinIcon />}
           </div>
         </div>
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className={`${isDark ? "text-white" : null}`}
+            className={`${isDark === "dark" ? "text-white" : null}`}
           >
             {t("resources")}
           </p>
@@ -180,7 +181,7 @@ const Footer = () => {
               href="/terms-of-service"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("termsOfService")}
@@ -189,7 +190,7 @@ const Footer = () => {
               href="/privacy-policy"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("privacyPolicy")}
@@ -198,7 +199,7 @@ const Footer = () => {
               href="/faq"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("faq")}
@@ -208,7 +209,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className={`${isDark ? "text-white" : null}`}
+            className={`${isDark === "dark" ? "text-white" : null}`}
           >
             {t("company")}
           </p>
@@ -217,7 +218,7 @@ const Footer = () => {
               href="/about"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("about")}
@@ -226,7 +227,7 @@ const Footer = () => {
               href="/contact-us"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("contact us")}
@@ -235,7 +236,7 @@ const Footer = () => {
               href="/blog"
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("blog")}
@@ -245,7 +246,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className={`${isDark ? "text-white" : null}`}
+            className={`${isDark === "dark" ? "text-white" : null}`}
           >
             Product
           </p>
@@ -253,7 +254,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("logIn")}
@@ -261,7 +262,7 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`${
-                isDark ? "text-white opacity-[63%]" : null
+                isDark === "dark" ? "text-white opacity-[63%]" : null
               } text-primary-text`}
             >
               {t("signup")}
