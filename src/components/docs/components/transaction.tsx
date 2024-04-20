@@ -1,17 +1,19 @@
-import { t } from "i18next";
-import { useTheme } from "next-themes";
+"use client";
 import React from "react";
-import useDarkMode from "use-dark-mode";
+import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
-const TransactionSection = () => {
+
+export const TransactionSection = () => {
   const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
   return (
     <div>
       <ul className="flex flex-col gap-8" style={{ listStyle: "outside" }}>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -19,10 +21,10 @@ const TransactionSection = () => {
             {t("transactionTxtOne")}
           </p>
         </li>
-        <li className={`${isDark ? "text-white" : "text-black"}`}>
+        <li className={`${isDark === "dark" ? "text-white" : "text-black"}`}>
           <p
             className={`text-base leading-8 ${
-              isDark
+              isDark === "dark"
                 ? "text-[#FFFFFFC7] opacity-[78%]"
                 : "text-[#121212C7] opacity-[78%]"
             }`}
@@ -34,5 +36,3 @@ const TransactionSection = () => {
     </div>
   );
 };
-
-export default TransactionSection;

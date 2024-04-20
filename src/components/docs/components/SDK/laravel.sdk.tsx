@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+"use client";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { CodeBox } from "../shared/code.box/code.box";
 import {
@@ -10,18 +11,17 @@ import {
   verifyPaymentCode,
   webhookUrlCode,
 } from "./laravel.sdk.codes";
-import useDarkMode from "use-dark-mode";
-import { t } from "i18next";
 import { useTheme } from "next-themes";
 
 export const LaravelSDKSection = () => {
   const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <div className="mt-5">
       <p
         className={`text-base font-semibold ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -30,7 +30,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -40,7 +40,7 @@ export const LaravelSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -57,16 +57,16 @@ export const LaravelSDKSection = () => {
 
       <p
         className={`text-base font-normal mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
       >
         {t("requirements")}
       </p>
-      <p
+      {/* <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -75,11 +75,14 @@ export const LaravelSDKSection = () => {
           style={{ height: "14dvh", textAlign: "left" }}
           code={requirementCode}
         />
-      </p>
-
+      </p> */}
+      <CodeBox
+        style={{ height: "14dvh", textAlign: "left" }}
+        code={requirementCode}
+      />
       <p
         className={`text-base font-normal mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -88,7 +91,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -98,7 +101,7 @@ export const LaravelSDKSection = () => {
       <CodeBox style={{ height: "7dvh" }} code={configurationCode} />
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -111,7 +114,7 @@ export const LaravelSDKSection = () => {
       />
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -121,7 +124,7 @@ export const LaravelSDKSection = () => {
       <CodeBox style={{ height: "10dvh" }} code={callbackUrlCode} />
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -132,7 +135,7 @@ export const LaravelSDKSection = () => {
 
       <p
         className={`text-base font-normal mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -141,7 +144,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -152,7 +155,7 @@ export const LaravelSDKSection = () => {
 
       <p
         className={`text-base font-normal mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -161,7 +164,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -171,7 +174,7 @@ export const LaravelSDKSection = () => {
       <CodeBox style={{ minHeight: "116dvh" }} code={requestingPaymentCode} />
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -180,7 +183,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -189,7 +192,7 @@ export const LaravelSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}

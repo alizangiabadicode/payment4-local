@@ -1,22 +1,24 @@
-import { t } from "i18next";
+"use client";
 import { useTheme } from "next-themes";
 import React from "react";
-import useDarkMode from "use-dark-mode";
+import { useTranslation } from "react-i18next";
+
 export const SDKSection = () => {
   const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <div className="p-4">
       <h2
         className={`text-2xl font-semibold ${
-          isDark ? "text-white" : "text-black"
+          isDark === "dark" ? "text-white" : "text-black"
         }`}
       >
         Overview
       </h2>
       <p
         className={`text-base font-normal mt-4 ${
-          isDark ? "text-white" : "text-black"
+          isDark === "dark" ? "text-white" : "text-black"
         }`}
       >
         {t("sdkDoc")}

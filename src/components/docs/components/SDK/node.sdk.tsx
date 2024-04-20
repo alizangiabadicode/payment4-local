@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import {
   configurationCode,
@@ -5,18 +7,18 @@ import {
   verifyPaymentCode,
 } from "./node.sdk.codes";
 import { CodeBox } from "../shared/code.box/code.box";
-import useDarkMode from "use-dark-mode";
-import { t } from "i18next";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
 export const NodeSDKSection = () => {
   const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
 
   return (
     <div className="mt-5 mb-10">
       <p
         className={`text-base font-semibold ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -25,7 +27,7 @@ export const NodeSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -35,7 +37,7 @@ export const NodeSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -44,7 +46,7 @@ export const NodeSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -57,7 +59,7 @@ export const NodeSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -66,7 +68,7 @@ export const NodeSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -77,7 +79,7 @@ export const NodeSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -87,7 +89,7 @@ export const NodeSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -97,7 +99,7 @@ export const NodeSDKSection = () => {
       <CodeBox code={requestingPaymentCode} />
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -106,7 +108,7 @@ export const NodeSDKSection = () => {
       </p>
       <p
         className={`text-base font-normal mt-2 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}
@@ -116,7 +118,7 @@ export const NodeSDKSection = () => {
 
       <p
         className={`text-base font-semibold mt-5 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         }`}

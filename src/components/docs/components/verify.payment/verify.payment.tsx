@@ -1,11 +1,12 @@
+"use client";
 import React from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
-import useDarkMode from "use-dark-mode";
-import { t } from "i18next";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
-const VerifyPayment = () => {
+export const VerifyPayment = () => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
 
   return (
@@ -13,7 +14,7 @@ const VerifyPayment = () => {
       <div className="my-5">
         <p
           className={`text-base leading-8 ${
-            isDark
+            isDark === "dark"
               ? "text-[#FFFFFFC7] opacity-[78%]"
               : "text-[#121212C7] opacity-[78%]"
           }`}
@@ -23,11 +24,11 @@ const VerifyPayment = () => {
       </div>
       <div
         className={`pb-1 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
   "paymentUid": "7edd9c95-b274-4ae4-8919-53643b6ba504",
@@ -40,7 +41,7 @@ const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
@@ -49,11 +50,11 @@ const VerifyPayment = () => {
       </p>
       <div
         className={`pb-1 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
   "x-api-key" : {api_key}
@@ -64,7 +65,7 @@ const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
@@ -73,27 +74,27 @@ const VerifyPayment = () => {
       </p>
       <div
         className={`py-3 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
           <code
-            style={{ color: isDark ? "white" : "black" }}
+            style={{ color: isDark === "dark" ? "white" : "black" }}
           >{`${process.env.BASE_URL}/api/v1/payment/verify`}</code>
         </pre>
       </div>
-      <h5
+      <p
         className={`text-lg leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
         {t("payment4ResponseTitleVerifyPayment")}
-      </h5>
+      </p>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
@@ -102,11 +103,11 @@ const VerifyPayment = () => {
       </p>
       <div
         className={`pb-1 rounded-lg ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#f6f8fa]"
         }`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code style={{ color: isDark ? "white" : "black" }}>
+          <code style={{ color: isDark === "dark" ? "white" : "black" }}>
             {`
 {
   "paymentStatus": "PENDING",
@@ -119,25 +120,25 @@ const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
         {t("amountDifferenceDescVerifyPayment")}
       </p>
-      <h5
+      <p
         className={`text-lg leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
       >
         {t("errorsTitleVerifyPayment")}
-      </h5>
+      </p>
       <p
         className={`text-base leading-8 ${
-          isDark
+          isDark === "dark"
             ? "text-[#FFFFFFC7] opacity-[78%]"
             : "text-[#121212C7] opacity-[78%]"
         } my-3`}
@@ -150,5 +151,3 @@ const VerifyPayment = () => {
     </div>
   );
 };
-
-export default VerifyPayment;

@@ -1,12 +1,137 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
-import { DocArrayInterface, docArray } from "../../../arrays/data.array";
 import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
-import useDarkMode from "use-dark-mode";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
+import {
+  ApiKeySection,
+  ApiSection,
+  ContactUsSection,
+  CreatePayment,
+  DevelopersSection,
+  Introduction,
+  LaravelSDKSection,
+  NodeSDKSection,
+  PluginsSection,
+  SDKSection,
+  SecuritySection,
+  Settlements,
+  SystemLimits,
+  TransactionSection,
+  VerifyPayment,
+  WHMCSSection,
+  WoocommerceSection,
+} from "@/components/docs";
 
+interface SubItem {
+  id: string;
+  title: string;
+  content?: React.ReactNode;
+}
+export interface DocArrayInterface {
+  id: string;
+  title: string;
+  content?: React.ReactNode;
+  subItems?: SubItem[];
+}
 const DocumentPageLayout: React.FC = () => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const docArray: DocArrayInterface[] = [
+    {
+      id: "Introduction",
+      title: t("introduction"),
+      content: <Introduction />,
+    },
+    {
+      id: "Transaction",
+      title: t("transaction"),
+      content: <TransactionSection />,
+    },
+    {
+      id: "Settlements",
+      title: t("settlementsTitle"),
+      content: <Settlements />,
+    },
+    {
+      id: "SystemLimits",
+      title: t("systemLimits"),
+      content: <SystemLimits />,
+    },
+    {
+      id: "ApiKey",
+      title: t("apiKeyTitle"),
+      content: <ApiKeySection />,
+    },
+    {
+      id: "Security",
+      title: t("authenticationAndSecurity"),
+      content: <SecuritySection />,
+    },
+    {
+      id: "Api",
+      title: "Api",
+      content: <ApiSection />,
+      subItems: [
+        {
+          id: "createPayment",
+          title: t("createPayment"),
+          content: <CreatePayment />,
+        },
+        {
+          id: "verifyPayment",
+          title: t("verifyPayment"),
+          content: <VerifyPayment />,
+        },
+      ],
+    },
+    {
+      id: "SDK",
+      title: "SDKS",
+      content: <SDKSection />,
+      subItems: [
+        {
+          id: "NodeSDK",
+          title: t("nodeSDK"),
+          content: <NodeSDKSection />,
+        },
+        {
+          id: "LaravelSDK",
+          title: t("laravelSDK"),
+          content: <LaravelSDKSection />,
+        },
+      ],
+    },
+    {
+      id: "Plugins",
+      title: t("plugins"),
+      content: <PluginsSection />,
+      subItems: [
+        {
+          id: "Woocommerce",
+          title: "Woocommerce",
+          content: <WoocommerceSection />,
+        },
+        {
+          id: "WHMCS",
+          title: "WHMCS",
+          content: <WHMCSSection />,
+        },
+      ],
+    },
+    {
+      id: "Developers",
+      title: t("developers"),
+      content: <DevelopersSection />,
+    },
+    {
+      id: "Contact",
+      title: t("contact us"),
+      content: <ContactUsSection />,
+    },
+  ];
+
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   const [selectedSection, setSelectedSection] = useState<string>("");
@@ -57,29 +182,32 @@ const DocumentPageLayout: React.FC = () => {
       {/* Sidebar */}
       <div
         className={`hidden md:block md:w-1/4 ${
-          isDark ? "bg-[#FFFFFF08]" : "bg-[#12121208]"
+          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#12121208]"
         } h-max p-[26px] rounded-[8px] sticky top-0`}
       >
         {docArray.map((item) => (
           <ul key={item.id}>
-            <li key={item.id} className="mb-4">
-              <div
-                className="flex items-center cursor-pointer justify-between"
-                onClick={() => scrollToSection(item.id)}
+            <li
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="mb-4 flex items-center cursor-pointer justify-between"
+            >
+              <p
+                className={`${
+                  isDark === "dark" ? "text-white" : "text-[#121212]"
+                }`}
               >
-                <p className={`${isDark ? "text-white" : "text-[#121212]"}`}>
-                  {item.title}
-                </p>
-                {item.subItems && (
-                  <button onClick={() => handleCollapseToggle(item.title)}>
-                    {isCollapsed(item.title) ? (
-                      <OpenCollapse />
-                    ) : (
-                      <CloseCollapse />
-                    )}
-                  </button>
-                )}
-              </div>
+                {item.title}
+              </p>
+              {item.subItems && (
+                <button onClick={() => handleCollapseToggle(item.title)}>
+                  {isCollapsed(item.title) ? (
+                    <OpenCollapse />
+                  ) : (
+                    <CloseCollapse />
+                  )}
+                </button>
+              )}
               {item.subItems && !isCollapsed(item.title) && (
                 <ul className="flex flex-col gap-3 my-[10px] ml-[15px]">
                   {item.subItems.map((subItem) => (
@@ -90,7 +218,7 @@ const DocumentPageLayout: React.FC = () => {
                     >
                       <p
                         className={`${
-                          isDark ? "text-white" : "text-[#121212]"
+                          isDark === "dark" ? "text-white" : "text-[#121212]"
                         }`}
                       >
                         {subItem.title}
@@ -109,7 +237,7 @@ const DocumentPageLayout: React.FC = () => {
           <div key={item.id} id={item.id} className="p-4">
             <p
               className={`${
-                isDark ? "text-white" : "text-black"
+                isDark === "dark" ? "text-white" : "text-black"
               } md:text-[20px] font-semibold`}
             >
               {item.title}
@@ -120,12 +248,12 @@ const DocumentPageLayout: React.FC = () => {
                 <div id={subItem.id} key={subItem.id} className="my-5">
                   <p
                     className={`${
-                      isDark ? "text-white" : "text-black"
+                      isDark === "dark" ? "text-white" : "text-black"
                     } md:text-[18px] font-semibold`}
                   >
                     {subItem.title}
                   </p>
-                  <p>{subItem.content}</p>
+                  {subItem.content}
                 </div>
               ))}
           </div>
