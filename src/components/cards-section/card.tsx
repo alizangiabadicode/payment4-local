@@ -53,10 +53,10 @@ const Card = (props: CardsType) => {
   return (
     <div
       className={`${
-        isDark === "dark" ? "bg-mobile-dark-card" : "bg-light-gradient-card"
+        isDark === "dark" ? "bg-[#1c1a22]" : "bg-light-gradient-card"
       } ${
         isDark === "dark" ? "sm:bg-dark-card" : "sm:bg-light-gradient-card"
-      } grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px]`}
+      } grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px] px-[20px]`}
     >
       <div className="flex flex-col gap-y-5 sm:gap-y-11 sm:pt-12 pl-10">
         <p

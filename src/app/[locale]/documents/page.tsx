@@ -187,27 +187,28 @@ const DocumentPageLayout: React.FC = () => {
       >
         {docArray.map((item) => (
           <ul key={item.id}>
-            <li
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="mb-4 flex items-center cursor-pointer justify-between"
-            >
-              <p
-                className={`${
-                  isDark === "dark" ? "text-white" : "text-[#121212]"
-                }`}
+            <li key={item.id} className="mb-4">
+              <div
+                onClick={() => scrollToSection(item.id)}
+                className="mb-4 flex items-center cursor-pointer justify-between"
               >
-                {item.title}
-              </p>
-              {item.subItems && (
-                <button onClick={() => handleCollapseToggle(item.title)}>
-                  {isCollapsed(item.title) ? (
-                    <OpenCollapse />
-                  ) : (
-                    <CloseCollapse />
-                  )}
-                </button>
-              )}
+                <p
+                  className={`${
+                    isDark === "dark" ? "text-white" : "text-[#121212]"
+                  }`}
+                >
+                  {item.title}
+                </p>
+                {item.subItems && (
+                  <button onClick={() => handleCollapseToggle(item.title)}>
+                    {isCollapsed(item.title) ? (
+                      <OpenCollapse />
+                    ) : (
+                      <CloseCollapse />
+                    )}
+                  </button>
+                )}
+              </div>
               {item.subItems && !isCollapsed(item.title) && (
                 <ul className="flex flex-col gap-3 my-[10px] ml-[15px]">
                   {item.subItems.map((subItem) => (

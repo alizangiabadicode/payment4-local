@@ -16,10 +16,6 @@ export const navbarItems: navbarItemsTypes[] = [
     path: "/about/",
   },
   {
-    title: "Blog",
-    path: "/blog/",
-  },
-  {
     title: "Contact us",
     path: "/contact-us/",
   },

@@ -68,9 +68,9 @@ const LanguageSelector: React.FC = () => {
       </div>
       {isOpen && (
         <div
-          className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg ${
-            isDark === "dark" ? "bg-[#000000] " : "bg-white"
-          } ring-1 ring-black ring-opacity-5`}
+          className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg
+             dark:bg-[#000000]  bg-white
+          ring-1 ring-black ring-opacity-5`}
         >
           <div
             className="py-1"
@@ -82,15 +82,15 @@ const LanguageSelector: React.FC = () => {
               <button
                 key={lang.value}
                 onClick={() => handleLanguageChange(lang.value)}
-                className={`px-4 py-2 text-sm text-gray-700 ${
-                  isDark === "dark" ? "hover:bg-[#252525]" : "hover:bg-[#ccc]"
-                } w-full text-left flex justify-between items-center`}
+                className={`px-4 py-2 text-sm text-gray-700 
+                  dark:hover:bg-[#252525] hover:bg-[#ccc]
+                 w-full text-left flex justify-between items-center`}
               >
                 <div className="flex items-center gap-x-4">
                   <p
-                    className={`${
-                      isDark === "dark" ? "text-white" : "text-black"
-                    }`}
+                    className={`
+                      dark:text-white text-black
+                    `}
                   >
                     {lang.label}
                   </p>

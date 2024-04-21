@@ -34,6 +34,8 @@ const config: Config = {
           "linear-gradient(to right, #F1EAFF, #f6f2ff, #F1EAFF)",
         "light-gradient-card":
           "linear-gradient(to bottom right, #F1EAFF, white, #F1EAFF)",
+        "dark-gradient-card":
+          "linear-gradient(to bottom right, #252132, #1C1A22, #18181A)",
         "light-gradient-ad-card":
           "linear-gradient(to right, white, #F1EAFF, white)",
         "dark-gradient-ad-card":

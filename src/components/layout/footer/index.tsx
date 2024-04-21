@@ -23,9 +23,8 @@ const Footer = () => {
   return (
     <footer
       style={{ borderTopColor: "#E5E5E5", direction: direction }}
-      className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8 ${
-        isDark === "dark" ? "bg-[#0B0B0E]" : "bg-white"
-      }`}
+      className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8
+        dark:bg-[#0B0B0E]  bg-white`}
     >
       <div className="flex flex-col items-center sm:items-start md:pl-32">
         <div className="flex flex-col gap-y-4 sm:gap-y-4">
@@ -232,7 +231,7 @@ const Footer = () => {
             >
               {t("contact us")}
             </Link>
-            <Link
+            {/* <Link
               href="/blog"
               style={{ fontSize: "12px" }}
               className={`${
@@ -240,7 +239,7 @@ const Footer = () => {
               } text-primary-text`}
             >
               {t("blog")}
-            </Link>
+            </Link> */}
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">
