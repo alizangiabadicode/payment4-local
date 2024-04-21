@@ -61,7 +61,7 @@ const LanguageSelector: React.FC = () => {
     <div
       ref={languageSelectorRef}
       style={{ direction: "ltr" }}
-      className="relative inline-block text-left"
+      className="relative inline-block text-left md:ml-4"
     >
       <div className="cursor-pointer" onClick={toggleMenu}>
         {isDark === "dark" ? <LanguageDarkIcon /> : <LanguageLightIcon />}
@@ -69,7 +69,7 @@ const LanguageSelector: React.FC = () => {
       {isOpen && (
         <div
           className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg
-             dark:bg-[#000000]  bg-white
+             dark:bg-black  bg-white
           ring-1 ring-black ring-opacity-5`}
         >
           <div

@@ -1,24 +1,17 @@
-"use client";
+'use client'
 import { useTranslation } from "react-i18next";
-import React, { useState } from "react";
+import React from "react";
 import { Button } from "../../shared/button";
 import LanguageSelector from "../../shared/select.language/select.language";
 import ThemeSwitch from "@/components/shared/theme.swicher/theme.swicher";
 import { NavigationBar } from "./navigation";
-import { usePathname } from "next/navigation";
-import { useTheme } from "next-themes";
+
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
-  const pathname = usePathname();
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-  const { resolvedTheme: isDark } = useTheme();
 
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
 
   return (
     <header
