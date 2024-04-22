@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "next-themes";
 import {
   ApiKeySection,
   ApiSection,
@@ -134,8 +133,6 @@ const DocumentPageLayout: React.FC = () => {
 
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
-  const [selectedSection, setSelectedSection] = useState<string>("");
-  const { resolvedTheme: isDark } = useTheme();
 
   const [collapsedItems, setCollapsedItems] = useState<string[]>(
     docArray.filter((item) => item.subItems).map((item) => item.title)
@@ -155,7 +152,6 @@ const DocumentPageLayout: React.FC = () => {
 
   const scrollToSection = (sectionId: string) => {
     window.location.hash = `#${sectionId}`;
-    setSelectedSection(sectionId);
   };
 
   useEffect(() => {
@@ -181,33 +177,34 @@ const DocumentPageLayout: React.FC = () => {
     <div style={{ direction }} className="container flex md:gap-[69px]">
       {/* Sidebar */}
       <div
-        className={`hidden md:block md:w-1/4 ${
-          isDark === "dark" ? "bg-[#FFFFFF08]" : "bg-[#12121208]"
-        } h-max p-[26px] rounded-[8px] sticky top-0`}
+        className="hidden md:block md:w-1/4 
+           dark:bg-[#FFFFFF08] bg-[#12121208]
+        h-max p-[26px] rounded-[8px] sticky top-0"
       >
         {docArray.map((item) => (
           <ul key={item.id}>
-            <li
-              key={item.id}
-              onClick={() => scrollToSection(item.id)}
-              className="mb-4 flex items-center cursor-pointer justify-between"
-            >
-              <p
-                className={`${
-                  isDark === "dark" ? "text-white" : "text-[#121212]"
-                }`}
+            <li key={item.id} className="mb-4">
+              <div
+                onClick={() => scrollToSection(item.id)}
+                className="mb-4 flex items-center cursor-pointer justify-between"
               >
-                {item.title}
-              </p>
-              {item.subItems && (
-                <button onClick={() => handleCollapseToggle(item.title)}>
-                  {isCollapsed(item.title) ? (
-                    <OpenCollapse />
-                  ) : (
-                    <CloseCollapse />
-                  )}
-                </button>
-              )}
+                <p
+                  className={`
+                    dark:text-white text-[#121212]
+                  `}
+                >
+                  {item.title}
+                </p>
+                {item.subItems && (
+                  <button onClick={() => handleCollapseToggle(item.title)}>
+                    {isCollapsed(item.title) ? (
+                      <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
+                    ) : (
+                      <CloseCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
+                    )}
+                  </button>
+                )}
+              </div>
               {item.subItems && !isCollapsed(item.title) && (
                 <ul className="flex flex-col gap-3 my-[10px] ml-[15px]">
                   {item.subItems.map((subItem) => (
@@ -217,9 +214,9 @@ const DocumentPageLayout: React.FC = () => {
                       className="cursor-pointer"
                     >
                       <p
-                        className={`${
-                          isDark === "dark" ? "text-white" : "text-[#121212]"
-                        }`}
+                        className={`
+                         dark:text-white text-[#121212]
+                       `}
                       >
                         {subItem.title}
                       </p>
@@ -236,9 +233,9 @@ const DocumentPageLayout: React.FC = () => {
         {docArray.map((item) => (
           <div key={item.id} id={item.id} className="p-4">
             <p
-              className={`${
-                isDark === "dark" ? "text-white" : "text-black"
-              } md:text-[20px] font-semibold`}
+              className="
+                 dark:text-white text-black
+              md:text-[20px] font-semibold"
             >
               {item.title}
             </p>
@@ -247,9 +244,7 @@ const DocumentPageLayout: React.FC = () => {
               item.subItems.map((subItem) => (
                 <div id={subItem.id} key={subItem.id} className="my-5">
                   <p
-                    className={`${
-                      isDark === "dark" ? "text-white" : "text-black"
-                    } md:text-[18px] font-semibold`}
+                    className={`dark:text-white text-black md:text-[18px] font-semibold`}
                   >
                     {subItem.title}
                   </p>

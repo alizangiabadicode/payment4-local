@@ -1,7 +1,4 @@
-"use client";
-
 import React, { FC, ReactNode } from "react";
-import { useTheme } from "next-themes";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -16,14 +13,12 @@ export const Drawer: FC<DrawerProps> = ({
   children,
   className,
 }) => {
-  const { resolvedTheme: isDark } = useTheme();
   return (
     <div
-      className={`fixed inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300 ${
-        isDark === "dark" ? "bg-black" : "bg-[#ccc]"
-      } ${
-        isOpen ? "translate-x-0" : "-translate-x-full"
-      } ${className} md:hidden`}
+      className={`fixed inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
+         dark:bg-black bg-[#ccc] ${
+           isOpen ? "translate-x-0" : "-translate-x-full"
+         } ${className} md:hidden`}
     >
       <div className="p-4">
         <button onClick={onClose} className="text-gray-700">

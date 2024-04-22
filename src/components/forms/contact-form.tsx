@@ -1,10 +1,10 @@
+"use client";
 import React, { useState } from "react";
 import Input from "../shared/textField";
 import TextArea from "../shared/textArea";
 import { Button } from "../shared/button";
-import useDarkMode from "use-dark-mode";
-import { t } from "i18next";
 import { useTheme } from "next-themes";
+import { useTranslation } from "react-i18next";
 
 interface FormData {
   name: string;
@@ -12,7 +12,7 @@ interface FormData {
   message: string;
 }
 const ContactForm = () => {
-  const { resolvedTheme: isDark } = useTheme();
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -30,21 +30,12 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`${
-        isDark
-          ? "bg-contacts-form-mobile-dark"
-          : "bg-contacts-form-mobile-light"
-      } ${
-        isDark ? "md:bg-contacts-form-dark" : "md:bg-contacts-form-light"
-      } bg-no-repeat h-[415px] md:h-[480px] w-[346px] md:w-[497px] px-[30px] ${
-        isDark ? "py-[10px]" : "py-[30px] "
-      } md:px-[48px] md:py-[40px]`}
+      className={`dark:bg-dark-gradient-card bg-light-gradient-card 
+      px-[48px] py-[40px] rounded-[8px] w-[346px] md:w-[497px] md:h-max-[497px]`}
     >
       <form onSubmit={handleSubmit}>
         <p
-          className={`${
-            isDark ? "text-white" : null
-          } text-[18px] md:text-[24px] font-semibold`}
+          className={`dark:text-white text-[18px] md:text-[24px] font-semibold`}
         >
           {t("getInTouch")}
         </p>
@@ -53,9 +44,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
             type="text"
             placeholder={t("name")}
           />
@@ -63,9 +52,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
             type="text"
             placeholder={t("email")}
           />
@@ -75,9 +62,7 @@ const ContactForm = () => {
             rows={4}
             value={formData.message}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
           />
         </div>
         <div className="flex justify-end">

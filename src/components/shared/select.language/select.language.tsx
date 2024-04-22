@@ -11,11 +11,13 @@ import {
 import { useTheme } from "next-themes";
 import { usePathname, useRouter } from "next/navigation";
 import i18nConfig from "../../../../i18nConfig";
+import Image from "next/image";
 
 const LanguageSelector: React.FC = () => {
   const { i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const languageSelectorRef = useRef<HTMLDivElement>(null);
+  const [mounted, setMounted] = useState(false);
   const { resolvedTheme: isDark } = useTheme();
   const currentLocale = i18n.language;
   const router = useRouter();
@@ -57,20 +59,35 @@ const LanguageSelector: React.FC = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
+
+  useEffect(() => setMounted(true), []);
+  if (!mounted)
+    return (
+      <Image
+        src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
+        width={36}
+        height={36}
+        sizes="36x36"
+        alt="Loading Light/Dark Toggle"
+        priority={false}
+        title="Loading Light/Dark Toggle"
+      />
+    );
+
   return (
     <div
       ref={languageSelectorRef}
       style={{ direction: "ltr" }}
-      className="relative inline-block text-left"
+      className="relative inline-block text-left md:ml-4"
     >
       <div className="cursor-pointer" onClick={toggleMenu}>
         {isDark === "dark" ? <LanguageDarkIcon /> : <LanguageLightIcon />}
       </div>
       {isOpen && (
         <div
-          className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg ${
-            isDark === "dark" ? "bg-[#000000] " : "bg-white"
-          } ring-1 ring-black ring-opacity-5`}
+          className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg
+             dark:bg-black  bg-white
+          ring-1 ring-black ring-opacity-5`}
         >
           <div
             className="py-1"
@@ -82,15 +99,15 @@ const LanguageSelector: React.FC = () => {
               <button
                 key={lang.value}
                 onClick={() => handleLanguageChange(lang.value)}
-                className={`px-4 py-2 text-sm text-gray-700 ${
-                  isDark === "dark" ? "hover:bg-[#252525]" : "hover:bg-[#ccc]"
-                } w-full text-left flex justify-between items-center`}
+                className={`px-4 py-2 text-sm text-gray-700 
+                  dark:hover:bg-[#252525] hover:bg-[#ccc]
+                 w-full text-left flex justify-between items-center`}
               >
                 <div className="flex items-center gap-x-4">
                   <p
-                    className={`${
-                      isDark === "dark" ? "text-white" : "text-black"
-                    }`}
+                    className={`
+                      dark:text-white text-black
+                    `}
                   >
                     {lang.label}
                   </p>

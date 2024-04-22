@@ -19,7 +19,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
       <div className="sm:hidden my-10 px-16">
         <hr style={{ color: "#E5E5E5" }} />
       </div>
-      <div className="flex justify-center">
+      <div className="flex justify-center md:mt-[100px]">
         <p
           className="text-[16px] sm:text-[24px] font-bold 
               dark:text-white text-center"

@@ -13,11 +13,7 @@ export const navbarItems: navbarItemsTypes[] = [
   },
   {
     title: "About",
-    path: "/about/",
-  },
-  {
-    title: "Blog",
-    path: "/blog/",
+    path: "/about-us",
   },
   {
     title: "Contact us",

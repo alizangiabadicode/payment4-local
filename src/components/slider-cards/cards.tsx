@@ -9,7 +9,7 @@ import {
 import SliderCard from "./card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import { CardsArrayInterface } from "./cards-array";
+import { CardsArrayInterface } from "./cards-array-interface";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
 
@@ -18,37 +18,29 @@ const SliderCards = () => {
   const { resolvedTheme: isDark } = useTheme();
   const cardsArray: CardsArrayInterface[] = [
     {
-      imageUrl:
-        isDark === "dark"
-          ? "/images/global-selling-dark-img.png"
-          : "/images/global-selling-img.png",
+      lightImageUrl: "/images/global-selling-img.png",
+      darkImageUrl: "/images/global-selling-dark-img.png",
       title: t("sliderOne"),
       desc: t("sliderOneDesc"),
       logo: <ShoppingIcon color={isDark === "dark" ? "#FFFFFF" : undefined} />,
     },
     {
-      imageUrl:
-        isDark === "dark"
-          ? "/images/instant-settlement-dark-img.png"
-          : "/images/instant-settlement-img.png",
+      lightImageUrl: "/images/instant-settlement-img.png",
+      darkImageUrl: "/images/instant-settlement-dark-img.png",
       title: t("sliderTwo"),
       desc: t("sliderTwoDesc"),
       logo: <CreditCardImg color={isDark === "dark" ? "#FFFFFF" : undefined} />,
     },
     {
-      imageUrl:
-        isDark === "dark"
-          ? "/images/twenty-four-hour-support-dark.png"
-          : "/images/twenty-four-hour-support.png",
+      lightImageUrl: "/images/twenty-four-hour-support.png",
+      darkImageUrl: "/images/twenty-four-hour-support-dark.png",
       title: t("sliderThree"),
       desc: t("sliderThreeDesc"),
       logo: <SupportIcon color={isDark === "dark" ? "#FFFFFF" : undefined} />,
     },
     {
-      imageUrl:
-        isDark === "dark"
-          ? "/images/crypto-diversity-dark.png"
-          : "/images/crypto-diversity.png",
+      lightImageUrl: "/images/crypto-diversity.png",
+      darkImageUrl: "/images/crypto-diversity-dark.png",
       title: t("sliderFour"),
       desc: t("sliderFourDesc"),
       logo: <DollarIcon color={isDark === "dark" ? "#FFFFFF" : undefined} />,
@@ -56,12 +48,13 @@ const SliderCards = () => {
   ];
 
   return (
-    <div>
-      <div className="hidden sm:flex sm:gap-x-5 sm:justify-center sm:my-16">
+    <>
+      <div className="hidden sm:flex sm:gap-x-5 sm:justify-center sm:my-[30px]">
         {cardsArray.map((card) => (
           <SliderCard
             desc={card.desc}
-            imageUrl={card.imageUrl}
+            lightImageUrl={card.lightImageUrl}
+            darkImageUrl={card.darkImageUrl}
             logo={card.logo}
             title={card.title}
             key={card.title}
@@ -75,7 +68,8 @@ const SliderCards = () => {
               {
                 <SliderCard
                   desc={card.desc}
-                  imageUrl={card.imageUrl}
+                  lightImageUrl={card.lightImageUrl}
+                  darkImageUrl={card.darkImageUrl}
                   logo={card.logo}
                   title={card.title}
                 />
@@ -84,7 +78,7 @@ const SliderCards = () => {
           ))}
         </Swiper>
       </div>
-    </div>
+    </>
   );
 };
 

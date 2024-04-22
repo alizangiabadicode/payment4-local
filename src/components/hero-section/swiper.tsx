@@ -4,11 +4,9 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Autoplay } from "swiper/modules";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
 export const SwiperSection = () => {
-  const { resolvedTheme: isDark } = useTheme();
   return (
     <div className="container hidden sm:block my-10">
       <Swiper
@@ -20,52 +18,72 @@ export const SwiperSection = () => {
         slidesPerView={2}
       >
         <SwiperSlide>
-          {isDark === "dark" ? (
-            <Image
-              height={120}
-              width={1000}
-              src="/images/assets-dark.png"
-              alt=""
-            />
-          ) : (
-            <Image height={120} width={1000} src="/images/assets.jpg" alt="" />
-          )}
+          <Image
+            height={120}
+            width={1000}
+            src="/images/assets-dark.png"
+            alt=""
+            className="dark:block hidden"
+          />
+
+          <Image
+            className="block dark:hidden"
+            height={120}
+            width={1000}
+            src="/images/assets.jpg"
+            alt=""
+          />
         </SwiperSlide>
         <SwiperSlide>
-          {isDark === "dark" ? (
-            <Image
-              height={120}
-              width={1000}
-              src="/images/assets-dark.png"
-              alt=""
-            />
-          ) : (
-            <Image height={120} width={1000} src="/images/assets.jpg" alt="" />
-          )}
+          <Image
+            height={120}
+            width={1000}
+            src="/images/assets-dark.png"
+            alt=""
+            className="dark:block hidden"
+          />
+
+          <Image
+            className="block dark:hidden"
+            height={120}
+            width={1000}
+            src="/images/assets.jpg"
+            alt=""
+          />
         </SwiperSlide>
         <SwiperSlide>
-          {isDark === "dark" ? (
-            <Image
-              height={120}
-              width={1000}
-              src="/images/assets-dark.png"
-              alt=""
-            />
-          ) : (
-            <Image height={120} width={1000} src="/images/assets.jpg" alt="" />
-          )}
+          <Image
+            height={120}
+            width={1000}
+            src="/images/assets-dark.png"
+            alt=""
+            className="dark:block hidden"
+          />
+
+          <Image
+            className="block dark:hidden"
+            height={120}
+            width={1000}
+            src="/images/assets.jpg"
+            alt=""
+          />
         </SwiperSlide>
         <SwiperSlide>
-          {isDark === "dark" ? (
-            <Image
-              height={120}
-              width={1000}
-              src="/images/assets-dark.png"
-              alt=""
-            />
-          ) : (
-            <Image height={120} width={1000} src="/images/assets.jpg" alt="" />
-          )}
+          <Image
+            height={120}
+            width={1000}
+            src="/images/assets-dark.png"
+            alt=""
+            className="dark:block hidden"
+          />
+
+          <Image
+            className="block dark:hidden"
+            height={120}
+            width={1000}
+            src="/images/assets.jpg"
+            alt=""
+          />
         </SwiperSlide>
       </Swiper>
     </div>

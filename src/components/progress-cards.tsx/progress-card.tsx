@@ -23,30 +23,42 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
       className="grid grid-cols-1 sm:grid-cols-2 gap-y-6"
     >
       <div className="sm:order-1">
-        <Image width={522} height={668} src={props.imageUrl} alt="" />
+        <Image
+          className="dark:hidden block"
+          width={522}
+          height={668}
+          src={props.lightImageUrl}
+          alt=""
+        />
+        <Image
+          className="hidden dark:block"
+          width={522}
+          height={668}
+          src={props.darkImageUrl}
+          alt=""
+        />
       </div>
       {props.title === t("signup") ? (
         <div className="flex flex-col gap-y-2">
           <div
-            className={`${
-              isDark === "dark" ? "sm:bg-[#151518]" : "sm:bg-[#F6F6F6]"
-            } sm:w-[450px] sm:px-[33px] sm:py-[24px]`}
+            className={`
+               dark:bg-[#151518] sm:bg-[#F6F6F6]
+             sm:w-[450px] sm:px-[33px] sm:py-[24px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
               <p
-                className={`text-[18px] sm:text-[22px] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[63%]" : null
-                }`}
+                className={`text-[18px] sm:text-[22px] font-bold 
+                   dark:text-white text-opacity-[63%]`}
               >
                 {props.title}
               </p>
             </div>
             <div className="sm:mt-1">
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[12px] sm:text-[14px] leading-5`}
+                className={`
+                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                 text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
               </p>
@@ -58,9 +70,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                 dark:text-[#636365] text-opacity-[36%]`}
               >
                 {t("gatewaySetup")}
               </p>
@@ -70,9 +81,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+               dark:text-[#636365] text-opacity-[36%]`}
               >
                 {t("progressThree")}
               </p>
@@ -82,9 +92,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#636365] text-opacity-[36%]`}
               >
                 {t("settlementRequests")}
               </p>
@@ -94,9 +103,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#636365] text-opacity-[36%]`}
               >
                 {t("securityMeasures")}
               </p>
@@ -108,37 +116,35 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
             <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
             <p
-              className={`text-[22px] text-[#12121296] font-bold ${
-                isDark === "dark" ? "text-white opacity-[36%]" : null
-              }`}
+              className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]`}
             >
               {t("signup")}
             </p>
           </div>
           <div
-            className={`${
-              isDark === "dark" ? "sm:bg-[#151518]" : "sm:bg-[#F6F6F6]"
-            } sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
+            className={`
+               dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+             sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
           >
             <div
-              className={`text-[18px] sm:text-[22px] font-bold ${
-                isDark === "dark" ? "text-white opacity-[63%]" : null
-              } flex items-center gap-x-3`}
+              className={`text-[18px] sm:text-[22px] font-bold 
+                dark:text-white 
+               flex items-center gap-x-3`}
             >
               {props.icon}
               <p
-                className={`text-[18px] sm:text-[22px] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[63%]" : null
-                }`}
+                className={`text-[18px] sm:text-[22px] font-bold 
+                dark:text-white`}
               >
                 {props.title}
               </p>
             </div>
             <div className="sm:mt-1">
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[12px] sm:text-[14px] leading-5`}
+                className={`
+                  dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
               </p>
@@ -150,9 +156,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                  dark:text-[#FFFFFF5C] text-opacity-[36%]
+                `}
               >
                 {t("progressThree")}
               </p>
@@ -162,9 +168,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+               dark:text-[#FFFFFF5C] text-opacity-[36%]
+             `}
               >
                 {t("settlementRequests")}
               </p>
@@ -174,9 +180,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              `}
               >
                 {t("securityMeasures")}
               </p>
@@ -189,9 +195,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              `}
               >
                 {t("signup")}
               </p>
@@ -201,34 +207,33 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+               dark:text-[#FFFFFF5C] text-opacity-[36%]
+             `}
               >
                 {t("gatewaySetup")}
               </p>
             </div>
           </div>
           <div
-            className={`${
-              isDark === "dark" ? "sm:bg-[#151518]" : "sm:bg-[#F6F6F6]"
-            } sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
+            className={`
+           dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+             sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
               <p
-                className={`text-[18px] sm:text-[22px] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[63%]" : null
-                }`}
+                className={`text-[18px] sm:text-[22px] font-bold 
+                  dark:text-white`}
               >
                 {props.title}
               </p>
             </div>
             <div className="sm:mt-1">
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[12px] sm:text-[14px] leading-5`}
+                className={`
+                  dark:text-[#FFFFFFA1] text-opacity-[63%]
+                 text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
               </p>
@@ -240,9 +245,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+               dark:text-[#FFFFFF5C] text-opacity-[36%]
+             `}
               >
                 {t("settlementRequests")}
               </p>
@@ -252,9 +257,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              `}
               >
                 {t("securityMeasures")}
               </p>
@@ -267,8 +272,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <SignupIcon />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
+                className={`text-[22px] text-[#12121296] font-bold 
+                  dark:text-[#FFFFFF5C] text-opacity-[36%]
                 }`}
               >
                 Sign Up
@@ -279,9 +284,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              }`}
               >
                 Gateway Setup
               </p>
@@ -291,24 +296,24 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                 dark:text-[#FFFFFF5C] text-opacity-[36%]
+               }`}
               >
                 API or Paylink Creation
               </p>
             </div>
           </div>
           <div
-            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px] ${
-              isDark === "dark" ? "sm:bg-[#151518]" : "sm:bg-[#F6F6F6]"
+            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]
+              dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
             }`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
               <p
-                className={`text-[18px] sm:text-[22px] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[63%]" : null
+                className={`text-[18px] sm:text-[22px] font-bold
+                  dark:text-white
                 }`}
               >
                 {props.title}
@@ -316,9 +321,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="sm:mt-1">
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[12px] sm:text-[14px] leading-5`}
+                className={`
+                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                 text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
               </p>
@@ -330,9 +335,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              }`}
               >
                 Security Measures
               </p>
@@ -345,9 +350,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                 dark:text-[#FFFFFF5C] text-opacity-[36%]
+               }`}
               >
                 {t("signup")}
               </p>
@@ -357,9 +362,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                 dark:text-[#FFFFFF5C] text-opacity-[36%]
+               }`}
               >
                 {t("gatewaySetup")}
               </p>
@@ -369,9 +374,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]
+              }`}
               >
                 {t("progressThree")}
               </p>
@@ -381,24 +386,24 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 color={isDark === "dark" ? "#636365" : undefined}
               />
               <p
-                className={`text-[22px] text-[#12121296] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[36%]" : null
-                }`}
+                className={`text-[22px] text-[#12121296] font-bold 
+                 dark:text-[#FFFFFF5C] text-opacity-[36%]
+               }`}
               >
                 {t("settlementRequests")}
               </p>
             </div>
           </div>
           <div
-            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px] ${
-              isDark === "dark" ? "sm:bg-[#151518]" : "sm:bg-[#F6F6F6]"
-            }`}
+            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px] 
+              dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+            `}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
               <p
-                className={`text-[18px] sm:text-[22px] font-bold ${
-                  isDark === "dark" ? "text-white opacity-[63%]" : null
+                className={`text-[18px] sm:text-[22px] font-bold
+                  dark:text-white 
                 }`}
               >
                 {props.title}
@@ -406,9 +411,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="sm:mt-1">
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[12px] sm:text-[14px] leading-5`}
+                className={`
+                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%] 
+                text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
               </p>
