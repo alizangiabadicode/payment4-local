@@ -1,5 +1,3 @@
-"use client";
-import { useTheme } from "next-themes";
 import React from "react";
 
 interface Error {
@@ -14,35 +12,23 @@ interface ErrorsTableProps {
 }
 
 const ErrorsTable: React.FC<ErrorsTableProps> = ({ errors }) => {
-  const { resolvedTheme: isDark } = useTheme();
-
   return (
     <div className="w-full">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse table-auto">
           <thead className="bg-gray-200">
             <tr>
-              <th
-                style={{ color: isDark === "dark" ? "white" : "black" }}
-                className={`w-1/6 px-4 py-2`}
-              >
+              <th className={`dark:text-white text-black w-1/6 px-4 py-2`}>
                 Status Code
               </th>
-              <th
-                style={{ color: isDark === "dark" ? "white" : "black" }}
-                className={`w-1/6 px-4 py-2`}
-              >
+              <th className={`dark:text-white text-black w-1/6 px-4 py-2`}>
                 Error Code
               </th>
-              <th
-                style={{ color: isDark === "dark" ? "white" : "black" }}
-                className="px-4 py-2"
-              >
+              <th className={`dark:text-white text-black w-1/6 px-4 py-2`}>
                 Error Message
               </th>
               <th
-                style={{ color: isDark === "dark" ? "white" : "black" }}
-                className="text-center px-4 py-2"
+                className={`dark:text-white text-black text-center w-1/6 px-4 py-2`}
               >
                 Error Description
               </th>
@@ -52,26 +38,22 @@ const ErrorsTable: React.FC<ErrorsTableProps> = ({ errors }) => {
             {errors.map((error, index) => (
               <tr key={index} className="border-b">
                 <td
-                  style={{ color: isDark === "dark" ? "white" : "black" }}
-                  className="border px-4 py-2"
+                  className={`dark:text-white text-black w-1/6 border px-4 py-2`}
                 >
                   {error.statusCode}
                 </td>
                 <td
-                  style={{ color: isDark === "dark" ? "white" : "black" }}
-                  className="border px-4 py-2"
+                  className={`dark:text-white text-black border w-1/6 px-4 py-2`}
                 >
                   {error.errorCode}
                 </td>
                 <td
-                  style={{ color: isDark === "dark" ? "white" : "black" }}
-                  className="border px-4 py-2"
+                  className={`dark:text-white text-black border w-1/6 px-4 py-2`}
                 >
                   {error.message}
                 </td>
                 <td
-                  style={{ color: isDark === "dark" ? "white" : "black" }}
-                  className="border px-4 py-2"
+                  className={`dark:text-white text-black border w-1/6 px-4 py-2`}
                 >
                   {error.description}
                 </td>

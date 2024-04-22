@@ -148,7 +148,7 @@ const AboutUs = async ({
         <div className="px-[10px] my-[100px]">
           <div
             className="rounded-[8px] 
-              dark:bg-[#151518] bg-light-gradient
+              dark:bg-dark-gradient-card bg-light-gradient
              pt-[40px] px-[70px] pb-[50px] flex flex-col items-center gap-y-[20px]"
           >
             <p

@@ -2,23 +2,23 @@ import React from "react";
 import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../../public/images/svg";
 import Image from "next/image";
-import { useTheme } from "next-themes";
+
 
 export interface CardsType {
   title: string;
   desc: string;
   buttonText: string;
-  imageUrl: string;
+  lightImageUrl: string;
+  darkImageUrl: string;
   id?: number;
 }
 
 const Card = (props: CardsType) => {
-  const { resolvedTheme: theme } = useTheme();
   return (
     <div
-      className={`${
-        theme === "dark" ? "bg-[#1c1a22]" : "bg-light-gradient-card"
-      }  grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px] px-[20px]`}
+      className={`
+         dark:bg-dark-gradient-card bg-light-gradient-card
+          grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px] px-[20px]`}
     >
       <div className="flex flex-col gap-y-5 sm:gap-y-11 sm:pt-12 pl-10">
         <p className={`font-bold sm:text-[24px] text-[16px] dark:text-white`}>
@@ -37,7 +37,20 @@ const Card = (props: CardsType) => {
         </div>
       </div>
       <div className="-order-last sm:order-1 w-[330px] sm:w-[384px]">
-        <Image width={354} height={354} src={props.imageUrl} alt="" />
+        <Image
+          className="dark:hidden block"
+          width={354}
+          height={354}
+          src={props.lightImageUrl}
+          alt=""
+        />
+        <Image
+          className="hidden dark:block"
+          width={354}
+          height={354}
+          src={props.darkImageUrl}
+          alt=""
+        />
       </div>
     </div>
   );

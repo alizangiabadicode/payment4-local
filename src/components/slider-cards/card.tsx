@@ -1,6 +1,5 @@
 import React from "react";
-import { CardsArrayInterface } from "./cards-array";
-import useDarkMode from "use-dark-mode";
+import { CardsArrayInterface } from "./cards-array-interface";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 
@@ -8,12 +7,25 @@ const SliderCard = (props: CardsArrayInterface) => {
   const { resolvedTheme: isDark } = useTheme();
   return (
     <div
-      className={`${
-        isDark ? "bg-[#17171a]" : null
-      } w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col items-center`}
+      className={`
+         dark:bg-[#17171a] 
+       w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col items-center`}
     >
       <div className="pt-[35px] w-[195px] h-[250px]">
-        <Image width={195} height={111} src={props.imageUrl} alt="" />
+        <Image
+          className="dark:hidden block"
+          width={195}
+          height={111}
+          src={props.lightImageUrl}
+          alt=""
+        />
+        <Image
+          className="hidden dark:block"
+          width={195}
+          height={111}
+          src={props.darkImageUrl}
+          alt=""
+        />
       </div>
       <div className="flex flex-col pl-[32px] gap-y-5 pb-[27px]">
         <div className="flex items-center gap-x-2">

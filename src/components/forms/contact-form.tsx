@@ -12,7 +12,6 @@ interface FormData {
   message: string;
 }
 const ContactForm = () => {
-  const { resolvedTheme: isDark } = useTheme();
   const { t } = useTranslation();
   const [formData, setFormData] = useState<FormData>({
     name: "",
@@ -31,15 +30,12 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`${
-        isDark === "dark" ? "bg-dark-gradient-card" : "bg-light-gradient-card"
-      } px-[48px] py-[40px] rounded-[8px] w-[346px] md:w-[497px] md:h-max-[497px]`}
+      className={`dark:bg-dark-gradient-card bg-light-gradient-card 
+      px-[48px] py-[40px] rounded-[8px] w-[346px] md:w-[497px] md:h-max-[497px]`}
     >
       <form onSubmit={handleSubmit}>
         <p
-          className={`${
-            isDark === "dark" ? "text-white" : null
-          } text-[18px] md:text-[24px] font-semibold`}
+          className={`dark:text-white text-[18px] md:text-[24px] font-semibold`}
         >
           {t("getInTouch")}
         </p>
@@ -48,9 +44,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark === "dark" ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
             type="text"
             placeholder={t("name")}
           />
@@ -58,9 +52,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark === "dark" ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
             type="text"
             placeholder={t("email")}
           />
@@ -70,9 +62,7 @@ const ContactForm = () => {
             rows={4}
             value={formData.message}
             onChange={handleInputChange}
-            className={`bg-transparent ${
-              isDark === "dark" ? "border-[#FFFFFF24]" : "border-[#12121224]"
-            }`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
           />
         </div>
         <div className="flex justify-end">

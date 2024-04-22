@@ -1,5 +1,4 @@
 "use client";
-
 import React from "react";
 import {
   ClockIcon,
@@ -8,25 +7,23 @@ import {
   PhoneIcon,
 } from "../../../../public/images/svg";
 import ContactForm from "../../../components/forms/contact-form";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
 const ContactUs = () => {
-  const { resolvedTheme: isDark } = useTheme();
   const { t, i18n } = useTranslation();
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   return (
     <div
       style={{ direction }}
-      className="flex flex-col gap-y-[64px] md:gap-y-[88px] mb-[100px]"
+      className="flex flex-col gap-y-[64px] md:gap-y-[88px] mb-[100px] md:mt-[50px]"
     >
       <div className="flex justify-center">
         <p
-          className={`${
-            isDark === "dark" ? "text-white" : null
-          } text-[18px] md:text-[24px] font-bold`}
+          className={`
+            dark:text-white
+          text-[18px] md:text-[24px] font-bold`}
         >
           {t("contact us")}
         </p>
@@ -37,16 +34,16 @@ const ContactUs = () => {
             <div className="flex flex-col  items-center">
               <PhoneIcon />
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[16px] font-bold`}
+                className={`
+               dark:text-white
+             text-[16px] font-bold`}
               >
                 {t("phone")}
               </p>
               <p
-                className={`text-[12px] ${
-                  isDark === "dark" ? "text-white" : null
-                } `}
+                className={`text-[12px] 
+                  dark:text-white
+                 `}
               >
                 +989121212121
               </p>
@@ -54,16 +51,16 @@ const ContactUs = () => {
             <div className="flex flex-col items-center">
               <EmailIcon />
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[16px] font-bold`}
+                className={`
+                dark:text-white
+              text-[16px] font-bold`}
               >
                 {t("email")}
               </p>
               <p
-                className={`text-[12px] ${
-                  isDark === "dark" ? "text-white" : null
-                } `}
+                className={`text-[12px] 
+                dark:text-white
+               `}
               >
                 Payment4@gmail.com
               </p>
@@ -71,30 +68,27 @@ const ContactUs = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
             <div
-              className={`border-l h-[74px] mx-4 ${
-                isDark === "dark" ? "border-white opacity-[16%]" : null
-              }`}
+              className={`border-l h-[74px] mx-4  dark:border-white opacity-[16%]`}
             ></div>
             <div
-              className={`border-l h-[74px] mx-4 ${
-                isDark === "dark" ? "border-white opacity-[16%]" : null
-              }`}
+              className={`border-l h-[74px] mx-4
+               dark:border-white dark:opacity-[16%]`}
             ></div>
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
             <div className="flex flex-col items-center">
               <ClockIcon />
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[16px] font-bold`}
+                className={`
+                dark:text-white
+              text-[16px] font-bold`}
               >
                 Hour
               </p>
               <p
-                className={`text-[12px] ${
-                  isDark === "dark" ? "text-white" : null
-                } `}
+                className={`text-[12px] 
+               dark:text-white
+              `}
               >
                 {t("openTime")}
               </p>
@@ -102,9 +96,9 @@ const ContactUs = () => {
             <div className="flex flex-col items-center">
               <LocationIcon />
               <p
-                className={`${
-                  isDark === "dark" ? "text-white" : null
-                } text-[16px] font-bold`}
+                className={`
+                dark:text-white
+              text-[16px] font-bold`}
               >
                 {t("address")}
               </p>
@@ -117,97 +111,95 @@ const ContactUs = () => {
         <div className="flex flex-col items-center">
           <EmailIcon />
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } text-[16px] font-bold`}
+            className={`
+             dark:text-white
+           text-[16px] font-bold`}
           >
             {t("email")}
           </p>
           <p
-            className={`text-[14px] ${
-              isDark === "dark" ? "text-white" : null
-            } `}
+            className={`text-[14px] 
+           dark:text-white
+          `}
           >
             Payment4@gmail.com
           </p>
         </div>
         <div
-          className={`border-l h-[74px] mx-4 ${
-            isDark ? "border-white opacity-[16%]" : null
-          }`}
+          className={`border-l h-[74px] mx-4
+            dark:border-white dark:opacity-[16%]`}
         ></div>
         <div className="flex flex-col items-center">
           <LocationIcon />
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } text-[16px] font-bold`}
+            className={`
+            dark:text-white
+          text-[16px] font-bold`}
           >
             {t("address")}
           </p>
           <p
-            className={`text-[14px] ${
-              isDark === "dark" ? "text-white" : null
-            } `}
+            className={`text-[14px] 
+           dark:text-white
+          `}
           >
             UAE , Sari
           </p>
         </div>
         <div
-          className={`border-l h-[74px] mx-4 ${
-            isDark === "dark" ? "border-white opacity-[16%]" : null
-          }`}
+          className={`border-l h-[74px] mx-4
+           dark:border-white dark:opacity-[16%]`}
         ></div>
         <div className="flex flex-col  items-center">
           <PhoneIcon />
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } text-[16px] font-bold`}
+            className={`
+             dark:text-white
+           text-[16px] font-bold`}
           >
             {t("phone")}
           </p>
           <p
-            className={`text-[14px] ${
-              isDark === "dark" ? "text-white" : null
-            } `}
+            className={`text-[14px] 
+             dark:text-white
+            `}
           >
             +989121212121
           </p>
         </div>
         <div
-          className={`border-l h-[74px] mx-4 ${
-            isDark === "dark" ? "border-white opacity-[16%]" : null
-          }`}
+          className={`border-l h-[74px] mx-4
+           dark:border-white dark:opacity-[16%]`}
         ></div>
         <div className="flex flex-col items-center">
           <ClockIcon />
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } text-[16px] font-bold`}
+            className={`
+            dark:text-white
+          text-[16px] font-bold`}
           >
             {t("hour")}
           </p>
           <p
-            className={`text-[14px] ${
-              isDark === "dark" ? "text-white" : null
-            } `}
+            className={`text-[14px] 
+              dark:text-white
+             `}
           >
             {t("openTime")}
           </p>
         </div>
       </div>
       <div
-        className={`${
-          isDark === "dark" ? "bg-contacts-dark" : "bg-contacts-light"
-        } h-[172px] gap-y-[15px] md:gap-y-[0px]  flex flex-col md:flex-row md:items-center md:justify-around`}
+        className={`
+          dark:bg-contacts-dark bg-contacts-light
+         h-[172px] gap-y-[15px] md:gap-y-0
+           flex flex-col md:flex-row md:items-center md:justify-around`}
       >
         <div className="hidden md:flex flex-col">
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } md:text-[24px] font-semibold`}
+            className={`
+              dark:text-white
+             md:text-[24px] font-semibold`}
           >
             {t("joinOurSocialNetworks")}
           </p>
@@ -221,9 +213,9 @@ const ContactUs = () => {
         </div>
         <div className="flex md:hidden flex-col items-center justify-center mt-[50px]">
           <p
-            className={`${
-              isDark === "dark" ? "text-white" : null
-            } md:text-[24px] font-semibold`}
+            className={`
+            dark:text-white
+           md:text-[24px] font-semibold`}
           >
             {t("joinOurSocialNetworks")}
           </p>
@@ -264,13 +256,17 @@ const ContactUs = () => {
         </div>
         <div className="px-[30px] md:px-0">
           <Image
+            className="hidden dark:block"
             width={487}
             height={487}
-            src={
-              isDark === "dark"
-                ? "/images/dark-map-img.png"
-                : "/images/light-map-img.png"
-            }
+            src={"/images/dark-map-img.png"}
+            alt="map"
+          />
+          <Image
+            className="dark:hidden block"
+            width={487}
+            height={487}
+            src={"/images/light-map-img.png"}
             alt="map"
           />
         </div>
