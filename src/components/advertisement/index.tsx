@@ -1,20 +1,12 @@
 "use client";
-
 import React from "react";
 import { Button } from "../shared/button";
-import {
-  IphoneDarkImg,
-  IphoneImg,
-  RightArrowIcon,
-} from "../../../public/images/svg";
-import { useTheme } from "next-themes";
+import { RightArrowIcon } from "../../../public/images/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 const AdvertisementCard = () => {
   const { t } = useTranslation();
-  const { resolvedTheme: isDark } = useTheme();
-
   return (
     <div
       className={`max-w-[300px] sm:max-w-none 
@@ -33,7 +25,7 @@ const AdvertisementCard = () => {
         <div className="w-3/4 sm:w-1/2">
           <p
             className={`text-[12px] sm:text-[14px] text-primary-text 
-              dark:text-white opacity-[36%] text-black
+              dark:text-white text-opacity-[36%] text-black
             }`}
           >
             {t("adDesc")}

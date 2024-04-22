@@ -116,9 +116,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
             <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
             <p
-              className={`text-[22px] text-[#12121296] font-bold ${
-                isDark === "dark" ? "text-white opacity-[36%]" : null
-              }`}
+              className={`text-[22px] text-[#12121296] font-bold 
+                dark:text-[#FFFFFF5C] text-opacity-[36%]`}
             >
               {t("signup")}
             </p>
