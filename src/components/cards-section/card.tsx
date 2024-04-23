@@ -36,7 +36,7 @@ const Card = (props: CardsType) => {
           </Button>
         </div>
       </div>
-      <div className="-order-last sm:order-1 w-[330px] sm:w-[384px]">
+      <div className="-order-last sm:order-1 sm:w-[384px]">
         <Image
           className="dark:hidden block"
           width={354}
