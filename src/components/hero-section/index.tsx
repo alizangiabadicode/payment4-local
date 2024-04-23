@@ -138,14 +138,14 @@ const HeroSection = () => {
       <div className="container sm:hidden my-10">
         <Image
           className="dark:block hidden"
-          width={100}
+          width={1000}
           height={100}
           src="/images/assets-dark.png"
           alt=""
         />
         <Image
           className="block dark:hidden"
-          width={100}
+          width={1000}
           height={100}
           src="/images/assets.jpg"
           alt=""

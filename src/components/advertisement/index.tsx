@@ -12,9 +12,9 @@ const AdvertisementCard = () => {
       className={`max-w-[300px] sm:max-w-none 
         dark:bg-dark-gradient-ad-card
            bg-light-gradient-ad-card
-      sm:py-[75px] rounded my-14 flex flex-col sm:flex-row sm:justify-center gap-y-10 py-5`}
+      sm:pt-[45px] sm:pb-[25px] rounded my-14 flex flex-col sm:flex-row sm:justify-between  gap-y-10 py-5`}
     >
-      <div className="flex flex-col gap-10 ml-[25px]">
+      <div className="flex flex-col justify-center gap-5 ml-[25px] w-1/2">
         <p
           className={`text-[18px] sm:text-[24px] font-bold 
             dark:text-white text-black
@@ -22,10 +22,10 @@ const AdvertisementCard = () => {
         >
           {t("adTitle")}
         </p>
-        <div className="w-3/4 sm:w-1/2">
+        <div className="w-3/4 sm:w-[350px]">
           <p
             className={`text-[12px] sm:text-[14px] text-primary-text 
-              dark:text-white text-opacity-[36%] text-black
+              dark:text-white dark:text-opacity-[36%] text-black
             }`}
           >
             {t("adDesc")}
@@ -41,15 +41,15 @@ const AdvertisementCard = () => {
       <div className="-order-last sm:order-last flex justify-center sm:justify-evenly">
         <Image
           className="dark:hidden block"
-          width={314}
-          height={392}
+          width={239}
+          height={320}
           src="/images/ad-img-light.png"
           alt="ad-img"
         />
         <Image
           className="dark:block hidden"
-          width={314}
-          height={292}
+          width={239}
+          height={320}
           src="/images/ad-img-dark.png"
           alt="add-img"
         />
