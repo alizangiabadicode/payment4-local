@@ -1,9 +1,10 @@
 import React, { FC } from "react";
 interface MenuItemProps {
   color?: string;
+  className?: string;
 }
 
-export const MenuItemIcon: FC<MenuItemProps> = ({ color = "#FCFCFC" }) => {
+export const MenuItemIcon: FC<MenuItemProps> = ({ color, className }) => {
   return (
     <svg
       width="24"
@@ -11,6 +12,7 @@ export const MenuItemIcon: FC<MenuItemProps> = ({ color = "#FCFCFC" }) => {
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <g clipPath="url(#clip0_1230_3123)">
         <path
@@ -34,5 +36,3 @@ export const MenuItemIcon: FC<MenuItemProps> = ({ color = "#FCFCFC" }) => {
     </svg>
   );
 };
-
-
