@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
-import useDarkMode from "use-dark-mode";
 import { useTheme } from "next-themes";
 
 interface FaqItemProps {
