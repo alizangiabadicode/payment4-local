@@ -9,6 +9,7 @@ import {
 } from "../../../public/images/svg";
 import ApiPaylinkCreationIcon from "../../../public/images/svg/api-paylink-creation-icon";
 import { useTranslation } from "react-i18next";
+import { useTheme } from "next-themes";
 
 export interface CardsArrayProps {
   title: string;
@@ -21,6 +22,7 @@ export interface CardsArrayProps {
 
 const ProgressCards: FC = () => {
   const { t } = useTranslation();
+  const { resolvedTheme: theme } = useTheme();
   const cardsArray: CardsArrayProps[] = [
     {
       id: 1,
@@ -34,7 +36,9 @@ const ProgressCards: FC = () => {
       id: 2,
       title: t("gatewaySetup"),
       desc: t("progressTwoDesc"),
-      icon: <GatewaySetupIcon color="#864AFF" />,
+      icon: (
+        <GatewaySetupIcon color={theme === "dark" ? "#9E6DFF" : "#864AFF"} />
+      ),
       lightImageUrl: "/images/gateway-setup-image.png",
       darkImageUrl: "/images/gateway-setup-dark-image.png",
     },
@@ -58,13 +62,15 @@ const ProgressCards: FC = () => {
       id: 5,
       title: t("securityMeasures"),
       desc: t("progressFiveDesc"),
-      icon: <SecurityMeasureIcon color="#864AFF" />,
+      icon: (
+        <SecurityMeasureIcon color={theme === "dark" ? "#9e6dff" : "#864AFF"} />
+      ),
       lightImageUrl: "/images/security-measures-image.png",
       darkImageUrl: "/images/security-measures-dark-image.png",
     },
   ];
   return (
-    <div className="flex flex-col items-center my-[30px] gap-y-[30px]">
+    <div className="flex flex-col items-center my-[130px] gap-y-[80px]">
       {cardsArray.map((card) => (
         <ProgressCard
           key={card.id}

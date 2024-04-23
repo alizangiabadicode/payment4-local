@@ -40,7 +40,7 @@ const Cards: React.FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-y-5">
+    <div className="flex flex-col items-center gap-y-[50px]">
       {cards.map((card) => {
         return (
           <Card

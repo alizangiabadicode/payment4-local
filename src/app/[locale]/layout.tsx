@@ -77,15 +77,15 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { locale: string };
 }>) {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { resources } = await initTranslations(locale, i18nNamespaces);
   return (
     <html
       lang={locale}
       dir={dir(locale)}
-      className={`${poppins.variable} ${yekanBakh.variable}`}
+      className={`${poppins.variable} ${yekanBakh.variable}bg-white dark:bg-dark`}
       suppressHydrationWarning
     >
-      <body className="dark:bg-dark">
+      <body className="">
         <Providers>
           <TranslationsProvider
             namespaces={i18nNamespaces}
