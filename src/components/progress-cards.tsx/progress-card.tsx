@@ -42,8 +42,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         <div className="flex flex-col gap-y-2">
           <div
             className={`
-               dark:bg-[#151518] sm:bg-[#F6F6F6]
-             sm:w-[450px] sm:px-[33px] sm:py-[24px]`}
+               dark:bg-[#FFFFFF0A]  sm:bg-[#F6F6F6]
+             sm:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -64,10 +64,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-10 mt-[46px] px-[33px]">
+          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] px-[33px]">
             <div className="flex items-center gap-x-3">
               <GatewaySetupIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -78,7 +78,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -89,7 +89,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <SettlementRequestIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -100,7 +100,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <SecurityMeasureIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -113,8 +113,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         </div>
       ) : props.title === t("gatewaySetup") ? (
         <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-            <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
+          <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
+            <SignupIcon color={isDark === "dark" ? "#FFFFFF5C" : undefined} />
             <p
               className={`text-[22px] text-[#12121296] font-bold 
                 dark:text-[#FFFFFF5C] text-opacity-[36%]`}
@@ -124,7 +124,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`
-               dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+               dark:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
              sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
           >
             <div
@@ -150,10 +150,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
+          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
               <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -165,7 +165,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <SettlementRequestIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -177,7 +177,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <SecurityMeasureIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -191,9 +191,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         </div>
       ) : props.title === t("progressThree") ? (
         <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[40px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-              <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
+          <div className="hidden sm:flex flex-col gap-y-[60px]">
+            <div className="hidden sm:flex items-center gap-x-3 px-[33px] mt-[50px]">
+              <SignupIcon color={isDark === "dark" ? "#FFFFFF5C" : undefined} />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
                 dark:text-[#FFFFFF5C] text-opacity-[36%]
@@ -204,7 +204,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <GatewaySetupIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -217,7 +217,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`
-           dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+           dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
              sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
           >
             <div className="flex items-center gap-x-3">
@@ -239,10 +239,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
+          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
               <SettlementRequestIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -254,7 +254,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="flex items-center gap-x-3">
               <SecurityMeasureIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -268,8 +268,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         </div>
       ) : props.title === t("settlementRequests") ? (
         <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[40px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
+          <div className="hidden sm:flex flex-col gap-y-[60px]">
+            <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
               <SignupIcon />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -281,7 +281,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <GatewaySetupIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -293,7 +293,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -306,7 +306,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]
-              dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+              dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
             }`}
           >
             <div className="flex items-center gap-x-3">
@@ -332,7 +332,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div className="hidden sm:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
               <SecurityMeasureIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -346,8 +346,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         </div>
       ) : props.title === t("securityMeasures") ? (
         <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[40px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
+          <div className="hidden sm:flex flex-col gap-y-[60px]">
+            <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
               <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -359,7 +359,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <GatewaySetupIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#ccc" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -371,7 +371,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
               <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+                color={isDark === "dark" ? "#737373" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -382,8 +382,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-              <SecurityMeasureIcon
-                color={isDark === "dark" ? "#636365" : undefined}
+              <SettlementRequestIcon
+                color={isDark === "dark" ? "#737373" : undefined}
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -396,7 +396,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px] 
-              dark:sm:bg-[#151518] sm:bg-[#F6F6F6]
+              dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
             `}
           >
             <div className="flex items-center gap-x-3">

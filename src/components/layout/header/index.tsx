@@ -16,7 +16,6 @@ const Header = () => {
   return (
     <header
       style={{ direction: direction }}
-      className="dark:bg-[#0B0B0E] bg-white"
     >
       <div
         className={`container px-5 sm:px-50 flex items-center justify-between my-4 `}

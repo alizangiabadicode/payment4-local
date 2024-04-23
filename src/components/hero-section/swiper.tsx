@@ -8,7 +8,7 @@ import Image from "next/image";
 
 export const SwiperSection = () => {
   return (
-    <div className="container hidden sm:block my-10">
+    <div className="container hidden sm:block mt-[50px] mb-[130px]">
       <Swiper
         autoplay={{ delay: 0, disableOnInteraction: false }}
         speed={3000}

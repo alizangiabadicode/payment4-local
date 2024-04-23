@@ -20,7 +20,7 @@ const Card = (props: CardsType) => {
          dark:bg-dark-gradient-card bg-light-gradient-card
           grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px] px-[20px]`}
     >
-      <div className="flex flex-col gap-y-5 sm:gap-y-11 sm:pt-12 pl-10">
+      <div className="flex flex-col  gap-y-5 sm:gap-y-17 sm:pt-12 pl-10 mt-[30px]">
         <p className={`font-bold sm:text-[24px] text-[16px] dark:text-white`}>
           {props.title}
         </p>
