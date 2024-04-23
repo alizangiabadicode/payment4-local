@@ -65,9 +65,9 @@ const LanguageSelector: React.FC = () => {
     return (
       <Image
         src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-        width={36}
-        height={36}
-        sizes="36x36"
+        width={30}
+        height={30}
+        sizes="30x30"
         alt="Loading Light/Dark Toggle"
         priority={false}
         title="Loading Light/Dark Toggle"
@@ -85,6 +85,7 @@ const LanguageSelector: React.FC = () => {
       </div>
       {isOpen && (
         <div
+          style={{ zIndex: 1 }}
           className={`origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg
              dark:bg-black  bg-white
           ring-1 ring-black ring-opacity-5`}

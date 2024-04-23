@@ -10,9 +10,7 @@ import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
 import Logo from "../../../../public/images/svg/logo";
 import { useTheme } from "next-themes";
 
-
 export const NavigationBar = () => {
-
   const pathname = usePathname();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { resolvedTheme: isDark } = useTheme();
@@ -35,6 +33,7 @@ export const NavigationBar = () => {
                     dark:text-white
                   }`}
                   href={item.path}
+                  onClick={() => setIsDrawerOpen(false)}
                 >
                   {t(`${item.title.toLowerCase()}`)}
                 </Link>
@@ -45,7 +44,8 @@ export const NavigationBar = () => {
             onClick={() => setIsDrawerOpen(true)}
             className="md:hidden cursor-pointer"
           >
-            <MenuItemIcon color={isDark === "dark" ? "white" : "#0B0B0E"} />
+            <MenuItemIcon className="dark:hidden block" color={"#0B0B0E"} />
+            <MenuItemIcon className="hidden dark:block" color={"white"} />
           </div>
         </div>
         <div style={{ width: "110px", height: "24px" }}>
