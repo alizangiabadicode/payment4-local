@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
 import { useTheme } from "next-themes";

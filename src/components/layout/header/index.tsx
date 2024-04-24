@@ -1,40 +1,74 @@
-'use client'
+"use client";
 import { useTranslation } from "react-i18next";
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "../../shared/button";
 import LanguageSelector from "../../shared/select.language/select.language";
 import ThemeSwitch from "@/components/shared/theme.swicher/theme.swicher";
 import { NavigationBar } from "./navigation";
-
+import { Drawer } from "@/components/shared";
+import { navbarItems } from "./navbar-items";
+import Link from "next/link";
+import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
-
-
+  const toggleDrawer = () => {
+    setIsDrawerOpen(!isDrawerOpen);
+  };
   return (
-    <header
-      style={{ direction: direction }}
-    >
+    <header style={{ direction: direction }}>
       <div
         className={`container px-5 sm:px-50 flex items-center justify-between my-4 `}
       >
         <NavigationBar />
-        <div className="flex gap-x-4">
+        <div className="flex items-center gap-x-4">
           <div className="flex gap-x-2">
             <div className="cursor-pointer">
               <ThemeSwitch />
             </div>
             <LanguageSelector />
           </div>
-          <div>
+          <div className="hidden md:block">
             <Button
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
               className="px-1 sm:px-6 text-sm sm:text-base"
             >
-              {t("signup")}
+              <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+                {t("signup")}
+              </a>
             </Button>
+          </div>
+          <div>
+            <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
+              {navbarItems.map((item) => {
+                const isActive = pathname === item.path;
+                return (
+                  <Link
+                    key={item.title}
+                    style={{ fontSize: "15px" }}
+                    className={`${isActive && "font-bold"}
+                    dark:text-white
+                  }`}
+                    href={item.path}
+                    onClick={() => setIsDrawerOpen(false)}
+                  >
+                    {t(`${item.title.toLowerCase()}`)}
+                  </Link>
+                );
+              })}
+            </Drawer>
+            <div
+              onClick={() => setIsDrawerOpen(true)}
+              className="md:hidden cursor-pointer"
+            >
+              <MenuItemIcon className="dark:hidden block" color={"#0B0B0E"} />
+              <MenuItemIcon className="hidden dark:block" color={"white"} />
+            </div>
           </div>
         </div>
       </div>

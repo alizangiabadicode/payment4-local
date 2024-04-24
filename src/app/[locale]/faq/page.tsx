@@ -1,6 +1,6 @@
 import React from "react";
-import FaqItem from "../../../components/shared/faq.collapsible.window.tsx/index.jsx";
-import initTranslations from "@/app/i18n.js";
+import FaqItem from "../../../components/shared/faq.collapsible.window.tsx";
+
 
 const FAQ = () => {
   return (

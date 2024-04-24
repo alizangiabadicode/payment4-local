@@ -36,3 +36,5 @@ export * from "./check-cart-icon";
 export * from "./attach-icon"
 export * from "./open.collapse"
 export * from "./close.collapse"
+export * from "./cross-icon-dark"
+export * from "./cross-icon-light"

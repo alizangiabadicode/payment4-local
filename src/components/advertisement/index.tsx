@@ -33,7 +33,9 @@ const AdvertisementCard = () => {
         </div>
         <div className="flex justify-start">
           <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg">
-            {t("getStartedNow")}
+            <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+              {t("letsGetStarted")}
+            </a>
             <RightArrowIcon />
           </Button>
         </div>
