@@ -25,8 +25,8 @@ const Footer = () => {
   useEffect(() => setMounted(true), []);
   return (
     <footer
-      style={{ borderTopColor: "#E5E5E5", direction: direction }}
-      className={`border-t grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8
+      style={{ direction: direction }}
+      className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8
         dark:bg-[#0B0B0E]  bg-white`}
     >
       <div className="flex flex-col items-center sm:items-start md:pl-32">
@@ -36,8 +36,8 @@ const Footer = () => {
           </div>
           <div className="sm:max-w-64 flex">
             <p
-              className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              className={`text-sm text-[#1212125C] leading-6 
+              dark:text-[#FFFFFFA1] dark:text-opacity-[36%]`}
             >
               {t("footerDesc")}
             </p>
@@ -118,7 +118,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-white"
+            className="dark:text-[#FFFFFFA1]"
           >
             {t("menu")}
           </p>
@@ -127,7 +127,7 @@ const Footer = () => {
               href="/"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("home")}
             </Link>
@@ -135,7 +135,7 @@ const Footer = () => {
               href="/developers"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("developers")}
             </Link>
@@ -143,7 +143,7 @@ const Footer = () => {
               href="/documents"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("documents")}
             </Link>
@@ -151,7 +151,7 @@ const Footer = () => {
               href="/about-us"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("about")}
             </Link>
@@ -159,7 +159,7 @@ const Footer = () => {
               href="/contact-us"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("contact us")}
             </Link>
@@ -168,7 +168,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-white"
+            className="dark:text-[#FFFFFFA1]"
           >
             {t("followUs")}
           </p>
@@ -176,28 +176,28 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("linkedin")}
             </p>
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               Telegram
             </p>
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("twitter")}
             </p>
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("instagram")}
             </p>
@@ -276,7 +276,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-white"
+            className="dark:text-[#FFFFFFA1]"
           >
             {t("resources")}
           </p>
@@ -285,7 +285,7 @@ const Footer = () => {
               href="/terms-of-service"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("termsOfService")}
             </Link>
@@ -293,7 +293,7 @@ const Footer = () => {
               href="/privacy-policy"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("privacyPolicy")}
             </Link>
@@ -301,7 +301,7 @@ const Footer = () => {
               href="/faq"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("faq")}
             </Link>
@@ -310,7 +310,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-white"
+            className="dark:text-[#FFFFFFA1]"
           >
             {t("company")}
           </p>
@@ -319,7 +319,7 @@ const Footer = () => {
               href="/about-us"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("about")}
             </Link>
@@ -327,7 +327,7 @@ const Footer = () => {
               href="/contact-us"
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("contact us")}
             </Link>
@@ -345,7 +345,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-white"
+            className="dark:text-[#FFFFFFA1]"
           >
             Product
           </p>
@@ -353,14 +353,14 @@ const Footer = () => {
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("logIn")}
             </p>
             <p
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
-              dark:text-white text-opacity-[36%]`}
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("signup")}
             </p>

@@ -108,7 +108,9 @@ const HeroSection = () => {
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             className="px-10 py-2 flex gap-x-2"
           >
-            {t("letsGetStarted")}
+            <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+              {t("letsGetStarted")}
+            </a>
             <RightArrowIcon />
           </Button>
         </div>
