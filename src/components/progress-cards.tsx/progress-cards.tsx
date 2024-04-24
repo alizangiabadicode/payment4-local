@@ -10,6 +10,7 @@ import {
 import ApiPaylinkCreationIcon from "../../../public/images/svg/api-paylink-creation-icon";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 export interface CardsArrayProps {
   title: string;
@@ -37,7 +38,12 @@ const ProgressCards: FC = () => {
       title: t("gatewaySetup"),
       desc: t("progressTwoDesc"),
       icon: (
-        <GatewaySetupIcon color={theme === "dark" ? "#9E6DFF" : "#864AFF"} />
+        <Image
+          width={22}
+          height={24}
+          src="/images/gateway-setup-img.png"
+          alt=""
+        />
       ),
       lightImageUrl: "/images/gateway-setup-image.png",
       darkImageUrl: "/images/gateway-setup-dark-image.png",
@@ -46,7 +52,14 @@ const ProgressCards: FC = () => {
       id: 3,
       title: t("progressThree"),
       desc: t("progressThreeDesc"),
-      icon: <ApiPaylinkCreationIcon color="#864AFF" />,
+      icon: (
+        <Image
+          width={22}
+          height={24}
+          src="/images/api-creation-img.png"
+          alt=""
+        />
+      ),
       lightImageUrl: "/images/aPI-or-paylink-creation-image.png",
       darkImageUrl: "/images/aPI-or-paylink-creation-dark-image.png",
     },
@@ -54,16 +67,18 @@ const ProgressCards: FC = () => {
       id: 4,
       title: t("settlementRequests"),
       desc: t("progressFourDesc"),
-      icon: <SettlementRequestIcon color="#864AFF" />,
-      lightImageUrl: "/images/settlement -requests-image.png",
-      darkImageUrl: "/images/settlement -requests-dark-image.png",
+      icon: (
+        <Image width={30} height={24} src="/images/settlement-img.png" alt="" />
+      ),
+      lightImageUrl: "/images/settlement-requests-image.png",
+      darkImageUrl: "/images/settlement-requests-dark-image.png",
     },
     {
       id: 5,
       title: t("securityMeasures"),
       desc: t("progressFiveDesc"),
       icon: (
-        <SecurityMeasureIcon color={theme === "dark" ? "#9e6dff" : "#864AFF"} />
+        <Image width={22} height={24} src="/images/security-img.png" alt="" />
       ),
       lightImageUrl: "/images/security-measures-image.png",
       darkImageUrl: "/images/security-measures-dark-image.png",

@@ -1,7 +1,6 @@
 import React from "react";
 
 export const GatewaySetupIcon = ({ color = "#121212" }: { color?: string }) => {
-  console.log("color", color);
   return (
     <svg
       width="23"

@@ -15,7 +15,6 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
-
 const Footer = () => {
   const [mounted, setMounted] = useState(false);
 
