@@ -1,0 +1,23 @@
+name: Prod Landing Deployment
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: 49.13.123.36
+          username: root
+          port: 22
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /root/ladning && git reset --hard 
+            git pull origin main
+            yarn install
+            yarn build
+            docker compose up -d --build
