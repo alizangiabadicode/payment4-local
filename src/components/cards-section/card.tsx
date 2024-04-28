@@ -3,7 +3,6 @@ import { Button } from "../shared/button";
 import { RightArrowIcon } from "../../../public/images/svg";
 import Image from "next/image";
 
-
 export interface CardsType {
   title: string;
   desc: string;
@@ -18,7 +17,7 @@ const Card = (props: CardsType) => {
     <div
       className={`
          dark:bg-dark-gradient-card bg-light-gradient-card
-          grid grid-cols-1 sm:grid-cols-2 rounded-md max-w-[850px] px-[20px]`}
+          grid grid-cols-1 md:grid-cols-2 rounded-md max-w-[400px] md:max-w-[850px] px-[20px]`}
     >
       <div className="flex flex-col  gap-y-5 sm:gap-y-17 sm:pt-12 pl-10 mt-[30px]">
         <p className={`font-bold sm:text-[24px] text-[16px] dark:text-white`}>
@@ -30,13 +29,13 @@ const Card = (props: CardsType) => {
           {props.desc}
         </p>
         <div className="mb-[10px]">
-          <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 mb-5 md:mb-0 dark:bg-[#FFFFFF1C]">
+          <Button className="hidden md:flex px-[10px] sm:px-10 sm:py-[10px] py-[7px] gap-x-2 mb-5 md:mb-0">
             {props.buttonText}
             <RightArrowIcon />
           </Button>
         </div>
       </div>
-      <div className="-order-last sm:order-1 sm:w-[384px]">
+      <div className="-order-last md:order-1 sm:w-[384px]">
         <Image
           className="dark:hidden block"
           width={354}

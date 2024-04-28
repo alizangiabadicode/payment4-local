@@ -21,7 +21,7 @@ export const Drawer: FC<DrawerProps> = ({
   return (
     <div
       className={`fixed flex flex-col justify-between inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
-         dark:bg-black bg-[#ccc] ${
+         dark:bg-black bg-white ${
            isOpen ? "translate-x-0" : "-translate-x-full"
          } ${className} md:hidden`}
     >

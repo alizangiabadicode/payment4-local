@@ -27,7 +27,7 @@ const SliderCard = (props: CardsArrayInterface) => {
           alt=""
         />
       </div>
-      <div className="flex flex-col pl-[32px] gap-y-2 mt-[27px]">
+      <div className="flex flex-col px-[32px] gap-y-2 mt-[27px]">
         <div className="flex items-center gap-x-2">
           {props.logo}
           <p

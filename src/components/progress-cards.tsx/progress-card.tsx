@@ -1,13 +1,7 @@
 "use client";
 import React from "react";
 import { CardsArrayProps } from "./progress-cards";
-import {
-  GatewaySetupIcon,
-  SecurityMeasureIcon,
-  SettlementRequestIcon,
-  SignupIcon,
-} from "../../../public/images/svg";
-import ApiPaylinkCreationIcon from "../../../public/images/svg/api-paylink-creation-icon";
+import { SignupIcon } from "../../../public/images/svg";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Image from "next/image";
@@ -20,9 +14,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
   return (
     <div
       style={{ direction }}
-      className="grid grid-cols-1 sm:grid-cols-2 gap-y-6"
+      className="grid grid-cols-1 lg:grid-cols-2 gap-x-5 gap-y-1 md:gap-y-6"
     >
-      <div className="sm:order-1">
+      <div className="lg:order-last flex justify-center lg:block">
         <Image
           className="dark:hidden block"
           width={522}
@@ -39,11 +33,11 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         />
       </div>
       {props.title === t("signup") ? (
-        <div className="flex flex-col gap-y-2">
+        <div className="flex flex-col gap-y-2 md:order-1 mt-3 md:mt-0">
           <div
             className={`
-               dark:bg-[#FFFFFF0A]  sm:bg-[#F6F6F6]
-             sm:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+               dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
+             lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -64,7 +58,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] px-[33px]">
+          <div className="hidden lg:flex flex-col gap-y-[60px] mt-[46px] px-[33px]">
             <div className="flex items-center gap-x-3">
               <Image
                 src="/images/gateway-setup-icon.png"
@@ -88,8 +82,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/api-creation-dark.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/api-creation-light.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -99,8 +104,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <SettlementRequestIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/settlement-request-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/settlement-request-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -110,8 +126,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <SecurityMeasureIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/security-measures-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/security-measures-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -121,10 +148,13 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
+          <div className="mt-[40px] md:hidden">
+            <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
+          </div>
         </div>
       ) : props.title === t("gatewaySetup") ? (
-        <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
+        <div className="flex flex-col gap-y-2 order-1 mt-3 md:mt-0">
+          <div className="hidden lg:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
             <SignupIcon color={isDark === "dark" ? "#FFFFFF5C" : undefined} />
             <p
               className={`text-[22px] text-[#12121296] font-bold 
@@ -135,8 +165,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`
-               dark:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
-             sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
+           dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
+         lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div
               className={`text-[18px] sm:text-[22px] font-bold 
@@ -161,10 +191,21 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
+          <div className="hidden lg:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
-              <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/api-creation-dark.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/api-creation-light.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -175,8 +216,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <SettlementRequestIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/settlement-request-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/settlement-request-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -187,8 +239,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <SecurityMeasureIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/security-measures-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/security-measures-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -199,11 +262,14 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
+          <div className="mt-[40px] md:hidden">
+            <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
+          </div>
         </div>
       ) : props.title === t("progressThree") ? (
-        <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[60px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px] mt-[50px]">
+        <div className="flex flex-col gap-y-2 order-1 mt-3 md:mt-0">
+          <div className="hidden lg:flex flex-col gap-y-[60px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px] mt-[50px]">
               <SignupIcon color={isDark === "dark" ? "#FFFFFF5C" : undefined} />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -213,7 +279,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {t("signup")}
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
               <Image
                 src="/images/gateway-setup-icon.png"
                 width={22}
@@ -239,8 +305,8 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           </div>
           <div
             className={`
-           dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
-             sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]`}
+      dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
+    lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -261,10 +327,21 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
+          <div className="hidden lg:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
-              <SettlementRequestIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/settlement-request-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/settlement-request-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -275,8 +352,19 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
             <div className="flex items-center gap-x-3">
-              <SecurityMeasureIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/security-measures-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/security-measures-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -287,11 +375,14 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
+          <div className="mt-[40px] md:hidden">
+            <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
+          </div>
         </div>
       ) : props.title === t("settlementRequests") ? (
-        <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[60px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
+        <div className="flex flex-col gap-y-2 order-1 mt-3 md:mt-0">
+          <div className="hidden lg:flex flex-col gap-y-[60px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
               <SignupIcon />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -301,7 +392,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 Sign Up
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
               <Image
                 src="/images/gateway-setup-icon.png"
                 width={22}
@@ -324,9 +415,20 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 Gateway Setup
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-              <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
+              <Image
+                src="/images/api-creation-dark.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/api-creation-light.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -338,9 +440,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
           </div>
           <div
-            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px]
-              dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
-            }`}
+            className={`
+         dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
+       lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -362,10 +464,21 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="hidden sm:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
+          <div className="hidden lg:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
             <div className="flex items-center gap-x-3">
-              <SecurityMeasureIcon
-                color={isDark === "dark" ? "#FFFFFF5C" : undefined}
+              <Image
+                src="/images/security-measures-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/security-measures-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -376,11 +489,14 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
+          <div className="mt-[40px] md:hidden">
+            <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
+          </div>
         </div>
       ) : props.title === t("securityMeasures") ? (
-        <div className="flex flex-col gap-y-2">
-          <div className="hidden sm:flex flex-col gap-y-[60px]">
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
+        <div className="flex flex-col gap-y-2 order-1 mt-3 md:mt-0">
+          <div className="hidden lg:flex flex-col gap-y-[60px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px] md:mt-[50px]">
               <SignupIcon color={isDark === "dark" ? "#636365" : undefined} />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -390,7 +506,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {t("signup")}
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
               {/* <GatewaySetupIcon
                 color={isDark === "dark" ? "#FFFFFF5C" : undefined}
               /> */}
@@ -416,9 +532,20 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {t("gatewaySetup")}
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-              <ApiPaylinkCreationIcon
-                color={isDark === "dark" ? "#737373" : undefined}
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
+              <Image
+                src="/images/api-creation-dark.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/api-creation-light.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -428,9 +555,20 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {t("progressThree")}
               </p>
             </div>
-            <div className="hidden sm:flex items-center gap-x-3 px-[33px]">
-              <SettlementRequestIcon
-                color={isDark === "dark" ? "#737373" : undefined}
+            <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
+              <Image
+                src="/images/settlement-request-dark-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="hidden dark:block"
+              />
+              <Image
+                src="/images/settlement-request-light-icon.png"
+                width={22}
+                height={24}
+                alt=""
+                className="dark:hidden block"
               />
               <p
                 className={`text-[22px] text-[#12121296] font-bold 
@@ -442,9 +580,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
           </div>
           <div
-            className={`sm:w-[450px] sm:px-[33px] sm:py-[24px] sm:my-[30px] 
-              dark:sm:bg-[#FFFFFF0A] sm:bg-[#F6F6F6]
-            `}
+            className={`
+         dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
+       lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -465,6 +603,9 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.desc}
               </p>
             </div>
+          </div>
+          <div className="mt-[40px] md:hidden">
+            <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>
       ) : null}

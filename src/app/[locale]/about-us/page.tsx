@@ -52,7 +52,7 @@ const AboutUs = async ({
       locale={locale}
       resources={resources}
     >
-      <div className="flex flex-col items-center lg:px-[300px] mt-[20px]">
+      <div className="flex flex-col items-center lg:px-[300px] mt-[30px]">
         <div className="flex flex-col gap-y-[8px] px-5 md:px-0">
           <p
             className="
@@ -64,7 +64,7 @@ const AboutUs = async ({
           <p
             className="
               text-center text-[13px] 
-              dark:text-white  text-black"
+              dark:text-[#FFFFFFA1]  text-[#121212A1]"
           >
             {t("aboutUsDesc")}
           </p>
@@ -72,19 +72,27 @@ const AboutUs = async ({
         <div className="px-5 md:px-0 grid grid-rows-2 grid-cols-3 md:grid-rows-1 md:grid-cols-4  justify-items-center gap-10 mt-[40px] mb-[90px]">
           <div className="flex flex-col items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+100</p>
-            <p>{t("registered")}</p>
+            <p
+              className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]"
+            >
+              {t("registered")}
+            </p>
           </div>
           <div className="flex flex-col items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+20000</p>
-            <p>{t("paymentDaily")}</p>
+            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]">{t("paymentDaily")}</p>
           </div>
           <div className="flex flex-col items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+1000</p>
-            <p>{t("merchant")}</p>
+            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]">{t("merchant")}</p>
           </div>
           <div className="flex flex-col col-span-3 md:col-span-1 justify-center items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+200</p>
-            <p>{t("teamMembers")}</p>
+            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]">{t("teamMembers")}</p>
           </div>
         </div>
         <div className="flex flex-col md:flex-row md:justify-between items-center gap-y-5">
@@ -96,7 +104,7 @@ const AboutUs = async ({
             >
               {t("ourMission")}
             </p>
-            <p className="dark:text-white text-black text-[16px]">
+            <p className="dark:text-[#FFFFFFA1]  text-[#121212A1] text-[16px] mt-3">
               {t("ourMissionDesc")}
             </p>
           </div>
@@ -126,7 +134,7 @@ const AboutUs = async ({
                   {item.logo}
                   <p
                     className="
-                    font-semibold dark:text-white text-black
+                    font-semibold dark:text-[#FFFFFFC7] text-[#121212C7]
                      text-[14px] md:text-[16px]"
                   >
                     {item.title}
@@ -135,7 +143,7 @@ const AboutUs = async ({
                 <div>
                   <p
                     className="
-                      dark:text-white text-black
+                      dark:text-[#FFFFFFA1] text-[#121212A1]
                      text-[12px] md:text-[14px]"
                   >
                     {item.desc}
@@ -160,7 +168,7 @@ const AboutUs = async ({
             </p>
             <p
               className="text-[12px] md:text-[14px]
-                dark:text-[#FFFFFFC7]text-[#121212C7] opacity-[78%]"
+                dark:text-[#FFFFFFC7] text-[#121212C7] text-center "
             >
               {t("JoinTheBusinesses")}
             </p>

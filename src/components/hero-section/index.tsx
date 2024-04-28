@@ -10,7 +10,7 @@ import { SwiperSection } from "./swiper";
 const HeroSection = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="overflow-x-hidden">
       <div className="flex flex-col items-center mt-10 gap-y-10">
         <div className="flex flex-col items-center gap-y-5">
           <div className="flex flex-col items-center relative">
@@ -137,22 +137,6 @@ const HeroSection = () => {
         </p>
       </div>
       <SwiperSection />
-      <div className="container sm:hidden my-10">
-        <Image
-          className="dark:block hidden"
-          width={1000}
-          height={100}
-          src="/images/assets-dark.png"
-          alt=""
-        />
-        <Image
-          className="block dark:hidden"
-          width={1000}
-          height={100}
-          src="/images/assets.jpg"
-          alt=""
-        />
-      </div>
     </div>
   );
 };

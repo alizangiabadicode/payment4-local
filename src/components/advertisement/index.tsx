@@ -9,12 +9,12 @@ const AdvertisementCard = () => {
   const { t } = useTranslation();
   return (
     <div
-      className={`max-w-[300px] sm:max-w-none 
+      className={`max-w-[639px] sm:max-w-none 
         dark:bg-dark-gradient-ad-card
            bg-light-gradient-ad-card
-      sm:pt-[45px] sm:pb-[25px] rounded my-14 flex flex-col sm:flex-row sm:justify-between  gap-y-10 py-5`}
+      md:pt-[45px] md:pb-[25px] rounded my-14 flex flex-col items-center sm:flex-row sm:justify-between  gap-y-10 py-5`}
     >
-      <div className="flex flex-col justify-center gap-5 ml-[25px] w-1/2">
+      <div className="flex flex-col justify-center gap-5 ml-[25px] sm:w-1/2">
         <p
           className={`text-[18px] sm:text-[24px] font-bold 
             dark:text-white text-black
@@ -40,7 +40,7 @@ const AdvertisementCard = () => {
           </Button>
         </div>
       </div>
-      <div className="-order-last sm:order-last flex justify-center sm:justify-evenly">
+      <div className="-order-last sm:order-last flex justify-center sm:justify-evenly w-[200px] md:w-[400px]">
         <Image
           className="dark:hidden block"
           width={239}

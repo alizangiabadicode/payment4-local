@@ -30,8 +30,8 @@ const ContactForm = () => {
 
   return (
     <div
-      className={`dark:bg-dark-gradient-card bg-light-gradient-card 
-      px-[48px] py-[40px] rounded-[8px] w-[346px] md:w-[497px] md:h-max-[497px]`}
+      className={`dark:bg-dark-gradient-card bg-light-gradient-card
+      px-[48px] py-[40px] rounded-[8px] w-full md:w-[497px] md:h-max-[497px]`}
     >
       <form onSubmit={handleSubmit}>
         <p
