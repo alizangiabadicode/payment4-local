@@ -26,10 +26,10 @@ const Footer = () => {
   return (
     <footer
       style={{ direction: direction }}
-      className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1 sm:grid-cols-2 p-4 sm:py-6 gap-y-8
+      className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1  sm:grid-cols-2 p-4 sm:py-6 gap-y-8
         dark:bg-[#0B0B0E]  bg-white`}
     >
-      <div className="flex flex-col items-center sm:items-start md:pl-32">
+      <div className="flex flex-col items-center sm:items-start lg:pl-32">
         <div className="flex flex-col gap-y-4 sm:gap-y-4">
           <div>
             <Logo />
@@ -114,7 +114,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-5 gap-y-7 sm:gap-0">
+      <div className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0">
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}

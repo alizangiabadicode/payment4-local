@@ -84,7 +84,7 @@ export default async function RootLayout({
       className={`${poppins.variable} ${yekanBakh.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-white dark:bg-dark">
+      <body className="min-h-screen grid grid-rows-[80px_1fr_auto] bg-white dark:bg-dark">
         <Providers>
           <TranslationsProvider
             namespaces={i18nNamespaces}

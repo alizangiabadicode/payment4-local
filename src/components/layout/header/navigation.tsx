@@ -1,21 +1,15 @@
 "use client";
 
 import { useTranslation } from "react-i18next";
-import { Drawer } from "@/components/shared";
 import { navbarItems } from "./navbar-items";
-import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
+
 import Logo from "../../../../public/images/svg/logo";
 
 export const NavigationBar = () => {
   const pathname = usePathname();
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { t } = useTranslation();
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
   return (
     <>
       <div className="flex gap-x-5 md:gap-0">
@@ -31,6 +25,8 @@ export const NavigationBar = () => {
               key={item.title}
               style={{ fontSize: "15px" }}
               href={item.path}
+              className={`${isActive && "font-bold"}
+              dark:text-white`}
             >
               {t(`${item.title.toLowerCase()}`)}
             </Link>

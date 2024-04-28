@@ -40,6 +40,10 @@ const config: Config = {
           "linear-gradient(to right, white, #F1EAFF, white)",
         "dark-gradient-ad-card":
           "linear-gradient(to right, #0d0d0f, #16141e, #0d0d0f)",
+        "dark-gradient-social-networks":
+          "linear-gradient(to right, #2A2338, #18181A, #18181A,  #2A2338)",
+        "light-gradient-social-networks":
+          "linear-gradient(to right, #EFE5FE, #F7F5FF, #F7F5FF,  #EFE5FE)",
       },
     },
   },

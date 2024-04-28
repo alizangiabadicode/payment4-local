@@ -1,4 +1,3 @@
-"use client";
 import React from "react";
 import {
   ClockIcon,
@@ -8,10 +7,14 @@ import {
 } from "../../../../public/images/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
-import { useTranslation } from "react-i18next";
+import initTranslations from "@/app/i18n";
 
-const ContactUs = () => {
-  const { t, i18n } = useTranslation();
+const ContactUs = async ({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) => {
+  const { t, i18n } = await initTranslations(locale, ["translation"]);
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   return (
@@ -68,11 +71,11 @@ const ContactUs = () => {
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
             <div
-              className={`border-l h-[74px] mx-4  dark:border-white opacity-[16%]`}
+              className={`border-l h-[74px] mx-4  dark:border-[#FFFFFF29] border-[#12121229]`}
             ></div>
             <div
               className={`border-l h-[74px] mx-4
-               dark:border-white dark:opacity-[16%]`}
+              dark:border-[#FFFFFF29] border-[#12121229]`}
             ></div>
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
@@ -127,7 +130,7 @@ const ContactUs = () => {
         </div>
         <div
           className={`border-l h-[74px] mx-4
-            dark:border-white dark:opacity-[16%]`}
+            dark:border-[#FFFFFF29] border-[#12121229]`}
         ></div>
         <div className="flex flex-col items-center">
           <LocationIcon />
@@ -148,7 +151,7 @@ const ContactUs = () => {
         </div>
         <div
           className={`border-l h-[74px] mx-4
-           dark:border-white dark:opacity-[16%]`}
+           dark:border-[#FFFFFF29] border-[#12121229]`}
         ></div>
         <div className="flex flex-col  items-center">
           <PhoneIcon />
@@ -169,7 +172,7 @@ const ContactUs = () => {
         </div>
         <div
           className={`border-l h-[74px] mx-4
-           dark:border-white dark:opacity-[16%]`}
+           dark:border-[#FFFFFF29] border-[#12121229]`}
         ></div>
         <div className="flex flex-col items-center">
           <ClockIcon />
@@ -191,7 +194,7 @@ const ContactUs = () => {
       </div>
       <div
         className={`
-          dark:bg-contacts-dark bg-contacts-light
+          dark:bg-dark-gradient-social-networks bg-light-gradient-social-networks
          h-[172px] gap-y-[15px] md:gap-y-0
            flex flex-col md:flex-row md:items-center md:justify-around`}
       >
@@ -250,11 +253,10 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col gap-10 items-center md:flex-row justify-center ">
-        <div>
-          <ContactForm />
-        </div>
-        <div className="px-[30px] md:px-0">
+      <div className="flex flex-col gap-10 items-center md:flex-row justify-center px-[30px]">
+        <ContactForm />
+
+        <div className=" md:px-0">
           <Image
             className="hidden dark:block"
             width={487}

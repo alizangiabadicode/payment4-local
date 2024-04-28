@@ -9,7 +9,7 @@ export const navbarItems: navbarItemsTypes[] = [
   },
   {
     title: "Documents",
-    path: "/documents/",
+    path: "/documents",
   },
   {
     title: "About",
@@ -17,6 +17,10 @@ export const navbarItems: navbarItemsTypes[] = [
   },
   {
     title: "Contact us",
-    path: "/contact-us/",
+    path: "/contact-us",
+  },
+  {
+    title: "faq",
+    path: "/faq",
   },
 ];

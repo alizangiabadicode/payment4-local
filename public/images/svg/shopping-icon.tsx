@@ -1,6 +1,6 @@
 import React from "react";
 
- export const ShoppingIcon = ({ color = "#864AFF" }: { color?: string }) => {
+ export const ShoppingIcon = ({ color }: { color?: string }) => {
   return (
     <svg
       width="20"
