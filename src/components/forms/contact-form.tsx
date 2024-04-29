@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import Input from "../shared/textField";
 import TextArea from "../shared/textArea";
 import { Button } from "../shared/button";
-import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
 
 interface FormData {
@@ -44,7 +43,7 @@ const ContactForm = () => {
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224] py-[15px]`}
             type="text"
             placeholder={t("name")}
           />
@@ -52,7 +51,7 @@ const ContactForm = () => {
             name="email"
             value={formData.email}
             onChange={handleInputChange}
-            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
+            className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224] py-[15px]`}
             type="text"
             placeholder={t("email")}
           />

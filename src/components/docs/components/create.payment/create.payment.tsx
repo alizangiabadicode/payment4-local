@@ -53,7 +53,7 @@ export const CreatePayment = () => {
         className={`pb-1 rounded-lg
           dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5">
+        <pre className="ml-5 overflow-x-auto">
           <code className="dark:text-white text-black">
             {`
 {
@@ -74,7 +74,7 @@ export const CreatePayment = () => {
         className={`pb-1 rounded-lg
          dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">{`${process.env.BASE_URL}/api/v1/payment`}</pre>
+        <pre className="ml-5 overflow-x-auto">{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment`}</pre>
       </div>
       <p
         className={`text-base leading-8 

@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <header style={{ direction: direction }}>
       <div
-        className={`container px-5 sm:px-50 flex items-center justify-between my-4 `}
+        className={`px-5 sm:px-50 flex items-center justify-between my-4 `}
       >
         <NavigationBar />
         <div className="flex items-center gap-x-4">
@@ -37,10 +37,14 @@ const Header = () => {
             <Button
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
               className="px-1 sm:px-6 text-sm sm:text-base"
+              onClick={() => console.log(i18n.language)}
             >
-              <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+              <Link
+                href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
+                target="_blank"
+              >
                 {t("signup")}
-              </a>
+              </Link>
             </Button>
           </div>
           <div>

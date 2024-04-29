@@ -52,8 +52,8 @@ const AboutUs = async ({
       locale={locale}
       resources={resources}
     >
-      <div className="flex flex-col items-center lg:px-[300px] mt-[30px]">
-        <div className="flex flex-col gap-y-[8px] px-5 md:px-0">
+      <div className="flex flex-col items-center lg:px-[200px] mt-[40px]">
+        <div className="flex flex-col gap-y-[8px] px-5 md:px-0 max-w-[800px]">
           <p
             className="
             dark:text-white text-black
@@ -81,21 +81,36 @@ const AboutUs = async ({
           </div>
           <div className="flex flex-col items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+20000</p>
-            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px]">{t("paymentDaily")}</p>
+            <p
+              className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]"
+            >
+              {t("paymentDaily")}
+            </p>
           </div>
           <div className="flex flex-col items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+1000</p>
-            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px]">{t("merchant")}</p>
+            <p
+              className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]"
+            >
+              {t("merchant")}
+            </p>
           </div>
           <div className="flex flex-col col-span-3 md:col-span-1 justify-center items-center">
             <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+200</p>
-            <p className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px]">{t("teamMembers")}</p>
+            <p
+              className="text-[#121212C7] dark:text-[#FFFFFFC7] 
+            text-[12px] md:text-[16px]"
+            >
+              {t("teamMembers")}
+            </p>
           </div>
         </div>
-        <div className="flex flex-col md:flex-row md:justify-between items-center gap-y-5">
+        <div
+          className="flex flex-col md:flex-row md:justify-between 
+        items-center gap-y-5 mb-[30px] md:mb-[100px]"
+        >
           <div className="flex flex-col md:w-1/2 px-5 md:px-0">
             <p
               className="
@@ -173,7 +188,7 @@ const AboutUs = async ({
               {t("JoinTheBusinesses")}
             </p>
             <div>
-              <Button className="px-[64px] py-[5px] rounded-[8px]">
+              <Button className="px-[64px] py-[10px] rounded-[8px]">
                 {t("joinUs")}
               </Button>
             </div>

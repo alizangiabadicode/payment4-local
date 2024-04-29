@@ -223,7 +223,7 @@ const ContactUs = async ({
             {t("joinOurSocialNetworks")}
           </p>
         </div>
-        <div className="flex gap-x-[60px] justify-center px-[15px]">
+        <div className="flex gap-x-[20px] md:gap-x-[60px] justify-center px-[15px]">
           <div>
             <Image
               width={80}
