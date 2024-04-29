@@ -229,7 +229,7 @@ const DocumentPageLayout: React.FC = () => {
         ))}
       </div>
       {/* Content Section */}
-      <div className="w-full md:w-3/4 p-4">
+      <div className="max-w-[320px] sm:max-w-[650px] md:max-w-none md:w-3/4 p-4">
         {docArray.map((item) => (
           <div key={item.id} id={item.id} className="p-4">
             <p

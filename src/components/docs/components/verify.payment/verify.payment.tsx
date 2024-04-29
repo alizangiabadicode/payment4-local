@@ -65,7 +65,7 @@ export const VerifyPayment = () => {
        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
         <pre className="ml-5 overflow-x-auto">
-          <code className="dark:text-white text-black">{`${process.env.BASE_URL}/api/v1/payment/verify`}</code>
+          <code className="dark:text-white text-black">{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment/verify`}</code>
         </pre>
       </div>
       <p
