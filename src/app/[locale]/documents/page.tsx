@@ -174,10 +174,10 @@ const DocumentPageLayout: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ direction }} className="container flex md:gap-[69px]">
+    <div style={{ direction }} className="container grid grid-cols-1 md:grid-cols-5 gap-[10px]">
       {/* Sidebar */}
       <div
-        className="hidden md:block md:w-1/4 
+        className="hidden md:block 
            dark:bg-[#FFFFFF08] bg-[#12121208]
         h-max p-[26px] rounded-[8px] sticky top-0"
       >
@@ -229,7 +229,7 @@ const DocumentPageLayout: React.FC = () => {
         ))}
       </div>
       {/* Content Section */}
-      <div className="max-w-[320px] sm:max-w-[650px] md:max-w-none md:w-3/4 p-4">
+      <div className="col-span-5 md:col-end-7 p-4">
         {docArray.map((item) => (
           <div key={item.id} id={item.id} className="p-4">
             <p
