@@ -11,22 +11,22 @@ const PrivacyPolicyPage = async ({
       className="py-24 container px-[10px] md:pr-36 flex flex-col gap-y-[20px]"
       style={{ direction: i18n.dir() }}
     >
-      <p className="font-bold text-[18px]">{t("PrivacyPolicy.introduction")}</p>
+      <p className="font-bold text-[18px]">{t("privacyPolicy.introduction")}</p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
         {" "}
-        {t("PrivacyPolicy.welcomeToPayment4Crypto")}
+        {t("privacyPolicy.welcomeToPayment4Crypto")}
       </p>
       <p
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: 2, fontSize: "14px" }}
       >
-        {t("PrivacyPolicy.privacyPolicyDesc")}
+        {t("privacyPolicy.privacyPolicyDesc")}
       </p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.informationCollection")}
+        {t("privacyPolicy.informationCollection")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.weCollectVariousTypesOfInformation")}
+        {t("privacyPolicy.weCollectVariousTypesOfInformation")}
       </p>
       <ul
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
@@ -34,21 +34,21 @@ const PrivacyPolicyPage = async ({
       >
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.personalInformation")}
+            {t("privacyPolicy.personalInformation")}
           </p>
-          {t("PrivacyPolicy.personalInformationDesc")}
+          {t("privacyPolicy.personalInformationDesc")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.paymentDetails")}
+            {t("privacyPolicy.paymentDetails")}
           </p>{" "}
-          {t("PrivacyPolicy.paymentDetailsDesc")}
+          {t("privacyPolicy.paymentDetailsDesc")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.UsageData")}
+            {t("privacyPolicy.UsageData")}
           </p>{" "}
-          {t("PrivacyPolicy.UsageDataDesc")}
+          {t("privacyPolicy.UsageDataDesc")}
         </li>
         {/* <li>
             <p  style={{ fontWeight: 700, fontSize: '14px' }}>
@@ -59,10 +59,10 @@ const PrivacyPolicyPage = async ({
           </li> */}
       </ul>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.useOfInformation")}
+        {t("privacyPolicy.useOfInformation")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.weUseTheInformation")}
+        {t("privacyPolicy.weUseTheInformation")}
       </p>
       <ul
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
@@ -70,124 +70,124 @@ const PrivacyPolicyPage = async ({
       >
         <li>
           {" "}
-          {t("PrivacyPolicy.processingCryptocurrencyTransactionsAndPayments")}
+          {t("privacyPolicy.processingCryptocurrencyTransactionsAndPayments")}
         </li>
         <li>
-          {t("PrivacyPolicy.providingCustomerSupportAndRespondingToInquiries")}
+          {t("privacyPolicy.providingCustomerSupportAndRespondingToInquiries")}
         </li>
-        <li>{t("PrivacyPolicy.sendingImportantNotifications")}</li>
-        <li>{t("PrivacyPolicy.improvingOurWebsite")}</li>
-        <li>{t("PrivacyPolicy.analyzingUsagePatterns")}</li>
-        <li>{t("PrivacyPolicy.complyingWithLegal")}</li>
+        <li>{t("privacyPolicy.sendingImportantNotifications")}</li>
+        <li>{t("privacyPolicy.improvingOurWebsite")}</li>
+        <li>{t("privacyPolicy.analyzingUsagePatterns")}</li>
+        <li>{t("privacyPolicy.complyingWithLegal")}</li>
       </ul>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.sharingOfInformation")}
+        {t("privacyPolicy.sharingOfInformation")}
       </p>
-      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("PrivacyPolicy.weMayShareYourInformation")}</p>
+      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("privacyPolicy.weMayShareYourInformation")}</p>
       <ul
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: 2, fontSize: "14px", listStyle: "outside" }}
       >
-        <li>{t("PrivacyPolicy.consentLi1")}</li>
-        <li>{t("PrivacyPolicy.requiredByLawLi2")}</li>
-        <li>{t("PrivacyPolicy.protectRightsLi3")}</li>
-        <li>{t("PrivacyPolicy.mergerOrAcquisitionLi4")}</li>
+        <li>{t("privacyPolicy.consentLi1")}</li>
+        <li>{t("privacyPolicy.requiredByLawLi2")}</li>
+        <li>{t("privacyPolicy.protectRightsLi3")}</li>
+        <li>{t("privacyPolicy.mergerOrAcquisitionLi4")}</li>
       </ul>
-      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("PrivacyPolicy.weDoNotSellOrRent")}</p>
-      <p className="font-bold text-[18px]">{t("PrivacyPolicy.dataSecurity")}</p>
-      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>{t("PrivacyPolicy.securityParagraph")}</p>
+      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("privacyPolicy.weDoNotSellOrRent")}</p>
+      <p className="font-bold text-[18px]">{t("privacyPolicy.dataSecurity")}</p>
+      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>{t("privacyPolicy.securityParagraph")}</p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.legalBasisForProcessing")}
+        {t("privacyPolicy.legalBasisForProcessing")}
       </p>
-      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("PrivacyPolicy.weProcessYourPersonalInformation")}</p>
+      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">{t("privacyPolicy.weProcessYourPersonalInformation")}</p>
       <ul
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: 2, fontSize: "14px", listStyle: "outside" }}
       >
-        <li>{t("PrivacyPolicy.processingBasis1")}</li>
-        <li>{t("PrivacyPolicy.processingBasis2")}</li>
-        <li>{t("PrivacyPolicy.processingBasis3")}</li>
-        <li>{t("PrivacyPolicy.processingBasis4")}</li>
-        <li>{t("PrivacyPolicy.processingBasis5")}</li>
+        <li>{t("privacyPolicy.processingBasis1")}</li>
+        <li>{t("privacyPolicy.processingBasis2")}</li>
+        <li>{t("privacyPolicy.processingBasis3")}</li>
+        <li>{t("privacyPolicy.processingBasis4")}</li>
+        <li>{t("privacyPolicy.processingBasis5")}</li>
       </ul>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.youHaveTheRightToObjectToCertainProcessing")}
+        {t("privacyPolicy.youHaveTheRightToObjectToCertainProcessing")}
       </p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.yourRightsAsAUser")}
+        {t("privacyPolicy.yourRightsAsAUser")}
       </p>
-      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>{t("PrivacyPolicy.AsAUserOfOur")}</p>
+      <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>{t("privacyPolicy.AsAUserOfOur")}</p>
       <ul
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: 2, fontSize: "14px", listStyle: "outside" }}
       >
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.accountInformation")}
+            {t("privacyPolicy.accountInformation")}
           </p>{" "}
-          {t("PrivacyPolicy.dataRetention1")}
+          {t("privacyPolicy.dataRetention1")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.transactionData")}
+            {t("privacyPolicy.transactionData")}
           </p>{" "}
-          {t("PrivacyPolicy.dataRetention2")}
+          {t("privacyPolicy.dataRetention2")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.usageData")}
+            {t("privacyPolicy.usageData")}
           </p>{" "}
-          {t("PrivacyPolicy.dataRetention3")}
+          {t("privacyPolicy.dataRetention3")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.marketingCommunications")}
+            {t("privacyPolicy.marketingCommunications")}
           </p>{" "}
-          {t("PrivacyPolicy.dataRetention4")}
+          {t("privacyPolicy.dataRetention4")}
         </li>
         <li>
           <p style={{ fontWeight: 700, fontSize: "14px" }}>
-            {t("PrivacyPolicy.legalAndRegulatoryRequirements")}
+            {t("privacyPolicy.legalAndRegulatoryRequirements")}
           </p>{" "}
-          {t("PrivacyPolicy.dataRetention5")}
+          {t("privacyPolicy.dataRetention5")}
         </li>
       </ul>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.onceTheRetentionPeriodExpires")}
+        {t("privacyPolicy.onceTheRetentionPeriodExpires")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.ifYouHaveAnyQuestions")}
+        {t("privacyPolicy.ifYouHaveAnyQuestions")}
       </p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.updatestoPrivacyPolicy")}
+        {t("privacyPolicy.updatestoPrivacyPolicy")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.weMayUpdateThisPrivacyPolicy")}
+        {t("privacyPolicy.weMayUpdateThisPrivacyPolicy")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.weEncourageYouToReview")}
+        {t("privacyPolicy.weEncourageYouToReview")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.ifThereAreSignificantChanges")}
+        {t("privacyPolicy.ifThereAreSignificantChanges")}
       </p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.contactInformation")}
+        {t("privacyPolicy.contactInformation")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.concernsRelatedToThisPrivacyPolicy")}
+        {t("privacyPolicy.concernsRelatedToThisPrivacyPolicy")}
       </p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>support@payment4.com</p>
       <p className="dark:text-[#FFFFFFA1] text-[#121212A1]" style={{ fontSize: "14px" }}>
-        {t("PrivacyPolicy.weAreCommittedToAddressingYourInquiries")}
+        {t("privacyPolicy.weAreCommittedToAddressingYourInquiries")}
       </p>
       <p className="font-bold text-[18px]">
-        {t("PrivacyPolicy.legalCompliance")}
+        {t("privacyPolicy.legalCompliance")}
       </p>
       <p
         className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: 2, fontSize: "14px" }}
       >
-        {t("PrivacyPolicy.ourDataProcessingActivities")}
+        {t("privacyPolicy.ourDataProcessingActivities")}
       </p>
     </div>
   );

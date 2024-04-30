@@ -56,7 +56,7 @@
   "instagram": "Instagram",
   "resources": "Recursos",
   "termsOfService": "Términos de servicio",
-  "privacyPolicy": "Política de privacidad",
+  "privacyPolicyFooter": "Política de privacidad",
   "faq": "Preguntas frecuentes",
   "company": "Empresa",
   "product": "Producto",
@@ -173,7 +173,7 @@
   "name": "Nombre",
   "enterYourMessage": "Ingrese su mensaje",
   "send": "Enviar",
-  "PrivacyPolicy": {
+  "privacyPolicy": {
     "introduction": "Introducción",
     "welcomeToPayment4Crypto": "¡Bienvenido a Payment4 Crypto Payment Gateway!",
     "privacyPolicyDesc": "En Payment4, entendemos la importancia de proteger su información personal y nos comprometemos a salvaguardar su privacidad. Esta Política de Privacidad describe cómo recopilamos, utilizamos, compartimos y protegemos la información que usted proporciona al utilizar nuestros servicios de pasarela de pagos de criptomonedas. Creemos en la transparencia y queremos que se sienta seguro de que sus datos están en buenas manos. Esta política explica los tipos de información que recopilamos, por qué lo hacemos y cómo puede ejercer control sobre sus datos. Lea detenidamente esta política para comprender nuestras prácticas y cómo se alinean con sus derechos como usuario. Al acceder o utilizar nuestros servicios de pasarela de pagos de criptomonedas, acepta los términos descritos en esta Política de Privacidad. Si tiene preguntas o inquietudes acerca de esta política o nuestras prácticas de datos, no dude en ponerse en contacto con nosotros en support@payment4.com. Su privacidad es importante para nosotros, y estamos aquí para proporcionarle la información que necesita. Gracias por elegir Payment4.com. Su confianza es inestimable para nosotros, y estamos dedicados a brindarle una experiencia segura y confiable en la pasarela de pagos.",
@@ -235,5 +235,7 @@
     "weAreCommittedToAddressingYourInquiries": "Estamos comprometidos en abordar sus consultas y resolver cualquier inquietud que pueda tener en relación con la privacidad y seguridad de su información personal.",
     "legalCompliance": "Cumplimiento Legal",
     "ourDataProcessingActivities": "Nuestras actividades de procesamiento de datos se llevan a cabo de acuerdo con las leyes y regulaciones de protección de datos aplicables. Esta Política de Privacidad tiene como objetivo proporcionarle información clara y transparente sobre cómo recopilamos, utilizamos, compartimos y protegemos su información personal. Como controladores de datos, tomamos nuestras responsabilidades en serio y nos esforzamos por garantizar que se respeten sus derechos e intereses. Si tiene preocupaciones sobre nuestras prácticas de procesamiento de datos, comuníquese con nosotros utilizando la información proporcionada en la sección 'Información de Contacto' de esta Política de Privacidad."
-  }
+  },
+  "runTheFollowingCommand": "Ejecute el siguiente comando:",
+  "youTube": "YouTube"
 }

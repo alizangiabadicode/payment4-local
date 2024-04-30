@@ -9,7 +9,10 @@ export const SDKSection = () => {
       <h2 className={`text-2xl font-semibold dark:text-white text-black`}>
         Overview
       </h2>
-      <p className={`text-base font-normal mt-4  dark:text-white text-black`}>
+      <p
+        className={`text-base font-normal mt-4   dark:text-[#FFFFFFC7] 
+        text-[#121212C7] `}
+      >
         {t("sdkDoc")}
       </p>
     </div>

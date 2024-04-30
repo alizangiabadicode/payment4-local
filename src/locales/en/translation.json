@@ -56,7 +56,7 @@
   "instagram": "Instagram",
   "resources": "Resources",
   "termsOfService": "Terms of service",
-  "privacyPolicy": "Privacy Policy",
+  "privacyPolicyFooter": "Privacy Policy",
   "faq": "FAQ",
   "company": "Company",
   "product": "Product",
@@ -173,7 +173,7 @@
   "name": "Name",
   "enterYourMessage": "Enter your message",
   "send": "send",
-  "PrivacyPolicy": {
+  "privacyPolicy": {
     "introduction": "Introduction",
     "welcomeToPayment4Crypto": "Welcome to Payment4 Crypto Payment Gateway!",
     "privacyPolicyDesc": "At Payment4, we understand the importance of safeguarding your personal information and are committed to protecting your privacy. This Privacy Policy outlines how we collect, use, share, and protect the information you provide when using our cryptocurrency payment gateway services. We believe in transparency and want you to feel confident that your data is in safe hands. This policy explains the types of information we collect, why we collect it, and how you can exercise control over your data. Please take the time to read through this policy to understand our practices and how they align with your rights as a user. By accessing or using our cryptocurrency payment gateway services, you agree to the terms outlined in this Privacy Policy. If you have any questions or concerns about this policy or our data practices, please don't hesitate to contact us at support@payment4.com. Your privacy matters to us, and we are here to provide you with the information you need. Thank you for choosing Payment4.com. Your trust is invaluable to us, and we are dedicated to providing you with a secure and reliable payment gateway experience.",
@@ -235,5 +235,7 @@
     "weAreCommittedToAddressingYourInquiries": "We are committed to addressing your inquiries and resolving any concerns you may have regarding the privacy and security of your personal information.",
     "legalCompliance": "Legal Compliance",
     "ourDataProcessingActivities": "Our data processing activities are conducted in accordance with applicable data protection laws and regulations. This Privacy Policy aims to provide you with clear and transparent information about how we collect, use, share, and protect your personal information. As a data controller, we take our responsibilities seriously and strive to ensure that your rights and interests are respected. If you have concerns about our data processing practices, please contact us using the information provided in the 'Contact Information' section of this Privacy Policy."
-  }
+  },
+  "runTheFollowingCommand": "Run the following command :",
+  "youTube": "youTube"
 }

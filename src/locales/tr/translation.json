@@ -173,7 +173,7 @@
   "name": "Ad",
   "enterYourMessage": "Mesajınızı girin",
   "send": "Gönder",
-  "PrivacyPolicy": {
+  "privacyPolicyFooter": {
     "introduction": "Giriş",
     "welcomeToPayment4Crypto": "Payment4 Crypto Ödeme Ağ Geçidi'ne hoş geldiniz!",
     "privacyPolicyDesc": "Payment4 olarak, kişisel bilgilerinizi korumanın önemini anlıyoruz ve verilerinizi koruma taahhüdümüzü sürdürüyoruz. Bu Gizlilik Politikası, kripto ödeme ağ geçidi hizmetlerimizi kullanırken sağladığınız bilgilerin nasıl toplandığını, kullanıldığını, paylaşıldığını ve korunduğunu açıklar. Şeffaflığı benimseriz ve verilerinizin güvende olduğuna dair güven duymanızı istiyoruz. Bu politika, topladığımız bilgi türlerini, neden topladığımızı ve verileriniz üzerinde nasıl kontrol sağlayabileceğinizi açıklar. Bu politikayı incelemek ve uygulamalarımızı, kullanıcı haklarınıza nasıl uyumlu olduğunu anlamak için lütfen zaman ayırın. Kripto ödeme ağ geçidi hizmetlerimizi erişerek veya kullanarak, bu Gizlilik Politikası'nda belirtilen şartları kabul etmiş olursunuz. Bu politika veya veri uygulamalarımızla ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen support@payment4.com adresinden bize ulaşmaktan çekinmeyin. Gizliliğiniz bizim için önemlidir ve vermeniz gereken bilgileri sağlamak için buradayız. Payment4.com'u tercih ettiğiniz için teşekkür ederiz. Güveniniz bizim için paha biçilmezdir ve size güvenli ve güvenilir bir ödeme ağ geçidi deneyimi sunmaya adanmışızdır.",
@@ -235,5 +235,7 @@
     "weAreCommittedToAddressingYourInquiries": "Kişisel bilgilerinizin gizliliği ve güvenliği konusundaki herhangi bir sorunuzu ele almak ve çözmek için taahhüt ediyoruz.",
     "legalCompliance": "Hukuki Uyumluluk",
     "ourDataProcessingActivities": "Veri işleme faaliyetlerimiz geçerli veri koruma yasaları ve düzenlemelerine uygun olarak yürütülür. Bu Gizlilik Politikası, kişisel bilgilerinizi nasıl topladığımız, kullanıdığımız, paylaştığımız ve koruduğumuz hakkında size açık ve şeffaf bilgi sağlamayı amaçlar. Veri denetleyicisi olarak, sorumluluklarımızı ciddiye alır ve haklarınızın ve çıkarlarınızın saygı"
-  }
+  },
+  "runTheFollowingCommand": "Aşağıdaki komutu çalıştırın:",
+  "youTube": "YouTube"
 }

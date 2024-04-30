@@ -11,17 +11,17 @@ export const CreatePayment = () => {
       <div className="flex flex-col my-5">
         <p
           className={`text-base leading-8 
-               dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-               text-[#121212C7] text-opacity-[78%]`}
+               dark:text-[#FFFFFFC7] 
+               text-[#121212C7] `}
         >
           {t("titleCreatePayment")}
         </p>
       </div>
       <div
-        className={`pb-1 rounded-lg 
+        className={`pb-4 rounded-lg 
           dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -44,16 +44,16 @@ export const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-       dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-       text-[#121212C7] text-opacity-[78%]`}
+       dark:text-[#FFFFFFC7] 
+       text-[#121212C7] `}
       >
         {t("apiHeaderCreatePayment")}
       </p>
       <div
-        className={`pb-1 rounded-lg
+        className={`pb-4 rounded-lg
           dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+        <pre className="ml-5 overflow-x-auto" style={{direction:'ltr'}}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -65,21 +65,21 @@ export const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7] `}
       >
         {t("requestSentToCreatePayment")}
       </p>
       <div
-        className={`pb-1 rounded-lg
+        className={`py-4 rounded-lg
          dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment`}</pre>
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment`}</pre>
       </div>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7] `}
       >
         {t("definitionsCreatePayment")}
       </p>
@@ -87,8 +87,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]`}
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] `}
           >
             {t("sandboxCreatePayment")}
           </p>
@@ -96,8 +96,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]`}
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] `}
           >
             {t("currencyCreatePayment")}
           </p>
@@ -105,8 +105,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-           dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-           text-[#121212C7] text-opacity-[78%]`}
+           dark:text-[#FFFFFFC7] 
+           text-[#121212C7] `}
           >
             {t("amountCreatePayment")}
           </p>
@@ -114,8 +114,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-           dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-           text-[#121212C7] text-opacity-[78%]`}
+           dark:text-[#FFFFFFC7] 
+           text-[#121212C7] `}
           >
             {t("callbackUrlCreatePayment")}
           </p>
@@ -123,8 +123,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]`}
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] `}
           >
             {t("callbackParamsCreatePayment")}
           </p>
@@ -132,8 +132,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-           dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-           text-[#121212C7] text-opacity-[78%]`}
+           dark:text-[#FFFFFFC7] 
+           text-[#121212C7] `}
           >
             {t("webhookUrlCreatePayment")}
           </p>
@@ -141,8 +141,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]`}
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] `}
           >
             {t("webhookParamsCreatePayment")}
           </p>
@@ -150,8 +150,8 @@ export const CreatePayment = () => {
         <li className={`dark:text-white text-black`}>
           <p
             className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]`}
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] `}
           >
             {t("languageCreatePayment")}
           </p>
@@ -159,16 +159,16 @@ export const CreatePayment = () => {
       </ul>
       <p
         className={`text-base leading-8 
-       dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-       text-[#121212C7] text-opacity-[78%]`}
+       dark:text-[#FFFFFFC7] 
+       text-[#121212C7] `}
       >
         {t("responseTitleCreatePayment")}
       </p>
       <div
-        className={`pb-1 rounded-lg
+        className={`pb-4 rounded-lg
         dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -182,19 +182,19 @@ export const CreatePayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%] my-5`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7]  my-5`}
       >
         {t("errorsTitleCreatePayment")}
       </p>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%] my-5`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7]  my-5`}
       >
         {t("errorsDescriptionCreatePayment")}
       </p>
-      <div className="pb-1 bg-gray-200 rounded-lg">
+      <div className="pb-4 bg-gray-200 rounded-lg">
         <ErrorsTable errors={errors} />
       </div>
     </div>
