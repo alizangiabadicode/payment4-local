@@ -4,11 +4,11 @@ import { useTranslation } from "react-i18next";
 export const Settlements = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="mt-3">
       <p
         className={`text-base leading-8 
-            dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-            text-[#121212C7] text-opacity-[78%]
+            dark:text-[#FFFFFFC7] 
+            text-[#121212C7] 
         }`}
       >
         {t("settlements")}

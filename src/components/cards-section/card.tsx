@@ -1,7 +1,8 @@
 import React from "react";
 import { Button } from "../shared/button";
-import { RightArrowIcon } from "../../../public/images/svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 export interface CardsType {
   title: string;
@@ -13,6 +14,7 @@ export interface CardsType {
 }
 
 const Card = (props: CardsType) => {
+  const { i18n } = useTranslation();
   return (
     <div
       className={`
@@ -31,7 +33,7 @@ const Card = (props: CardsType) => {
         <div className="mb-[10px]">
           <Button className="hidden md:flex px-[10px] sm:px-10 sm:py-[10px] py-[7px] gap-x-2 mb-5 md:mb-0">
             {props.buttonText}
-            <RightArrowIcon />
+            {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>
       </div>

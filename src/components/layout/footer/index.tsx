@@ -4,8 +4,6 @@ import Logo from "../../../../public/images/svg/logo";
 import {
   LinkedinDarkIcon,
   LinkedinIcon,
-  TelegramDarkIcon,
-  TelegramIcon,
   XDarkLogo,
   XLogo,
   YoutubeDarkIcon,
@@ -43,7 +41,17 @@ const Footer = () => {
             </p>
           </div>
           <div className="hidden sm:flex gap-4">
-            <div className="cursor-pointer">
+            <div
+              onClick={() => {
+                window.open(
+                  i18n.language === "fa"
+                    ? "https://twitter.com/payment4_fa?s=11"
+                    : "http://twitter.com/payment4_com",
+                  "_blank"
+                );
+              }}
+              className="cursor-pointer"
+            >
               {isDark === "dark" && mounted ? (
                 <XDarkLogo />
               ) : isDark === "light" && mounted ? (
@@ -60,24 +68,17 @@ const Footer = () => {
                 />
               )}
             </div>
-            <div className="cursor-pointer">
-              {isDark === "dark" && mounted ? (
-                <TelegramDarkIcon />
-              ) : isDark === "light" && mounted ? (
-                <TelegramIcon />
-              ) : (
-                <Image
-                  src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-                  width={36}
-                  height={36}
-                  sizes="36x36"
-                  alt="Loading Light/Dark Toggle"
-                  priority={false}
-                  title="Loading Light/Dark Toggle"
-                />
-              )}
-            </div>
-            <div className="cursor-pointer">
+            <div
+              onClick={() => {
+                window.open(
+                  i18n.language === "fa"
+                    ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
+                    : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA",
+                  "_blank"
+                );
+              }}
+              className="cursor-pointer"
+            >
               {isDark === "dark" && mounted ? (
                 <YoutubeDarkIcon />
               ) : isDark === "light" && mounted ? (
@@ -94,7 +95,15 @@ const Footer = () => {
                 />
               )}
             </div>
-            <div className="cursor-pointer">
+            <div
+              onClick={() => {
+                window.open(
+                  "https://www.linkedin.com/company/payment4/",
+                  "_blank"
+                );
+              }}
+              className="cursor-pointer"
+            >
               {isDark === "dark" && mounted ? (
                 <LinkedinDarkIcon />
               ) : isDark === "light" && mounted ? (
@@ -173,34 +182,54 @@ const Footer = () => {
             {t("followUs")}
           </p>
           <div className="flex flex-col gap-2">
-            <p
+            <Link
+              target="_blank"
+              href={"https://www.linkedin.com/company/payment4/"}
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("linkedin")}
-            </p>
-            <p
-              style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
-            >
-              Telegram
-            </p>
-            <p
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                i18n.language === "fa"
+                  ? " https://x.com/payment4_fa?s=11"
+                  : "http://twitter.com/payment4_com"
+              }
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("twitter")}
-            </p>
-            <p
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                i18n.language === "fa"
+                  ? "https://www.instagram.com/payment4_fa"
+                  : "https://www.instagram.com/payment4_com"
+              }
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("instagram")}
-            </p>
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                i18n.language === "fa"
+                  ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
+                  : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA"
+              }
+              style={{ fontSize: "12px" }}
+              className={`text-sm text-primary-text leading-6 
+              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+            >
+              {t("youTube")}
+            </Link>
           </div>
         </div>
         <div className="sm:hidden flex flex-col gap-4 items-center">
@@ -209,23 +238,6 @@ const Footer = () => {
               <XDarkLogo />
             ) : isDark === "light" && mounted ? (
               <XLogo />
-            ) : (
-              <Image
-                src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
-                width={36}
-                height={36}
-                sizes="36x36"
-                alt="Loading Light/Dark Toggle"
-                priority={false}
-                title="Loading Light/Dark Toggle"
-              />
-            )}
-          </div>
-          <div className="cursor-pointer">
-            {isDark === "dark" && mounted ? (
-              <TelegramDarkIcon />
-            ) : isDark === "light" && mounted ? (
-              <TelegramIcon />
             ) : (
               <Image
                 src="data:image/svg+xml;base64,PHN2ZyBzdHJva2U9IiNGRkZGRkYiIGZpbGw9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMCIgdmlld0JveD0iMCAwIDI0IDI0IiBoZWlnaHQ9IjIwMHB4IiB3aWR0aD0iMjAwcHgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiB4PSIyIiB5PSIyIiBmaWxsPSJub25lIiBzdHJva2Utd2lkdGg9IjIiIHJ4PSIyIj48L3JlY3Q+PC9zdmc+Cg=="
@@ -295,7 +307,7 @@ const Footer = () => {
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
-              {t("privacyPolicy")}
+              {t("privacyPolicyFooter")}
             </Link>
             <Link
               href="/faq"

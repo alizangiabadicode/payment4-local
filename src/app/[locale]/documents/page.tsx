@@ -35,7 +35,7 @@ export interface DocArrayInterface {
   subItems?: SubItem[];
 }
 const DocumentPageLayout: React.FC = () => {
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("");
 
   const docArray: DocArrayInterface[] = [
     {
@@ -174,7 +174,10 @@ const DocumentPageLayout: React.FC = () => {
   }, []);
 
   return (
-    <div style={{ direction }} className="container grid grid-cols-1 md:grid-cols-5 gap-[10px]">
+    <div
+      style={{ direction }}
+      className="container grid grid-cols-1 md:grid-cols-5 gap-[10px]"
+    >
       {/* Sidebar */}
       <div
         className="hidden md:block 
@@ -206,7 +209,13 @@ const DocumentPageLayout: React.FC = () => {
                 )}
               </div>
               {item.subItems && !isCollapsed(item.title) && (
-                <ul className="flex flex-col gap-3 my-[10px] ml-[15px]">
+                <ul
+                  className="flex flex-col gap-3 my-[10px]"
+                  style={{
+                    marginLeft: i18n.dir() === "ltr" ? "15px" : 0,
+                    marginRight: i18n.dir() === "rtl" ? "15px" : 0,
+                  }}
+                >
                   {item.subItems.map((subItem) => (
                     <li
                       onClick={() => scrollToSection(subItem.id)}
@@ -214,8 +223,8 @@ const DocumentPageLayout: React.FC = () => {
                       className="cursor-pointer"
                     >
                       <p
-                        className={`
-                         dark:text-white text-[#121212]
+                        className={` text-[15px]
+                        dark:text-[#FFFFFFC7] dark: text-[#121212C7]
                        `}
                       >
                         {subItem.title}

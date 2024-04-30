@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
 import { Button } from "../shared/button";
-import { RightArrowIcon } from "../../../public/images/svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 
 const AdvertisementCard = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div
       className={`max-w-[639px] sm:max-w-none 
@@ -36,7 +36,7 @@ const AdvertisementCard = () => {
             <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
               {t("letsGetStarted")}
             </a>
-            <RightArrowIcon />
+            {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>
       </div>

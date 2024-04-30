@@ -8,19 +8,19 @@ export const WoocommerceSection = () => {
     <div className="px-4 py-5">
       <p
         className={`text-base font-semibold dark:text-[#FFFFFFC7] 
-       dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+     text-[#121212C7] `}
       >
         {t("installation")}
       </p>
       <p
         className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] 
-        dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+        dark: text-[#121212C7] `}
       >
         {t("step")} 1
       </p>
       <p
         className={`text-base font-normal leading-8 mt-2 dark:text-[#FFFFFFC7] 
-       dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+       dark: text-[#121212C7] `}
       >
         {t("dlPlugin")}
         <a href={process.env.NEXT_PUBLIC_REACT_APP_WOOCOMMERCE_PLUGIN_URL}>
@@ -31,19 +31,19 @@ export const WoocommerceSection = () => {
       <p className="text-base font-semibold mt-5">{t("step")} 2</p>
       <p
         className={`text-base font-normal leading-8 mt-2 dark:text-[#FFFFFFC7] 
-        dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+        dark: text-[#121212C7] `}
       >
         {t("configurePlugin")}
       </p>
       <p
         className={`text-base font-semibold mt-2 dark:text-[#FFFFFFC7] 
-        dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+        dark: text-[#121212C7] `}
       >
         {t("step")} 3
       </p>
       <p
         className={`text-base font-normal leading-8 mt-2 dark:text-[#FFFFFFC7] 
-         dark:text-opacity-[78%] text-[#121212C7] text-opacity-[78%]`}
+          text-[#121212C7] `}
       >
         {t("fillInPluginSettings")}
       </p>
@@ -51,49 +51,76 @@ export const WoocommerceSection = () => {
         className="text-base font-normal leading-8 ml-6 my-5"
         style={{ listStyle: "outside" }}
       >
-        <li className={`dark:text-white text-black`}>{t("enableDisable")}</li>
-        <li className={`dark:text-white text-black`}>{t("pluginSandbox")}</li>
-        <li className={`dark:text-white text-black`}>{t("apiKeyPlugin")}</li>
-        <li className={`dark:text-white text-black`}>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
+          {t("enableDisable")}
+        </li>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
+          {t("pluginSandbox")}
+        </li>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
+          {t("apiKeyPlugin")}
+        </li>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
           {t("successPaymentMessage")}
         </li>
-        <li className={`dark:text-white text-black`}>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
           {t("failedPaymentMessage")}
         </li>
-        <li className={`dark:text-white text-black`}>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
           {t("acceptablePaymentMessage")}
         </li>
-        <li className={`dark:text-white text-black`}>
+        <li
+          className={`dark:text-[#FFFFFFC7] 
+          text-[#121212C7]`}
+        >
           {t("mismatchPaymentMessage")}
         </li>
       </ul>
       <p
-        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-         text-[#121212C7] text-opacity-[78%]`}
+        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:
+         text-[#121212C7] `}
       >
         {t("step")} 4
       </p>
       <p
-        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:
+        text-[#121212C7] `}
       >
         {t("optimizeWooCommerceCheckoutPage")}
       </p>
       <p
-        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        className={`text-base font-semibold mt-3 dark:text-[#FFFFFFC7] dark:
+        text-[#121212C7] `}
       >
         {t("step")} 5
       </p>
       <p
-        className={`text-base font-semibold dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        className={`text-base font-semibold dark:text-[#FFFFFFC7] dark:
+        text-[#121212C7] `}
       >
         {t("seamlesslyUse")}
       </p>
       <p
-        className={`text-base font-semibold mt-5 dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%]`}
+        className={`text-base font-semibold mt-5 dark:text-[#FFFFFFC7] dark:
+        text-[#121212C7] `}
       >
         {t("dlPluginDesc")}
         <a href={process.env.NEXT_PUBLIC_REACT_APP_WOOCOMMERCE_PLUGIN_URL}>

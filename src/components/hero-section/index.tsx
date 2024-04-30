@@ -2,13 +2,13 @@
 
 import React from "react";
 import { Button } from "../shared/button";
-import { RightArrowIcon } from "../../../public/images/svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { SwiperSection } from "./swiper";
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col items-center mt-10 gap-y-10">
@@ -108,10 +108,10 @@ const HeroSection = () => {
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             className="px-10 py-2 flex gap-x-2"
           >
-            <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+            <a target="_blank" href={process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}>
               {t("letsGetStarted")}
             </a>
-            <RightArrowIcon />
+            {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>
         <div>

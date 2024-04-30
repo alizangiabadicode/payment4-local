@@ -56,7 +56,7 @@
   "instagram": "Instagram",
   "resources": "Ressources",
   "termsOfService": "Conditions d'utilisation",
-  "privacyPolicy": "Politique de confidentialité",
+  "privacyPolicyFooter": "Politique de confidentialité",
   "faq": "FAQ",
   "company": "Société",
   "product": "Produit",
@@ -173,7 +173,7 @@
   "name": "Nom",
   "enterYourMessage": "Entrez votre message",
   "send": "Envoyer",
-  "PrivacyPolicy": {
+  "privacyPolicy": {
     "introduction": "Introduction",
     "welcomeToPayment4Crypto": "Bienvenue sur Payment4 Crypto Payment Gateway !",
     "privacyPolicyDesc": "Chez Payment4, nous comprenons l'importance de la protection de vos informations personnelles et nous nous engageons à préserver votre vie privée. Cette politique de confidentialité décrit comment nous recueillons, utilisons, partageons et protégeons les informations que vous fournissez lorsque vous utilisez nos services de passerelle de paiement en crypto-monnaie. Nous croyons en la transparence et souhaitons que vous ayez confiance en la sécurité de vos données. Cette politique explique les types d'informations que nous recueillons, pourquoi nous les recueillons et comment vous pouvez exercer un contrôle sur vos données. Prenez le temps de lire cette politique pour comprendre nos pratiques et comment elles sont conformes à vos droits en tant qu'utilisateur. En accédant ou en utilisant nos services de passerelle de paiement en crypto-monnaie, vous acceptez les termes décrits dans cette politique de confidentialité. Si vous avez des questions ou des préoccupations concernant cette politique ou nos pratiques en matière de données, n'hésitez pas à nous contacter à support@payment4.com. Votre vie privée est importante pour nous, et nous sommes là pour vous fournir les informations dont vous avez besoin. Merci d'avoir choisi Payment4.com. Votre confiance est inestimable pour nous, et nous nous engageons à vous offrir une expérience de passerelle de paiement sécurisée et fiable.",
@@ -235,5 +235,7 @@
     "weAreCommittedToAddressingYourInquiries": "Nous nous engageons à répondre à vos questions et à résoudre toute préoccupation que vous pourriez avoir concernant la confidentialité et la sécurité de vos informations personnelles.",
     "legalCompliance": "Conformité légale",
     "ourDataProcessingActivities": "Nos activités de traitement des données sont menées conformément aux lois et réglementations applicables en matière de protection des données. Cette politique de confidentialité vise à vous fournir des informations claires et transparentes sur la manière dont nous collectons, utilisons, partageons et protégeons vos informations personnelles. En tant que responsable du traitement des données, nous prenons nos responsabilités au sérieux et nous nous efforçons de garantir que vos droits et intérêts sont respectés. Si vous avez des préoccupations concernant nos pratiques de traitement des données, veuillez nous contacter en utilisant les informations fournies dans la section 'Coordonnées' de cette politique de confidentialité."
-  }
+  },
+  "runTheFollowingCommand": "Exécutez la commande suivante :",
+  "youTube": "YouTube"
 }

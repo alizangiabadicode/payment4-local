@@ -4,13 +4,13 @@ import { useTranslation } from "react-i18next";
 export const SystemLimits = () => {
   const { t } = useTranslation();
   return (
-    <div>
+    <div className="mt-3">
       <ul className="flex flex-col gap-y-6" style={{ listStyle: "outside" }}>
         <li className="dark:text-white text-black">
           <p
             className={`text-base leading-8 
-                dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-                text-[#121212C7] text-opacity-[78%]
+                dark:text-[#FFFFFFC7] 
+                text-[#121212C7] 
             `}
           >
             {t("systemLimitOne")}
@@ -19,8 +19,8 @@ export const SystemLimits = () => {
         <li className="dark:text-white text-black">
           <p
             className={`text-base leading-8 
-           dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-           text-[#121212C7] text-opacity-[78%]
+           dark:text-[#FFFFFFC7] 
+           text-[#121212C7] 
        `}
           >
             {t("systemLimitTwo")}

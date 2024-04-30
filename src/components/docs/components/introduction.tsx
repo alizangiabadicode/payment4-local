@@ -6,7 +6,7 @@ export const Introduction = () => {
   return (
     <div>
       <p
-        className={`text-[16px] leading-8 dark:text-[#FFFFFFC7] dark:opacity-[78%] text-[#121212C7] opacity-[78%]`}
+        className={`text-[16px] leading-8 dark:text-[#FFFFFFC7] text-[#121212C7] mt-3`}
       >
         {t("docIntro")}
       </p>

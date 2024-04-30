@@ -3,6 +3,7 @@ export * from "./telegram-icon";
 export * from "./youtube-icon";
 export * from "./linkedin-icon";
 export * from "./right-arrow-icon";
+export * from "./left-arrow-icon";
 export * from "./eth-icon";
 export * from "./btc-icon";
 export * from "./signup-icon";

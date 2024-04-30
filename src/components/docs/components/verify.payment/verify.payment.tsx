@@ -10,17 +10,17 @@ export const VerifyPayment = () => {
       <div className="my-5">
         <p
           className={`text-base leading-8 
-          dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-          text-[#121212C7] text-opacity-[78%]`}
+          dark:text-[#FFFFFFC7] 
+          text-[#121212C7] `}
         >
           {t("titleVerifyPayment")}
         </p>
       </div>
       <div
-        className={`pb-1 rounded-lg 
+        className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -34,16 +34,16 @@ export const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%] my-3`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7]  my-3`}
       >
         {t("requestDataVerifyPayment")}
       </p>
       <div
-        className={`pb-1 rounded-lg 
+        className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -55,8 +55,8 @@ export const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%] my-3`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7]  my-3`}
       >
         {t("apiHeaderVerifyPayment")}
       </p>
@@ -64,29 +64,29 @@ export const VerifyPayment = () => {
         className={`py-3 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment/verify`}</code>
         </pre>
       </div>
       <p
         className={`text-base leading-8 
-         dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-         text-[#121212C7] text-opacity-[78%] my-3`}
+         dark:text-[#FFFFFFC7] 
+         text-[#121212C7]  my-3`}
       >
         {t("payment4ResponseTitleVerifyPayment")}
       </p>
       <p
         className={`text-base leading-8 
-         dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-         text-[#121212C7] text-opacity-[78%] my-3`}
+         dark:text-[#FFFFFFC7] 
+         text-[#121212C7]  my-3`}
       >
         {t("responseDescriptionVerifyPayment")}
       </p>
       <div
-        className={`pb-1 rounded-lg 
+        className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-        <pre className="ml-5 overflow-x-auto">
+       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
           <code className="dark:text-white text-black">
             {`
 {
@@ -100,22 +100,22 @@ export const VerifyPayment = () => {
       </div>
       <p
         className={`text-base leading-8 
-         dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-         text-[#121212C7] text-opacity-[78%] my-3`}
+         dark:text-[#FFFFFFC7] 
+         text-[#121212C7]  my-3`}
       >
         {t("amountDifferenceDescVerifyPayment")}
       </p>
       <p
         className={`text-base leading-8 
-         dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-         text-[#121212C7] text-opacity-[78%] my-3`}
+         dark:text-[#FFFFFFC7] 
+         text-[#121212C7]  my-3`}
       >
         {t("errorsTitleVerifyPayment")}
       </p>
       <p
         className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] dark:text-opacity-[78%]
-        text-[#121212C7] text-opacity-[78%] my-3`}
+        dark:text-[#FFFFFFC7] 
+        text-[#121212C7]  my-3`}
       >
         {t("errorsDescriptionVerifyPayment")}
       </p>
