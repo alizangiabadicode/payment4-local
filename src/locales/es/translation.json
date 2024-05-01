@@ -237,5 +237,8 @@
     "ourDataProcessingActivities": "Nuestras actividades de procesamiento de datos se llevan a cabo de acuerdo con las leyes y regulaciones de protección de datos aplicables. Esta Política de Privacidad tiene como objetivo proporcionarle información clara y transparente sobre cómo recopilamos, utilizamos, compartimos y protegemos su información personal. Como controladores de datos, tomamos nuestras responsabilidades en serio y nos esforzamos por garantizar que se respeten sus derechos e intereses. Si tiene preocupaciones sobre nuestras prácticas de procesamiento de datos, comuníquese con nosotros utilizando la información proporcionada en la sección 'Información de Contacto' de esta Política de Privacidad."
   },
   "runTheFollowingCommand": "Ejecute el siguiente comando:",
-  "youTube": "YouTube"
+  "youTube": "YouTube",
+  "pageNotFound": "¡Página no encontrada!",
+  "notFoundDesc": "Lo sentimos, la página que solicitó no se pudo encontrar. ¡Por favor, regrese a la página de inicio!",
+  "goBack": "REGRESAR"
 }

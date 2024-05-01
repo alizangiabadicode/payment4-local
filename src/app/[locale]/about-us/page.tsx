@@ -9,6 +9,7 @@ import { Button } from "../../../components/shared/button";
 import Image from "next/image";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
+import Link from "next/link";
 
 interface reasonsToChoosePayment4 {
   title: string;
@@ -23,7 +24,7 @@ const AboutUs = async ({
 }: {
   params: { locale: string };
 }) => {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { t, resources, i18n } = await initTranslations(locale, i18nNamespaces);
   const reasonsToChoosePayment4: reasonsToChoosePayment4[] = [
     {
       title: t("secureAndReliable"),
@@ -188,9 +189,14 @@ const AboutUs = async ({
               {t("JoinTheBusinesses")}
             </p>
             <div>
-              <Button className="px-[64px] py-[10px] rounded-[8px]">
-                {t("joinUs")}
-              </Button>
+              <Link
+                target="_blank"
+                href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
+              >
+                <Button className="px-[64px] py-[10px] rounded-[8px]">
+                  {t("joinUs")}
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

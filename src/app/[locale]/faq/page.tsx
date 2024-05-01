@@ -1,5 +1,5 @@
 import React from "react";
-import FaqItem from "../../../components/shared/faq.collapsible.window.tsx";
+import FaqItem from "@/components/shared/faq.collapsible.window.tsx";
 
 
 const FAQ = () => {

@@ -359,23 +359,27 @@ const Footer = () => {
             style={{ fontSize: "14px", fontWeight: 700 }}
             className="dark:text-[#FFFFFFA1]"
           >
-            Product
+            {t("product")}
           </p>
           <div className="flex flex-col gap-2">
-            <p
+            <Link
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_REACT_SIGHNIN_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("logIn")}
-            </p>
-            <p
+            </Link>
+            <Link
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
             >
               {t("signup")}
-            </p>
+            </Link>
           </div>
         </div>
       </div>
