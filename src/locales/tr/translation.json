@@ -237,5 +237,8 @@
     "ourDataProcessingActivities": "Veri işleme faaliyetlerimiz geçerli veri koruma yasaları ve düzenlemelerine uygun olarak yürütülür. Bu Gizlilik Politikası, kişisel bilgilerinizi nasıl topladığımız, kullanıdığımız, paylaştığımız ve koruduğumuz hakkında size açık ve şeffaf bilgi sağlamayı amaçlar. Veri denetleyicisi olarak, sorumluluklarımızı ciddiye alır ve haklarınızın ve çıkarlarınızın saygı"
   },
   "runTheFollowingCommand": "Aşağıdaki komutu çalıştırın:",
-  "youTube": "YouTube"
+  "youTube": "YouTube",
+  "pageNotFound": "Sayfa Bulunamadı!",
+  "notFoundDesc": "Üzgünüz, istediğiniz sayfa bulunamadı. Lütfen ana sayfaya geri dönün!",
+  "goBack": "GERİ DÖN"
 }

@@ -237,5 +237,8 @@
     "ourDataProcessingActivities": "Our data processing activities are conducted in accordance with applicable data protection laws and regulations. This Privacy Policy aims to provide you with clear and transparent information about how we collect, use, share, and protect your personal information. As a data controller, we take our responsibilities seriously and strive to ensure that your rights and interests are respected. If you have concerns about our data processing practices, please contact us using the information provided in the 'Contact Information' section of this Privacy Policy."
   },
   "runTheFollowingCommand": "Run the following command :",
-  "youTube": "youTube"
+  "youTube": "youTube",
+  "pageNotFound":"Page Not Found!",
+  "notFoundDesc":"We are sorry, the page you requested could not be found. Please go back to the home page!",
+  "goBack":"GO BACK"
 }

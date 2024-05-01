@@ -237,5 +237,8 @@
     "ourDataProcessingActivities": "Nos activités de traitement des données sont menées conformément aux lois et réglementations applicables en matière de protection des données. Cette politique de confidentialité vise à vous fournir des informations claires et transparentes sur la manière dont nous collectons, utilisons, partageons et protégeons vos informations personnelles. En tant que responsable du traitement des données, nous prenons nos responsabilités au sérieux et nous nous efforçons de garantir que vos droits et intérêts sont respectés. Si vous avez des préoccupations concernant nos pratiques de traitement des données, veuillez nous contacter en utilisant les informations fournies dans la section 'Coordonnées' de cette politique de confidentialité."
   },
   "runTheFollowingCommand": "Exécutez la commande suivante :",
-  "youTube": "YouTube"
+  "youTube": "YouTube",
+  "pageNotFound": "Page non trouvée!",
+  "notFoundDesc": "Nous sommes désolés, la page que vous avez demandée est introuvable. Veuillez revenir à la page d'accueil!",
+  "goBack": "RETOUR"
 }
