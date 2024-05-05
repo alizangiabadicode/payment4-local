@@ -2,6 +2,7 @@
 import * as React from "react";
 import { Size } from "../types/size.type";
 import { ButtonProps } from "./button.types";
+import { useTranslation } from "react-i18next";
 
 const sizeClasses: Record<Size, string> = {
   xs: "py-2 px-2",
@@ -25,13 +26,13 @@ export const Button: React.FC<ButtonProps> = ({
   isOutline = false,
   isLoading = false,
   loadingType = "spinner",
-  loadingText = "sending ...",
+  loadingText,
   type = "button",
   children,
   className,
   ...rest
 }: ButtonProps) => {
-
+  const { t } = useTranslation();
   return (
     <button
       type={type}
@@ -42,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
       `}
       {...rest}
     >
-      {isLoading ? loadingText : children}
+      {isLoading ? t("sending") : children}
     </button>
   );
 };

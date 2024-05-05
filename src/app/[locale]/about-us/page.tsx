@@ -109,7 +109,7 @@ const AboutUs = async ({
           </div>
         </div>
         <div
-          className="flex flex-col md:flex-row md:justify-between 
+          className="flex flex-col md:flex-row md:justify-between md:px-[20px]
         items-center gap-y-5 mb-[30px] md:mb-[100px]"
         >
           <div className="flex flex-col md:w-1/2 px-5 md:px-0">
@@ -173,12 +173,12 @@ const AboutUs = async ({
           <div
             className="rounded-[8px] 
               dark:bg-dark-gradient-card bg-light-gradient
-             pt-[40px] px-[70px] pb-[50px] flex flex-col items-center gap-y-[20px]"
+             pt-[40px] px-[40px] md:px-[70px] pb-[50px] flex flex-col items-center gap-y-[20px]"
           >
             <p
               className="
                 dark:text-white text-black
-               text-[18px] md:text-[20px] font-semibold"
+               text-[18px] md:text-[20px] font-semibold text-center"
             >
               {t("readyToGetStarted")}
             </p>
@@ -193,7 +193,7 @@ const AboutUs = async ({
                 target="_blank"
                 href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
               >
-                <Button className="px-[64px] py-[10px] rounded-[8px]">
+                <Button className="px-[64px] py-[10px] rounded-[8px] text-nowrap">
                   {t("joinUs")}
                 </Button>
               </Link>

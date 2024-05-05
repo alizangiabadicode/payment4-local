@@ -1,4 +1,10 @@
 {
+  "successTicket": "Biletiniz başarıyla gönderildi. Destek ekibimiz yakında sizinle iletişime geçecektir.",
+  "sending": "gönderiliyor...",
+  "nameIsRequired": "Ad alanı gereklidir",
+  "invalidEmailAddress": "Geçersiz e-posta adresi",
+  "emailIsRequired": "E-posta alanı gereklidir",
+  "messageIsRequired": "Mesaj alanı gereklidir",
   "home": "Ana Sayfa",
   "documents": "Belgeler",
   "about": "Hakkında",

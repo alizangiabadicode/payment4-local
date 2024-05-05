@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import {
   ClockIcon,
   EmailIcon,
@@ -7,21 +9,24 @@ import {
 } from "../../../../public/images/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
-import initTranslations from "@/app/i18n";
+import { Snackbar } from "@/components/shared";
+import { useTranslation } from "react-i18next";
 
-const ContactUs = async ({
-  params: { locale },
-}: {
-  params: { locale: string };
-}) => {
-  const { t, i18n } = await initTranslations(locale, ["translation"]);
+const ContactUs = () => {
+  const { t, i18n } = useTranslation();
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <div
       style={{ direction }}
       className="flex flex-col gap-y-[64px] md:gap-y-[88px] mb-[100px] md:mt-[50px]"
     >
+      <Snackbar
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        message={t("successTicket")}
+      />
       <div className="flex justify-center">
         <p
           className={`
@@ -105,7 +110,7 @@ const ContactUs = async ({
               >
                 {t("address")}
               </p>
-              <p className="text-[12px]">UAE , Sari</p>
+              <p className="text-[12px]">UAE , Dubai</p>
             </div>
           </div>
         </div>
@@ -254,8 +259,7 @@ const ContactUs = async ({
         </div>
       </div>
       <div className="flex flex-col gap-10 items-center md:flex-row justify-center px-[30px]">
-        <ContactForm />
-
+        <ContactForm setOpenSnackBar={setIsOpen} />
         <div className=" md:px-0">
           <Image
             className="hidden dark:block"

@@ -7,7 +7,7 @@ interface TextAreaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 
 const TextArea: React.FC<TextAreaProps> = ({ label, className, ...rest }) => {
   return (
-    <div className="mb-4">
+    <div className="mb-2">
       {label && <label className="block mb-1">{label}</label>}
       <textarea
         {...rest}

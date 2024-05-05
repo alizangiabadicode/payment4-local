@@ -1,4 +1,10 @@
 {
+  "successTicket": "Votre ticket a été envoyé avec succès. Notre équipe de support vous contactera bientôt.",
+  "sending": "envoi en cours...",
+  "nameIsRequired": "Le nom est requis",
+  "invalidEmailAddress": "Adresse e-mail invalide",
+  "emailIsRequired": "L'email est requis",
+  "messageIsRequired": "Le message est requis",
   "home": "Accueil",
   "documents": "Documents",
   "about": "À propos",

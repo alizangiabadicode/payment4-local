@@ -1,4 +1,10 @@
 {
+  "successTicket": "Su ticket se ha enviado correctamente. El equipo de soporte se pondrá en contacto con usted pronto.",
+  "sending": "در حال ارسال...",
+  "nameIsRequired": "El nombre es obligatorio",
+  "invalidEmailAddress": "Dirección de correo electrónico no válida",
+  "emailIsRequired": "El correo electrónico es obligatorio",
+  "messageIsRequired": "El mensaje es obligatorio",
   "home": "Inicio",
   "documents": "Documentos",
   "about": "Acerca de",
