@@ -1,4 +1,10 @@
 {
+  "successTicket": "تم إرسال تذكرتك بنجاح. سيراجعك الفريق الدعم قريبًا.",
+  "sending": "جارٍ الإرسال...",
+  "nameIsRequired": "الاسم مطلوب",
+  "invalidEmailAddress": "عنوان البريد الإلكتروني غير صالح",
+  "emailIsRequired": "البريد الإلكتروني مطلوب",
+  "messageIsRequired": "الرسالة مطلوبة",
   "home": "الرئيسية",
   "documents": "المستندات",
   "about": "حول",

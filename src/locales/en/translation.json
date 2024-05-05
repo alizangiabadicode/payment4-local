@@ -1,4 +1,10 @@
 {
+  "successTicket": "Your ticket sent successfully. support team will contact you soon.",
+  "sending": "sending ...",
+  "nameIsRequired": "name is required",
+  "invalidEmailAddress": "Invalid email address",
+  "emailIsRequired": "email is required",
+  "messageIsRequired": "message is required",
   "home": "Home",
   "documents": "Documents",
   "about": "About",
@@ -238,7 +244,7 @@
   },
   "runTheFollowingCommand": "Run the following command :",
   "youTube": "youTube",
-  "pageNotFound":"Page Not Found!",
-  "notFoundDesc":"We are sorry, the page you requested could not be found. Please go back to the home page!",
-  "goBack":"GO BACK"
+  "pageNotFound": "Page Not Found!",
+  "notFoundDesc": "We are sorry, the page you requested could not be found. Please go back to the home page!",
+  "goBack": "GO BACK"
 }

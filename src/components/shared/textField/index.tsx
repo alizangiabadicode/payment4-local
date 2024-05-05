@@ -2,12 +2,12 @@ import React, { InputHTMLAttributes } from "react";
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   label?: string;
-  className?: string; // Add className prop
+  className?: string; 
 }
 
 const Input: React.FC<InputProps> = ({ label, className, ...rest }) => {
   return (
-    <div className="mb-4">
+    <div className="mb-2">
       {label && <label className="block mb-1">{label}</label>}
       <input
         {...rest}

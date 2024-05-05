@@ -1,4 +1,10 @@
 {
+  "successTicket": "پیام شما با موفقیت ارسال شد. بزودی از پشتیبانی با شما تماس گرفته خواهد شد.",
+  "sending": "در حال ارسال...",
+  "nameIsRequired": "نام الزامی است",
+    "invalidEmailAddress": "آدرس ایمیل نامعتبر است",
+    "emailIsRequired": "ایمیل الزامی است",
+    "messageIsRequired": "پیام الزامی است",
   "home": "خانه",
   "documents": "مستندات",
   "about": "درباره ی ما",
