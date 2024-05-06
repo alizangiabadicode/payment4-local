@@ -1,0 +1,9 @@
+.custom-content {
+  line-height: 30px;
+  padding: 0 20px;
+}
+
+.custom-content img {
+  margin: auto;
+  border-radius: 8px;
+}

@@ -1,0 +1,15 @@
+export interface Post {
+    cursor: string;
+    node: {
+      date: string;
+      uri: string;
+      title: string;
+      id: string;
+      featuredImage: {
+        node: {
+          mediaItemUrl: string;
+        };
+      };
+    };
+  }
+
