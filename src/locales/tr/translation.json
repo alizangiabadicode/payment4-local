@@ -246,5 +246,9 @@
   "youTube": "YouTube",
   "pageNotFound": "Sayfa Bulunamadı!",
   "notFoundDesc": "Üzgünüz, istediğiniz sayfa bulunamadı. Lütfen ana sayfaya geri dönün!",
-  "goBack": "GERİ DÖN"
+  "goBack": "GERİ DÖN",
+  "otherBlogs": "Diğer Bloglar",
+  "search": "Ara",
+  "categories": "Kategoriler",
+  "seeMore": "Daha fazla gör"
 }

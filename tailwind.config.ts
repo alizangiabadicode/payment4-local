@@ -44,6 +44,14 @@ const config: Config = {
           "linear-gradient(to right, #2A2338, #18181A, #18181A,  #2A2338)",
         "light-gradient-social-networks":
           "linear-gradient(to right, #EFE5FE, #F7F5FF, #F7F5FF,  #EFE5FE)",
+        "dark-gradient-sidebar-post":
+          "linear-gradient(to bottom right, #151518, #151518,#262033)",
+        "light-gradient-sidebar-post":
+          "linear-gradient(to bottom right, #F5F1FF, #FAF7FF,#F3EAFE)",
+        "light-gradient-sidebar-post-rtl":
+          "linear-gradient(to bottom left, #F5F1FF, #FAF7FF,#F3EAFE)",
+        "dark-gradient-sidebar-post-rtl":
+          "linear-gradient(to bottom left, #151518,#151518, #262033)",
       },
     },
   },
