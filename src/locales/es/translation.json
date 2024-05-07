@@ -246,5 +246,9 @@
   "youTube": "YouTube",
   "pageNotFound": "¡Página no encontrada!",
   "notFoundDesc": "Lo sentimos, la página que solicitó no se pudo encontrar. ¡Por favor, regrese a la página de inicio!",
-  "goBack": "REGRESAR"
+  "goBack": "REGRESAR",
+  "otherBlogs": "Otros blogs",
+  "search": "Buscar",
+  "categories": "Categorías",
+  "seeMore": "Ver más"
 }

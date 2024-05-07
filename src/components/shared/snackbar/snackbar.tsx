@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import { DarkCrossIcon, LightCrossIcon } from "../../../../public/images/svg";
 
+type Variant = "success" | "warning";
 interface SnackbarProps {
   message: string;
   isOpen: boolean;
   onClose: () => void;
   autoCloseDelay?: number;
+  variant?: Variant;
 }
 
 export const Snackbar: React.FC<SnackbarProps> = ({
@@ -13,6 +15,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
   isOpen,
   onClose,
   autoCloseDelay = 3000,
+  variant = "success",
 }) => {
   useEffect(() => {
     let timeoutId: NodeJS.Timeout;
@@ -31,7 +34,11 @@ export const Snackbar: React.FC<SnackbarProps> = ({
     <>
       {isOpen && (
         <div className="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
-          <div className="max-w-sm w-full bg-[#378C3B] shadow-lg rounded-lg pointer-events-auto">
+          <div
+            className={`max-w-sm w-full ${
+              variant === "success" ? "bg-[#378C3B]" : "bg-[#F67C01]"
+            }  shadow-lg rounded-lg pointer-events-auto`}
+          >
             <div className="rounded-lg shadow-xs overflow-hidden">
               <div className="p-4">
                 <div className="flex items-start">

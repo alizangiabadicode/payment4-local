@@ -23,4 +23,8 @@ export const navbarItems: navbarItemsTypes[] = [
     title: "faq",
     path: "/faq",
   },
+  {
+    title: "Blog",
+    path: "/blog",
+  },
 ];
