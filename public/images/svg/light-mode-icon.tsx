@@ -1,6 +1,6 @@
 import React from "react";
 
-const LightModeIcon = () => {
+export const LightModeIcon = () => {
   return (
     <svg
       width="36"
@@ -18,4 +18,3 @@ const LightModeIcon = () => {
   );
 };
 
-export default LightModeIcon;

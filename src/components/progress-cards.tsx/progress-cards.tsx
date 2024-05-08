@@ -23,7 +23,6 @@ export interface CardsArrayProps {
 
 const ProgressCards: FC = () => {
   const { t } = useTranslation();
-  const { resolvedTheme: theme } = useTheme();
   const cardsArray: CardsArrayProps[] = [
     {
       id: 1,
