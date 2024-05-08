@@ -13,8 +13,10 @@ export const NavigationBar = () => {
   return (
     <>
       <div className="flex gap-x-5 md:gap-0">
-        <div style={{ width: "110px", height: "24px" }}>
-          <Logo />
+        <div className="lg:mx-4 mx-4 md:mx-2 w-[110px] h-[24px]">
+          <Link href="/">
+            <Logo />
+          </Link>
         </div>
       </div>
       <div className="hidden md:flex md:gap-x-5 lg:gap-x-10">

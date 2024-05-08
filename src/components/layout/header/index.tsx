@@ -26,7 +26,7 @@ const Header = () => {
         className={`px-5 md:px-0 lg:px-5 sm:px-50 flex items-center justify-between my-4 `}
       >
         <NavigationBar />
-        <div className="flex items-center gap-x-4">
+        <div className="flex items-center lg:gap-x-4 gap-x-4 md:gap-x-2">
           <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2">
             <div className="cursor-pointer">
               <ThemeSwitch />
