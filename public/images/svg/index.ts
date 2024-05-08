@@ -21,6 +21,7 @@ export * from "./dollar-icon";
 export * from "./twenty-four-hour-support-img";
 export * from "./iphone-img";
 export * from "./darkMode-icon";
+export * from "./light-mode-icon";
 export * from "./language-dark-icon";
 export * from "./iphone-dark-img";
 export * from "./x-dark-logo";

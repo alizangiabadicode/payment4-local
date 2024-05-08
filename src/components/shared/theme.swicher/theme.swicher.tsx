@@ -2,8 +2,7 @@
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import LightModeIcon from "../../../../public/images/svg/light-mode-icon";
-import { DarkModeIcon } from "../../../../public/images/svg";
+import { DarkModeIcon, LightModeIcon } from "../../../../public/images/svg";
 
 export default function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
