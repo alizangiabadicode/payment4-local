@@ -9,10 +9,10 @@ import { Drawer } from "@/components/shared";
 import { navbarItems } from "./navbar-items";
 import Link from "next/link";
 import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
-import { usePathname } from "next/navigation";
+import useCurrentRoute from "@/hooks/useCurrentRoute";
 
 const Header = () => {
-  const pathname = usePathname();
+  const currentRoute = useCurrentRoute();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const direction =
@@ -50,7 +50,7 @@ const Header = () => {
           <div>
             <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
               {navbarItems.map((item) => {
-                const isActive = pathname === item.path;
+                const isActive = currentRoute === item.path;
                 return (
                   <Link
                     key={item.title}
