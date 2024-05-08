@@ -3,13 +3,13 @@
 import { useTranslation } from "react-i18next";
 import { navbarItems } from "./navbar-items";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-
 import Logo from "../../../../public/images/svg/logo";
+import useCurrentRoute from "@/hooks/useCurrentRoute";
 
 export const NavigationBar = () => {
-  const pathname = usePathname();
+  const currentRoute = useCurrentRoute();
   const { t } = useTranslation();
+
   return (
     <>
       <div className="flex gap-x-5 md:gap-0">
@@ -21,7 +21,7 @@ export const NavigationBar = () => {
       </div>
       <div className="hidden md:flex md:gap-x-5 lg:gap-x-10">
         {navbarItems.map((item) => {
-          const isActive = pathname === item.path;
+          const isActive = currentRoute === item.path;
           return (
             <Link
               key={item.title}
