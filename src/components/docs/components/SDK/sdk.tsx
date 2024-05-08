@@ -7,7 +7,7 @@ export const SDKSection = () => {
   return (
     <div className="p-4">
       <h2 className={`text-2xl font-semibold dark:text-white text-black`}>
-        Overview
+        {t('overview')}
       </h2>
       <p
         className={`text-base font-normal mt-4   dark:text-[#FFFFFFC7] 

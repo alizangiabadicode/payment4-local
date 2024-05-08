@@ -247,8 +247,9 @@
   "pageNotFound": "Page Not Found!",
   "notFoundDesc": "We are sorry, the page you requested could not be found. Please go back to the home page!",
   "goBack": "GO BACK",
-  "otherBlogs":"Other Blogs",
-  "search":"Search",
-  "categories":"Categories",
-  "seeMore":"See more"
+  "otherBlogs": "Other Blogs",
+  "search": "Search",
+  "categories": "Categories",
+  "seeMore": "See more",
+  "overview": "Overview"
 }

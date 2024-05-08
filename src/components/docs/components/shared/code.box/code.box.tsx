@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import "./index.css";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "next-themes";
 
 interface CodeBoxProps {
   code: string;
@@ -9,21 +8,23 @@ interface CodeBoxProps {
 }
 
 export const CodeBox: React.FC<CodeBoxProps> = ({ code, style }) => {
-  const { resolvedTheme: theme } = useTheme();
   const { i18n } = useTranslation();
   const codeRef = useRef<HTMLTextAreaElement | null>(null);
 
   const handleCopy = () => {
-    if (codeRef.current) {
-      codeRef.current.select();
-      document.execCommand("copy");
+    const codeElement = codeRef.current;
+    if (codeElement) {
+      navigator.clipboard.writeText(codeElement.textContent || "");
     }
   };
 
   return (
     <div
       className="code-box"
-      style={{ marginLeft: i18n.dir() === "rtl" ? "auto" : 0 , direction:'ltr' }}
+      style={{
+        marginLeft: i18n.dir() === "rtl" ? "auto" : 0,
+        direction: "ltr",
+      }}
     >
       <textarea
         ref={codeRef}

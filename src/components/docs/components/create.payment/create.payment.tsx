@@ -1,11 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useEffect, useRef } from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
 import { useTranslation } from "react-i18next";
+import Prism from "prismjs";
+require("prismjs/components/prism-javascript");
+import "./code.css";
+
+interface CodeRefs {
+  paymentCode: React.RefObject<HTMLPreElement>;
+  apiKeyCode: React.RefObject<HTMLPreElement>;
+  responseCode: React.RefObject<HTMLPreElement>;
+}
 
 export const CreatePayment = () => {
   const { t } = useTranslation();
-
+  const codeRefs: CodeRefs = {
+    paymentCode: useRef<HTMLPreElement | null>(null),
+    apiKeyCode: useRef<HTMLPreElement | null>(null),
+    responseCode: useRef<HTMLPreElement | null>(null),
+  };
+  const handleCopyClick = (ref: React.RefObject<HTMLPreElement>) => {
+    const codeElement = ref.current;
+    if (codeElement) {
+      navigator.clipboard.writeText(codeElement.textContent || "");
+    }
+  };
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
   return (
     <div className="space-y-5">
       <div className="flex flex-col my-5">
@@ -19,10 +43,17 @@ export const CreatePayment = () => {
       </div>
       <div
         className={`pb-4 rounded-lg 
-          dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
+          dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
-          <code className="dark:text-white text-black">
+        <pre
+          className="ml-5 overflow-x-auto !bg-transparent"
+          style={{ direction: "ltr" }}
+        >
+          <code
+            ref={codeRefs.paymentCode}
+            className="dark:text-white text-black language-javascript"
+            style={{ textShadow: "none" }}
+          >
             {`
 {
   "sandBox": false,
@@ -41,6 +72,12 @@ export const CreatePayment = () => {
 `}
           </code>
         </pre>
+        <button
+          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+          onClick={() => handleCopyClick(codeRefs.paymentCode)}
+        >
+          Copy
+        </button>
       </div>
       <p
         className={`text-base leading-8 
@@ -51,10 +88,17 @@ export const CreatePayment = () => {
       </p>
       <div
         className={`pb-4 rounded-lg
-          dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
+          dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-        <pre className="ml-5 overflow-x-auto" style={{direction:'ltr'}}>
-          <code className="dark:text-white text-black">
+        <pre
+          className="ml-5 overflow-x-auto !bg-transparent"
+          style={{ direction: "ltr" }}
+        >
+          <code
+            ref={codeRefs.apiKeyCode}
+            className="dark:text-white text-black language-javascript"
+            style={{ textShadow: "none" }}
+          >
             {`
 {
     "x-api-key" : {api_key}
@@ -62,6 +106,12 @@ export const CreatePayment = () => {
 `}
           </code>
         </pre>
+        <button
+          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+          onClick={() => handleCopyClick(codeRefs.apiKeyCode)}
+        >
+          Copy
+        </button>
       </div>
       <p
         className={`text-base leading-8 
@@ -74,7 +124,10 @@ export const CreatePayment = () => {
         className={`py-4 rounded-lg
          dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
       >
-       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>{`${process.env.NEXT_PUBLIC__BASE_URL}/api/v1/payment`}</pre>
+        <pre
+          className="ml-5 overflow-x-auto"
+          style={{ direction: "ltr" }}
+        >{`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/payment`}</pre>
       </div>
       <p
         className={`text-base leading-8 
@@ -166,10 +219,17 @@ export const CreatePayment = () => {
       </p>
       <div
         className={`pb-4 rounded-lg
-        dark:bg-[#FFFFFF08] bg-[#f6f8fa]`}
+        dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-       <pre className="ml-5 overflow-x-auto" style={{ direction: "ltr" }}>
-          <code className="dark:text-white text-black">
+        <pre
+          className="ml-5 overflow-x-auto !bg-transparent"
+          style={{ direction: "ltr" }}
+        >
+          <code
+            ref={codeRefs.responseCode}
+            className="dark:text-white text-black language-javascript"
+            style={{ textShadow: "none" }}
+          >
             {`
 {
   "id": 0,
@@ -179,6 +239,12 @@ export const CreatePayment = () => {
 `}
           </code>
         </pre>
+        <button
+          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+          onClick={() => handleCopyClick(codeRefs.responseCode)}
+        >
+          Copy
+        </button>
       </div>
       <p
         className={`text-base leading-8 
