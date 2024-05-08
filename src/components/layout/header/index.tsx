@@ -23,11 +23,11 @@ const Header = () => {
   return (
     <header style={{ direction: direction }}>
       <div
-        className={`px-5 sm:px-50 flex items-center justify-between my-4 `}
+        className={`px-5 md:px-0 lg:px-5 sm:px-50 flex items-center justify-between my-4 `}
       >
         <NavigationBar />
         <div className="flex items-center gap-x-4">
-          <div className="flex gap-x-2">
+          <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2">
             <div className="cursor-pointer">
               <ThemeSwitch />
             </div>
@@ -36,11 +36,11 @@ const Header = () => {
           <div className="hidden md:block">
             <Button
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
-              className="px-1 sm:px-6 text-sm sm:text-base"
+              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap"
               onClick={() => console.log(i18n.language)}
             >
               <Link
-                href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
+                href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
                 target="_blank"
               >
                 {t("signup")}

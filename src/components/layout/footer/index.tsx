@@ -364,7 +364,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_REACT_SIGHNIN_URL}?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_SIGHNIN_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}
@@ -373,7 +373,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-primary-text leading-6 
               dark:text-[#FFFFFFA1] text-opacity-[36%]`}

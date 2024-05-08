@@ -10,7 +10,7 @@ export const WHMCSSection = () => {
       >
         {t("whmcsPluginDesc")}
         <a
-          href={process.env.NEXT_PUBLIC_REACT_APP_WHMCS_PLUGIN_URL}
+          href={process.env.NEXT_PUBLIC_APP_WHMCS_PLUGIN_URL}
           className="text-blue-600"
         >
           {t("hereIsTheDlLink")}

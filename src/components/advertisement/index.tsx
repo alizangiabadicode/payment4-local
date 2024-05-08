@@ -4,6 +4,7 @@ import { Button } from "../shared/button";
 import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import Link from "next/link";
 
 const AdvertisementCard = () => {
   const { t, i18n } = useTranslation();
@@ -33,9 +34,12 @@ const AdvertisementCard = () => {
         </div>
         <div className="flex justify-start">
           <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg">
-            <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+            <Link
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+            >
               {t("letsGetStarted")}
-            </a>
+            </Link>
             {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>

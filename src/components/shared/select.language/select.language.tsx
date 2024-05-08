@@ -78,7 +78,8 @@ const LanguageSelector: React.FC = () => {
     <div
       ref={languageSelectorRef}
       style={{ direction: "ltr" }}
-      className="relative inline-block text-left md:ltr:ml-4 md:rtl:mr-4"
+      className="relative inline-block text-left lg:ltr:ml-4 lg:rtl:mr-4 ltr:ml-4 rtl:mr-4 
+      md:ltr:ml-2 md:rtl:mr-2"
     >
       <div className="cursor-pointer" onClick={toggleMenu}>
         {isDark === "dark" ? <LanguageDarkIcon /> : <LanguageLightIcon />}
