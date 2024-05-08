@@ -3,6 +3,7 @@ import Logo from "../../../../public/images/svg/logo";
 import { Button } from "../button";
 import { useTranslation } from "react-i18next";
 import { DarkCrossIcon, LightCrossIcon } from "../../../../public/images/svg";
+import Link from "next/link";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -17,7 +18,7 @@ export const Drawer: FC<DrawerProps> = ({
   children,
   className,
 }) => {
-  const { t } = useTranslation();
+  const { t , i18n } = useTranslation();
   return (
     <div
       className={`fixed flex flex-col justify-between inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
@@ -39,9 +40,12 @@ export const Drawer: FC<DrawerProps> = ({
       </div>
       <div className="px-4 mb-6">
         <Button className="w-full h-[44px] flex justify-center items-center">
-          <a target="_blank" href={process.env.REACT_SIGHNUP_URL}>
+          <Link
+            target="_blank"
+            href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+          >
             {t("signup")}
-          </a>
+          </Link>
         </Button>
       </div>
     </div>

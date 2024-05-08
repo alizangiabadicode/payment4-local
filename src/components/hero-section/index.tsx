@@ -6,6 +6,7 @@ import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { SwiperSection } from "./swiper";
+import Link from "next/link";
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -108,9 +109,12 @@ const HeroSection = () => {
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             className="px-10 py-2 flex gap-x-2"
           >
-            <a target="_blank" href={process.env.NEXT_PUBLIC_REACT_SIGHNUP_URL}>
+            <Link
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+            >
               {t("letsGetStarted")}
-            </a>
+            </Link>
             {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>

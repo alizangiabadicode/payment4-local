@@ -23,10 +23,9 @@ export const NavigationBar = () => {
           return (
             <Link
               key={item.title}
-              style={{ fontSize: "15px" }}
               href={item.path}
               className={`${isActive && "font-bold"}
-              dark:text-white`}
+              dark:text-white text-nowrap text-[13px] md:text-[15px]`}
             >
               {t(`${item.title.toLowerCase()}`)}
             </Link>

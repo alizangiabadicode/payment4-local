@@ -23,7 +23,7 @@ export const WoocommerceSection = () => {
        dark: text-[#121212C7] `}
       >
         {t("dlPlugin")}
-        <a href={process.env.NEXT_PUBLIC_REACT_APP_WOOCOMMERCE_PLUGIN_URL}>
+        <a href={process.env.NEXT_PUBLIC_APP_WOOCOMMERCE_PLUGIN_URL}>
           {t("downloadLink")}
         </a>
         . {t("headOfWordPress")}
@@ -123,7 +123,7 @@ export const WoocommerceSection = () => {
         text-[#121212C7] `}
       >
         {t("dlPluginDesc")}
-        <a href={process.env.NEXT_PUBLIC_REACT_APP_WOOCOMMERCE_PLUGIN_URL}>
+        <a href={process.env.NEXT_PUBLIC_APP_WOOCOMMERCE_PLUGIN_URL}>
           {t("downloadLink")}
         </a>
         . {t("pluginBenefits")}
