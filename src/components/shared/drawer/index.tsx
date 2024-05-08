@@ -28,9 +28,9 @@ export const Drawer: FC<DrawerProps> = ({
     >
       <div className="flex flex-col">
         <div className="p-4 flex justify-between">
-          <div>
+          <Link href='/'>
             <Logo />
-          </div>
+          </Link>
           <button onClick={onClose} className="text-gray-700 w-[24px] h-[24px]">
             <DarkCrossIcon className="hidden dark:block" />
             <LightCrossIcon className="dark:hidden block" />
