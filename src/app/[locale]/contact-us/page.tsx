@@ -6,7 +6,7 @@ import {
   EmailIcon,
   LocationIcon,
   PhoneIcon,
-} from "../../../../public/images/svg";
+} from "../../../icons/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";

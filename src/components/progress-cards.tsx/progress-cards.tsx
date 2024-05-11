@@ -1,13 +1,13 @@
 "use client";
 import React, { FC } from "react";
 import ProgressCard from "./progress-card";
-import { SignupIcon } from "../../../public/images/svg/signup-icon";
+import { SignupIcon } from "../../icons/svg/signup-icon";
 import {
   GatewaySetupIcon,
   SecurityMeasureIcon,
   SettlementRequestIcon,
-} from "../../../public/images/svg";
-import ApiPaylinkCreationIcon from "../../../public/images/svg/api-paylink-creation-icon";
+} from "../../icons/svg";
+import ApiPaylinkCreationIcon from "../../icons/svg/api-paylink-creation-icon";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Image from "next/image";

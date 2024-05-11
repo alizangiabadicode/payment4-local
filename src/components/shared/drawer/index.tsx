@@ -1,8 +1,8 @@
 import React, { FC, ReactNode } from "react";
-import Logo from "../../../../public/images/svg/logo";
+import Logo from "../../../icons/svg/logo";
 import { Button } from "../button";
 import { useTranslation } from "react-i18next";
-import { DarkCrossIcon, LightCrossIcon } from "../../../../public/images/svg";
+import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
 import Link from "next/link";
 
 interface DrawerProps {

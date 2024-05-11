@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { CardsArrayProps } from "./progress-cards";
-import { SignupIcon } from "../../../public/images/svg";
+import { SignupIcon } from "../../icons/svg";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Image from "next/image";

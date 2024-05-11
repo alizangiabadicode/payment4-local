@@ -5,10 +5,10 @@ import i18nConfig from "../../../i18nConfig";
 import { dir } from "i18next";
 import localFont from "next/font/local";
 import { Providers } from "./provider";
-import Header from "@/components/layout/header";
+import Header from "@/layout/header";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
-import Footer from "@/components/layout/footer";
+import Footer from "@/layout/footer";
 
 export const metadata: Metadata = {
   title: "Payment4",

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Logo from "../../../../public/images/svg/logo";
+import Logo from "../../icons/svg/logo";
 import {
   LinkedinDarkIcon,
   LinkedinIcon,
@@ -8,7 +8,7 @@ import {
   XLogo,
   YoutubeDarkIcon,
   YoutubeIcon,
-} from "../../../../public/images/svg";
+} from "../../icons/svg";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Link from "next/link";

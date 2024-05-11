@@ -5,7 +5,7 @@ import {
   DollarIcon,
   ShoppingIcon,
   SupportIcon,
-} from "../../../public/images/svg";
+} from "../../icons/svg";
 import SliderCard from "./card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

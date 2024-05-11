@@ -3,11 +3,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { supportedLanguages } from "./supported.language";
 import { useTranslation } from "react-i18next";
-import LanguageLightIcon from "../../../../public/images/svg/language-light-icon";
+import LanguageLightIcon from "../../../icons/svg/language-light-icon";
 import {
   CheckIconLight,
   LanguageDarkIcon,
-} from "../../../../public/images/svg";
+} from "../../../icons/svg";
 import { useTheme } from "next-themes";
 import { usePathname, useRouter } from "next/navigation";
 import i18nConfig from "../../../../i18nConfig";

@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./post.css";
 import { BlogPreview, SearchBar } from "@/components/shared";
-import { RightArrowNavigate } from "../../../../../public/images/svg";
+import { RightArrowNavigate } from "../../../../icons/svg";
 import { useTranslation } from "react-i18next";
 
 type ExtendedPost = Omit<Post, "node"> & {

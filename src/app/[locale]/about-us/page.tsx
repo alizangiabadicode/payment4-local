@@ -4,7 +4,7 @@ import {
   BackSlashIcon,
   CheckCartIcon,
   CheckIconLight,
-} from "../../../../public/images/svg";
+} from "../../../icons/svg";
 import { Button } from "../../../components/shared/button";
 import Image from "next/image";
 import initTranslations from "@/app/i18n";

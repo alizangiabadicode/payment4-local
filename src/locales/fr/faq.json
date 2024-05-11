@@ -1,0 +1,34 @@
+{
+  "q1": {
+    "q": "Qu'est-ce qu'un frais de transaction réseau ?",
+    "a": "Dans différents réseaux blockchain, pour transférer le solde de la portefeuille source à la portefeuille de destination, vous devez payer un certain montant en tant que frais de transaction réseau pour que le transfert de solde ait lieu. Ce frais est calculé dans l'unité monétaire de base de chaque réseau et varie dans chaque réseau."
+  },
+  "q2": {
+    "q": "Qu'est-ce qu'une commission de transaction et comment est-elle calculée ?",
+    "a": "Pour chaque transaction reçue dans Payment4, une petite somme (environ 1 pour cent) du montant total de la transaction est considérée comme frais de service de Payment4, plafonnée à 1 dollar. Par exemple, un paiement réussi de 50 dollars entraîne des frais de 50 cents, une transaction de 100 dollars entraîne des frais de 1 dollar, et les transactions de plus de 100 dollars (par exemple, une transaction de 200 dollars) auront également des frais de 1 dollar."
+  },
+  "q3": {
+    "q": "Comment sont déterminés le payeur des frais de transaction réseau et les frais de Payment4 ?",
+    "a": "Chaque commerçant peut spécifier dans la section des paramètres de chaque passerelle si le payeur des frais de transaction réseau et des frais de Payment4 doit être le commerçant (eux-mêmes) ou l'utilisateur payant (l'utilisateur payant la facture). Dans le premier cas, après chaque paiement, les coûts mentionnés sont considérés et déduits du montant total lors de la liquidation finale. Mais dans le second cas, les montants mentionnés sont ajoutés à la facture finale, et le commerçant recevra finalement le montant total de la facture payée sans déduction lors de la liquidation finale. Il convient de mentionner qu'il est possible de séparer ces deux frais, par exemple, l'utilisateur paie les frais de réseau et le commerçant paie les frais de Payment4."
+  },
+  "q4": {
+    "q": "Comment se fait la liquidation ?",
+    "a": "Après avoir reçu plusieurs paiements de vos utilisateurs, vous pouvez voir le solde total basé sur la crypto-monnaie et le réseau dans lequel le paiement a été effectué dans la section solde. Chaque nouveau paiement augmente ce solde. Dans la section de liquidation, seules les transactions totales qui ont été payées il y a plus de 24 heures sont visibles. Vous pouvez demander votre liquidation à n'importe quelle heure du jour, et elle sera liquidée instantanément (en fonction du trafic réseau). Il convient de noter que seuls les soldes éligibles pour la liquidation peuvent être liquidés à l'adresse de portefeuille du même réseau."
+  },
+  "q5": {
+    "q": "Où puis-je saisir mon adresse de portefeuille de liquidation ?",
+    "a": "Dans la section carnet d'adresses de chaque passerelle, vous pouvez procéder à l'enregistrement de l'adresse de portefeuille du destinataire de la liquidation. Veuillez noter que le solde éligible pour la liquidation de chaque crypto-monnaie ne peut être transféré qu'à un portefeuille de la même crypto-monnaie, et les crypto-monnaies ne peuvent pas être converties en autres."
+  },
+  "q6": {
+    "q": "Comment puis-je équiper mon site Web de commerce électronique avec la passerelle ?",
+    "a": "Pour lire la documentation et savoir comment connecter la passerelle à votre site Web de commerce électronique, vous pouvez visiter le site officiel https://payment4.com et procéder à l'équipement de votre site Web de commerce électronique dans la section documentation."
+  },
+  "q7": {
+    "q": "Comment puis-je activer la passerelle pour un site WordPress ?",
+    "a": "Pour les sites WordPress (WooCommerce), vous pouvez visiter la section documentation du site officiel https://payment4.com et télécharger le plugin WordPress (WooCommerce) de la section plugins."
+  },
+  "q8": {
+    "q": "Où puis-je obtenir ma clé API ?",
+    "a": "En créant chaque passerelle, vous aurez le droit d'utiliser la clé API spécifique de cette passerelle. Cette clé API est disponible dans la section paramètres de chaque passerelle."
+  }
+}

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Button } from "../shared/button";
-import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { SwiperSection } from "./swiper";

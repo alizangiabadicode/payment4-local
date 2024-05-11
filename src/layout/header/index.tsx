@@ -1,14 +1,14 @@
 "use client";
 import { useTranslation } from "react-i18next";
 import React, { useState } from "react";
-import { Button } from "../../shared/button";
-import LanguageSelector from "../../shared/select.language/select.language";
+import { Button } from "../../components/shared/button";
+import LanguageSelector from "../../components/shared/select.language/select.language";
 import ThemeSwitch from "@/components/shared/theme.swicher/theme.swicher";
 import { NavigationBar } from "./navigation";
 import { Drawer } from "@/components/shared";
 import { navbarItems } from "./navbar-items";
 import Link from "next/link";
-import { MenuItemIcon } from "../../../../public/images/svg/menu-item";
+import { MenuItemIcon } from "../../icons/svg/menu-item";
 import useCurrentRoute from "@/hooks/useCurrentRoute";
 
 const Header = () => {
