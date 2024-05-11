@@ -3,7 +3,7 @@
 import { useTranslation } from "react-i18next";
 import { navbarItems } from "./navbar-items";
 import Link from "next/link";
-import Logo from "../../icons/svg/logo";
+import Logo from "../../../icons/svg/logo";
 import useCurrentRoute from "@/hooks/useCurrentRoute";
 
 export const NavigationBar = () => {

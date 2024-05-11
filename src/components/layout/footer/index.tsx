@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import Logo from "../../icons/svg/logo";
+import Logo from "../../../icons/svg/logo";
 import {
   LinkedinDarkIcon,
   LinkedinIcon,
@@ -8,7 +8,7 @@ import {
   XLogo,
   YoutubeDarkIcon,
   YoutubeIcon,
-} from "../../icons/svg";
+} from "../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -24,7 +24,8 @@ const Footer = () => {
   return (
     <footer
       style={{ direction: direction }}
-      className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1  sm:grid-cols-2 p-4 sm:py-6 gap-y-8
+      className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1  
+      sm:grid-cols-2 p-4 sm:py-6 gap-y-8
         dark:bg-[#0B0B0E]  bg-white`}
     >
       <div className="flex flex-col items-center sm:items-start lg:pl-32">
