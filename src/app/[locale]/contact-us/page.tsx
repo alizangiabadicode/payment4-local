@@ -115,7 +115,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-      <div className="hidden md:flex px-[245px] justify-between">
+      <div className="hidden md:flex px-[245px] md:px-[100px] lg:px-[245px] justify-between">
         <div className="flex flex-col items-center">
           <EmailIcon />
           <p
@@ -228,7 +228,7 @@ const ContactUs = () => {
             {t("joinOurSocialNetworks")}
           </p>
         </div>
-        <div className="flex gap-x-[20px] md:gap-x-[60px] justify-center px-[15px]">
+        <div className="flex gap-x-[20px] md:gap-x-[30px] lg:gap-x-[60px] justify-center px-[15px]">
           <div>
             <Image
               width={80}
