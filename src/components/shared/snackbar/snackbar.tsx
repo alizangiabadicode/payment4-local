@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { DarkCrossIcon, LightCrossIcon } from "../../../../public/images/svg";
+import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
 
 type Variant = "success" | "warning";
 interface SnackbarProps {

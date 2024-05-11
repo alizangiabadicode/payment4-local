@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Button } from "../shared/button";
-import { LeftArrowIcon, RightArrowIcon } from "../../../public/images/svg";
+import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";

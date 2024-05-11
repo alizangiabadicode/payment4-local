@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
+import { CloseCollapse, OpenCollapse } from "../../../icons/svg";
 
 
 interface FaqItemProps {

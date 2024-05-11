@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { CloseCollapse, OpenCollapse } from "../../../../public/images/svg";
+import { CloseCollapse, OpenCollapse } from "../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import {
   ApiKeySection,

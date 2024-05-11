@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { LeftArrowIcon, SearchIcon } from "../../../../public/images/svg";
+import { LeftArrowIcon, SearchIcon } from "../../../icons/svg";
 import { useTranslation } from "react-i18next";
 
 interface SearchProps {

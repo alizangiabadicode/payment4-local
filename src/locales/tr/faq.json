@@ -1,0 +1,34 @@
+{
+  "q1": {
+    "q": "Ağ işlem ücreti nedir?",
+    "a": "Farklı blok zinciri ağlarında, kaynak cüzdanından hedef cüzdana bakiye transferi yapmak için, bakiye transferinin gerçekleşmesi için belirli bir miktarı ağ işlem ücreti olarak ödemeniz gerekir. Bu ücret, her ağdaki temel para birimi biriminde hesaplanır ve her ağda farklılık gösterir."
+  },
+  "q2": {
+    "q": "İşlem komisyonu nedir ve nasıl hesaplanır?",
+    "a": "Payment4'te her alınan işlem için, toplam işlem tutarının küçük bir miktarı (% 1 civarı) Payment4 hizmet ücreti olarak kabul edilir ve maksimum 1 dolar ile sınırlıdır. Örneğin, başarılı bir 50 dolarlık ödeme 50 sent ücret alır, 100 dolarlık bir işlem 1 dolar ücret alır ve 100 dolardan fazla işlemler (örneğin, 200 dolarlık bir işlem) de 1 dolar ücret alır."
+  },
+  "q3": {
+    "q": "Ağ işlem ücreti ödeyicisi ve Payment4 ücreti nasıl belirlenir?",
+    "a": "Her satıcı, her geçidin ayarlar bölümünde ağ işlem ücreti ödeyicisinin ve Payment4 ücretinin kendileri (satıcılar) veya ödeme yapan kullanıcı (fatura ödeyen kullanıcı) olması gerektiğini belirtebilir. İlk durumda, her ödemenin ardından, yukarıdaki maliyetler dikkate alınır ve son düzenleme sırasında toplam miktarından düşülür. Ancak ikinci durumda, belirtilen miktarlar nihai faturaya eklenir ve satıcı sonunda son düzenlemede kesintisiz ödenen fatura miktarını alır. Bu iki ücreti ayırmak da mümkündür, örneğin, kullanıcı ağ ücretini öder ve satıcı Payment4 ücretini öder."
+  },
+  "q4": {
+    "q": "Uygulama nasıl yapılır?",
+    "a": "Kullanıcılarınızdan gelen çeşitli ödemeleri aldıktan sonra, bakiye bölümünde, ödemenin yapıldığı kripto para birimi ve ağa dayalı toplam bakiyeyi görebilirsiniz. Her yeni ödeme bu bakiyeyi artırır. Düzenleme bölümünde, sadece 24 saatten daha eski olan toplam işlemler görünür. Düzenlemenizi günün her saati isteyebilir ve anında düzenlenir (ağ trafiğine bağlı olarak). Dikkat edilmesi gereken bir nokta, sadece düzenleme için uygun olan bakiyelerin aynı ağdaki cüzdana düzenlenebileceğidir."
+  },
+  "q5": {
+    "q": "Düzenleme cüzdan adresimi nereye girebilirim?",
+    "a": "Her geçidin adres defteri bölümünde, düzenleme alıcısı cüzdan adresini kaydetmeye devam edebilirsiniz. Lütfen her kripto paranın düzenlemesi için uygun olan bakiye yalnızca aynı kripto para birimine ait bir cüzdana transfer edilebilir ve kripto paralar başka bir para birimine dönüştürülemez."
+  },
+  "q6": {
+    "q": "E-ticaret web sitenize geçidi nasıl donatabilirim?",
+    "a": "Geçidi web sitenize nasıl bağlayacağınızı ve belgeleri okumak için resmi site https://payment4.com'u ziyaret edebilir ve belge bölümünde e-ticaret sitenizi donatma işlemini gerçekleştirebilirsiniz."
+  },
+  "q7": {
+    "q": "WordPress sitesi için geçidi nasıl etkinleştirebilirim?",
+    "a": "WordPress (WooCommerce) siteler için, resmi site https://payment4.com'un belge bölümüne gidip eklentiler bölümünden WordPress (WooCommerce) eklentisini indirebilirsiniz."
+  },
+  "q8": {
+    "q": "API anahtarımı nereden alabilirim?",
+    "a": "Her geçit oluşturduğunuzda, o geçidin özel API anahtarını kullanma hakkına sahip olursunuz. Bu API anahtarı, her geçidin ayarlar bölümünde mevcuttur."
+  }
+}

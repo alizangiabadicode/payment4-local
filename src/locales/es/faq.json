@@ -1,0 +1,34 @@
+{
+  "q1": {
+    "q": "¿Qué es una tarifa de transacción de red?",
+    "a": "En diferentes redes blockchain, para transferir el saldo desde la billetera de origen a la billetera de destino, debes pagar una cierta cantidad como tarifa de transacción de red para que se realice la transferencia de saldo. Esta tarifa se calcula en la unidad de moneda base de cada red y varía en cada red."
+  },
+  "q2": {
+    "q": "¿Qué es una comisión de transacción y cómo se calcula?",
+    "a": "Por cada transacción recibida en Payment4, se considera una pequeña cantidad (aproximadamente el 1 por ciento) del monto total de la transacción como tarifa de servicio de Payment4, que está limitada a 1 dólar. Por ejemplo, un pago exitoso de 50 dólares incurre en una tarifa de 50 centavos, una transacción de 100 dólares incurre en una tarifa de 1 dólar, y las transacciones de más de 100 dólares (por ejemplo, una transacción de 200 dólares) también tendrán una tarifa de 1 dólar."
+  },
+  "q3": {
+    "q": "¿Cómo se determinan el pagador de la tarifa de transacción de red y la tarifa de Payment4?",
+    "a": "Cada comerciante puede especificar en la sección de configuración de cada pasarela si el pagador de la tarifa de transacción de red y la tarifa de Payment4 debe ser el comerciante (ellos mismos) o el usuario que paga (el usuario que paga la factura). En el primer caso, después de cada pago, se consideran y deducen los costos mencionados del monto total durante la liquidación final. Pero en el segundo caso, los montos mencionados se agregan a la factura final, y el comerciante finalmente recibirá el monto total de la factura pagada sin deducción en la liquidación final. Cabe mencionar que es posible separar estas dos tarifas, por ejemplo, el usuario paga la tarifa de red y el comerciante paga la tarifa de Payment4."
+  },
+  "q4": {
+    "q": "¿Cómo se realiza la liquidación?",
+    "a": "Después de recibir múltiples pagos de tus usuarios, puedes ver el saldo total basado en la criptomoneda y la red en la que se realizó el pago en la sección de saldo. Cada nuevo pago aumenta este saldo. En la sección de liquidación, solo son visibles las transacciones totales que se pagaron hace más de 24 horas. Puedes solicitar tu liquidación en cualquier hora del día, y se liquidará instantáneamente (dependiendo del tráfico de red). Cabe destacar que solo los saldos elegibles para la liquidación pueden liquidarse a la dirección de billetera de la misma red."
+  },
+  "q5": {
+    "q": "¿Dónde puedo ingresar mi dirección de billetera de liquidación?",
+    "a": "En la sección de libreta de direcciones de cada pasarela, puedes proceder a registrar la dirección de billetera del destinatario de la liquidación. Ten en cuenta que el saldo elegible para la liquidación de cada criptomoneda solo se puede transferir a una billetera de la misma criptomoneda, y las criptomonedas no se pueden convertir a otras."
+  },
+  "q6": {
+    "q": "¿Cómo puedo equipar mi sitio web de comercio electrónico con la pasarela?",
+    "a": "Para leer la documentación y cómo conectar la pasarela a tu sitio web de comercio electrónico, puedes visitar el sitio oficial https://payment4.com y proceder a equipar tu sitio web de comercio electrónico en la sección de documentación."
+  },
+  "q7": {
+    "q": "¿Cómo puedo activar la pasarela para un sitio de WordPress?",
+    "a": "Para sitios de WordPress (WooCommerce), puedes visitar la sección de documentación del sitio oficial https://payment4.com y descargar el complemento de WordPress (WooCommerce) de la sección de complementos."
+  },
+  "q8": {
+    "q": "¿Dónde puedo obtener mi clave API?",
+    "a": "Al crear cada pasarela, tendrás derecho a utilizar la clave API específica de esa pasarela. Esta clave API está disponible en la sección de configuración de cada pasarela."
+  }
+}
