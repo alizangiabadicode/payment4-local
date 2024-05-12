@@ -84,7 +84,7 @@ const ProgressCards: FC = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center my-[130px] gap-y-[80px]">
+    <div className="flex flex-col items-center my-[130px] gap-y-[80px] lg:px-[20px]">
       {cardsArray.map((card) => (
         <ProgressCard
           key={card.id}

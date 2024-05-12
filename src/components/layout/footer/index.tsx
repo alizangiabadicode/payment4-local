@@ -25,7 +25,7 @@ const Footer = () => {
     <footer
       style={{ direction: direction }}
       className={`border-t border-[#E5E5E5] dark:border-[#171717]  grid grid-cols-1  
-      sm:grid-cols-2 p-4 sm:py-6 gap-y-8
+      sm:grid-cols-3 lg:grid-cols-2 p-4 sm:py-6 gap-y-8 sm:gap-x-[30px] lg:gap-x-0
         dark:bg-[#0B0B0E]  bg-white`}
     >
       <div className="flex flex-col items-center sm:items-start lg:pl-32">
@@ -35,8 +35,8 @@ const Footer = () => {
           </div>
           <div className="sm:max-w-64 flex">
             <p
-              className={`text-sm text-[#1212125C] leading-6 
-              dark:text-[#FFFFFFA1] dark:text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] dark:`}
             >
               {t("footerDesc")}
             </p>
@@ -124,11 +124,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0">
+      <div className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0 
+      sm:col-span-2 lg:col-span-1">
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-[#FFFFFFA1]"
+            className=""
           >
             {t("menu")}
           </p>
@@ -136,40 +137,40 @@ const Footer = () => {
             <Link
               href="/"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("home")}
             </Link>
             <Link
               href="/developers"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("developers")}
             </Link>
             <Link
               href="/documents"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("documents")}
             </Link>
             <Link
               href="/about-us"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("about")}
             </Link>
             <Link
               href="/contact-us"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("contact us")}
             </Link>
@@ -178,7 +179,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-[#FFFFFFA1]"
+            className=""
           >
             {t("followUs")}
           </p>
@@ -187,8 +188,8 @@ const Footer = () => {
               target="_blank"
               href={"https://www.linkedin.com/company/payment4/"}
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("linkedin")}
             </Link>
@@ -200,8 +201,8 @@ const Footer = () => {
                   : "http://twitter.com/payment4_com"
               }
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("twitter")}
             </Link>
@@ -213,8 +214,8 @@ const Footer = () => {
                   : "https://www.instagram.com/payment4_com"
               }
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("instagram")}
             </Link>
@@ -226,8 +227,8 @@ const Footer = () => {
                   : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA"
               }
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("youTube")}
             </Link>
@@ -289,7 +290,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-[#FFFFFFA1]"
+            className=""
           >
             {t("resources")}
           </p>
@@ -297,24 +298,24 @@ const Footer = () => {
             <Link
               href="/terms-of-service"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("termsOfService")}
             </Link>
             <Link
               href="/privacy-policy"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("privacyPolicyFooter")}
             </Link>
             <Link
               href="/faq"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("faq")}
             </Link>
@@ -323,7 +324,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-[#FFFFFFA1]"
+            className=""
           >
             {t("company")}
           </p>
@@ -331,16 +332,16 @@ const Footer = () => {
             <Link
               href="/about-us"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("about")}
             </Link>
             <Link
               href="/contact-us"
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("contact us")}
             </Link>
@@ -349,7 +350,7 @@ const Footer = () => {
               style={{ fontSize: "12px" }}
               className={`${
                 isDark === "dark" ? "text-white opacity-[63%]" : null
-              } text-primary-text`}
+              } text-[#5F5E5E]`}
             >
               {t("blog")}
             </Link> */}
@@ -358,7 +359,7 @@ const Footer = () => {
         <div className="flex flex-col gap-3 items-center sm:items-start">
           <p
             style={{ fontSize: "14px", fontWeight: 700 }}
-            className="dark:text-[#FFFFFFA1]"
+            className=""
           >
             {t("product")}
           </p>
@@ -367,8 +368,8 @@ const Footer = () => {
               target="_blank"
               href={`${process.env.NEXT_PUBLIC_SIGHNIN_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("logIn")}
             </Link>
@@ -376,8 +377,8 @@ const Footer = () => {
               target="_blank"
               href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
-              className={`text-sm text-primary-text leading-6 
-              dark:text-[#FFFFFFA1] text-opacity-[36%]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("signup")}
             </Link>

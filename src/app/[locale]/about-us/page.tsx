@@ -72,7 +72,12 @@ const AboutUs = async ({
         </div>
         <div className="px-5 md:px-0 grid grid-rows-2 grid-cols-3 md:grid-rows-1 md:grid-cols-4  justify-items-center gap-10 mt-[40px] mb-[90px]">
           <div className="flex flex-col items-center">
-            <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+100</p>
+            <p
+              style={{ direction: i18n.dir() === "ltr" ? "rtl" : "ltr" }}
+              className={`text-[28px] text-[#9E6DFF] font-bold`}
+            >
+              +100
+            </p>
             <p
               className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px]"
@@ -81,7 +86,12 @@ const AboutUs = async ({
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+20000</p>
+            <p
+              style={{ direction: i18n.dir() === "ltr" ? "rtl" : "ltr" }}
+              className={`text-[28px] text-[#9E6DFF] font-bold`}
+            >
+              +20000
+            </p>
             <p
               className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px]"
@@ -90,7 +100,12 @@ const AboutUs = async ({
             </p>
           </div>
           <div className="flex flex-col items-center">
-            <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+1000</p>
+            <p
+              style={{ direction: i18n.dir() === "ltr" ? "rtl" : "ltr" }}
+              className={`text-[28px] text-[#9E6DFF] font-bold`}
+            >
+              +1000
+            </p>
             <p
               className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px]"
@@ -99,7 +114,12 @@ const AboutUs = async ({
             </p>
           </div>
           <div className="flex flex-col col-span-3 md:col-span-1 justify-center items-center">
-            <p className={`text-[28px] text-[#9E6DFF] font-bold`}>+200</p>
+            <p
+              style={{ direction: i18n.dir() === "ltr" ? "rtl" : "ltr" }}
+              className={`text-[28px] text-[#9E6DFF] font-bold`}
+            >
+              +200
+            </p>
             <p
               className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px]"

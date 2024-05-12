@@ -33,11 +33,11 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
         />
       </div>
       {props.title === t("signup") ? (
-        <div className="flex flex-col gap-y-2 md:order-1 mt-3 md:mt-0">
+        <div className="flex flex-col gap-y-2 md:order-1 mt-3 lg:mt-0">
           <div
             className={`
                dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
-             lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+             lg:w-[450px] sm:px-[33px] py-[24px] lg:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -148,7 +148,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="mt-[40px] md:hidden">
+          <div className="mt-[40px] lg:hidden">
             <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>
@@ -166,7 +166,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div
             className={`
            dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
-         lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+         lg:w-[450px] sm:px-[33px] py-[24px] lg:mt-[50px]`}
           >
             <div
               className={`text-[18px] sm:text-[22px] font-bold 
@@ -192,7 +192,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
           </div>
           <div className="hidden lg:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-3 mt-[25px]">
               <Image
                 src="/images/api-creation-dark.png"
                 width={22}
@@ -262,7 +262,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="mt-[40px] md:hidden">
+          <div className="mt-[40px] lg:hidden">
             <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>
@@ -306,7 +306,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div
             className={`
       dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
-    lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+    lg:w-[450px] sm:px-[33px] py-[24px] lg:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -328,7 +328,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
           </div>
           <div className="hidden lg:flex flex-col gap-y-[60px] mt-[46px] sm:mt-0 px-[33px]">
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-3 mt-[25px]">
               <Image
                 src="/images/settlement-request-dark-icon.png"
                 width={22}
@@ -375,7 +375,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="mt-[40px] md:hidden">
+          <div className="mt-[40px] lg:hidden">
             <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>
@@ -442,7 +442,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div
             className={`
          dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
-       lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+       lg:w-[450px] sm:px-[33px] py-[24px] lg:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -465,7 +465,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
             </div>
           </div>
           <div className="hidden lg:flex flex-col gap-y-10 mt-[46px] sm:mt-0 px-[33px]">
-            <div className="flex items-center gap-x-3">
+            <div className="flex items-center gap-x-3 mt-[25px]">
               <Image
                 src="/images/security-measures-dark-icon.png"
                 width={22}
@@ -489,7 +489,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="mt-[40px] md:hidden">
+          <div className="mt-[40px] lg:hidden">
             <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>
@@ -582,7 +582,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
           <div
             className={`
          dark:lg:bg-[#FFFFFF0A]  lg:bg-[#F6F6F6]
-       lg:w-[450px] sm:px-[33px] sm:py-[24px] md:mt-[50px]`}
+       lg:w-[450px] sm:px-[33px] py-[24px] lg:mt-[50px]`}
           >
             <div className="flex items-center gap-x-3">
               {props.icon}
@@ -604,7 +604,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
               </p>
             </div>
           </div>
-          <div className="mt-[40px] md:hidden">
+          <div className="mt-[40px] lg:hidden">
             <hr className="border-t-1 dark:border-[#FFFFFF14] border-[#ececec]" />
           </div>
         </div>

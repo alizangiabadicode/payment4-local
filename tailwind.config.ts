@@ -29,6 +29,10 @@ const config: Config = {
       center: true,
     },
     extend: {
+      screens: {
+        'xs':'420 px',
+        'x': "857px",
+      },
       backgroundImage: {
         "light-gradient":
           "linear-gradient(to right, #F1EAFF, #f6f2ff, #F1EAFF)",

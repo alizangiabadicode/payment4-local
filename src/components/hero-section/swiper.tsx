@@ -15,8 +15,12 @@ export const SwiperSection = () => {
           speed={3000}
           loop={true}
           modules={[Autoplay]}
-          spaceBetween={5}
-          slidesPerView={2}
+          spaceBetween={4}
+          slidesPerView={1}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            1024: { slidesPerView: 1.5 },
+          }}
         >
           <SwiperSlide>
             <Image

@@ -53,11 +53,11 @@ const DocumentPageLayout: React.FC = () => {
       title: t("settlementsTitle"),
       content: <Settlements />,
     },
-    {
-      id: "SystemLimits",
-      title: t("systemLimits"),
-      content: <SystemLimits />,
-    },
+    // {
+    //   id: "SystemLimits",
+    //   title: t("systemLimits"),
+    //   content: <SystemLimits />,
+    // },
     {
       id: "ApiKey",
       title: t("apiKeyTitle"),
