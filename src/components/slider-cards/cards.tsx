@@ -50,7 +50,8 @@ const SliderCards = () => {
 
   return (
     <>
-      <div className="hidden md:flex sm:gap-x-5 sm:justify-center sm:my-[30px]">
+      <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-x-[210px] 
+      md:gap-y-[20px] mt-[50px] md:px-[20px] xl:gap-x-[50px]">
         {/* {cardsArray.map((card) => (
           <SliderCard
             desc={card.desc}
@@ -64,7 +65,7 @@ const SliderCards = () => {
         <div
           className={`
          dark:bg-[#17171a] 
-       w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+       w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
           <div className="w-[196px] mt-[40px]  flex">
             <Image
@@ -107,7 +108,7 @@ const SliderCards = () => {
         <div
           className={`
          dark:bg-[#17171a] 
-       w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+       w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
           <div className="w-[196px] mt-[40px] flex">
             <Image
@@ -150,7 +151,7 @@ const SliderCards = () => {
         <div
           className={`
          dark:bg-[#17171a] 
-       w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+       w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
           <div className="w-[175px] mt-[40px]  flex">
             <Image
@@ -193,7 +194,7 @@ const SliderCards = () => {
         <div
           className={`
          dark:bg-[#17171a] 
-       w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+       w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
           <div className="w-[175px] mt-[40px]  flex">
             <Image
@@ -235,7 +236,15 @@ const SliderCards = () => {
         </div>
       </div>
       <div className="md:hidden container my-16">
-        <Swiper spaceBetween={45} slidesPerView={1.2}>
+        <Swiper
+          slidesPerView={1}
+          breakpoints={{
+            0: { slidesPerView: 1.5, spaceBetween: 90 },
+            420: { slidesPerView: 1.5, spaceBetween: 30 },
+            490: { slidesPerView: 2, spaceBetween: 30 },
+            700: { slidesPerView: 2.5, spaceBetween: 10 },
+          }}
+        >
           {cardsArray.map((card) => (
             <SwiperSlide key={card.title}>
               {

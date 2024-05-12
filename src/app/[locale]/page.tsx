@@ -25,7 +25,7 @@ async function Home({ params: { locale } }: { params: { locale: string } }) {
       <div className="flex justify-center">
         <SliderCards />
       </div>
-      <div className="flex justify-center sm:px-[200px]">
+      <div className="flex justify-center sm:px-[5xl:gap-x-[50px]0px] lg:px-[150px]">
         <AdvertisementCard />
       </div>
       {/* <div className="flex justify-center my-[128px]">

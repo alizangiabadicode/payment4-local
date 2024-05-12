@@ -19,10 +19,10 @@ const Card = (props: CardsType) => {
     <div
       className={`
          dark:bg-dark-gradient-card bg-light-gradient-card
-          grid grid-cols-1 md:grid-cols-2 rounded-md max-w-[400px] md:max-w-[850px] px-[20px]`}
+          grid grid-cols-1 md:grid-cols-2 rounded-md max-w-[400px] md:max-w-[850px] x:min-w-[850px] px-[20px]`}
     >
-      <div className="flex flex-col  gap-y-5 sm:gap-y-17 sm:pt-12 pl-10 mt-[30px]">
-        <p className={`font-bold sm:text-[24px] text-[16px] dark:text-white`}>
+      <div className="flex flex-col  gap-y-5 sm:gap-y-17 md:pt-12 md:rtl:pr-[30px] pl-10 mt-[30px]">
+        <p className={`font-bold md:text-[24px] text-[20px] dark:text-white`}>
           {props.title}
         </p>
         <p
@@ -37,7 +37,7 @@ const Card = (props: CardsType) => {
           </Button>
         </div>
       </div>
-      <div className="-order-last md:order-1 sm:w-[384px]">
+      <div className="-order-last md:order-1 sm:w-[384px] md:rtl:pr-[30px]">
         <Image
           className="dark:hidden block"
           width={354}
