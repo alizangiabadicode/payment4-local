@@ -257,5 +257,7 @@
   "search": "جستجو",
   "categories": "دسته‌بندی‌ها",
   "seeMore": "مشاهده بیشتر",
-  "overview": "مرور"
+  "overview": "مرور",
+  "dailyInvoiceCount": "تعداد فاکتور روزانه",
+  "totalInvoicesCount": "تعداد کل فاکتورها"
 }

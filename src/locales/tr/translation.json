@@ -251,5 +251,7 @@
   "search": "Ara",
   "categories": "Kategoriler",
   "seeMore": "Daha fazla gör",
-  "overview": "Genel Bakış"
+  "overview": "Genel Bakış",
+  "dailyInvoiceCount": "Günlük fatura sayısı",
+  "totalInvoicesCount": "Toplam fatura sayısı"
 }

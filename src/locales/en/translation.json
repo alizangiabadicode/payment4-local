@@ -251,5 +251,7 @@
   "search": "Search",
   "categories": "Categories",
   "seeMore": "See more",
-  "overview": "Overview"
+  "overview": "Overview",
+  "dailyInvoiceCount":"Daily invoice count",
+  "totalInvoicesCount":"Total invoices count"
 }
