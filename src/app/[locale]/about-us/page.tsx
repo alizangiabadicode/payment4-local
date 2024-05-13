@@ -101,8 +101,7 @@ const AboutUs = async ({
                 className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px] text-center"
               >
-                {/* {t("paymentDaily")} */}
-                Daily invoice count
+                {t("dailyInvoiceCount")}
               </p>
             </div>
             <div className="flex flex-col items-center">
@@ -116,7 +115,7 @@ const AboutUs = async ({
                 className="text-[#121212C7] dark:text-[#FFFFFFC7] 
             text-[12px] md:text-[16px] text-center"
               >
-                total invoices count
+                {t("totalInvoicesCount")}
               </p>
             </div>
           </div>

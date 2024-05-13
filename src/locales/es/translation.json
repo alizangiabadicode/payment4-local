@@ -251,5 +251,7 @@
   "search": "Buscar",
   "categories": "Categorías",
   "seeMore": "Ver más",
-  "overview": "Visión general"
+  "overview": "Visión general",
+  "dailyInvoiceCount": "Cantidad de facturas diarias",
+  "totalInvoicesCount": "Cantidad total de facturas"
 }

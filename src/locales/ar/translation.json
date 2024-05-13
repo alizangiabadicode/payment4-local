@@ -251,5 +251,7 @@
   "search": "بحث",
   "categories": "الفئات",
   "seeMore": "رؤية المزيد",
-  "overview": "نظرة عامة"
+  "overview": "نظرة عامة",
+  "dailyInvoiceCount": "عدد الفواتير اليومية",
+  "totalInvoicesCount": "إجمالي عدد الفواتير"
 }
