@@ -5,6 +5,7 @@ import { supportedLanguages } from "./supported.language";
 import { useTranslation } from "react-i18next";
 import LanguageLightIcon from "../../../icons/svg/language-light-icon";
 import {
+  CheckIconDark,
   CheckIconLight,
   LanguageDarkIcon,
 } from "../../../icons/svg";
@@ -88,7 +89,7 @@ const LanguageSelector: React.FC = () => {
         <div
           style={{ zIndex: 1 }}
           className={`ltr:origin-top-right rtl:origin-top-left absolute ltr:right-0 rtl:left-0 mt-2 w-48 rounded-md shadow-lg
-             dark:bg-black  bg-white
+             dark:bg-[#040406]  bg-white
           ring-1 ring-black ring-opacity-5`}
         >
           <div
@@ -96,16 +97,22 @@ const LanguageSelector: React.FC = () => {
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="options-menu"
+            style={{ direction: i18n.dir() }}
           >
             {supportedLanguages.map((lang) => (
               <button
                 key={lang.value}
                 onClick={() => handleLanguageChange(lang.value)}
                 className={`px-4 py-2 text-sm text-gray-700 
-                  dark:hover:bg-[#252525] hover:bg-[#ccc]
+                  dark:hover:bg-[#111115] hover:bg-[#F6F6F6]
+                  ${
+                    i18n.language === lang.value
+                      ? "dark:bg-[#222228] bg-[#DFDFDF]"
+                      : null
+                  }
                  w-full text-left flex justify-between items-center`}
               >
-                <div className="flex items-center gap-x-4">
+                <div className="flex items-center gap-x-4 rtl:flex-row-reverse">
                   <p
                     className={`
                       dark:text-white text-black
@@ -115,7 +122,11 @@ const LanguageSelector: React.FC = () => {
                   </p>
                   {lang.icon}
                 </div>
-                {i18n.language === lang.value && <CheckIconLight />}
+                {i18n.language === lang.value && isDark === "light" ? (
+                  <CheckIconLight />
+                ) : i18n.language === lang.value && isDark === "dark" ? (
+                  <CheckIconDark />
+                ) : null}
               </button>
             ))}
           </div>

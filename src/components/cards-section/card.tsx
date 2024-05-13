@@ -4,6 +4,7 @@ import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 
+
 export interface CardsType {
   title: string;
   desc: string;
@@ -31,7 +32,16 @@ const Card = (props: CardsType) => {
           {props.desc}
         </p>
         <div className="mb-[10px]">
-          <Button className="hidden md:flex px-[10px] sm:px-10 sm:py-[10px] py-[7px] gap-x-2 mb-5 md:mb-0">
+          <Button
+            onClick={() => {
+              window.open(
+                `${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`,
+                "_blank"
+              );
+            }}
+            className="cursor-pointer hidden md:flex px-[10px] 
+            sm:px-10 sm:py-[10px] py-[7px] gap-x-2 mb-5 md:mb-0"
+          >
             {props.buttonText}
             {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>

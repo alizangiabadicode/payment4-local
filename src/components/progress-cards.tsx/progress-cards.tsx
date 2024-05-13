@@ -2,14 +2,7 @@
 import React, { FC } from "react";
 import ProgressCard from "./progress-card";
 import { SignupIcon } from "../../icons/svg/signup-icon";
-import {
-  GatewaySetupIcon,
-  SecurityMeasureIcon,
-  SettlementRequestIcon,
-} from "../../icons/svg";
-import ApiPaylinkCreationIcon from "../../icons/svg/api-paylink-creation-icon";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "next-themes";
 import Image from "next/image";
 
 export interface CardsArrayProps {

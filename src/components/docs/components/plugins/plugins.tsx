@@ -6,7 +6,7 @@ export const PluginsSection = () => {
   return (
     <div className="mt-3">
       <p
-        className={`text-base font-normal mt-3 mb-2 dark:text-[#FFFFFFC7] 
+        className={`text-[16px] font-normal mt-3 mb-2 dark:text-[#FFFFFFC7] 
  text-[#121212C7]`}
       >
         {t("pluginDesc")}

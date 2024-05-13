@@ -144,7 +144,7 @@
   "settlementsTitle": "Settlements",
   "systemLimits": "System limits",
   "apiKeyTitle": "Api key",
-  "authenticationAndSecurity": "Authentication and Security",
+  "authenticationAndSecurity": "Authentication",
   "createPayment": "create payment",
   "verifyPayment": "verify payment",
   "nodeSDK": "Node SDK",
