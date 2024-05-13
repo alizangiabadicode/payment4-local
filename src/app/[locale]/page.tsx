@@ -10,7 +10,7 @@ const i18nNamespaces = ["translation"];
 async function Home({ params: { locale } }: { params: { locale: string } }) {
   const { t } = await initTranslations(locale, i18nNamespaces);
   return (
-    <div className="overflow-x-auto px-[20px] sm:px-0">
+    <div className="overflow-x-auto px-[20px] sm:px-0 container">
       <HeroSection />
       <Cards />
       <ProgressCards />

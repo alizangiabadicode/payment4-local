@@ -129,11 +129,7 @@ export const CreatePayment = () => {
           style={{ direction: "ltr" }}
         >{`${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/payment`}</pre>
       </div>
-      <p
-        className={`text-base leading-8 
-        dark:text-[#FFFFFFC7] 
-        text-[#121212C7] `}
-      >
+      <p className={`text-[20px] leading-8 font-semibold `}>
         {t("definitionsCreatePayment")}
       </p>
       <ul className="flex flex-col gap-y-4" style={{ listStyle: "outside" }}>

@@ -16,7 +16,6 @@ import {
   SDKSection,
   SecuritySection,
   Settlements,
-  SystemLimits,
   TransactionSection,
   VerifyPayment,
   WHMCSSection,
@@ -180,7 +179,7 @@ const DocumentPageLayout: React.FC = () => {
     >
       {/* Sidebar */}
       <div
-        className="hidden md:block 
+        className="hidden md:flex flex-col gap-y-[15px]
            dark:bg-[#FFFFFF08] bg-[#12121208]
         h-max p-[26px] rounded-[8px] sticky top-0"
       >
@@ -188,18 +187,22 @@ const DocumentPageLayout: React.FC = () => {
           <ul key={item.id}>
             <li key={item.id} className="mb-4">
               <div
-                onClick={() => scrollToSection(item.id)}
+                onClick={() => {
+                  scrollToSection(item.id);
+                  handleCollapseToggle(item.title);
+                }}
                 className="mb-4 flex items-center cursor-pointer justify-between"
               >
                 <p
                   className={`
                     dark:text-white text-[#121212]
+                    text-[17px] 
                   `}
                 >
                   {item.title}
                 </p>
                 {item.subItems && (
-                  <button onClick={() => handleCollapseToggle(item.title)}>
+                  <button>
                     {isCollapsed(item.title) ? (
                       <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
                     ) : (
@@ -212,8 +215,8 @@ const DocumentPageLayout: React.FC = () => {
                 <ul
                   className="flex flex-col gap-3 my-[10px]"
                   style={{
-                    marginLeft: i18n.dir() === "ltr" ? "15px" : 0,
-                    marginRight: i18n.dir() === "rtl" ? "15px" : 0,
+                    marginLeft: i18n.dir() === "ltr" ? "18px" : 0,
+                    marginRight: i18n.dir() === "rtl" ? "18px" : 0,
                   }}
                 >
                   {item.subItems.map((subItem) => (
@@ -223,8 +226,8 @@ const DocumentPageLayout: React.FC = () => {
                       className="cursor-pointer"
                     >
                       <p
-                        className={` text-[15px]
-                        dark:text-[#FFFFFFC7] dark: text-[#121212C7]
+                        className={` text-[16px]
+                        
                        `}
                       >
                         {subItem.title}
@@ -244,7 +247,7 @@ const DocumentPageLayout: React.FC = () => {
             <p
               className="
                  dark:text-white text-black
-              md:text-[20px] font-semibold"
+              md:text-[22px] font-semibold"
             >
               {item.title}
             </p>
@@ -253,7 +256,7 @@ const DocumentPageLayout: React.FC = () => {
               item.subItems.map((subItem) => (
                 <div id={subItem.id} key={subItem.id} className="my-5">
                   <p
-                    className={`dark:text-white text-black md:text-[18px] font-semibold`}
+                    className={`dark:text-white text-black md:text-[20px] font-semibold`}
                   >
                     {subItem.title}
                   </p>

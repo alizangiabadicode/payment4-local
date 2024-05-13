@@ -28,7 +28,8 @@ const Footer = () => {
       sm:grid-cols-3 lg:grid-cols-2 p-4 sm:py-6 gap-y-8 sm:gap-x-[30px] lg:gap-x-0
         dark:bg-[#0B0B0E]  bg-white`}
     >
-      <div className="flex flex-col items-center sm:items-start lg:pl-32">
+      <div className="flex flex-col items-center sm:items-start 
+      lg:items-start lg:pl-[100px]">
         <div className="flex flex-col gap-y-4 sm:gap-y-4">
           <div>
             <Logo />
@@ -124,13 +125,12 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0 
-      sm:col-span-2 lg:col-span-1">
+      <div
+        className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0 
+      sm:col-span-2 lg:col-span-1"
+      >
         <div className="flex flex-col gap-3">
-          <p
-            style={{ fontSize: "14px", fontWeight: 700 }}
-            className=""
-          >
+          <p style={{ fontSize: "14px", fontWeight: 700 }} className="">
             {t("menu")}
           </p>
           <div className="flex flex-col gap-2">
@@ -143,7 +143,8 @@ const Footer = () => {
               {t("home")}
             </Link>
             <Link
-              href="/developers"
+              target="_blank"
+              href="https://service.payment4.com/doc"
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -177,10 +178,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">
-          <p
-            style={{ fontSize: "14px", fontWeight: 700 }}
-            className=""
-          >
+          <p style={{ fontSize: "14px", fontWeight: 700 }} className="">
             {t("followUs")}
           </p>
           <div className="flex flex-col gap-2">
@@ -288,10 +286,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <p
-            style={{ fontSize: "14px", fontWeight: 700 }}
-            className=""
-          >
+          <p style={{ fontSize: "14px", fontWeight: 700 }} className="">
             {t("resources")}
           </p>
           <div className="flex flex-col gap-2">
@@ -322,10 +317,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">
-          <p
-            style={{ fontSize: "14px", fontWeight: 700 }}
-            className=""
-          >
+          <p style={{ fontSize: "14px", fontWeight: 700 }} className="">
             {t("company")}
           </p>
           <div className="flex flex-col gap-2">
@@ -357,10 +349,7 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">
-          <p
-            style={{ fontSize: "14px", fontWeight: 700 }}
-            className=""
-          >
+          <p style={{ fontSize: "14px", fontWeight: 700 }} className="">
             {t("product")}
           </p>
           <div className="flex flex-col gap-2">

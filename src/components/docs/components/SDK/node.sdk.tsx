@@ -13,23 +13,19 @@ export const NodeSDKSection = () => {
   return (
     <div className="mt-5 mb-10">
       <p
-        className={`text-base font-semibold dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[17px] font-normal`}
       >
         {t("introduction")}
       </p>
       <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("sdkNodeDesc")}
       </p>
 
+      <p className={`text-[17px] font-normal mt-5`}>{t("installation")}</p>
       <p
-        className={`text-base font-normal mt-5 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
-      >
-        {t("installation")}
-      </p>
-      <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("nodeSdkStart")}
       </p>
@@ -38,42 +34,42 @@ export const NodeSDKSection = () => {
       </div>
 
       <p
-        className={`text-base font-normal mt-5 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[17px] font-normal mt-5`}
       >
         {t("configuration")}
       </p>
       <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("nodeSdkConfiguration")}
       </p>
       <CodeBox code={configurationCode} />
 
       <p
-        className={`text-base font-normal mt-5 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[17px] font-normal mt-5`}
       >
         API
       </p>
 
       <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("requestingAPayment")}
       </p>
       <CodeBox code={requestingPaymentCode} />
       <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-[25px] dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("nodeSdkSupportedLanguages")}
       </p>
       <p
-        className={`text-base font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[15px] font-normal mt-2 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
       >
         {t("nodeSdkSupportedCurrencies")}
       </p>
 
       <p
-        className={`text-base font-normal mt-5 dark:text-[#FFFFFFC7] dark: text-[#121212C7] `}
+        className={`text-[17px] mt-5 `}
       >
         {t("verifyingAPayment")}
       </p>
