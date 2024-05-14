@@ -97,8 +97,9 @@ const HeroSection = () => {
           </div>
           <div className="max-w-[700px]">
             <p
-              className={`text-secondary-text text-center leading-8 
-              dark:text-white  dark:text-opacity-[44%] text-black`}
+              className={`text-[13px] md:text-[16px] 
+              text-center leading-[23px] 
+              md:leading-8 dark:text-[#B5B5B5]  text-[#717171]`}
             >
               {t("payment4WelcomesUsers")}
             </p>
@@ -111,7 +112,7 @@ const HeroSection = () => {
           >
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
             >
               {t("letsGetStarted")}
             </Link>

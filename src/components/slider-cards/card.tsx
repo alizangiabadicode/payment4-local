@@ -9,7 +9,7 @@ const SliderCard = (props: CardsArrayInterface) => {
     <div
       className={`
          dark:bg-[#17171a] 
-         w-[235px] xs:w-[275px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+         w-[235px] xs:w-[275px] sm:w-[255px]  bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
     >
       <div className="w-[175px]  flex">
         <Image
@@ -41,7 +41,7 @@ const SliderCard = (props: CardsArrayInterface) => {
         <div>
           <p
             className={`text-[12px] 
-               dark:text-[#FFFFFF5C] text-[#1212128F] text-opacity-[36%]
+               dark:text-[#FFFFFF5C] text-[#717171] 
             }`}
           >
             {props.desc}

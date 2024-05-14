@@ -204,7 +204,7 @@ const AboutUs = async ({
               <div>
                 <Link
                   target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+                  href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
                 >
                   <Button className="px-[64px] py-[10px] rounded-[8px] text-nowrap">
                     {t("joinUs")}

@@ -196,7 +196,7 @@ const DocumentPageLayout: React.FC = () => {
                 <p
                   className={`
                     dark:text-white text-[#121212]
-                    text-[17px] 
+                  md:text-[14px]  lg:text-[17px] 
                   `}
                 >
                   {item.title}
@@ -225,11 +225,7 @@ const DocumentPageLayout: React.FC = () => {
                       key={subItem.id}
                       className="cursor-pointer"
                     >
-                      <p
-                        className={` text-[16px]
-                        
-                       `}
-                      >
+                      <p className={`md:text-[13px] lg:text-[16px]`}>
                         {subItem.title}
                       </p>
                     </li>

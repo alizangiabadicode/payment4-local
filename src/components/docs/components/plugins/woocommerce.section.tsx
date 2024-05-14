@@ -20,12 +20,13 @@ export const WoocommerceSection = () => {
         </a> */}
         . {t("headOfWordPress")}
         <Button
-          className="dark:text-[#9E6DFF] text-[#9E6DFF] 
-        mx-5 dark:bg-transparent bg-transparent font-semibold"
+          className="
+        mx-5 dark:bg-transparent bg-transparent "
         >
           <a
-            className="flex ltr:flex-row-reverse gap-x-2"
-            href={process.env.NEXT_PUBLIC_APP_WOOCOMMERCE_PLUGIN_URL}
+            className="flex ltr:flex-row-reverse gap-x-2 
+            dark:text-[#9E6DFF] text-[#9E6DFF] font-semibold"
+            href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`}
           >
             {t("downloadLink")} <DownloadIcon />
           </a>

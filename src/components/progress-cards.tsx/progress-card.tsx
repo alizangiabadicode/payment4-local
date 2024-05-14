@@ -48,10 +48,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.title}
               </p>
             </div>
-            <div className="sm:mt-1">
+            <div className="sm:mt-2">
               <p
                 className={`
-                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                   dark:text-[#B5B5B5] text-[#717171]
                  text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
@@ -181,10 +181,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.title}
               </p>
             </div>
-            <div className="sm:mt-1">
+            <div className="sm:mt-2">
               <p
                 className={`
-                  dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                  dark:text-[#B5B5B5] text-[#717171]
                 text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
@@ -317,10 +317,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.title}
               </p>
             </div>
-            <div className="sm:mt-1">
+            <div className="sm:mt-2">
               <p
                 className={`
-                  dark:text-[#FFFFFFA1] text-opacity-[63%]
+                  dark:text-[#B5B5B5] text-[#717171]
                  text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
@@ -454,10 +454,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.title}
               </p>
             </div>
-            <div className="sm:mt-1">
+            <div className="sm:mt-2">
               <p
                 className={`
-                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%]
+                   dark:text-[#B5B5B5] text-[#717171]
                  text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}
@@ -594,10 +594,10 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 {props.title}
               </p>
             </div>
-            <div className="sm:mt-1">
+            <div className="sm:mt-2">
               <p
                 className={`
-                   dark:text-[#FFFFFFA1] dark:text-opacity-[63%] 
+                   dark:text-[#B5B5B5]  text-[#717171]
                 text-[12px] sm:text-[14px] leading-5`}
               >
                 {props.desc}

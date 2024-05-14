@@ -40,7 +40,7 @@ const Header = () => {
               onClick={() => console.log(i18n.language)}
             >
               <Link
-                href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
                 target="_blank"
               >
                 {t("signup")}

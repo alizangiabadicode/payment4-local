@@ -50,8 +50,10 @@ const SliderCards = () => {
 
   return (
     <>
-      <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-4 md:gap-x-[210px] 
-      md:gap-y-[20px] mt-[50px] md:px-[20px] xl:gap-x-[50px]">
+      <div
+        className="hidden xl:grid md:grid-cols-2 xl:grid-cols-4 md:gap-x-[210px] 
+      md:gap-y-[20px] mt-[50px] md:px-[20px] xl:gap-x-[50px]"
+      >
         {/* {cardsArray.map((card) => (
           <SliderCard
             desc={card.desc}
@@ -67,7 +69,7 @@ const SliderCards = () => {
          dark:bg-[#17171a] 
        w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
-          <div className="w-[196px] mt-[40px]  flex">
+          <>
             <Image
               className="dark:hidden block"
               width={196}
@@ -78,12 +80,12 @@ const SliderCards = () => {
             <Image
               className="hidden dark:block"
               width={196}
-              height={143}
+              height={144}
               src={cardsArray[0].darkImageUrl}
               alt=""
             />
-          </div>
-          <div className="flex flex-col px-[32px] gap-y-2 mt-[10px]">
+          </>
+          <div className="flex flex-col px-[25px] gap-y-2">
             <div className="flex items-center gap-x-2">
               {cardsArray[0].logo}
               <p
@@ -97,7 +99,7 @@ const SliderCards = () => {
             <div>
               <p
                 className={`text-[12px] 
-               dark:text-[#FFFFFF5C] text-[#1212128F] text-opacity-[36%]
+               dark:text-[#B5B5B5] text-[#717171] 
             }`}
               >
                 {cardsArray[0].desc}
@@ -110,7 +112,7 @@ const SliderCards = () => {
          dark:bg-[#17171a] 
        w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
-          <div className="w-[196px] mt-[40px] flex">
+          <>
             <Image
               className="dark:hidden block"
               width={196}
@@ -125,8 +127,8 @@ const SliderCards = () => {
               src={cardsArray[1].darkImageUrl}
               alt=""
             />
-          </div>
-          <div className="flex flex-col px-[32px] gap-y-2 md:mt-[40px]">
+          </>
+          <div className="flex flex-col px-[25px] gap-y-2 ">
             <div className="flex items-center gap-x-2">
               {cardsArray[1].logo}
               <p
@@ -140,7 +142,7 @@ const SliderCards = () => {
             <div>
               <p
                 className={`text-[12px] 
-               dark:text-[#FFFFFF5C] text-[#1212128F] text-opacity-[36%]
+               dark:text-[#B5B5B5] text-[#717171] 
             }`}
               >
                 {cardsArray[1].desc}
@@ -153,7 +155,7 @@ const SliderCards = () => {
          dark:bg-[#17171a] 
        w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
-          <div className="w-[175px] mt-[40px]  flex">
+          <>
             <Image
               className="dark:hidden block"
               width={185}
@@ -164,13 +166,13 @@ const SliderCards = () => {
             <Image
               className="hidden dark:block"
               width={195}
-              height={111}
+              height={144}
               src={cardsArray[2].darkImageUrl}
               alt=""
             />
-          </div>
-          <div className="flex flex-col px-[32px] gap-y-2 mb-2">
-            <div className="flex items-center gap-x-2">
+          </>
+          <div className="flex flex-col px-[25px] gap-y-2">
+            <div className="flex items-center gap-x-2 rtl:pb-[5px]">
               {cardsArray[2].logo}
               <p
                 className={`${
@@ -183,7 +185,7 @@ const SliderCards = () => {
             <div>
               <p
                 className={`text-[12px] 
-               dark:text-[#FFFFFF5C] text-[#1212128F] text-opacity-[36%]
+               dark:text-[#B5B5B5] text-[#717171] 
             }`}
               >
                 {cardsArray[2].desc}
@@ -196,7 +198,7 @@ const SliderCards = () => {
          dark:bg-[#17171a] 
        w-[255px] bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
         >
-          <div className="w-[175px] mt-[40px]  flex">
+          <>
             <Image
               className="dark:hidden block"
               width={185}
@@ -211,9 +213,9 @@ const SliderCards = () => {
               src={cardsArray[3].darkImageUrl}
               alt=""
             />
-          </div>
-          <div className="flex flex-col px-[32px] gap-y-2 md:mb-1">
-            <div className="flex items-center gap-x-2">
+          </>
+          <div className="flex flex-col px-[25px] gap-y-2">
+            <div className="flex items-center gap-x-2 rtl:pb-[3px]">
               {cardsArray[3].logo}
               <p
                 className={`${
@@ -226,7 +228,7 @@ const SliderCards = () => {
             <div>
               <p
                 className={`text-[12px] 
-               dark:text-[#FFFFFF5C] text-[#1212128F] text-opacity-[36%]
+               dark:text-[#B5B5B5] text-[#717171] 
             }`}
               >
                 {cardsArray[3].desc}
@@ -235,7 +237,7 @@ const SliderCards = () => {
           </div>
         </div>
       </div>
-      <div className="md:hidden container my-16">
+      <div className="xl:hidden container my-16">
         <Swiper
           slidesPerView={1}
           breakpoints={{
@@ -243,6 +245,7 @@ const SliderCards = () => {
             420: { slidesPerView: 1.5, spaceBetween: 30 },
             490: { slidesPerView: 2, spaceBetween: 30 },
             700: { slidesPerView: 2.5, spaceBetween: 10 },
+            1024: { slidesPerView: 3.5, spaceBetween: 10 },
           }}
         >
           {cardsArray.map((card) => (

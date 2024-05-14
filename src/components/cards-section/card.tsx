@@ -27,7 +27,8 @@ const Card = (props: CardsType) => {
           {props.title}
         </p>
         <p
-          className={`text-[12px] sm:text-16  sm:w-3/4 dark:text-white dark:text-opacity-[49%] text-primary-text`}
+          className={`text-[12px] sm:text-[14px]  sm:w-3/4 
+          dark:text-[#B5B5B5]  text-[#717171]`}
         >
           {props.desc}
         </p>
@@ -35,7 +36,7 @@ const Card = (props: CardsType) => {
           <Button
             onClick={() => {
               window.open(
-                `${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`,
+                `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`,
                 "_blank"
               );
             }}
