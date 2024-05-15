@@ -33,7 +33,9 @@ export const Snackbar: React.FC<SnackbarProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed inset-0 flex items-end justify-center px-4 py-6 pointer-events-none sm:p-6 sm:items-start sm:justify-end">
+        <div className="fixed top-0 ltr:left-0 rtl:right-0 flex items-end 
+        justify-center px-4 py-6 
+        pointer-events-none sm:p-6 sm:items-start sm:justify-end">
           <div
             className={`max-w-sm w-full ${
               variant === "success" ? "bg-[#378C3B]" : "bg-[#F67C01]"
@@ -59,7 +61,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
                       />
                     </svg>
                   </div>
-                  <div className="ml-3 w-0 flex-1 pt-0.5">
+                  <div className="mx-3 flex-1 pt-0.5">
                     <p className="text-sm font-medium text-gray-900">
                       {message}
                     </p>

@@ -1,0 +1,22 @@
+.swiper-pagination-bullet-active {
+  background: #9e6dff !important;
+}
+.swiper-pagination-bullet {
+  background: #383838;
+}
+.swiper-wrapper {
+  margin-bottom: 30px;
+}
+.swiper-pagination {
+  position: unset;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark .swiper-pagination-bullet-active {
+    background: #864aff !important;
+  }
+
+  .dark .swiper-pagination-bullet {
+    background: #bfbfbf;
+  }
+}
