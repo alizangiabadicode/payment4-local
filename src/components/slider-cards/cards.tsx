@@ -9,10 +9,13 @@ import {
 import SliderCard from "./card";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/pagination";
 import { CardsArrayInterface } from "./cards-array-interface";
 import { useTheme } from "next-themes";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
+import { Pagination } from "swiper/modules";
+import "./style.css";
 
 const SliderCards = () => {
   const { t } = useTranslation();
@@ -237,13 +240,16 @@ const SliderCards = () => {
           </div>
         </div>
       </div>
-      <div className="xl:hidden container my-16">
+      <div className="xl:hidden container my-16 rtl:pr-[10px] ltr:pl:[10px]">
         <Swiper
-          slidesPerView={1}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
           breakpoints={{
             0: { slidesPerView: 1.5, spaceBetween: 90 },
             420: { slidesPerView: 1.5, spaceBetween: 30 },
-            490: { slidesPerView: 2, spaceBetween: 30 },
+            490: { slidesPerView: 2.1, spaceBetween: 40 },
             700: { slidesPerView: 2.5, spaceBetween: 10 },
             1024: { slidesPerView: 3.5, spaceBetween: 10 },
           }}

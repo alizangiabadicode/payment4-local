@@ -92,7 +92,7 @@ export const SwiperSection = () => {
           </SwiperSlide>
         </Swiper>
       </div>
-      <div className="sm:hidden mt-5 mb-10 w-[500px]">
+      <div className="sm:hidden mt-5 mb-[70px] w-[500px]">
         <Swiper
           autoplay={{ delay: 0, disableOnInteraction: false }}
           speed={3000}

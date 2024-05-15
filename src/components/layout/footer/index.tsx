@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-0 
+        className="grid grid-cols-3 md:gap-x-[30px] md:grid-cols-5 gap-y-7 sm:gap-y-[15px] 
       sm:col-span-2 lg:col-span-1"
       >
         <div className="flex flex-col gap-3">
@@ -234,7 +234,17 @@ const Footer = () => {
           </div>
         </div>
         <div className="sm:hidden flex flex-col gap-4 items-center">
-          <div className="cursor-pointer">
+          <div
+            onClick={() => {
+              window.open(
+                i18n.language === "fa"
+                  ? "https://twitter.com/payment4_fa?s=11"
+                  : "http://twitter.com/payment4_com",
+                "_blank"
+              );
+            }}
+            className="cursor-pointer"
+          >
             {isDark === "dark" && mounted ? (
               <XDarkLogo />
             ) : isDark === "light" && mounted ? (
@@ -251,7 +261,17 @@ const Footer = () => {
               />
             )}
           </div>
-          <div className="cursor-pointer">
+          <div
+            onClick={() => {
+              window.open(
+                i18n.language === "fa"
+                  ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
+                  : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA",
+                "_blank"
+              );
+            }}
+            className="cursor-pointer"
+          >
             {isDark === "dark" && mounted ? (
               <YoutubeDarkIcon />
             ) : isDark === "light" && mounted ? (
@@ -268,7 +288,15 @@ const Footer = () => {
               />
             )}
           </div>
-          <div className="cursor-pointer">
+          <div
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/company/payment4/",
+                "_blank"
+              );
+            }}
+            className="cursor-pointer"
+          >
             {isDark === "dark" && mounted ? (
               <LinkedinDarkIcon />
             ) : isDark === "light" && mounted ? (

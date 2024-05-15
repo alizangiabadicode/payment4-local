@@ -9,9 +9,9 @@ const SliderCard = (props: CardsArrayInterface) => {
     <div
       className={`
          dark:bg-[#17171a] 
-         w-[235px] xs:w-[275px] sm:w-[255px]  bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
+         w-[235px] sm:w-[255px]  bg-[#12121208] rounded-[8px] min-h-[384px] flex flex-col justify-around items-center`}
     >
-      <div className="w-[175px]  flex">
+      <div className="flex">
         <Image
           className="dark:hidden block"
           width={185}
