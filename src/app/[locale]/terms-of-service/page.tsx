@@ -14,7 +14,7 @@ const termsOfService = async ({
       <p className="font-bold text-[18px]" style={{ marginBottom: "1rem" }}>
         {t("termsOfService.title")}
       </p>
-      <p style={{ marginBottom: "1rem", fontSize: "14px" }}>
+      <p style={{ marginBottom: "1rem", fontSize: "14px" , fontWeight:600 }}>
         {t("termsOfService.welcomeMessage")}
       </p>
       <p
@@ -86,56 +86,76 @@ const termsOfService = async ({
         {t("termsOfService.responsibilitiesAndGuidelinesTitleText")}
       </p>
       <ul
-        className="my-[2rem] dark:text-[#FFFFFFA1] text-[#121212A1]"
+        className="my-[2rem]"
         style={{ lineHeight: "2rem", fontSize: "14px", listStyle: "outside" }}
       >
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.lawfulUse")}</p>{" "}
-          {t("termsOfService.lawfulUseText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.lawfulUse")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.lawfulUseText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.accurateInformation")}
-          </p>{" "}
-          {t("termsOfService.accurateInformationText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.accurateInformationText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.prohibitedActivities")}
-          </p>{" "}
-          {t("termsOfService.prohibitedActivitiesText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.prohibitedActivitiesText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.security")}</p>{" "}
-          {t("termsOfService.securityText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.security")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.securityText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.PersonalUse")}</p>{" "}
-          {t("termsOfService.personalUseText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.PersonalUse")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.personalUseText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.Transactions")}</p>{" "}
-          {t("termsOfService.transactionsText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.Transactions")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.transactionsText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.thirdPartyContent")}
-          </p>{" "}
-          {t("termsOfService.thirdPartyContentText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.thirdPartyContentText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.Compliance")}</p>{" "}
-          {t("termsOfService.complianceText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.Compliance")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.complianceText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.Feedback")}</p>{" "}
-          {t("termsOfService.feedbackText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.Feedback")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.feedbackText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.SuspensionOrTermination")}
-          </p>{" "}
-          {t("termsOfService.suspensionOrTerminationText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.suspensionOrTerminationText")}
+          </p>
         </li>
       </ul>
       {i18n.language === "en" ? (
@@ -153,50 +173,63 @@ const termsOfService = async ({
         {t("termsOfService.platformSecurityAndPaymentsText")}
       </p>
       <ul
-        className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: "2rem", fontSize: "14px", listStyle: "outside" }}
       >
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.TransactionDetails")}
           </p>
-          {t("termsOfService.transactionDetailsResponsibilityText")}
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.transactionDetailsResponsibilityText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.TransactionConfirmation")}
           </p>
-          {t("termsOfService.irreversibleTransactionText")}
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.irreversibleTransactionText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.TransactionFees")}
           </p>
-          {t("termsOfService.transactionFeesText")}
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.transactionFeesText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.CryptocurrencyConversion")}
           </p>
-          {t("termsOfService.cryptocurrencyConversionsText")}
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.cryptocurrencyConversionsText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.SecurityAndRisks")}
           </p>
-          {t("termsOfService.cryptocurrencyRisksText")}
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.cryptocurrencyRisksText")}
+          </p>
         </li>
         {i18n.language === "en" ? (
           <li>
-            <p style={{ fontWeight: 700 }}>{t("termsOfService.Compliance")}</p>{" "}
-            {t("termsOfService.complianceWithLawsText")}
+            <p style={{ fontWeight: 700 }}>{t("termsOfService.Compliance")}</p>
+            <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+              {t("termsOfService.complianceWithLawsText")}
+            </p>
           </li>
         ) : null}
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.TransactionDisputesTitle")}
-          </p>{" "}
-          {t("termsOfService.transactionDisputesResolutionText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.transactionDisputesResolutionText")}
+          </p>
         </li>
       </ul>
       {i18n.language === "en" && (
@@ -214,42 +247,55 @@ const termsOfService = async ({
         {t("termsOfService.intellectualPropertyProtectionText")}
       </p>
       <ul
-        className="dark:text-[#FFFFFFA1] text-[#121212A1]"
         style={{ lineHeight: "2rem", fontSize: "14px", listStyle: "outside" }}
       >
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.ownership")}</p>{" "}
-          {t("termsOfService.ownershipOfContentText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.ownership")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.ownershipOfContentText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.limitedLicense")}
-          </p>{" "}
-          {t("termsOfService.limitedLicenseText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.limitedLicenseText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.trademarks")}</p>{" "}
-          {t("termsOfService.trademarkProtectionText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.trademarks")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.trademarkProtectionText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.userContent")}</p>{" "}
-          {t("termsOfService.contentLicenseText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.userContent")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.contentLicenseText")}
+          </p>
         </li>
         <li>
-          <p style={{ fontWeight: 700 }}>{t("termsOfService.prohibitedUse")}</p>{" "}
-          {t("termsOfService.noExploitationWithoutPermissionText")}
+          <p style={{ fontWeight: 700 }}>{t("termsOfService.prohibitedUse")}</p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.noExploitationWithoutPermissionText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.copyrightInfringement")}
-          </p>{" "}
-          {t("termsOfService.reportIPInfringementText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.reportIPInfringementText")}
+          </p>
         </li>
         <li>
           <p style={{ fontWeight: 700 }}>
             {t("termsOfService.thirdPartyContent")}
-          </p>{" "}
-          {t("termsOfService.thirdPartyContentDisclaimerText")}
+          </p>
+          <p className="dark:text-[#FFFFFFA1] text-[#121212A1]">
+            {t("termsOfService.thirdPartyContentDisclaimerText")}
+          </p>
         </li>
       </ul>
       <p
