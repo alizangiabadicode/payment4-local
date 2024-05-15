@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { CloseCollapse, OpenCollapse } from "../../../icons/svg";
 
-
 interface FaqItemProps {
   question: string;
   answer: string;
@@ -29,11 +28,13 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
         <p className={`text-[16px] dark:text-white text-[#121212]`}>
           {question}
         </p>
-        {isOpen ? (
-          <CloseCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
-        ) : (
-          <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
-        )}
+        <div>
+          {isOpen ? (
+            <CloseCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
+          ) : (
+            <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
+          )}
+        </div>
       </div>
       {isOpen && (
         <div>

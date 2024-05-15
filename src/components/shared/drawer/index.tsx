@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useEffect, useRef } from "react";
 import Logo from "../../../icons/svg/logo";
 import { Button } from "../button";
 import { useTranslation } from "react-i18next";
@@ -18,36 +18,74 @@ export const Drawer: FC<DrawerProps> = ({
   children,
   className,
 }) => {
-  const { t , i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const drawerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        drawerRef.current &&
+        !drawerRef.current.contains(event.target as Node)
+      ) {
+        onClose();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+      document.body.classList.add("overflow-hidden");
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.classList.remove("overflow-hidden");
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [isOpen, onClose]);
+
   return (
-    <div
-      className={`fixed flex flex-col justify-between inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
+    <>
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-black opacity-50 z-40"
+          onClick={onClose}
+        ></div>
+      )}
+      <div
+        ref={drawerRef}
+        className={`fixed flex flex-col justify-between inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
          dark:bg-black bg-white ${
            isOpen ? "translate-x-0" : "-translate-x-full"
          } ${className} md:hidden`}
-    >
-      <div className="flex flex-col">
-        <div className="p-4 flex justify-between">
-          <Link href='/'>
-            <Logo />
-          </Link>
-          <button onClick={onClose} className="text-gray-700 w-[24px] h-[24px]">
-            <DarkCrossIcon className="hidden dark:block" />
-            <LightCrossIcon className="dark:hidden block" />
-          </button>
+      >
+        <div className="flex flex-col">
+          <div className="p-4 flex justify-between">
+            <Link href="/">
+              <Logo />
+            </Link>
+            <button
+              onClick={onClose}
+              className="text-gray-700 w-[24px] h-[24px]"
+            >
+              <DarkCrossIcon className="hidden dark:block" />
+              <LightCrossIcon className="dark:hidden block" />
+            </button>
+          </div>
+          <div className="py-4 px-4 flex flex-col gap-y-4">{children}</div>
         </div>
-        <div className="py-4 px-4 flex flex-col gap-y-4">{children}</div>
+        <div className="px-4 mb-6">
+          <Button className="w-full h-[44px] flex justify-center items-center">
+            <Link
+              target="_blank"
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+            >
+              {t("signup")}
+            </Link>
+          </Button>
+        </div>
       </div>
-      <div className="px-4 mb-6">
-        <Button className="w-full h-[44px] flex justify-center items-center">
-          <Link
-            target="_blank"
-            href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
-          >
-            {t("signup")}
-          </Link>
-        </Button>
-      </div>
-    </div>
+    </>
   );
 };

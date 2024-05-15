@@ -29,7 +29,7 @@ const ContactForm = ({ setOpenSnackBar }: ContactFormProps) => {
     try {
       const { name, email, message } = values;
 
-      const url = `${process.env.NEXT_PUBLIC_BASE_URL_CONTACT_US_FORM}/api/v1/contact-support`;
+      const url = `${process.env.NEXT_PUBLIC_BASE_URL}/api/v1/contact-support`;
 
       const data = {
         name,
@@ -91,7 +91,8 @@ const ContactForm = ({ setOpenSnackBar }: ContactFormProps) => {
               name="name"
               value={formik.values.name}
               onChange={formik.handleChange}
-              className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224] py-[15px]`}
+              className={`bg-transparent focus:border-black focus:dark:border-[#AEAEAF]
+               dark:border-[#FFFFFF24] border-[#12121224] py-[15px]`}
               type="text"
               placeholder={t("name")}
             />
@@ -104,7 +105,8 @@ const ContactForm = ({ setOpenSnackBar }: ContactFormProps) => {
               name="email"
               value={formik.values.email}
               onChange={formik.handleChange}
-              className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224] py-[15px]`}
+              className={`bg-transparent dark:border-[#FFFFFF24] focus:border-black focus:dark:border-[#AEAEAF]
+              border-[#12121224] py-[15px]`}
               type="text"
               placeholder={t("email")}
             />
@@ -119,7 +121,8 @@ const ContactForm = ({ setOpenSnackBar }: ContactFormProps) => {
               rows={4}
               value={formik.values.message}
               onChange={formik.handleChange}
-              className={`bg-transparent dark:border-[#FFFFFF24] border-[#12121224]`}
+              className={`bg-transparent dark:border-[#FFFFFF24] focus:border-black focus:dark:border-[#AEAEAF]
+               border-[#12121224]`}
             />
             {formik.touched.message && Boolean(formik.errors.message)
               ? t(`${formik.errors.message}`)

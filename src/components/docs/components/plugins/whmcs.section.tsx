@@ -12,14 +12,15 @@ export const WHMCSSection = () => {
       >
         {t("whmcsPluginDesc")}
         <Button
-          className="dark:text-[#9E6DFF] text-[#9E6DFF] 
+          className="
         mx-5 dark:bg-transparent bg-transparent font-semibold"
         >
           <a
-            className="flex ltr:flex-row-reverse gap-x-2"
-            href={process.env.NEXT_PUBLIC_APP_WHMCS_PLUGIN_URL}
+            className="flex ltr:flex-row-reverse gap-x-2 font-semibold dark:text-[#9E6DFF] 
+            text-[#9E6DFF] "
+            href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/whmcs/payment4_whmcs.zip`}
           >
-            {t("hereIsTheDlLink")} <DownloadIcon />
+            {t("downloadLink")} <DownloadIcon />
           </a>
         </Button>
       </p>

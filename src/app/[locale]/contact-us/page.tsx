@@ -116,8 +116,8 @@ const ContactUs = () => {
         </div>
       </div>
       <div
-        className="hidden md:flex px-[245px] md:px-[100px] 
-      lg:px-[245px] justify-between"
+        className="hidden md:flex px-[245px] md:px-[50px] 
+      lg:px-[200px] justify-between"
       >
         <div className="flex flex-col items-center  gap-y-[5px]">
           <EmailIcon />
@@ -171,6 +171,7 @@ const ContactUs = () => {
             {t("phone")}
           </p>
           <p
+            style={{ direction: "ltr" }}
             className={`text-[14px] 
              dark:text-white
             `}
@@ -231,32 +232,110 @@ const ContactUs = () => {
             {t("joinOurSocialNetworks")}
           </p>
         </div>
-        <div className="flex gap-x-[20px] md:gap-x-[30px] lg:gap-x-[60px] justify-center px-[15px]">
-          <div>
+        <div
+          className="flex gap-x-[20px] md:gap-x-[30px] lg:gap-x-[60px] 
+        justify-center px-[15px]"
+        >
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              window.open(
+                i18n.language === "fa"
+                  ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
+                  : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA",
+                "_blank"
+              );
+            }}
+          >
             <Image
               width={80}
               height={40}
               src="/images/youtube-contact.png"
               alt=""
+              className="dark:hidden block"
+            />
+            <Image
+              width={80}
+              height={40}
+              src="/images/youtube-contact-dark.png"
+              alt=""
+              className="hidden dark:block"
             />
           </div>
-          <div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              window.open(
+                "https://www.linkedin.com/company/payment4/",
+                "_blank"
+              );
+            }}
+          >
             <Image
               width={80}
               height={40}
               src="/images/linkedin-contact.png"
               alt=""
+              className="dark:hidden block"
             />
-          </div>
-          <div>
-            <Image width={80} height={40} src="/images/x-contact.png" alt="" />
-          </div>
-          <div>
             <Image
               width={80}
               height={40}
-              src="/images/telegram-contact.png"
+              src="/images/linkedin-contact-dark.png"
               alt=""
+              className="hidden dark:block"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              window.open(
+                i18n.language === "fa"
+                  ? "https://twitter.com/payment4_fa?s=11"
+                  : "http://twitter.com/payment4_com",
+                "_blank"
+              );
+            }}
+          >
+            <Image
+              width={80}
+              height={40}
+              src="/images/x-contact.png"
+              alt=""
+              className="dark:hidden block"
+            />
+            <Image
+              width={80}
+              height={40}
+              src="/images/x-contact-dark.png"
+              alt=""
+              className="hidden dark:block"
+            />
+          </div>
+          <div
+            className="cursor-pointer"
+            onClick={() => {
+              window.open(
+                i18n.language === "fa"
+                  ? "https://www.instagram.com/payment4_fa"
+                  : "https://www.instagram.com/payment4_com"
+              ),
+                "_blank";
+            }}
+          >
+            <Image
+              width={80}
+              height={40}
+              src="/images/instagram-contact.png"
+              alt=""
+              className="dark:hidden block"
+            />
+            <Image
+              width={80}
+              height={40}
+              src="/images/instagram-contact-dark.png"
+              alt=""
+              className="dark:block hidden"
             />
           </div>
         </div>

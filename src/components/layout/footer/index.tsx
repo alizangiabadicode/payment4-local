@@ -28,8 +28,10 @@ const Footer = () => {
       sm:grid-cols-3 lg:grid-cols-2 p-4 sm:py-6 gap-y-8 sm:gap-x-[30px] lg:gap-x-0
         dark:bg-[#0B0B0E]  bg-white`}
     >
-      <div className="flex flex-col items-center sm:items-start 
-      lg:items-start lg:pl-[100px]">
+      <div
+        className="flex flex-col items-center sm:items-start 
+      lg:items-start lg:pl-[100px]"
+      >
         <div className="flex flex-col gap-y-4 sm:gap-y-4">
           <div>
             <Logo />
@@ -143,13 +145,12 @@ const Footer = () => {
               {t("home")}
             </Link>
             <Link
-              target="_blank"
-              href="https://service.payment4.com/doc"
+              href="/faq"
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
             >
-              {t("developers")}
+              {t("faq")}
             </Link>
             <Link
               href="/documents"
@@ -307,12 +308,13 @@ const Footer = () => {
               {t("privacyPolicyFooter")}
             </Link>
             <Link
-              href="/faq"
+              target="_blank"
+              href="https://service.payment4.com/doc"
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
             >
-              {t("faq")}
+              {t("developers")}
             </Link>
           </div>
         </div>
@@ -355,7 +357,7 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_SIGHNIN_URL}?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -364,7 +366,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_SIGHNUP_URL}?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
