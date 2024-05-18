@@ -11,19 +11,16 @@ export const WHMCSSection = () => {
         className={`text-base font-normal leading-8 dark:text-[#FFFFFFC7]  text-[#121212C7] `}
       >
         {t("whmcsPluginDesc")}
-        <Button
-          className="
-        mx-5 dark:bg-transparent bg-transparent font-semibold"
-        >
-          <a
-            className="flex ltr:flex-row-reverse gap-x-2 font-semibold dark:text-[#9E6DFF] 
-            text-[#9E6DFF] "
-            href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/whmcs/payment4_whmcs.zip`}
-          >
-            {t("downloadLink")} <DownloadIcon />
-          </a>
-        </Button>
       </p>
+      <div className="flex items-center mt-5">
+        <a
+          className="flex ltr:flex-row-reverse gap-x-2 font-semibold dark:text-[#9E6DFF] 
+            text-[#9E6DFF]"
+          href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/whmcs/payment4_whmcs.zip`}
+        >
+          {t("downloadLink")} <DownloadIcon />
+        </a>
+      </div>
     </div>
   );
 };

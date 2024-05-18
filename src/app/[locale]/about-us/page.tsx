@@ -83,12 +83,7 @@ const AboutUs = async ({
               >
                 +1000
               </p>
-              <p
-                className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px]"
-              >
-                {t("merchant")}
-              </p>
+              <p className="text-[12px] md:text-[16px]">{t("merchant")}</p>
             </div>
             <div className="flex flex-col items-center">
               <p
@@ -97,10 +92,7 @@ const AboutUs = async ({
               >
                 +20000
               </p>
-              <p
-                className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px] text-center"
-              >
+              <p className="text-[12px] md:text-[16px] text-center">
                 {t("dailyInvoiceCount")}
               </p>
             </div>
@@ -111,10 +103,7 @@ const AboutUs = async ({
               >
                 +1000
               </p>
-              <p
-                className="text-[#121212C7] dark:text-[#FFFFFFC7] 
-            text-[12px] md:text-[16px] text-center"
-              >
+              <p className="text-[12px] md:text-[16px] text-center">
                 {t("totalInvoicesCount")}
               </p>
             </div>

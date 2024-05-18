@@ -258,5 +258,7 @@
   "seeMore": "See more",
   "overview": "Overview",
   "dailyInvoiceCount": "Daily invoice count",
-  "totalInvoicesCount": "Total invoices count"
+  "totalInvoicesCount": "Total invoices count",
+  "verifyPaymentSamples": "verify payment samples",
+  "createPaymentSamples": "create payment samples"
 }
