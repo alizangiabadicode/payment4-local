@@ -257,5 +257,7 @@
   "seeMore": "Ver más",
   "overview": "Visión general",
   "dailyInvoiceCount": "Cantidad de facturas diarias",
-  "totalInvoicesCount": "Cantidad total de facturas"
+  "totalInvoicesCount": "Cantidad total de facturas",
+  "verifyPaymentSamples": "ejemplos de verificación de pago",
+  "createPaymentSamples": "ejemplos de creación de pago"
 }

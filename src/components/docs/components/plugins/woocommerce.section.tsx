@@ -19,19 +19,16 @@ export const WoocommerceSection = () => {
           {t("downloadLink")}
         </a> */}
         . {t("headOfWordPress")}
-        <Button
-          className="
-        mx-5 dark:bg-transparent bg-transparent "
-        >
-          <a
-            className="flex ltr:flex-row-reverse gap-x-2 
-            dark:text-[#9E6DFF] text-[#9E6DFF] font-semibold"
-            href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`}
-          >
-            {t("downloadLink")} <DownloadIcon />
-          </a>
-        </Button>
       </p>
+      <div className="flex items-center mt-3">
+        <a
+          className="flex ltr:flex-row-reverse gap-x-2 
+          dark:text-[#9E6DFF] text-[#9E6DFF] font-semibold"
+          href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`}
+        >
+          {t("downloadLink")} <DownloadIcon />
+        </a>
+      </div>
       <p className="text-base mt-5">{t("step")} 2</p>
       <p
         className={`text-[15px] font-normal leading-8 mt-2 dark:text-[#FFFFFFC7] 

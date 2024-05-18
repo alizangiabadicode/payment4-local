@@ -250,9 +250,13 @@ const DocumentPageLayout: React.FC = () => {
             {item.content}
             {item.subItems &&
               item.subItems.map((subItem) => (
-                <div id={subItem.id} key={subItem.id} className="my-5">
+                <div
+                  id={subItem.id}
+                  key={subItem.id}
+                  className="my-5 ltr:ml-3 rtl:mr-3"
+                >
                   <p
-                    className={`dark:text-white text-black md:text-[20px] font-semibold`}
+                    className={`dark:text-white text-black md:text-[19px] font-semibold`}
                   >
                     {subItem.title}
                   </p>
