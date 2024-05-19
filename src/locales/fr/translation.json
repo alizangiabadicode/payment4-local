@@ -259,5 +259,6 @@
   "dailyInvoiceCount": "Nombre de factures quotidiennes",
   "totalInvoicesCount": "Nombre total de factures",
   "verifyPaymentSamples": "exemples de code de vérification de paiement",
-  "createPaymentSamples": "exemples de code de création de paiement"
+  "createPaymentSamples": "exemples de code de création de paiement",
+  "category": "Catégorie"
 }

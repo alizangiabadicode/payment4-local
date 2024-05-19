@@ -29,7 +29,11 @@ export const BlogPreview: FC<BlogPreviewProps> = ({
       </div>
       <div className="flex flex-col gap-y-[10px]">
         <p className="text-[14px] font-semibold">{title}</p>
-        <Link className="text-[#864AFF] font-semibold text-[14px]" href={href}>
+        <Link
+          className="text-[#864AFF] dark:text-[#9E6DFF] 
+        font-semibold text-[14px]"
+          href={href}
+        >
           {t("seeMore")}
         </Link>
       </div>

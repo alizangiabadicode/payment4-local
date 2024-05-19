@@ -45,3 +45,4 @@ export * from "./right-arrow-navigate";
 export * from "./check.icon.dark";
 export * from "./check-icon-contact-us";
 export * from "./download-icon";
+export * from "./left-arrow-navigate";

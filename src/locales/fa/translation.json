@@ -265,5 +265,6 @@
   "dailyInvoiceCount": "تعداد فاکتور روزانه",
   "totalInvoicesCount": "تعداد کل فاکتورها",
   "verifyPaymentSamples": "نمونه‌های کد تأیید پرداخت",
-  "createPaymentSamples": "نمونه‌های کد ایجاد پرداخت"
+  "createPaymentSamples": "نمونه‌های کد ایجاد پرداخت",
+  "category": "دسته‌بندی"
 }

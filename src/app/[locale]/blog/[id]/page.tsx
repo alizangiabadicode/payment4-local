@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./post.css";
 import { BlogPreview, SearchBar } from "@/components/shared";
-import { RightArrowNavigate } from "../../../../icons/svg";
+import { LeftArrowNavigate, RightArrowNavigate } from "../../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import useGraphQLUrl from "@/hooks/useGraphQLUrl";
 
@@ -110,7 +110,7 @@ export default function Blog({ params }: { params: { id: string } }) {
   };
   useEffect(() => {
     fetchPost();
-  }, [params.id , graphqlUrl]);
+  }, [params.id, graphqlUrl]);
 
   useEffect(() => {
     fetchPosts();
@@ -201,36 +201,62 @@ export default function Blog({ params }: { params: { id: string } }) {
             </div>
             <div className="flex flex-col px-[10px] gap-y-[10px]">
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 1</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">
+                  {t("category")} 1
+                </p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
               <div>
                 <hr className="border border-[#12121214] dark:border-[#FFFFFF14]" />
               </div>
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 2</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">{t("category")} 2</p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
               <div>
                 <hr className="border border-[#12121214] dark:border-[#FFFFFF14]" />
               </div>
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 3</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">{t("category")} 3</p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
             </div>
