@@ -259,6 +259,6 @@
   "overview": "Overview",
   "dailyInvoiceCount": "Daily invoice count",
   "totalInvoicesCount": "Total invoices count",
-  "verifyPaymentSamples": "verify payment samples",
-  "createPaymentSamples": "create payment samples"
+  "verifyPaymentSamples": "verify payment code samples",
+  "createPaymentSamples": "create payment code samples"
 }
