@@ -367,15 +367,14 @@ const Footer = () => {
             >
               {t("contact us")}
             </Link>
-            {/* <Link
+            <Link
               href="/blog"
               style={{ fontSize: "12px" }}
-              className={`${
-                isDark === "dark" ? "text-white opacity-[63%]" : null
-              } text-[#5F5E5E]`}
+              className={`text-sm text-[#5F5E5E] leading-6 
+              dark:text-[#FFFFFFA1] `}
             >
               {t("blog")}
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">

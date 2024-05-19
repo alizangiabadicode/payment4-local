@@ -6,8 +6,9 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./post.css";
 import { BlogPreview, SearchBar } from "@/components/shared";
-import { RightArrowNavigate } from "../../../icons/svg";
+import { LeftArrowNavigate, RightArrowNavigate } from "../../../../icons/svg";
 import { useTranslation } from "react-i18next";
+import useGraphQLUrl from "@/hooks/useGraphQLUrl";
 
 type ExtendedPost = Omit<Post, "node"> & {
   post: Post["node"] & {
@@ -16,16 +17,17 @@ type ExtendedPost = Omit<Post, "node"> & {
 };
 
 export default function Blog({ params }: { params: { id: string } }) {
+  const graphqlUrl = useGraphQLUrl();
   const [post, setPost] = useState<ExtendedPost>();
   const [posts, setPosts] = useState<Post[]>([]);
   const [postsLoading, setPostsLoading] = useState(true);
   const [postLoading, setPostLoading] = useState(true);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const fetchPosts = async () => {
     const data = JSON.stringify({
       query: `query getPosts {
-              posts(where: {orderby: {field: DATE, order: DESC}}) {
+              posts(first: 2,where: {orderby: {field: DATE, order: DESC}}) {
                  edges {
                   cursor
                   node {
@@ -48,7 +50,7 @@ export default function Blog({ params }: { params: { id: string } }) {
     const config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "https://blog.payment4.com/graphql",
+      url: graphqlUrl,
       headers: {
         "Content-Type": "application/json",
       },
@@ -90,7 +92,7 @@ export default function Blog({ params }: { params: { id: string } }) {
     let config = {
       method: "post",
       maxBodyLength: Infinity,
-      url: "https://blog.payment4.com/graphql",
+      url: graphqlUrl,
       headers: {
         "Content-Type": "application/json",
       },
@@ -108,13 +110,13 @@ export default function Blog({ params }: { params: { id: string } }) {
   };
   useEffect(() => {
     fetchPost();
-  }, [params.id]);
+  }, [params.id, graphqlUrl]);
 
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, [graphqlUrl]);
   return (
-    <div className="grid grid-cols-5 px-[30px]">
+    <div className="grid grid-cols-5 px-[30px] xl:px-[143px]">
       {postLoading ? (
         <div
           className="col-start-1 col-end-6  
@@ -151,7 +153,7 @@ export default function Blog({ params }: { params: { id: string } }) {
           <p>loading other posts ...</p>
         </div>
       ) : (
-        <div className="hidden md:col-start-4 md:col-end-6 md:flex flex-col gap-y-[20px]">
+        <div className="hidden md:col-start-4  xl:col-start-5  md:col-end-6 md:flex flex-col gap-y-[20px]">
           <div
             className="flex flex-col dark:rtl:bg-dark-gradient-sidebar-post-rtl
          dark:ltr:bg-dark-gradient-sidebar-post ltr:bg-light-gradient-sidebar-post 
@@ -199,36 +201,62 @@ export default function Blog({ params }: { params: { id: string } }) {
             </div>
             <div className="flex flex-col px-[10px] gap-y-[10px]">
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 1</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">
+                  {t("category")} 1
+                </p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
               <div>
                 <hr className="border border-[#12121214] dark:border-[#FFFFFF14]" />
               </div>
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 2</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">{t("category")} 2</p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
               <div>
                 <hr className="border border-[#12121214] dark:border-[#FFFFFF14]" />
               </div>
               <div className="flex items-center justify-between py-[5px]">
-                <p className="text-[14px] dark:text-[#FFFFFFC7]">Category 3</p>
+                <p className="text-[14px] dark:text-[#FFFFFFC7]">{t("category")} 3</p>
                 <div className="cursor-pointer dark:hidden">
-                  <RightArrowNavigate color="black" />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate color="black" />
+                  ) : (
+                    <RightArrowNavigate color="black" />
+                  )}
                 </div>
                 <div className="cursor-pointer hidden dark:block">
-                  <RightArrowNavigate />
+                  {i18n.dir() === "rtl" ? (
+                    <LeftArrowNavigate />
+                  ) : (
+                    <RightArrowNavigate />
+                  )}
                 </div>
               </div>
             </div>

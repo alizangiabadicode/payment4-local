@@ -258,7 +258,7 @@
   "overview": "نظرة عامة",
   "dailyInvoiceCount": "عدد الفواتير اليومية",
   "totalInvoicesCount": "إجمالي عدد الفواتير",
-  "verifyPaymentSamples": "عينات التحقق من الدفع",
-  "createPaymentSamples": "عينات إنشاء الدفع"
-
+  "verifyPaymentSamples": "عينات كود التحقق من الدفع",
+  "createPaymentSamples": "عينات كود إنشاء الدفع",
+  "category": "الفئة"
 }

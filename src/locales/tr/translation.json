@@ -258,6 +258,7 @@
   "overview": "Genel Bakış",
   "dailyInvoiceCount": "Günlük fatura sayısı",
   "totalInvoicesCount": "Toplam fatura sayısı",
-  "verifyPaymentSamples": "ödeme doğrulama örnekleri",
-  "createPaymentSamples": "ödeme oluşturma örnekleri"
+  "verifyPaymentSamples": "ödeme doğrulama kod örnekleri",
+  "createPaymentSamples": "ödeme oluşturma kod örnekleri",
+  "category": "Kategori"
 }

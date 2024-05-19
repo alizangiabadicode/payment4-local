@@ -1,6 +1,9 @@
 .custom-content {
-  line-height: 30px;
+  line-height: 37px;
   padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap:20px
 }
 
 .custom-content img {
