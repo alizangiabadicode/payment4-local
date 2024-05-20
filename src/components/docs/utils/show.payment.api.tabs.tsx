@@ -1,36 +1,47 @@
-import React, { useEffect, useRef } from "react";
-import Prism from "prismjs";
-require("prismjs/components/prism-javascript");
+import React, { useEffect, useRef, useState } from "react";
 import "../components/create.payment/code.css";
+import { Highlight, themes } from "prism-react-renderer";
+import { useTheme } from "next-themes";
 
-const ShowPaymentApiTabs = ({ code }: {code:string }) => {
-  const codeRefs = useRef<HTMLPreElement | null>(null)
+const ShowPaymentApiTabs = ({ code }: { code: string }) => {
+  const [mounted, setMounted] = useState(false);
+  const { resolvedTheme } = useTheme();
+  const codeRefs = useRef<HTMLPreElement | null>(null);
   const handleCopyClick = (ref: React.RefObject<HTMLPreElement>) => {
     const codeElement = ref.current;
     if (codeElement) {
       navigator.clipboard.writeText(codeElement.textContent || "");
     }
   };
-  useEffect(() => {
-    Prism.highlightAll();
-  }, [code]);
+  useEffect(() => setMounted(true), []);
   return (
     <div
       className={`pb-4 rounded-lg 
         dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
     >
-      <pre
-        className="ml-5 overflow-x-auto !bg-transparent"
-        style={{ direction: "ltr" }}
+      <Highlight
+        theme={
+          resolvedTheme === "dark" && mounted ? themes.oneDark : themes.oneLight
+        }
+        language="javascript"
+        code={code}
       >
-        <code
-          ref={codeRefs}
-          className="dark:text-white text-black language-javascript"
-          style={{ textShadow: "none" }}
-        >
-          {code}
-        </code>
-      </pre>
+        {({ className, style, tokens, getLineProps, getTokenProps }) => (
+          <pre
+            className={`${className} py-[10px] ml-[30px] overflow-x-auto !bg-transparent`}
+            style={{ ...style, direction: "ltr" }}
+            ref={codeRefs}
+          >
+            {tokens.map((line, i) => (
+              <div key={i} {...getLineProps({ line, key: i })}>
+                {line.map((token, key) => (
+                  <span key={key} {...getTokenProps({ token, key })}></span>
+                ))}
+              </div>
+            ))}
+          </pre>
+        )}
+      </Highlight>
       <button
         className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
         onClick={() => handleCopyClick(codeRefs)}
