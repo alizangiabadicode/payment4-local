@@ -1,10 +1,8 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+import React, { useRef } from "react";
 import ErrorsTable from "../shared/error.table";
 import { errors } from "./errors.array";
 import { useTranslation } from "react-i18next";
-import Prism from "prismjs";
-require("prismjs/components/prism-javascript");
 import "./code.css";
 import { Tabs } from "@/components/shared";
 import ShowVerifyPaymentTabs from "../../utils/show.payment.api.tabs";
@@ -19,6 +17,8 @@ import {
   pythonCode,
   rustCode,
 } from "./verify.payment.tabs";
+import { Highlight, themes } from "prism-react-renderer";
+import { useTheme } from "next-themes";
 
 interface CodeRefs {
   paymentCode: React.RefObject<HTMLPreElement>;
@@ -27,6 +27,7 @@ interface CodeRefs {
 }
 
 export const VerifyPayment = () => {
+  const { resolvedTheme } = useTheme();
   const { t } = useTranslation();
   const tabs = [
     { label: "Javascript", content: <ShowVerifyPaymentTabs code={jsCode} /> },
@@ -50,9 +51,7 @@ export const VerifyPayment = () => {
       navigator.clipboard.writeText(codeElement.textContent || "");
     }
   };
-  useEffect(() => {
-    Prism.highlightAll();
-  }, []);
+
   return (
     <div className="px-4 py-6">
       <div className="my-5">
@@ -68,24 +67,35 @@ export const VerifyPayment = () => {
         className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-        <pre
-          className="ml-5 overflow-x-auto !bg-transparent"
-          style={{ direction: "ltr" }}
+        <Highlight
+          theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
+          language="javascript"
+          code={`
+          {
+            "paymentUid": "7edd9c95-b274-4ae4-8919-53643b6ba504",
+            "amount": 100,
+            "currency": "USD"
+          }
+          `}
         >
-          <code
-            ref={codeRefs.paymentCode}
-            className="dark:text-white text-black language-javascript"
-            style={{ textShadow: "none" }}
-          >
-            {`
-{
-  "paymentUid": "7edd9c95-b274-4ae4-8919-53643b6ba504",
-  "amount": 100,
-  "currency": "USD"
-}
-            `}
-          </code>
-        </pre>
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre
+              className={`${className} py-[10px] ml-[30px] overflow-x-auto !bg-transparent`}
+              style={{ ...style, direction: "ltr" }}
+              ref={codeRefs.paymentCode}
+            >
+              {tokens.map((line, i) => (
+                <div key={i} {...getLineProps({ line, key: i })}>
+                  {line
+                    .filter((token) => !token.types.includes("plain"))
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
         <button
           className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.paymentCode)}
@@ -104,22 +114,32 @@ export const VerifyPayment = () => {
         className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-        <pre
-          className="ml-5 overflow-x-auto !bg-transparent"
-          style={{ direction: "ltr" }}
+        <Highlight
+          theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
+          code={`
+          {
+            "x-api-key" : {api_key}
+          }`}
+          language="javascript"
         >
-          <code
-            ref={codeRefs.apiKeyCode}
-            className="dark:text-white text-black language-javascript"
-            style={{ textShadow: "none" }}
-          >
-            {`
-{
-  "x-api-key" : {api_key}
-}
-            `}
-          </code>
-        </pre>
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre
+              className={`${className} py-[10px] ml-[30px] overflow-x-auto !bg-transparent`}
+              style={{ ...style, direction: "ltr" }}
+              ref={codeRefs.apiKeyCode}
+            >
+              {tokens.map((line, i) => (
+                <div key={i} {...getLineProps({ line, key: i })}>
+                  {line
+                    .filter((token) => !token.types.includes("plain"))
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
         <button
           className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.apiKeyCode)}
@@ -160,24 +180,35 @@ export const VerifyPayment = () => {
         className={`pb-4 rounded-lg 
        dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
       >
-        <pre
-          className="ml-5 overflow-x-auto !bg-transparent"
-          style={{ direction: "ltr" }}
+        <Highlight
+          theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
+          code={`
+          {
+            "paymentStatus": "PENDING",
+            "amountDifference": "-1.1",
+            "verified": true
+          }
+          `}
+          language="javascript"
         >
-          <code
-            ref={codeRefs.responseCode}
-            className="dark:text-white text-black language-javascript"
-            style={{ textShadow: "none" }}
-          >
-            {`
-{
-  "paymentStatus": "PENDING",
-  "amountDifference": "-1.1",
-  "verified": true
-}
-            `}
-          </code>
-        </pre>
+          {({ className, style, tokens, getLineProps, getTokenProps }) => (
+            <pre
+              className={`${className} py-[10px] ml-[30px] overflow-x-auto !bg-transparent`}
+              style={{ ...style, direction: "ltr" }}
+              ref={codeRefs.responseCode}
+            >
+              {tokens.map((line, i) => (
+                <div key={i} {...getLineProps({ line, key: i })}>
+                  {line
+                    .filter((token) => !token.types.includes("plain"))
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
+                </div>
+              ))}
+            </pre>
+          )}
+        </Highlight>
         <button
           className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.responseCode)}

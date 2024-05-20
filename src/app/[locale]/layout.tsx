@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-require("prismjs/themes/prism.css");
 import i18nConfig from "../../../i18nConfig";
 import { dir } from "i18next";
 import localFont from "next/font/local";
