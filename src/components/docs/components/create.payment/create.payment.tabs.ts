@@ -1,6 +1,6 @@
-export const jsCode: string = `\nimport axios from "axios";
+export const jsCode: string = `\nconst axios = require("axios");
 
-export const createPayment = async () => {
+const createPayment = async () => {
   const payment4Payload = {
     amount: 10,
     callbackUrl: "https://example.com/callback-url",
@@ -21,23 +21,81 @@ export const createPayment = async () => {
       method: "POST",
       baseURL: "https://service.payment4.com",
       url: "/api/v1/payment",
+      headers: headers,
+      data: payment4Payload,
+    });
+
+    const { id, paymentUid, paymentUrl } = response.data;
+    return { id, paymentUid, paymentUrl };
+  } catch (error) {
+    console.error("Payment request failed:", error);
+    throw error;
+  }
+};
+
+module.exports = createPayment;
+`;
+
+export const tsCode: string = `\nimport axios, { AxiosResponse } from "axios";
+
+interface PaymentPayload {
+  amount: number;
+  callbackUrl: string;
+  callbackParams: {
+    key1: string;
+    key2: string;
+  };
+  webhookUrl: string;
+  webhookParams: {
+    key1: string;
+    key2: string;
+  };
+  language: string;
+  currency: string;
+  sandBox: boolean;
+}
+
+interface PaymentResponse {
+  id: number;
+  paymentUid: string;
+  paymentUrl: string;
+}
+
+export const createPayment = async (): Promise<PaymentResponse> => {
+  const payment4Payload: PaymentPayload = {
+    amount: 10,
+    callbackUrl: "https://example.com/callback-url",
+    callbackParams: { key1: "value1", key2: "value2" },
+    webhookUrl: "https://example.com/webhook-url",
+    webhookParams: { key1: "value1", key2: "value2" },
+    language: "EN",
+    currency: "USD",
+    sandBox: false,
+  };
+
+  const headers = {
+    "x-api-key": "YOUR_GATEWAY_API_KEY",
+  };
+
+  try {
+    const response: AxiosResponse<PaymentResponse> = await axios({
+      method: "POST",
+      baseURL: "https://service.payment4.com",
+      url: "/api/v1/payment",
       headers,
       data: payment4Payload,
     });
 
     const { id, paymentUid, paymentUrl } = response.data;
-
-    // Return or process the payment data
     return { id, paymentUid, paymentUrl };
   } catch (error) {
-    // Handle the error appropriately
     console.error("Payment request failed:", error);
     throw error;
   }
-};`;
+};
+`;
 
-
-export const javaCode : string = `\nimport java.io.IOException;
+export const javaCode: string = `\nimport java.io.IOException;
 import okhttp3.*;
 import org.json.JSONObject;
 
@@ -73,9 +131,9 @@ public class VerifyPayment {
         }
     }
 }
-`
+`;
 
-export const cs : string  = `\nusing System;
+export const cs: string = `\nusing System;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -118,9 +176,9 @@ public class PaymentService
         }
     }
 }
-`
+`;
 
-export const phpCode : string = `\nfunction createPayment() {
+export const phpCode: string = `\nfunction createPayment() {
     $url = "https://service.payment4.com/api/v1/payment";
     $headers = [
         "x-api-key: YOUR_GATEWAY_API_KEY",
@@ -157,9 +215,9 @@ export const phpCode : string = `\nfunction createPayment() {
         throw new Exception("Payment request failed");
     }
 }
-`
+`;
 
-export const curlCode : string = `\ncurl -X POST https://service.payment4.com/api/v1/payment \
+export const curlCode: string = `\ncurl -X POST https://service.payment4.com/api/v1/payment \
 -H "x-api-key: YOUR_GATEWAY_API_KEY" \
 -H "Content-Type: application/json" \
 -d '{
@@ -172,8 +230,8 @@ export const curlCode : string = `\ncurl -X POST https://service.payment4.com/ap
   "currency": "USD",
   "sandBox": false
 }'
-`
-export const golangCode : string = `\npackage main
+`;
+export const golangCode: string = `\npackage main
 
 import (
     "bytes"
@@ -235,8 +293,8 @@ func main() {
         fmt.Println("Error:", err)
     }
 }
-`
-export const rustCode : string = `\nuse reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE};
+`;
+export const rustCode: string = `\nuse reqwest::header::{HeaderMap, HeaderValue, CONTENT_TYPE};
 use serde_json::json;
 use std::error::Error;
 
@@ -283,8 +341,8 @@ async fn main() {
         eprintln!("Error: {}", e);
     }
 }
-`
-export const pythonCode : string = `\nimport requests
+`;
+export const pythonCode: string = `\nimport requests
 
 def create_payment():
     url = "https://service.payment4.com/api/v1/payment"
@@ -313,8 +371,8 @@ def create_payment():
         payment_url = response_data["paymentUrl"]
     else:
         raise Exception("Payment request failed")
-`
-export const dartCode : string = `\nimport 'dart:convert';
+`;
+export const dartCode: string = `\nimport 'dart:convert';
 import 'package:http/http.dart' as http;
 
 Future<void> createPayment() async {
@@ -352,4 +410,4 @@ void main() {
     print('Error: $error');
   });
 }
-`
+`;

@@ -16,6 +16,7 @@ import {
   phpCode,
   pythonCode,
   rustCode,
+  tsCode,
 } from "./verify.payment.tabs";
 import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
@@ -31,6 +32,7 @@ export const VerifyPayment = () => {
   const { t } = useTranslation();
   const tabs = [
     { label: "Javascript", content: <ShowVerifyPaymentTabs code={jsCode} /> },
+    { label: "Typescript", content: <ShowVerifyPaymentTabs code={tsCode} /> },
     { label: "Java", content: <ShowVerifyPaymentTabs code={javaCode} /> },
     { label: "C#", content: <ShowVerifyPaymentTabs code={csCode} /> },
     { label: "PHP", content: <ShowVerifyPaymentTabs code={phpCode} /> },

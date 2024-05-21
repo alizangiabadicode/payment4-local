@@ -1,35 +1,87 @@
-export const jsCode: string = `\nimport axios from "axios";
+export const jsCode: string = `\nconst axios = require("axios");
 
-const VerifyPayment = async () => {
+function VerifyPayment() {
   const headers = {
     "x-api-key": "YOUR_GATEWAY_API_KEY",
   };
 
-  const verifyPayment4Payload = {
+  const verifyPaymentPayload = {
+    paymentUid: "paymentUid",
+    amount: 12,
+    currency: "USD",
+  };
+
+  return axios({
+    method: "PUT",
+    baseURL: "https://service.payment4.com",
+    url: "/api/v1/payment/verify",
+    headers: headers,
+    data: verifyPaymentPayload,
+  })
+    .then(function (response) {
+      var data = response.data;
+      var paymentStatus = data.paymentStatus;
+      var amountDifference = data.amountDifference;
+      var verified = data.verified;
+      // Return or process the verification data
+      return {
+        paymentStatus: paymentStatus,
+        amountDifference: amountDifference,
+        verified: verified,
+      };
+    })
+    .catch(function (error) {
+      // Handle the error appropriately
+      console.error("Verification request failed:", error);
+      throw error;
+    });
+}
+`;
+
+export const tsCode: string = `\nimport axios, { AxiosResponse } from "axios";
+
+interface VerifyPaymentResponse {
+  paymentStatus: string;
+  amountDifference: number;
+  verified: boolean;
+}
+
+interface VerifyPaymentPayload {
+  paymentUid: string;
+  amount: number;
+  currency: string;
+}
+
+const VerifyPayment = async (): Promise<VerifyPaymentResponse> => {
+  const headers = {
+    "x-api-key": "YOUR_GATEWAY_API_KEY",
+  };
+
+  const verifyPaymentPayload: VerifyPaymentPayload = {
     paymentUid: "paymentUid",
     amount: 12,
     currency: "USD",
   };
 
   try {
-    const response = await axios({
+    const response: AxiosResponse<VerifyPaymentResponse> = await axios({
       method: "PUT",
       baseURL: "https://service.payment4.com",
       url: "/api/v1/payment/verify",
       headers,
-      data: verifyPayment4Payload,
+      data: verifyPaymentPayload,
     });
 
     const { paymentStatus, amountDifference, verified } = response.data;
 
-    // Return or process the verification data
     return { paymentStatus, amountDifference, verified };
-  } catch (error) {
-    // Handle the error appropriately
+  } catch (error: any) {
+
     console.error("Verification request failed:", error);
     throw error;
   }
-};`;
+};
+`;
 
 export const javaCode: string = `\nimport java.io.IOException;
 import okhttp3.*;
