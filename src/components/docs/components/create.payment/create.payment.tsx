@@ -22,6 +22,7 @@ import {
   phpCode,
   pythonCode,
   rustCode,
+  tsCode,
 } from "./create.payment.tabs";
 import { useTheme } from "next-themes";
 // require("prismjs/themes/prism-dark.css");
@@ -40,6 +41,7 @@ export const CreatePayment = () => {
   const { t } = useTranslation();
   const tabs = [
     { label: "Javascript", content: <ShowCreatePaymentTabs code={jsCode} /> },
+    { label: "Typescript", content: <ShowCreatePaymentTabs code={tsCode} /> },
     { label: "Java", content: <ShowCreatePaymentTabs code={javaCode} /> },
     { label: "C#", content: <ShowCreatePaymentTabs code={cs} /> },
     { label: "PHP", content: <ShowCreatePaymentTabs code={phpCode} /> },
@@ -124,17 +126,9 @@ export const CreatePayment = () => {
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
                     .filter((token) => !token.types.includes("plain"))
-                    .map(
-                      (token, key) => (
-                       
-                        (
-                          <span
-                            key={key}
-                            {...getTokenProps({ token, key })}
-                          ></span>
-                        )
-                      )
-                    )}
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
                 </div>
               ))}
             </pre>
@@ -178,17 +172,9 @@ export const CreatePayment = () => {
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
                     .filter((token) => !token.types.includes("plain"))
-                    .map(
-                      (token, key) => (
-                       
-                        (
-                          <span
-                            key={key}
-                            {...getTokenProps({ token, key })}
-                          ></span>
-                        )
-                      )
-                    )}
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
                 </div>
               ))}
             </pre>
@@ -346,17 +332,9 @@ export const CreatePayment = () => {
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
                     .filter((token) => !token.types.includes("plain"))
-                    .map(
-                      (token, key) => (
-                       
-                        (
-                          <span
-                            key={key}
-                            {...getTokenProps({ token, key })}
-                          ></span>
-                        )
-                      )
-                    )}
+                    .map((token, key) => (
+                      <span key={key} {...getTokenProps({ token, key })}></span>
+                    ))}
                 </div>
               ))}
             </pre>
