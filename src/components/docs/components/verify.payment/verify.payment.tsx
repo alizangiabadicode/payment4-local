@@ -73,11 +73,11 @@ export const VerifyPayment = () => {
           theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
           language="javascript"
           code={`
-          {
-            "paymentUid": "7edd9c95-b274-4ae4-8919-53643b6ba504",
-            "amount": 100,
-            "currency": "USD"
-          }
+{
+  "paymentUid": "7edd9c95-b274-4ae4-8919-53643b6ba504",
+  "amount": 100,
+  "currency": "USD"     
+}
           `}
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -89,7 +89,7 @@ export const VerifyPayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
@@ -119,9 +119,10 @@ export const VerifyPayment = () => {
         <Highlight
           theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
           code={`
-          {
-            "x-api-key" : {api_key}
-          }`}
+{
+  "x-api-key" : <GATEWAY_API_KEY>     
+}
+`}
           language="javascript"
         >
           {({ className, style, tokens, getLineProps, getTokenProps }) => (
@@ -133,7 +134,7 @@ export const VerifyPayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
@@ -185,11 +186,11 @@ export const VerifyPayment = () => {
         <Highlight
           theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
           code={`
-          {
-            "paymentStatus": "PENDING",
-            "amountDifference": "-1.1",
-            "verified": true
-          }
+{
+  "paymentStatus": "PENDING",
+  "amountDifference": "-1.1",
+  "verified": true        
+}
           `}
           language="javascript"
         >
@@ -202,7 +203,7 @@ export const VerifyPayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
