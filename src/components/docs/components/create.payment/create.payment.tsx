@@ -99,20 +99,20 @@ export const CreatePayment = () => {
         <Highlight
           theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
           code={`
-          {
-            "sandBox": false,
-            "currency":"USD",
-            "amount": 5,
-            "callbackUrl": "https://your-domain/payment",
-            "callbackParams": {
-              "your_key": "your value"
-            },
-            "webhookUrl": "https://your-domain/payment/webhook/",
-            "webhookParams": {
-              "your_key": "your value"
-            },
-            "language": "EN"
-          }
+{
+    "sandBox": false,
+    "currency":"USD",
+    "amount": 5,
+    "callbackUrl": "https://your-domain/payment",
+    "callbackParams": {
+      "your_key": "your value"
+    },
+    "webhookUrl": "https://your-domain/payment/webhook/",
+    "webhookParams": {
+      "your_key": "your value"
+    },
+    "language": "EN"   
+}
           `}
           language="javascript"
         >
@@ -125,7 +125,7 @@ export const CreatePayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
@@ -156,9 +156,11 @@ export const CreatePayment = () => {
         <Highlight
           theme={resolvedTheme === "dark" ? themes.dracula : themes.oneLight}
           code={`
-          {
-            "x-api-key" : {api_key}
-        }
+{
+  
+    "x-api-key" : <GATEWAY_API_KEY>
+}
+         
           `}
           language="javascript"
         >
@@ -171,7 +173,7 @@ export const CreatePayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
@@ -314,11 +316,11 @@ export const CreatePayment = () => {
         <Highlight
           theme={resolvedTheme === "dark" ? themes.oneDark : themes.oneLight}
           code={`
-          {
-            "id": 0,
-            "paymentUid": "string",
-            "paymentUrl": "string"
-          }
+{
+  "id": 0,
+  "paymentUid": "string",
+  "paymentUrl": "string"         
+}
           `}
           language="javascript"
         >
@@ -331,7 +333,7 @@ export const CreatePayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    .filter((token) => !token.types.includes("plain"))
+                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
