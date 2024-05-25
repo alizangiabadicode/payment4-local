@@ -37,9 +37,9 @@ const ContactUs = () => {
         </p>
       </div>
       <div className="md:hidden flex flex-col gap-y-[24px] mx-[20px]">
-        <div className="grid grid-cols-3 justify-items-center">
+        <div className="grid grid-cols-3 grid-rows-1 justify-items-center gap-[5px]">
           <div className="flex flex-col gap-y-[32px]">
-            <div className="flex flex-col items-center gap-y-[5px]">
+            {/* <div className="flex flex-col items-center gap-y-[5px]">
               <PhoneIcon />
               <p
                 className={`
@@ -55,7 +55,7 @@ const ContactUs = () => {
               >
                 +989121212121
               </p>
-            </div>
+            </div> */}
             <div className="flex flex-col items-center gap-y-[5px]">
               <EmailIcon />
               <p
@@ -70,37 +70,18 @@ const ContactUs = () => {
                 dark:text-white
                `}
               >
-                Payment4@gmail.com
+                info@payment4.com
               </p>
             </div>
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
-            <div
+            {/* <div
               className={`border-l h-[74px] mx-4  dark:border-[#FFFFFF29] border-[#12121229]`}
-            ></div>
-            <div
+            ></div> */}
+            {/* <div
               className={`border-l h-[74px] mx-4
               dark:border-[#FFFFFF29] border-[#12121229]`}
-            ></div>
-          </div>
-          <div className="flex flex-col md:flex-row gap-y-[32px]">
-            <div className="flex flex-col items-center  gap-y-[5px]">
-              <ClockIcon />
-              <p
-                className={`
-                dark:text-white
-              text-[16px] font-bold`}
-              >
-                Hour
-              </p>
-              <p
-                className={`text-[12px] 
-               dark:text-white
-              `}
-              >
-                {t("openTime")}
-              </p>
-            </div>
+            ></div> */}
             <div className="flex flex-col items-center  gap-y-[5px]">
               <LocationIcon />
               <p
@@ -110,8 +91,38 @@ const ContactUs = () => {
               >
                 {t("address")}
               </p>
-              <p className="text-[12px]">UAE , Dubai</p>
+              <p className="text-[12px] text-center">UAE, Dubai, Box No. 58616</p>
             </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-y-[32px]">
+            <div className="flex flex-col items-center  gap-y-[5px]">
+              <ClockIcon />
+              <p
+                className={`
+                dark:text-white
+              text-[16px] font-bold`}
+              >
+               {t("hour")}
+              </p>
+              <p
+                className={`text-[12px] 
+               dark:text-white text-center
+              `}
+              >
+                {t("openTime")}
+              </p>
+            </div>
+            {/* <div className="flex flex-col items-center  gap-y-[5px]">
+              <LocationIcon />
+              <p
+                className={`
+                dark:text-white
+              text-[16px] font-bold`}
+              >
+                {t("address")}
+              </p>
+              <p className="text-[12px]">UAE, Dubai, Box No. 58616</p>
+            </div> */}
           </div>
         </div>
       </div>
@@ -133,7 +144,7 @@ const ContactUs = () => {
            dark:text-white
           `}
           >
-            Payment4@gmail.com
+            info@payment4.com
           </p>
         </div>
         <div
@@ -154,14 +165,14 @@ const ContactUs = () => {
            dark:text-white
           `}
           >
-            UAE , Dubai
+            UAE, Dubai, Box No. 58616
           </p>
         </div>
-        <div
+        {/* <div
           className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}
-        ></div>
-        <div className="flex flex-col gap-y-[5px] items-center">
+        ></div> */}
+        {/* <div className="flex flex-col gap-y-[5px] items-center">
           <PhoneIcon />
           <p
             className={`
@@ -178,7 +189,7 @@ const ContactUs = () => {
           >
             +989121212121
           </p>
-        </div>
+        </div> */}
         <div
           className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}

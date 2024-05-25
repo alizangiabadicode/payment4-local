@@ -2,8 +2,10 @@ import React from "react";
 import { CardsArrayInterface } from "./cards-array-interface";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 const SliderCard = (props: CardsArrayInterface) => {
+  const { t } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
   return (
     <div
@@ -27,7 +29,11 @@ const SliderCard = (props: CardsArrayInterface) => {
           alt=""
         />
       </div>
-      <div className="flex flex-col px-[32px] gap-y-2 mt-[27px]">
+      <div
+        className={`flex flex-col px-[32px] gap-y-2 ltr:mt-[27px] ${
+          props.title === t("sliderOne") ? "rtl:mb-[20px]" : ""
+        }`}
+      >
         <div className="flex items-center gap-x-2">
           {props.logo}
           <p

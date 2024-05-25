@@ -17,7 +17,7 @@ const AdvertisementCard = () => {
       sm:flex-row sm:justify-around gap-y-10 py-5`}
     >
       <div className="flex flex-column justify-center sm:ml-[25px] sm:w-1/2 lg:w-fit">
-        <div className="flex flex-col justify-center items-center md:items-baseline 
+        <div className="flex flex-col justify-center items-center md:items-start 
         gap-5">
           <p
             className={`text-[18px] sm:text-[24px] font-bold 

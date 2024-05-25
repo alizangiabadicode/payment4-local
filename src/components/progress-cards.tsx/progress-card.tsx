@@ -389,7 +389,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                   dark:text-[#FFFFFF5C] text-opacity-[36%]
                 }`}
               >
-                Sign Up
+                {t('signup')}
               </p>
             </div>
             <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
@@ -412,7 +412,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 dark:text-[#FFFFFF5C] text-opacity-[36%]
               }`}
               >
-                Gateway Setup
+                {t('gatewaySetup')}
               </p>
             </div>
             <div className="hidden lg:flex items-center gap-x-3 px-[33px]">
@@ -435,7 +435,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                  dark:text-[#FFFFFF5C] text-opacity-[36%]
                }`}
               >
-                API or Paylink Creation
+                {t('progressThree')}
               </p>
             </div>
           </div>
@@ -485,7 +485,7 @@ const ProgressCard: React.FC<CardsArrayProps> = (props) => {
                 dark:text-[#FFFFFF5C] text-opacity-[36%]
               }`}
               >
-                Security Measures
+                {t('securityMeasures')}
               </p>
             </div>
           </div>
