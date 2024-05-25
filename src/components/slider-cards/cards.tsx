@@ -88,7 +88,7 @@ const SliderCards = () => {
               alt=""
             />
           </>
-          <div className="flex flex-col px-[25px] gap-y-2">
+          <div className="flex flex-col px-[25px] gap-y-2 rtl:xl:mb-[20px]">
             <div className="flex items-center gap-x-2">
               {cardsArray[0].logo}
               <p
@@ -131,7 +131,7 @@ const SliderCards = () => {
               alt=""
             />
           </>
-          <div className="flex flex-col px-[25px] gap-y-2 ">
+          <div className="flex flex-col px-[25px] gap-y-2 rtl:xl:mb-[20px]">
             <div className="flex items-center gap-x-2">
               {cardsArray[1].logo}
               <p
