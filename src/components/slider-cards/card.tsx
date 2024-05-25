@@ -32,7 +32,9 @@ const SliderCard = (props: CardsArrayInterface) => {
       <div
         className={`flex flex-col px-[32px] gap-y-2 ltr:mt-[27px] ${
           props.title === t("sliderOne") ? "rtl:mb-[20px]" : ""
-        }`}
+        } ${props.title === t("sliderThree") ? "ltr:mt-[60px]" : ""}
+        ${props.title === t("sliderFour") ? "ltr:mt-[5px]" : ""}
+        `}
       >
         <div className="flex items-center gap-x-2">
           {props.logo}
