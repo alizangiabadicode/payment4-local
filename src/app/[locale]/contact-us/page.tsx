@@ -37,7 +37,7 @@ const ContactUs = () => {
         </p>
       </div>
       <div className="md:hidden flex flex-col gap-y-[24px] mx-[20px]">
-        <div className="grid grid-cols-3 grid-rows-1 justify-items-center gap-[5px]">
+        <div className="grid grid-cols-3 grid-rows-1 justify-items-center gap-[20px]">
           <div className="flex flex-col gap-y-[32px]">
             {/* <div className="flex flex-col items-center gap-y-[5px]">
               <PhoneIcon />
