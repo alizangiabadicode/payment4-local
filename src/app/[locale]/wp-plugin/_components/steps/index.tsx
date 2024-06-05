@@ -62,7 +62,10 @@ export const Steps = () => {
       >
         {images.map((image, index) => {
           return (
-            <div className="flex px-[20px] flex-col gap-y-[10px] items-center" key={index}>
+            <div
+              className="flex px-[20px] flex-col gap-y-[10px] items-center"
+              key={index}
+            >
               <div
                 key={index}
                 className="relative w-[300px] xl:w-[248px] max-w-md h-[370px] xl:h-[317px] mt-2"
@@ -77,6 +80,11 @@ export const Steps = () => {
               </div>
               <p className="xl:hidden text-[16px] font-bold">{image.title}</p>
               <p className="text-[13px] text-[#121212A1]">{image.desc}</p>
+              {index !== images.length - 1 && (
+                <div className="w-full xl:hidden">
+                  <hr className="border border-[#EBEBEB] w-full" />
+                </div>
+              )}
             </div>
           );
         })}
