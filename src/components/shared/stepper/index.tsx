@@ -71,18 +71,69 @@ export interface Step {
   image?: string;
 }
 
+// interface StepperProps {
+//   steps: Step[];
+// }
+
+// const Stepper: React.FC<StepperProps> = ({ steps }) => {
+//   return (
+//     <div className="w-full hidden xl:flex justify-center">
+//       <ul className="relative flex flex-col md:flex-row gap-2 w-full">
+//         {steps.map((step, index) => (
+//           <li
+//             key={index}
+//             className="md:shrink w-full group flex gap-x-2 md:block"
+//           >
+//             {step.number !== undefined && (
+//               <div className="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
+//                 <span
+//                   style={{ boxShadow: "0px 1px 4px 0px #0000001F" }}
+//                   className="w-[59px] h-[59px] flex justify-center items-center text-[25px] text-[#864AFF] flex-shrink-0 font-bold rounded-full dark:bg-neutral-700 dark:text-white"
+//                 >
+//                   {step.number}
+//                 </span>
+//                 {index !== 4 && (
+//                   <div className="mt-2 w-px h-full md:mt-0 md:ms-2 md:w-full md:h-px md:flex-1 bg-[#EDEDED] group-last:hidden dark:bg-neutral-700"></div>
+//                 )}
+//               </div>
+//             )}
+//             {index !== 0 && index !== 5 && (
+//               <div className="grow md:grow-0 md:mt-3 pb-5 flex flex-col items-start">
+//                 <span className="block text-sm text-[18px] font-bold dark:text-white">
+//                   {step.title}
+//                 </span>
+//               </div>
+//             )}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default Stepper;
+
+export interface Step {
+  number?: number;
+  title: string;
+  description: string;
+  image?: string;
+}
+
 interface StepperProps {
   steps: Step[];
 }
 
 const Stepper: React.FC<StepperProps> = ({ steps }) => {
   return (
-    <div className="w-full hidden xl:flex justify-center">
+    <div className="w-full hidden xl:flex justify-center items-center">
       <ul className="relative flex flex-col md:flex-row gap-2 w-full">
         {steps.map((step, index) => (
           <li
             key={index}
-            className="md:shrink w-full group flex gap-x-2 md:block"
+            className={`md:shrink w-full group flex gap-x-2 md:block ${
+              index === 0 ? "xl:mr-[190px]" : ""
+            }`}
           >
             {step.number !== undefined && (
               <div className="min-w-7 min-h-7 flex flex-col items-center md:w-full md:inline-flex md:flex-wrap md:flex-row text-xs align-middle">
@@ -97,13 +148,12 @@ const Stepper: React.FC<StepperProps> = ({ steps }) => {
                 )}
               </div>
             )}
-            {index !== 0 && index !== 5 && (
-              <div className="grow md:grow-0 md:mt-3 pb-5 flex flex-col items-start">
-                <span className="block text-sm text-[18px] font-bold dark:text-white">
-                  {step.title}
-                </span>
-              </div>
-            )}
+
+            <div className="grow md:grow-0 md:mt-3 pb-5 flex flex-col items-start">
+              <span className="block text-sm text-[18px] font-bold dark:text-white">
+                {step.title}
+              </span>
+            </div>
           </li>
         ))}
       </ul>

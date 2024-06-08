@@ -11,7 +11,10 @@ const page = () => {
   return (
     <div className="container flex flex-col pt-[20px]">
       <div className="flex flex-col xl:flex-row items-center gap-y-[50px] xl:justify-around ">
-        <div className="flex flex-col xl:max-w-[40%] mt-[40px] h-full items-center px-[10px] xl:px-0">
+        <div
+          className="flex flex-col xl:max-w-[40%] h-full 
+        items-center xl:items-start justify-center  px-[10px] xl:px-0"
+        >
           <p className=" text-center font-bold text-[32px]">
             درگاه پرداخت رمزارزی Payment4
           </p>

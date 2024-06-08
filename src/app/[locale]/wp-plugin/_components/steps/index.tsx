@@ -4,7 +4,7 @@ import React from "react";
 
 export const Steps = () => {
   const steps = [
-    { title: "", description: "" },
+    // { title: "", description: "" },
     {
       number: 1,
       title: "ثبت‌ نام",
@@ -63,12 +63,13 @@ export const Steps = () => {
         {images.map((image, index) => {
           return (
             <div
-              className="flex px-[20px] flex-col gap-y-[10px] items-center"
+              className="flex px-[20px] xl:px-0 flex-col gap-y-[10px] items-center xl:items-start"
               key={index}
             >
               <div
                 key={index}
-                className="relative w-[300px] xl:w-[248px] max-w-md h-[370px] xl:h-[317px] mt-2"
+                className="relative w-[300px] xl:w-[248px] max-w-md h-[370px] 
+                xl:h-[317px] mt-2"
               >
                 <Image
                   src={image.imgUrl}

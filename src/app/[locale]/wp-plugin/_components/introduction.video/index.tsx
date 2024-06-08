@@ -2,7 +2,7 @@ import React from "react";
 
 export const IntroductionVideo = () => {
   return (
-    <div className="flex flex-col items-center gap-y-[32px] my-[100px]">
+    <div className="flex flex-col items-center gap-y-[32px] mt-[100px] mb-[150px]">
       <p className="text-[28px] font-bold">معرفی و آموزش Payment4</p>
       <div
         className="relative overflow-hidden w-[75%] xl:w-1/2 pt-[42%] xl:pt-[28%]"
