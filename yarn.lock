@@ -133,10 +133,10 @@
   dependencies:
     glob "10.3.10"
 
-"@next/swc-darwin-x64@14.2.1":
+"@next/swc-darwin-arm64@14.2.1":
   version "14.2.1"
-  resolved "https://registry.npmjs.org/@next/swc-darwin-x64/-/swc-darwin-x64-14.2.1.tgz"
-  integrity sha512-dAdWndgdQi7BK2WSXrx4lae7mYcOYjbHJUhvOUnJjMNYrmYhxbbvJ2xElZpxNxdfA6zkqagIB9He2tQk+l16ew==
+  resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.1.tgz"
+  integrity sha512-kGjnjcIJehEcd3rT/3NAATJQndAEELk0J9GmGMXHSC75TMnvpOhONcjNHbjtcWE5HUQnIHy5JVkatrnYm1QhVw==
 
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"

@@ -8,6 +8,7 @@ import Header from "@/components/layout/header";
 import Footer from "@/components/layout/footer";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
+import { LayoutProvider } from "./layout.provider";
 
 export const metadata: Metadata = {
   title: "Payment4 | Pay By Crypto",
@@ -109,9 +110,7 @@ export default async function RootLayout({
             locale={locale}
             resources={resources}
           >
-            <Header />
-            {children}
-            <Footer />
+            <LayoutProvider>{children}</LayoutProvider>
           </TranslationsProvider>
         </Providers>
       </body>
