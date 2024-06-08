@@ -1,13 +1,16 @@
 "use client";
 import { Button } from "@/components/shared/button";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import { Cards } from "./_components/cards";
 import { Steps } from "./_components/steps";
 import { IntroductionVideo } from "./_components/introduction.video";
 import { DownloadSection } from "./_components/download.section";
+import { useTheme } from "next-themes";
 
-const page = () => {
+const Page = () => {
+  const { setTheme } = useTheme();
+  useEffect(() => setTheme("light"), []);
   return (
     <div className="container flex flex-col pt-[20px]">
       <div className="flex flex-col xl:flex-row items-center gap-y-[50px] xl:justify-around ">
@@ -87,4 +90,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
