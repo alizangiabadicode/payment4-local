@@ -36,14 +36,14 @@ const Page = () => {
             <div>
               <Button
                 className="xl:px-[21px] text-[16px] py-[10px]"
-                onClick={() => {
-                  window.open(
-                    `${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`,
-                    "_blank"
-                  );
-                }}
+                // onClick={() => {
+                //   window.open(
+                //     `${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`,
+                //     "_blank"
+                //   );
+                // }}
               >
-                نصب رایگان افزونه
+                دانلود رایگان از ژاکت
               </Button>
             </div>
             <div>
