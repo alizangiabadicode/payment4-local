@@ -9,6 +9,7 @@ import Footer from "@/components/layout/footer";
 import initTranslations from "../i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
 import { LayoutProvider } from "./layout.provider";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Payment4 | Pay By Crypto",
@@ -114,6 +115,10 @@ export default async function RootLayout({
           </TranslationsProvider>
         </Providers>
       </body>
+
+      {process.env.NEXT_PUBLIC_GTM_ID && (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+      )}
     </html>
   );
 }
