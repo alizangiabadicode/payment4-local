@@ -5,8 +5,9 @@ import { FC } from "react";
 const HOTJAR_ID = process.env.NEXT_PUBLIC_HJ_ID;
 
 export const HotjarSnippet: FC = () => {
-  Hotjar.init(Number(HOTJAR_ID), 6);
-
+  if (typeof window !== "undefined") {
+    Hotjar.init(Number(HOTJAR_ID), 6);
+  }
   return null;
   // if (HOTJAR_ID) return null;
   // return (
