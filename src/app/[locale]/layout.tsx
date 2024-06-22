@@ -120,7 +120,8 @@ export default async function RootLayout({
       {process.env.NEXT_PUBLIC_GTM_ID && (
         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
       )}
-      {process.env.NEXT_PUBLIC_HJ_ID && <HotjarSnippet />}
+      {process.env.NEXT_PUBLIC_HJ_ID &&
+        Number(process.env.NEXT_PUBLIC_HJ_ID) && <HotjarSnippet />}
     </html>
   );
 }
