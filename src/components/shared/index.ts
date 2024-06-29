@@ -5,5 +5,6 @@ export * from "./faq.collapsible.window.tsx";
 export * from "./snackbar/snackbar";
 export * from "./blog-card";
 export * from "./blog-preview";
-export * from "./search-bar";
+export * from "./search.bar";
 export * from "./tab";
+export * from "./loading.spinner";

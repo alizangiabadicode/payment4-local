@@ -1,5 +1,5 @@
 "use client";
-import { BlogCard, Snackbar } from "@/components/shared";
+import { BlogCard, LoadingSpinner, Snackbar } from "@/components/shared";
 import useGraphQLUrl from "@/hooks/useGraphQLUrl";
 import { Post } from "@/types/blog-post-types";
 import axios from "axios";
@@ -70,7 +70,7 @@ const Blogs = () => {
       />
       {loading ? (
         <div className="container">
-          <p>loading ...</p>
+          <LoadingSpinner/>
         </div>
       ) : (
         <div
