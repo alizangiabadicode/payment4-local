@@ -5,10 +5,11 @@ import axios from "axios";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import "./post.css";
-import { BlogPreview, SearchBar } from "@/components/shared";
+import { BlogPreview, LoadingSpinner, SearchBar } from "@/components/shared";
 import { LeftArrowNavigate, RightArrowNavigate } from "../../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import useGraphQLUrl from "@/hooks/useGraphQLUrl";
+
 
 type ExtendedPost = Omit<Post, "node"> & {
   post: Post["node"] & {
@@ -118,16 +119,18 @@ export default function Blog({ params }: { params: { id: string } }) {
   return (
     <div className="grid grid-cols-5 px-[30px] xl:px-[143px]">
       {postLoading ? (
+        // <div
+        //   className="col-start-1 col-end-6  
+        // md:col-start-1 md:col-end-4 "
         <div
-          className="col-start-1 col-end-6  
-        md:col-start-1 md:col-end-4 "
-        >
-          <p>loading selected post ...</p>
+        className="grid col-start-2 col-end-5"
+         >
+         <LoadingSpinner/>
         </div>
       ) : (
         <div
           className="flex flex-col gap-y-[20px] pb-[30px] col-start-1 col-end-6  
-      md:col-start-1 md:col-end-4 "
+      md:col-start-2 md:col-end-5 md:justify-items-center"
         >
           <div className="px-[20px]">
             <Image
@@ -148,7 +151,7 @@ export default function Blog({ params }: { params: { id: string } }) {
           </div>
         </div>
       )}
-      {postsLoading ? (
+      {/* {postsLoading ? (
         <div className="hidden md:block">
           <p>loading other posts ...</p>
         </div>
@@ -262,7 +265,7 @@ export default function Blog({ params }: { params: { id: string } }) {
             </div>
           </div>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
