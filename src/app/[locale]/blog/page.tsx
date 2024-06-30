@@ -19,6 +19,7 @@ const Blogs = () => {
                  edges {
                   cursor
                   node {
+                    link
                     date
                     uri
                     title
@@ -34,7 +35,6 @@ const Blogs = () => {
             }`,
       variables: {},
     });
-
     const config = {
       method: "post",
       maxBodyLength: Infinity,
@@ -70,7 +70,7 @@ const Blogs = () => {
       />
       {loading ? (
         <div className="container">
-          <LoadingSpinner/>
+          <LoadingSpinner />
         </div>
       ) : (
         <div
@@ -83,6 +83,7 @@ const Blogs = () => {
               title={post.node.title}
               imageUrl={post.node.featuredImage?.node.mediaItemUrl}
               key={post.node.id}
+              link={post.node.link}
             />
           ))}
         </div>
