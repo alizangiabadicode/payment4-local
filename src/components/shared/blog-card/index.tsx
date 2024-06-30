@@ -6,12 +6,14 @@ interface BlogCardProp {
   imageUrl: string;
   title: string;
   href: string;
+  link: string;
 }
 
 export const BlogCard: React.FC<BlogCardProp> = (props: BlogCardProp) => {
   return (
     <div className="bg-transparent flex flex-col max-w-[230px]">
-      <Link href={`/blog/${props.href}`}>
+      <Link href={`${props.link}`}>
+        {/* <Link href={`/blog/${props.href}`}> */}
         <Image
           loader={() => props.imageUrl}
           src={props.imageUrl}
