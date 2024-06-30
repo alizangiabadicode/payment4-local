@@ -12,8 +12,9 @@ interface BlogCardProp {
 export const BlogCard: React.FC<BlogCardProp> = (props: BlogCardProp) => {
   return (
     <div className="bg-transparent flex flex-col max-w-[230px]">
-      <Link href={`${props.link}`}>
-        {/* <Link href={`/blog/${props.href}`}> */}
+      {/* <Link passHref href={`${props.link}`}> */}
+      {/* <Link href={`/blog/${props.href}`}> */}
+      <a href={`${props.link}`} target="_blank">
         <Image
           loader={() => props.imageUrl}
           src={props.imageUrl}
@@ -28,7 +29,8 @@ export const BlogCard: React.FC<BlogCardProp> = (props: BlogCardProp) => {
         >
           {props.title}
         </p>
-      </Link>
+      </a>
+      {/* </Link> */}
     </div>
   );
 };
