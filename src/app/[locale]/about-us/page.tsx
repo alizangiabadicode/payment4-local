@@ -10,7 +10,7 @@ import Image from "next/image";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
 import Link from "next/link";
-import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
+
 
 interface reasonsToChoosePayment4 {
   title: string;
@@ -57,14 +57,6 @@ const AboutUs = async ({
   } = searchParams as {
     [key: string]: string | undefined;
   };
-  const trackUser = async () => {
-    try {
-      await utmTrackingServerSide(utmCampaign, utmMedium, utmSource);
-    } catch (error) {
-      console.error("Error tracking user:", error);
-    }
-  };
-  trackUser();
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}

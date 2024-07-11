@@ -4,7 +4,7 @@ import Cards from "@/components/cards-section/cards";
 import ProgressCards from "@/components/progress-cards.tsx/progress-cards";
 import AdvertisementCard from "@/components/advertisement";
 import SliderCards from "@/components/slider-cards/cards";
-import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
+import { utmTrackingServerSide } from "@/utils/server.side.utm.tracker";
 
 const i18nNamespaces = ["translation"];
 
@@ -30,7 +30,9 @@ async function Home({
       console.error("Error tracking user:", error);
     }
   };
-  trackUser();
+  if (utmCampaign || utmMedium || utmSource) {
+    trackUser();
+  }
   return (
     <div className="overflow-x-auto px-[20px] sm:px-0 container">
       <HeroSection />

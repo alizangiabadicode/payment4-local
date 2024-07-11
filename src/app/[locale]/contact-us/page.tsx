@@ -1,15 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { ClockIcon, EmailIcon, LocationIcon } from "../../../icons/svg";
+import React, { useState } from "react";
+import { ClockIcon, EmailIcon } from "../../../icons/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";
 import { useTranslation } from "react-i18next";
-import { useSearchParams } from "next/navigation";
-import { utmTrackingClientSide } from "@/utils/client.side.utm.track";
-import useQueryParams from "@/hooks/useQueryParams";
-import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
 
 const ContactUs = () => {
   const { t, i18n } = useTranslation();
