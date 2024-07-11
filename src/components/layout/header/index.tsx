@@ -7,9 +7,10 @@ import ThemeSwitch from "@/components/shared/theme.swicher/theme.swicher";
 import { NavigationBar } from "./navigation";
 import { Drawer } from "@/components/shared";
 import { navbarItems } from "./navbar-items";
-import Link from "next/link";
 import { MenuItemIcon } from "../../../icons/svg/menu-item";
 import useCurrentRoute from "@/hooks/useCurrentRoute";
+import useQueryParams from "@/hooks/useQueryParams";
+import Link from "next/link";
 
 const Header = () => {
   const currentRoute = useCurrentRoute();
@@ -20,6 +21,8 @@ const Header = () => {
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
     <header style={{ direction: direction }}>
       <div
@@ -37,10 +40,13 @@ const Header = () => {
             <Button
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
               className="px-1 sm:px-6 text-sm sm:text-base text-nowrap"
-              onClick={() => console.log(i18n.language)}
             >
               <Link
-                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                  i18n.language
+                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                  utm_medium ? `&utm_campaign=${utm_medium}` : ""
+                }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
                 target="_blank"
               >
                 {t("signup")}
@@ -58,7 +64,10 @@ const Header = () => {
                     className={`${isActive && "font-bold"}
                     dark:text-white
                   }`}
-                    href={item.path}
+                    href={{
+                      pathname: item.path,
+                      query: { utm_campaign, utm_medium, utm_source },
+                    }}
                     onClick={() => setIsDrawerOpen(false)}
                   >
                     {t(`${item.title.toLowerCase()}`)}

@@ -5,9 +5,12 @@ import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
 import Link from "next/link";
+import useQueryParams from "@/hooks/useQueryParams";
 
 const AdvertisementCard = () => {
   const { t, i18n } = useTranslation();
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
     <div
       className={`max-w-[639px]  sm:max-w-none w-full
@@ -17,8 +20,10 @@ const AdvertisementCard = () => {
       sm:flex-row sm:justify-around gap-y-10 py-5`}
     >
       <div className="flex flex-column justify-center sm:ml-[25px] sm:w-1/2 lg:w-fit">
-        <div className="flex flex-col justify-center items-center md:items-start 
-        gap-5">
+        <div
+          className="flex flex-col justify-center items-center md:items-start 
+        gap-5"
+        >
           <p
             className={`text-[18px] sm:text-[24px] font-bold 
             dark:text-white text-black
@@ -39,7 +44,11 @@ const AdvertisementCard = () => {
             <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg">
               <Link
                 target="_blank"
-                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                  i18n.language
+                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                  utm_medium ? `&utm_medium=${utm_medium}` : ""
+                }${utm_source ? `&utm_source=${utm_source}` : ""}`}
               >
                 {t("letsGetStarted")}
               </Link>

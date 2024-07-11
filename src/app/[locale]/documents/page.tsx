@@ -22,6 +22,9 @@ import {
   WoocommerceSection,
 } from "@/components/docs";
 
+import { utmTrackingClientSide } from "@/utils/client.side.utm.track";
+import { useRouter, useSearchParams } from "next/navigation";
+
 interface SubItem {
   id: string;
   title: string;
@@ -35,6 +38,18 @@ export interface DocArrayInterface {
 }
 const DocumentPageLayout: React.FC = () => {
   const { t, i18n } = useTranslation("");
+  const searchParams = useSearchParams();
+  const queryParams = searchParams.get("queryParams");
+  const trackUser = async () => {
+    try {
+      await utmTrackingClientSide(queryParams as string);
+    } catch (error) {
+      console.error("Error tracking user:", error);
+    }
+  };
+  useEffect(() => {
+    trackUser();
+  }, [queryParams]);
 
   const docArray: DocArrayInterface[] = [
     {

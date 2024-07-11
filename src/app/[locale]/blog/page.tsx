@@ -2,7 +2,9 @@
 import { BlogCard, LoadingSpinner, Snackbar } from "@/components/shared";
 import useGraphQLUrl from "@/hooks/useGraphQLUrl";
 import { Post } from "@/types/blog-post-types";
+import { utmTrackingClientSide } from "@/utils/client.side.utm.track";
 import axios from "axios";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -11,6 +13,18 @@ const Blogs = () => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [isOpenSnackBar, setIsOpenSnackBar] = useState(false);
+  const searchParams = useSearchParams();
+  const queryParams = searchParams.get("queryParams");
+  const trackUser = async () => {
+    try {
+      await utmTrackingClientSide(queryParams as string);
+    } catch (error) {
+      console.error("Error tracking user:", error);
+    }
+  };
+  useEffect(() => {
+    trackUser();
+  }, [queryParams]);
   const { i18n } = useTranslation();
   const fetchData = async () => {
     const data = JSON.stringify({

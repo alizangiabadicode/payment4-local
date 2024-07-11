@@ -87,6 +87,7 @@ const yekanBakh = localFont({
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
 }
+
 const i18nNamespaces = ["translation"];
 export default async function RootLayout({
   children,
