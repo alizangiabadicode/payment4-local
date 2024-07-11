@@ -1,29 +1,12 @@
 import initTranslations from "@/app/i18n";
-import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
+
 
 const termsOfService = async ({
   params: { locale },
-  searchParams,
 }: {
   params: { locale: string };
-  searchParams?: { [key: string]: string | string[] | undefined };
 }) => {
   const { t, i18n } = await initTranslations(locale, ["terms-of-service"]);
-  const {
-    utm_campaign: utmCampaign,
-    utm_medium: utmMedium,
-    utm_source: utmSource,
-  } = searchParams as {
-    [key: string]: string | undefined;
-  };
-  const trackUser = async () => {
-    try {
-      await utmTrackingServerSide(utmCampaign, utmMedium, utmSource);
-    } catch (error) {
-      console.error("Error tracking user:", error);
-    }
-  };
-  trackUser();
   return (
     <div
       className="py-24 container px-[10px] md:pr-36 flex flex-col gap-y-[20px]"
