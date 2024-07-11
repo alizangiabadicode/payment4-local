@@ -30,7 +30,9 @@ async function Home({
       console.error("Error tracking user:", error);
     }
   };
-  trackUser();
+  if (utmCampaign || utmMedium || utmSource) {
+    trackUser();
+  }
   return (
     <div className="overflow-x-auto px-[20px] sm:px-0 container">
       <HeroSection />
