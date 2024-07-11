@@ -3,6 +3,9 @@ const nextConfig = {
   images: {
     disableStaticImages: true,
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default nextConfig;

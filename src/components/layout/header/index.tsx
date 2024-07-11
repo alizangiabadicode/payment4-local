@@ -66,7 +66,10 @@ const Header = () => {
                   }`}
                     href={{
                       pathname: item.path,
-                      query: { utm_campaign, utm_medium, utm_source },
+                      query:
+                        item.path === "/about-us"
+                          ? { utm_campaign, utm_medium, utm_source }
+                          : undefined,
                     }}
                     onClick={() => setIsDrawerOpen(false)}
                   >
