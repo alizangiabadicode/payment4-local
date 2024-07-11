@@ -7,6 +7,7 @@ import { Steps } from "./_components/steps";
 import { IntroductionVideo } from "./_components/introduction.video";
 import { DownloadSection } from "./_components/download.section";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 
 const Page = () => {
   const { setTheme } = useTheme();
@@ -48,15 +49,17 @@ const Page = () => {
             </div>
             <div>
               <Button
-                onClick={() => {
-                  window.open(
-                    `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=fa&utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web`,
-                    "_blank"
-                  );
-                }}
+                // onClick={() => {
+                //   window.open(
+                //     `?/lang=fa&utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web`,
+                //     "_blank"
+                //   );
+                // }}
                 className="xl:px-[21px] text-[16px] py-[10px] bg-white !text-[#864AFF] border hover:bg-white"
               >
-                ساخت حساب کاربری
+                <Link href="/?lang=fa&utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web">
+                  ساخت حساب کاربری
+                </Link>
               </Button>
             </div>
           </div>
