@@ -29,10 +29,11 @@ export const NavigationBar = () => {
               key={item.title}
               href={{
                 pathname: item.path,
-                query:
-                  item.path === "/about-us" || item.path === "/"
-                    ? { utm_campaign, utm_medium, utm_source }
-                    : undefined,
+                query: {
+                  ...(utm_campaign && { utm_campaign }),
+                  ...(utm_medium && { utm_medium }),
+                  ...(utm_source && { utm_source }),
+                },
               }}
               className={`${isActive && "font-bold"}
               dark:text-white text-nowrap text-[13px] md:text-[15px]`}

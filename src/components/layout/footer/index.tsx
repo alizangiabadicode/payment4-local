@@ -141,7 +141,11 @@ const Footer = () => {
             <Link
               href={{
                 pathname: "/",
-                query: { utm_campaign, utm_medium, utm_source },
+                query: {
+                  ...(utm_campaign && { utm_campaign }),
+                  ...(utm_medium && { utm_medium }),
+                  ...(utm_source && { utm_source }),
+                },
               }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
@@ -168,7 +172,11 @@ const Footer = () => {
             <Link
               href={{
                 pathname: "/about-us",
-                query: { utm_campaign, utm_medium, utm_source },
+                query: {
+                  ...(utm_campaign && { utm_campaign }),
+                  ...(utm_medium && { utm_medium }),
+                  ...(utm_source && { utm_source }),
+                },
               }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
@@ -362,7 +370,11 @@ const Footer = () => {
             <Link
               href={{
                 pathname: "/about-us",
-                query: { utm_campaign, utm_medium, utm_source },
+                query: {
+                  ...(utm_campaign && { utm_campaign }),
+                  ...(utm_medium && { utm_medium }),
+                  ...(utm_source && { utm_source }),
+                },
               }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
