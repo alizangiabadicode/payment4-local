@@ -1,22 +1,22 @@
 import { usePathname, useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
-const useQueryParams = (): string => {
+const useQueryParams = (): Record<string, string> => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  const [queryString, setQueryString] = useState<string>("");
+  const [queryParams, setQueryParams] = useState<Record<string, string>>({});
 
   useEffect(() => {
-    const updateQueryString = () => {
-      const params: string[] = [];
+    const updateQueryParams = () => {
+      const params: Record<string, string> = {};
       searchParams.forEach((value, key) => {
-        params.push(`${key}=${value}`);
+        params[key] = value;
       });
-      setQueryString(params.join("&"));
+      setQueryParams(params);
     };
-    updateQueryString();
+    updateQueryParams();
     const handleRouteChange = () => {
-      updateQueryString();
+      updateQueryParams();
     };
     handleRouteChange();
     window.addEventListener("popstate", handleRouteChange);
@@ -25,7 +25,7 @@ const useQueryParams = (): string => {
     };
   }, [pathname, searchParams]);
 
-  return queryString;
+  return queryParams;
 };
 
 export default useQueryParams;

@@ -10,6 +10,7 @@ import Image from "next/image";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
 import Link from "next/link";
+import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
 
 interface reasonsToChoosePayment4 {
   title: string;
@@ -21,8 +22,10 @@ const i18nNamespaces = ["translation"];
 
 const AboutUs = async ({
   params: { locale },
+  searchParams,
 }: {
   params: { locale: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
 }) => {
   const { t, resources, i18n } = await initTranslations(locale, i18nNamespaces);
   const reasonsToChoosePayment4: reasonsToChoosePayment4[] = [
@@ -47,6 +50,21 @@ const AboutUs = async ({
       desc: t("innovativeFeaturesDesc"),
     },
   ];
+  const {
+    utm_campaign: utmCampaign,
+    utm_medium: utmMedium,
+    utm_source: utmSource,
+  } = searchParams as {
+    [key: string]: string | undefined;
+  };
+  const trackUser = async () => {
+    try {
+      await utmTrackingServerSide(utmCampaign, utmMedium, utmSource);
+    } catch (error) {
+      console.error("Error tracking user:", error);
+    }
+  };
+  trackUser();
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}
@@ -193,7 +211,11 @@ const AboutUs = async ({
               <div>
                 <Link
                   target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+                  href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                    i18n.language
+                  }${utmCampaign ? `&utm_campaign=${utmCampaign}` : ""}${
+                    utmMedium ? `&utm_campaign=${utmMedium}` : ""
+                  }${utmSource ? `&utm_campaign=${utmSource}` : ""}`}
                 >
                   <Button className="px-[64px] py-[10px] rounded-[8px] text-nowrap">
                     {t("joinUs")}

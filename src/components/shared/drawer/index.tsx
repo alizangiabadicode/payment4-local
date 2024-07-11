@@ -4,6 +4,7 @@ import { Button } from "../button";
 import { useTranslation } from "react-i18next";
 import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
 import Link from "next/link";
+import useQueryParams from "@/hooks/useQueryParams";
 
 interface DrawerProps {
   isOpen: boolean;
@@ -20,7 +21,8 @@ export const Drawer: FC<DrawerProps> = ({
 }) => {
   const { t, i18n } = useTranslation();
   const drawerRef = useRef<HTMLDivElement>(null);
-
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -79,7 +81,11 @@ export const Drawer: FC<DrawerProps> = ({
           <Button className="w-full h-[44px] flex justify-center items-center">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                i18n.language
+              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                utm_medium ? `&utm_medium=${utm_medium}` : ""
+              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
             >
               {t("signup")}
             </Link>

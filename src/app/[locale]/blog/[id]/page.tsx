@@ -9,7 +9,8 @@ import { BlogPreview, LoadingSpinner, SearchBar } from "@/components/shared";
 import { LeftArrowNavigate, RightArrowNavigate } from "../../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import useGraphQLUrl from "@/hooks/useGraphQLUrl";
-
+import { useSearchParams } from "next/navigation";
+import { utmTrackingClientSide } from "@/utils/client.side.utm.track";
 
 type ExtendedPost = Omit<Post, "node"> & {
   post: Post["node"] & {
@@ -24,7 +25,18 @@ export default function Blog({ params }: { params: { id: string } }) {
   const [postsLoading, setPostsLoading] = useState(true);
   const [postLoading, setPostLoading] = useState(true);
   const { t, i18n } = useTranslation();
-
+  const searchParams = useSearchParams();
+  const queryParams = searchParams.get("queryParams");
+  const trackUser = async () => {
+    try {
+      await utmTrackingClientSide(queryParams as string);
+    } catch (error) {
+      console.error("Error tracking user:", error);
+    }
+  };
+  useEffect(() => {
+    trackUser();
+  }, [queryParams]);
   const fetchPosts = async () => {
     const data = JSON.stringify({
       query: `query getPosts {
@@ -120,12 +132,10 @@ export default function Blog({ params }: { params: { id: string } }) {
     <div className="grid grid-cols-5 px-[30px] xl:px-[143px]">
       {postLoading ? (
         // <div
-        //   className="col-start-1 col-end-6  
+        //   className="col-start-1 col-end-6
         // md:col-start-1 md:col-end-4 "
-        <div
-        className="grid col-start-2 col-end-5"
-         >
-         <LoadingSpinner/>
+        <div className="grid col-start-2 col-end-5">
+          <LoadingSpinner />
         </div>
       ) : (
         <div

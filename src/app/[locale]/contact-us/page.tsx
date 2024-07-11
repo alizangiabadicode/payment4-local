@@ -1,16 +1,15 @@
 "use client";
 
-import React, { useState } from "react";
-import {
-  ClockIcon,
-  EmailIcon,
-  LocationIcon,
-  PhoneIcon,
-} from "../../../icons/svg";
+import React, { useEffect, useState } from "react";
+import { ClockIcon, EmailIcon, LocationIcon } from "../../../icons/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";
 import { useTranslation } from "react-i18next";
+import { useSearchParams } from "next/navigation";
+import { utmTrackingClientSide } from "@/utils/client.side.utm.track";
+import useQueryParams from "@/hooks/useQueryParams";
+import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
 
 const ContactUs = () => {
   const { t, i18n } = useTranslation();
@@ -82,7 +81,7 @@ const ContactUs = () => {
               className={`border-l h-[74px] mx-4
               dark:border-[#FFFFFF29] border-[#12121229]`}
             ></div> */}
-            <div className="flex flex-col items-center  gap-y-[5px]">
+            {/* <div className="flex flex-col items-center  gap-y-[5px]">
               <LocationIcon />
               <p
                 className={`
@@ -92,7 +91,7 @@ const ContactUs = () => {
                 {t("address")}
               </p>
               <p className="text-[12px] text-center">UAE, Dubai, Box No. 58616</p>
-            </div>
+            </div> */}
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
             <div className="flex flex-col items-center  gap-y-[5px]">
@@ -102,7 +101,7 @@ const ContactUs = () => {
                 dark:text-white
               text-[16px] font-bold`}
               >
-               {t("hour")}
+                {t("hour")}
               </p>
               <p
                 className={`text-[12px] 
@@ -151,7 +150,7 @@ const ContactUs = () => {
           className={`border-l h-[74px] mx-4
             dark:border-[#FFFFFF29] border-[#12121229]`}
         ></div>
-        <div className="flex flex-col items-center  gap-y-[5px]">
+        {/* <div className="flex flex-col items-center  gap-y-[5px]">
           <LocationIcon />
           <p
             className={`
@@ -167,7 +166,7 @@ const ContactUs = () => {
           >
             UAE, Dubai, Box No. 58616
           </p>
-        </div>
+        </div> */}
         {/* <div
           className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}
@@ -190,10 +189,10 @@ const ContactUs = () => {
             +989121212121
           </p>
         </div> */}
-        <div
+        {/* <div
           className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}
-        ></div>
+        ></div> */}
         <div className="flex flex-col items-center gap-y-[5px]">
           <ClockIcon />
           <p
@@ -302,8 +301,8 @@ const ContactUs = () => {
             onClick={() => {
               window.open(
                 i18n.language === "fa"
-                  ? "https://twitter.com/payment4_fa?s=11"
-                  : "http://twitter.com/payment4_com",
+                  ? "https://x.com/payment4_fa?s=11"
+                  : "https://x.com/payment4_com",
                 "_blank"
               );
             }}

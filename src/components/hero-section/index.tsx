@@ -7,8 +7,11 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { SwiperSection } from "./swiper";
 import Link from "next/link";
+import useQueryParams from "@/hooks/useQueryParams";
 
 const HeroSection = () => {
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   const { t, i18n } = useTranslation();
   return (
     <div className="overflow-x-hidden">
@@ -112,7 +115,11 @@ const HeroSection = () => {
           >
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                i18n.language
+              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                utm_medium ? `&utm_medium=${utm_medium}` : ""
+              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
             >
               {t("letsGetStarted")}
             </Link>

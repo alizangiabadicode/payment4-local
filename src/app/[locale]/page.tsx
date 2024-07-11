@@ -4,11 +4,33 @@ import Cards from "@/components/cards-section/cards";
 import ProgressCards from "@/components/progress-cards.tsx/progress-cards";
 import AdvertisementCard from "@/components/advertisement";
 import SliderCards from "@/components/slider-cards/cards";
+import { utmTrackingServerSide } from "@/utils/server.side.utm.track";
 
 const i18nNamespaces = ["translation"];
 
-async function Home({ params: { locale } }: { params: { locale: string } }) {
+async function Home({
+  params: { locale },
+  searchParams,
+}: {
+  params: { locale: string };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}) {
   const { t } = await initTranslations(locale, i18nNamespaces);
+  const {
+    utm_campaign: utmCampaign,
+    utm_medium: utmMedium,
+    utm_source: utmSource,
+  } = searchParams as {
+    [key: string]: string | undefined;
+  };
+  const trackUser = async () => {
+    try {
+      await utmTrackingServerSide(utmCampaign, utmMedium, utmSource);
+    } catch (error) {
+      console.error("Error tracking user:", error);
+    }
+  };
+  trackUser();
   return (
     <div className="overflow-x-auto px-[20px] sm:px-0 container">
       <HeroSection />

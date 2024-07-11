@@ -3,7 +3,7 @@ import { Button } from "../shared/button";
 import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
-
+import useQueryParams from "@/hooks/useQueryParams";
 
 export interface CardsType {
   title: string;
@@ -16,6 +16,8 @@ export interface CardsType {
 
 const Card = (props: CardsType) => {
   const { i18n } = useTranslation();
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
     <div
       className={`
@@ -36,7 +38,11 @@ const Card = (props: CardsType) => {
           <Button
             onClick={() => {
               window.open(
-                `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`,
+                `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                  i18n.language
+                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                  utm_medium ? `&utm_medium=${utm_medium}` : ""
+                }${utm_source ? `&utm_source=${utm_source}` : ""}`,
                 "_blank"
               );
             }}

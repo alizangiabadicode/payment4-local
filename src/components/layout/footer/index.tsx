@@ -13,9 +13,11 @@ import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Link from "next/link";
 import Image from "next/image";
+import useQueryParams from "@/hooks/useQueryParams";
 const Footer = () => {
   const [mounted, setMounted] = useState(false);
-
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   const { t, i18n } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
   const direction =
@@ -49,8 +51,8 @@ const Footer = () => {
               onClick={() => {
                 window.open(
                   i18n.language === "fa"
-                    ? "https://twitter.com/payment4_fa?s=11"
-                    : "http://twitter.com/payment4_com",
+                    ? "https://x.com/payment4_fa?s=11"
+                    : "https://x.com/payment4_com",
                   "_blank"
                 );
               }}
@@ -197,7 +199,7 @@ const Footer = () => {
               href={
                 i18n.language === "fa"
                   ? " https://x.com/payment4_fa?s=11"
-                  : "http://twitter.com/payment4_com"
+                  : "https://x.com/payment4_com"
               }
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
@@ -238,8 +240,8 @@ const Footer = () => {
             onClick={() => {
               window.open(
                 i18n.language === "fa"
-                  ? "https://twitter.com/payment4_fa?s=11"
-                  : "http://twitter.com/payment4_com",
+                  ? "https://x.com/payment4_fa?s=11"
+                  : "http://x.com/payment4_com",
                 "_blank"
               );
             }}
@@ -384,7 +386,11 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
+                i18n.language
+              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                utm_medium ? `&utm_medium=${utm_medium}` : ""
+              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -393,7 +399,11 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+                i18n.language
+              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                utm_medium ? `&utm_medium=${utm_medium}` : ""
+              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}

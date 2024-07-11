@@ -21,12 +21,12 @@ export const DownloadSection = () => {
         </p>
         <div className="flex justify-center md:justify-start">
           <Button
-            // onClick={() => {
-            //   window.open(
-            //     `${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`,
-            //     "_blank"
-            //   );
-            // }}
+            onClick={() => {
+              window.open(
+                `${process.env.NEXT_PUBLIC_ZHAKET_DOWNLOAD_URL}`,
+                "_blank"
+              );
+            }}
           >
             دانلود رایگان از ژاکت
           </Button>

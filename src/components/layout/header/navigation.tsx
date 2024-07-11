@@ -5,11 +5,13 @@ import { navbarItems } from "./navbar-items";
 import Link from "next/link";
 import Logo from "../../../icons/svg/logo";
 import useCurrentRoute from "@/hooks/useCurrentRoute";
+import useQueryParams from "@/hooks/useQueryParams";
 
 export const NavigationBar = () => {
   const currentRoute = useCurrentRoute();
   const { t } = useTranslation();
-
+  const queryParams = useQueryParams();
+  const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
     <>
       <div className="flex gap-x-5 md:gap-0">
@@ -25,7 +27,10 @@ export const NavigationBar = () => {
           return (
             <Link
               key={item.title}
-              href={item.path}
+              href={{
+                pathname: item.path,
+                query: { utm_campaign, utm_medium, utm_source },
+              }}
               className={`${isActive && "font-bold"}
               dark:text-white text-nowrap text-[13px] md:text-[15px]`}
             >
