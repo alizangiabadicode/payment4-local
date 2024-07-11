@@ -139,7 +139,10 @@ const Footer = () => {
           </p>
           <div className="flex flex-col gap-2">
             <Link
-              href="/"
+              href={{
+                pathname: "/",
+                query: { utm_campaign, utm_medium, utm_source },
+              }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -163,7 +166,10 @@ const Footer = () => {
               {t("documents")}
             </Link>
             <Link
-              href="/about-us"
+              href={{
+                pathname: "/about-us",
+                query: { utm_campaign, utm_medium, utm_source },
+              }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -354,7 +360,10 @@ const Footer = () => {
           </p>
           <div className="flex flex-col gap-2">
             <Link
-              href="/about-us"
+              href={{
+                pathname: "/about-us",
+                query: { utm_campaign, utm_medium, utm_source },
+              }}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
