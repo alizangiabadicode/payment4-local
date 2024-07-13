@@ -49,17 +49,15 @@ const Page = () => {
             </div>
             <div>
               <Button
-                // onClick={() => {
-                //   window.open(
-                //     `?/lang=fa&utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web`,
-                //     "_blank"
-                //   );
-                // }}
+                onClick={() => {
+                  window.open(
+                    `${process.env.NEXT_PUBLIC_LANDING_URL}?/utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web`,
+                    "_blank"
+                  );
+                }}
                 className="xl:px-[21px] text-[16px] py-[10px] bg-white !text-[#864AFF] border hover:bg-white"
               >
-                <Link href="/?lang=fa&utm_campaign=wp-plugin&utm_source=zhaket&utm_medium=web">
-                  ساخت حساب کاربری
-                </Link>
+                ساخت حساب کاربری
               </Button>
             </div>
           </div>
