@@ -121,7 +121,9 @@ const HeroSection = () => {
                 utm_medium ? `&utm_medium=${utm_medium}` : ""
               }${utm_source ? `&utm_source=${utm_source}` : ""}`}
             >
-              {t("letsGetStarted")}
+              {i18n.language === "fa"
+                ? t("heroSectionLetsGetStarted")
+                : t("letsGetStarted")}
             </Link>
             {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
@@ -132,14 +134,22 @@ const HeroSection = () => {
             width={700}
             height={500}
             src="/images/dashboard-dark.png"
-            alt="dashboard"
+            alt={
+              i18n.language !== "fa"
+                ? "dashboard"
+                : "بهترین درگاه پرداخت بین المللی برای سایت"
+            }
           />
           <Image
             className="block dark:hidden"
             width={700}
             height={500}
             src="/images/dashboard.jpg"
-            alt="dashboard"
+            alt={
+              i18n.language !== "fa"
+                ? "dashboard"
+                : "بهترین درگاه پرداخت بین المللی برای سایت"
+            }
           />
         </div>
       </div>
