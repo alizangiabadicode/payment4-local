@@ -5,6 +5,7 @@ import ProgressCards from "@/components/progress-cards.tsx/progress-cards";
 import AdvertisementCard from "@/components/advertisement";
 import SliderCards from "@/components/slider-cards/cards";
 import { utmTrackingServerSide } from "@/utils/server.side.utm.tracker";
+import { VideoSection } from "@/components/video.section";
 
 const i18nNamespaces = ["translation"];
 
@@ -15,7 +16,7 @@ async function Home({
   params: { locale: string };
   searchParams?: { [key: string]: string | string[] | undefined };
 }) {
-  const { t } = await initTranslations(locale, i18nNamespaces);
+  const { t, i18n } = await initTranslations(locale, i18nNamespaces);
   const {
     utm_campaign: utmCampaign,
     utm_medium: utmMedium,
@@ -37,7 +38,12 @@ async function Home({
     <div className="overflow-x-auto px-[20px] sm:px-0 container">
       <HeroSection />
       <Cards />
-      <ProgressCards />
+
+      <div className="w-full mx-auto max-w-[700px] my-[130px]">
+        <p className="text-center my-6 text-[24px]">معرفی</p>
+        {i18n.language !== "fa" ? null : <VideoSection />}
+      </div>
+      {i18n.language !== "fa" && <ProgressCards />}
       <div className="flex justify-center md:mt-[100px]">
         <p
           className="text-[16px] sm:text-[24px] font-bold 
