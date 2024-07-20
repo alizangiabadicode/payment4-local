@@ -1,7 +1,12 @@
 "use client";
 
 import React, { useState } from "react";
-import { ClockIcon, EmailIcon } from "../../../icons/svg";
+import {
+  ClockIcon,
+  EmailIcon,
+  LocationIcon,
+  PhoneIcon,
+} from "../../../icons/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";
@@ -34,23 +39,27 @@ const ContactUs = () => {
       <div className="md:hidden flex flex-col gap-y-[24px] mx-[20px]">
         <div className="grid grid-cols-3 grid-rows-1 justify-items-center gap-[20px]">
           <div className="flex flex-col gap-y-[32px]">
-            {/* <div className="flex flex-col items-center gap-y-[5px]">
-              <PhoneIcon />
-              <p
-                className={`
+            {i18n.language === "fa" && (
+              <>
+                <div className="flex flex-col items-center gap-y-[5px]">
+                  <PhoneIcon />
+                  <p
+                    className={`
                dark:text-white
              text-[16px] font-bold`}
-              >
-                {t("phone")}
-              </p>
-              <p
-                className={`text-[12px] 
+                  >
+                    {t("phone")}
+                  </p>
+                  <p
+                    className={`text-[12px] 
                   dark:text-white
                  `}
-              >
-                +989121212121
-              </p>
-            </div> */}
+                  >
+                    021-45628182
+                  </p>
+                </div>
+              </>
+            )}
             <div className="flex flex-col items-center gap-y-[5px]">
               <EmailIcon />
               <p
@@ -69,14 +78,18 @@ const ContactUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col md:flex-row gap-y-[32px]">
-            {/* <div
-              className={`border-l h-[74px] mx-4  dark:border-[#FFFFFF29] border-[#12121229]`}
-            ></div> */}
-            {/* <div
+          <div className="flex flex-col md:flex-row gap-y-[32px] items-center">
+            {i18n.language === "fa" && (
+              <>
+                <div
+                  className={`border-l h-[74px] mx-4  dark:border-[#FFFFFF29] border-[#12121229]`}
+                ></div>
+              </>
+            )}
+            <div
               className={`border-l h-[74px] mx-4
               dark:border-[#FFFFFF29] border-[#12121229]`}
-            ></div> */}
+            ></div>
             {/* <div className="flex flex-col items-center  gap-y-[5px]">
               <LocationIcon />
               <p
@@ -86,7 +99,10 @@ const ContactUs = () => {
               >
                 {t("address")}
               </p>
-              <p className="text-[12px] text-center">UAE, Dubai, Box No. 58616</p>
+              <p className="text-[12px] text-center">
+                تهران، بلوار پژوهش، پارک علم و فناوری دانشگاه تربیت مدرس، مرکز
+                نوآوری زرین
+              </p>
             </div> */}
           </div>
           <div className="flex flex-col md:flex-row gap-y-[32px]">
@@ -104,20 +120,29 @@ const ContactUs = () => {
                dark:text-white text-center
               `}
               >
-                {t("openTime")}
+                {i18n.language !== "fa"
+                  ? t("openTime")
+                  : "شنبه تا چهارشنبه :‌۹ صبح تا ۱۶:۳۰ عصر"}
               </p>
             </div>
-            {/* <div className="flex flex-col items-center  gap-y-[5px]">
-              <LocationIcon />
-              <p
-                className={`
+            {i18n.language === "fa" && (
+              <>
+                <div className="flex flex-col items-center gap-y-[5px]">
+                  <LocationIcon />
+                  <p
+                    className={`
                 dark:text-white
               text-[16px] font-bold`}
-              >
-                {t("address")}
-              </p>
-              <p className="text-[12px]">UAE, Dubai, Box No. 58616</p>
-            </div> */}
+                  >
+                    {t("address")}
+                  </p>
+                  <p className="text-[12px]">
+                    تهران، بلوار پژوهش، پارک علم و فناوری دانشگاه تربیت مدرس،
+                    مرکز نوآوری زرین
+                  </p>
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>
@@ -146,49 +171,58 @@ const ContactUs = () => {
           className={`border-l h-[74px] mx-4
             dark:border-[#FFFFFF29] border-[#12121229]`}
         ></div>
-        {/* <div className="flex flex-col items-center  gap-y-[5px]">
-          <LocationIcon />
-          <p
-            className={`
+        {i18n.language === "fa" && (
+          <>
+            <div className="flex flex-col items-center  gap-y-[5px]">
+              <LocationIcon />
+              <p
+                className={`
             dark:text-white
           text-[16px] font-bold`}
-          >
-            {t("address")}
-          </p>
-          <p
-            className={`text-[14px] 
+              >
+                {t("address")}
+              </p>
+              <p
+                className={`text-[14px] 
            dark:text-white
           `}
-          >
-            UAE, Dubai, Box No. 58616
-          </p>
-        </div> */}
-        {/* <div
-          className={`border-l h-[74px] mx-4
+              >
+                تهران، بلوار پژوهش، پارک علم و فناوری دانشگاه تربیت مدرس، مرکز
+                نوآوری زرین
+              </p>
+            </div>
+            <div
+              className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}
-        ></div> */}
-        {/* <div className="flex flex-col gap-y-[5px] items-center">
-          <PhoneIcon />
-          <p
-            className={`
+            ></div>
+          </>
+        )}
+        {i18n.language === "fa" && (
+          <>
+            <div className="flex flex-col gap-y-[5px] items-center">
+              <PhoneIcon />
+              <p
+                className={`
              dark:text-white
            text-[16px] font-bold`}
-          >
-            {t("phone")}
-          </p>
-          <p
-            style={{ direction: "ltr" }}
-            className={`text-[14px] 
+              >
+                {t("phone")}
+              </p>
+              <p
+                style={{ direction: "ltr" }}
+                className={`text-[14px] 
              dark:text-white
             `}
-          >
-            +989121212121
-          </p>
-        </div> */}
-        {/* <div
-          className={`border-l h-[74px] mx-4
+              >
+                021-45628182
+              </p>
+            </div>
+            <div
+              className={`border-l h-[74px] mx-4
            dark:border-[#FFFFFF29] border-[#12121229]`}
-        ></div> */}
+            ></div>
+          </>
+        )}
         <div className="flex flex-col items-center gap-y-[5px]">
           <ClockIcon />
           <p
@@ -203,7 +237,9 @@ const ContactUs = () => {
               dark:text-white
              `}
           >
-            {t("openTime")}
+            {i18n.language !== "fa"
+              ? t("openTime")
+              : "شنبه تا چهارشنبه :‌۹ صبح تا ۱۶:۳۰ عصر"}
           </p>
         </div>
       </div>
