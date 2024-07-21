@@ -12,15 +12,8 @@ const sizeClasses: Record<Size, string> = {
   xl: "py-6 px-6",
 };
 
-// const shapeClasses: Record<ButtonShape, string> = {
-//   wide: "btn-wide",
-//   full: "btn-block",
-//   square: "btn-square",
-//   default: "",
-// };
-
 export const Button: React.FC<ButtonProps> = ({
-  variant,
+  variant = "contained",
   size = "md",
   isDisabled = false,
   isOutline = false,
@@ -33,15 +26,19 @@ export const Button: React.FC<ButtonProps> = ({
   ...rest
 }: ButtonProps) => {
   const { t } = useTranslation();
+  const baseStyles = `${sizeClasses[size]} rounded text-base font-normal`;
+  const containedStyles =
+    "dark:bg-[#9e6dff] bg-primary text-white hover:bg-[#552CA6] dark:hover:bg-[#864AFF]";
+  const outlinedStyles =
+    "bg-transparent border border-[#864AFF] dark:border-[#9E6DFF] text-[#864AFF] dark:text-[#9E6DFF] hover:bg-[#864AFF] hover:text-white hover:dark:text-white dark:hover:bg-[#864AFF]";
+
   return (
     <button
       type={type}
       disabled={isDisabled}
-      className={`${sizeClasses[size]} ${className}
-       dark:bg-[#9e6dff] bg-primary
-       text-white hover:bg-[#552CA6] dark:hover:bg-[#864AFF] 
-       rounded text-base font-normal
-      `}
+      className={`${baseStyles} ${
+        variant === "contained" ? containedStyles : outlinedStyles
+      } ${className}`}
       {...rest}
     >
       {isLoading ? t("sending") : children}
