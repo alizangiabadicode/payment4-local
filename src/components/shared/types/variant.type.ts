@@ -7,4 +7,6 @@ export type Variant =
     | "info"
     | "success"
     | "warning"
-    | "error";
+    | "error"
+    | "contained"
+    | "outlined";

@@ -36,10 +36,26 @@ const Header = () => {
             </div>
             <LanguageSelector />
           </div>
-          <div className="hidden md:block">
+          <div className="hidden md:flex gap-x-[10px]">
+            <Button
+              variant="outlined"
+              style={{ paddingTop: "6px", paddingBottom: "6px" }}
+              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]"
+            >
+              <Link
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
+                  i18n.language
+                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                  utm_medium ? `&utm_campaign=${utm_medium}` : ""
+                }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
+                target="_blank"
+              >
+                {t("logIn")}
+              </Link>
+            </Button>
             <Button
               style={{ paddingTop: "6px", paddingBottom: "6px" }}
-              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap"
+              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]"
             >
               <Link
                 href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${

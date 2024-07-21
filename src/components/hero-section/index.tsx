@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center gap-y-5">
           <div className="flex flex-col items-center relative">
             <p
-              className={`text-[20px] sm:text-[40px] font-bold dark:text-white 
+              className={`text-[20px] sm:text-[40px] font-bold dark:text-white text-center
                text-black`}
             >
               {t("welcomeToPayment4")}

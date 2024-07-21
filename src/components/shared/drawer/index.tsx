@@ -77,9 +77,27 @@ export const Drawer: FC<DrawerProps> = ({
           </div>
           <div className="py-4 px-4 flex flex-col gap-y-4">{children}</div>
         </div>
-        <div className="px-4 mb-6">
+        <div className="px-4 mb-6 flex flex-col gap-y-[10px]">
+          <Button
+            variant="outlined"
+            style={{ paddingTop: "6px", paddingBottom: "6px" }}
+            className="w-full h-[44px] flex justify-center items-center"
+          >
+            <Link
+              className="w-full"
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
+                i18n.language
+              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+                utm_medium ? `&utm_campaign=${utm_medium}` : ""
+              }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
+              target="_blank"
+            >
+              {t("logIn")}
+            </Link>
+          </Button>
           <Button className="w-full h-[44px] flex justify-center items-center">
             <Link
+              className="w-full"
               target="_blank"
               href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
                 i18n.language
