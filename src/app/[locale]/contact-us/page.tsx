@@ -57,6 +57,13 @@ const ContactUs = () => {
                   >
                     021-45628182
                   </p>
+                  <p
+                    className={`text-[12px] 
+                  dark:text-white
+                 `}
+                  >
+                    09912142499
+                  </p>
                 </div>
               </>
             )}
@@ -215,6 +222,14 @@ const ContactUs = () => {
             `}
               >
                 021-45628182
+              </p>
+              <p
+                style={{ direction: "ltr" }}
+                className={`text-[14px] 
+             dark:text-white
+            `}
+              >
+                09912142499
               </p>
             </div>
             <div
