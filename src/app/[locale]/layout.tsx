@@ -11,7 +11,7 @@ import { GoogleTagManager } from "@next/third-parties/google";
 import { HotjarSnippet } from "@/components/tracking/hotjar.snippet";
 
 export const metadata: Metadata = {
-  title: "Payment4 | Pay By Crypto",
+  title: "Payment4 | Pay By Crypto", 
   description: "Pay By Crypto",
   icons: {
     icon: "/images/favicon.ico",
