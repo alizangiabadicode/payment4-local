@@ -15,3 +15,4 @@ export * from "./components/plugins/woocommerce.section";
 export * from "./components/plugins/whmcs.section";
 export * from "./components/developers.section";
 export * from "./components/contact.us.section";
+export * from "./components/plugins/open.cart.section"
