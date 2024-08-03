@@ -12,6 +12,7 @@ import {
   Introduction,
   LaravelSDKSection,
   NodeSDKSection,
+  OpenCartSection,
   PluginsSection,
   SDKSection,
   SecuritySection,
@@ -21,7 +22,6 @@ import {
   WHMCSSection,
   WoocommerceSection,
 } from "@/components/docs";
-
 
 interface SubItem {
   id: string;
@@ -116,6 +116,11 @@ const DocumentPageLayout: React.FC = () => {
           id: "WHMCS",
           title: "WHMCS",
           content: <WHMCSSection />,
+        },
+        {
+          id: "OpenCart",
+          title: "Open cart",
+          content: <OpenCartSection />,
         },
       ],
     },
