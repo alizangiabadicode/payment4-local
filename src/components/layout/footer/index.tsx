@@ -1,14 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Logo from "../../../icons/svg/logo";
-import {
-  LinkedinDarkIcon,
-  LinkedinIcon,
-  XDarkLogo,
-  XLogo,
-  YoutubeDarkIcon,
-  YoutubeIcon,
-} from "../../../icons/svg";
+import { LinkedinDarkIcon, LinkedinIcon, XDarkLogo, XLogo, YoutubeDarkIcon, YoutubeIcon } from "../../../icons/svg";
 import { useTranslation } from "react-i18next";
 import { useTheme } from "next-themes";
 import Link from "next/link";
@@ -20,8 +13,7 @@ const Footer = () => {
   const { utm_campaign, utm_medium, utm_source } = queryParams;
   const { t, i18n } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
-  const direction =
-    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
+  const direction = i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   useEffect(() => setMounted(true), []);
   return (
     <footer
@@ -49,12 +41,7 @@ const Footer = () => {
           <div className="hidden sm:flex gap-4">
             <div
               onClick={() => {
-                window.open(
-                  i18n.language === "fa"
-                    ? "https://x.com/payment4_fa?s=11"
-                    : "https://x.com/payment4_com",
-                  "_blank"
-                );
+                window.open(i18n.language === "fa" ? "https://x.com/payment4_fa?s=11" : "https://x.com/payment4_com", "_blank");
               }}
               className="cursor-pointer"
             >
@@ -76,12 +63,7 @@ const Footer = () => {
             </div>
             <div
               onClick={() => {
-                window.open(
-                  i18n.language === "fa"
-                    ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
-                    : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA",
-                  "_blank"
-                );
+                window.open(i18n.language === "fa" ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ" : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA", "_blank");
               }}
               className="cursor-pointer"
             >
@@ -103,10 +85,7 @@ const Footer = () => {
             </div>
             <div
               onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/company/payment4/",
-                  "_blank"
-                );
+                window.open("https://www.linkedin.com/company/payment4/", "_blank");
               }}
               className="cursor-pointer"
             >
@@ -210,11 +189,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={
-                i18n.language === "fa"
-                  ? " https://x.com/payment4_fa?s=11"
-                  : "https://x.com/payment4_com"
-              }
+              href={i18n.language === "fa" ? " https://x.com/payment4_fa?s=11" : "https://x.com/payment4_com"}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -223,11 +198,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={
-                i18n.language === "fa"
-                  ? "https://www.instagram.com/payment4_fa"
-                  : "https://www.instagram.com/payment4_com"
-              }
+              href={i18n.language === "fa" ? "https://www.instagram.com/payment4_fa" : "https://www.instagram.com/payment4_com"}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -236,11 +207,7 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={
-                i18n.language === "fa"
-                  ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
-                  : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA"
-              }
+              href={i18n.language === "fa" ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ" : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA"}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -252,12 +219,7 @@ const Footer = () => {
         <div className="sm:hidden flex flex-col gap-4 items-center">
           <div
             onClick={() => {
-              window.open(
-                i18n.language === "fa"
-                  ? "https://x.com/payment4_fa?s=11"
-                  : "http://x.com/payment4_com",
-                "_blank"
-              );
+              window.open(i18n.language === "fa" ? "https://x.com/payment4_fa?s=11" : "http://x.com/payment4_com", "_blank");
             }}
             className="cursor-pointer"
           >
@@ -279,12 +241,7 @@ const Footer = () => {
           </div>
           <div
             onClick={() => {
-              window.open(
-                i18n.language === "fa"
-                  ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ"
-                  : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA",
-                "_blank"
-              );
+              window.open(i18n.language === "fa" ? "https://www.youtube.com/channel/UCDPGsr2TpzDDZwmjsAfPzGQ" : "https://www.youtube.com/channel/UCppBDjYXa0_KwcGmS0xBNqA", "_blank");
             }}
             className="cursor-pointer"
           >
@@ -306,10 +263,7 @@ const Footer = () => {
           </div>
           <div
             onClick={() => {
-              window.open(
-                "https://www.linkedin.com/company/payment4/",
-                "_blank"
-              );
+              window.open("https://www.linkedin.com/company/payment4/", "_blank");
             }}
             className="cursor-pointer"
           >
@@ -390,14 +344,14 @@ const Footer = () => {
             >
               {t("contact us")}
             </Link>
-            {/* <Link
+            <Link
               href="/blog"
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
             >
               {t("blog")}
-            </Link> */}
+            </Link>
           </div>
         </div>
         <div className="flex flex-col gap-3 items-center sm:items-start">
@@ -407,11 +361,9 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+                utm_source ? `&utm_source=${utm_source}` : ""
+              }`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -420,11 +372,9 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+                utm_source ? `&utm_source=${utm_source}` : ""
+              }`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
