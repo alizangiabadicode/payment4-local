@@ -16,8 +16,7 @@ const Header = () => {
   const currentRoute = useCurrentRoute();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  const direction =
-    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
+  const direction = i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   const toggleDrawer = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
@@ -25,9 +24,7 @@ const Header = () => {
   const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
     <header style={{ direction: direction }}>
-      <div
-        className={`px-5 md:px-0 lg:px-5 sm:px-50 flex items-center justify-between my-4 `}
-      >
+      <div className={`px-5 md:px-0 lg:px-5 sm:px-50 flex items-center justify-between my-4 `}>
         <NavigationBar />
         <div className="flex items-center lg:gap-x-4 gap-x-4 md:gap-x-2">
           <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2">
@@ -37,32 +34,21 @@ const Header = () => {
             <LanguageSelector />
           </div>
           <div className="hidden md:flex gap-x-[10px]">
-            <Button
-              variant="outlined"
-              style={{ paddingTop: "6px", paddingBottom: "6px" }}
-              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]"
-            >
+            <Button variant="outlined" style={{ paddingTop: "6px", paddingBottom: "6px" }} className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]">
               <Link
-                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
-                  i18n.language
-                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                  utm_medium ? `&utm_campaign=${utm_medium}` : ""
-                }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${utm_medium ? `&utm_campaign=${utm_medium}` : ""}${
+                  utm_source ? `&utm_campaign=${utm_source}` : ""
+                }`}
                 target="_blank"
               >
                 {t("logIn")}
               </Link>
             </Button>
-            <Button
-              style={{ paddingTop: "6px", paddingBottom: "6px" }}
-              className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]"
-            >
+            <Button style={{ paddingTop: "6px", paddingBottom: "6px" }} className="px-1 sm:px-6 text-sm sm:text-base text-nowrap min-w-[100px]">
               <Link
-                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                  i18n.language
-                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                  utm_medium ? `&utm_campaign=${utm_medium}` : ""
-                }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
+                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${utm_medium ? `&utm_campaign=${utm_medium}` : ""}${
+                  utm_source ? `&utm_campaign=${utm_source}` : ""
+                }`}
                 target="_blank"
               >
                 {t("signup")}
@@ -73,6 +59,22 @@ const Header = () => {
             <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
               {navbarItems.map((item) => {
                 const isActive = currentRoute === item.path;
+                if (item.path === "/blog") {
+                  return (
+                    <Link
+                      key={item.title}
+                      style={{ fontSize: "15px" }}
+                      className={`${isActive && "font-bold"}
+                  dark:text-white
+                }`}
+                      target="_blank"
+                      href={`https://${i18n.language === "fa" ? "fa." : ""}${process.env.NEXT_PUBLIC_BLOG_URL}`}
+                      onClick={() => setIsDrawerOpen(false)}
+                    >
+                      {t(`${item.title.toLowerCase()}`)}
+                    </Link>
+                  );
+                }
                 return (
                   <Link
                     key={item.title}
@@ -95,10 +97,7 @@ const Header = () => {
                 );
               })}
             </Drawer>
-            <div
-              onClick={() => setIsDrawerOpen(true)}
-              className="md:hidden cursor-pointer"
-            >
+            <div onClick={() => setIsDrawerOpen(true)} className="md:hidden cursor-pointer">
               <MenuItemIcon className="dark:hidden block" color={"#0B0B0E"} />
               <MenuItemIcon className="hidden dark:block" color={"white"} />
             </div>
