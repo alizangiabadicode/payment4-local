@@ -8,7 +8,7 @@ interface FaqItemProps {
 }
 
 const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isOpen, setIsOpen] = useState<boolean>(true);
 
   const toggleCollapse = () => {
     setIsOpen(!isOpen);
@@ -21,20 +21,9 @@ const FaqItem: React.FC<FaqItemProps> = ({ question, answer }) => {
           dark:border-[#FFFFFF14] 
         border-[#1212120A] rounded-md mb-4 `}
     >
-      <div
-        className="flex items-center justify-between px-4 py-2 bg-gray-200 cursor-pointer"
-        onClick={toggleCollapse}
-      >
-        <p className={`text-[16px] dark:text-white text-[#121212]`}>
-          {question}
-        </p>
-        <div>
-          {isOpen ? (
-            <CloseCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
-          ) : (
-            <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />
-          )}
-        </div>
+      <div className="flex items-center justify-between px-4 py-2 bg-gray-200 cursor-pointer" onClick={toggleCollapse}>
+        <p className={`text-[16px] dark:text-white text-[#121212]`}>{question}</p>
+        <div>{isOpen ? <CloseCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" /> : <OpenCollapse className="dark:fill-[#FFFFFF] fill-[#121212]" />}</div>
       </div>
       {isOpen && (
         <div>

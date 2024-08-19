@@ -9,7 +9,7 @@ import useQueryParams from "@/hooks/useQueryParams";
 
 export const NavigationBar = () => {
   const currentRoute = useCurrentRoute();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
   return (
@@ -24,6 +24,19 @@ export const NavigationBar = () => {
       <div className="hidden md:flex md:gap-x-5 lg:gap-x-10">
         {navbarItems.map((item) => {
           const isActive = currentRoute === item.path;
+          if (item.path === "/blog") {
+            return (
+              <Link
+                key={item.title}
+                target="_blank"
+                href={`https://${i18n.language === "fa" ? "fa." : ""}${process.env.NEXT_PUBLIC_BLOG_URL}`}
+                className={`${isActive && "font-bold"}
+            dark:text-white text-nowrap text-[13px] md:text-[15px]`}
+              >
+                {t(`${item.title.toLowerCase()}`)}
+              </Link>
+            );
+          }
           return (
             <Link
               key={item.title}

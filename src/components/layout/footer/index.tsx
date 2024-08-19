@@ -345,7 +345,8 @@ const Footer = () => {
               {t("contact us")}
             </Link>
             <Link
-              href="/blog"
+              target="_blank"
+              href={`https://${i18n.language === "fa" ? "fa." : ""}${process.env.NEXT_PUBLIC_BLOG_URL}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
