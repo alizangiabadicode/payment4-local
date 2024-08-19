@@ -9,13 +9,14 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: 49.13.123.36
-          username: root
+          host: 168.119.237.221
+          username: payment4
           port: 22
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /root/landing && git reset --hard 
+            cd ~/landing && git reset --hard 
             git pull origin main
             yarn install
             yarn build
-            docker compose up -d --build
+            docker compose build
+            docker compose restart landing
