@@ -24,12 +24,12 @@
       "a": "Haz clic en el enlace 'Olvidé mi contraseña' en la página de inicio de sesión. Ingresa tu correo electrónico registrado y sigue las instrucciones para restablecer tu contraseña."
     },
     {
-      "q": "¿Qué tan segura es mi cuenta?",
-      "a": "Empleamos medidas de seguridad avanzadas como autenticación de dos factores (2FA), encriptación y almacenamiento seguro para proteger tu cuenta. Recomendamos habilitar 2FA y usar contraseñas fuertes y únicas."
-    },
-    {
       "q": "¿Qué es la autenticación de dos factores (2FA) y cómo la habilito?",
       "a": "La autenticación de dos factores (2FA) agrega una capa adicional de seguridad al requerir una segunda forma de verificación, como un código enviado a tu dispositivo móvil, además de tu contraseña. Puedes habilitar 2FA en la sección 'Configuración de seguridad' de tu cuenta."
+    },
+    {
+      "q": "¿Qué tan segura es mi cuenta?",
+      "a": "Empleamos medidas de seguridad avanzadas como autenticación de dos factores (2FA), encriptación y almacenamiento seguro para proteger tu cuenta. Recomendamos habilitar 2FA y usar contraseñas fuertes y únicas."
     }
   ],
   "transactionsCommission": [
