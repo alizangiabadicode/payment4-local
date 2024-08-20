@@ -80,6 +80,10 @@
     {
       "q": "Where can I get my API key?",
       "a": "By creating each gateway, you will have the right to use the specific API key of that gateway. This API key is available in the settings section of each gateway."
+    },
+    {
+      "q": "What should I do if my API key has been leaked?",
+      "a": "generate a new API key through your account settings.Replace the old API key with the new one in all your applications, scripts, or services that rely on the API."
     }
   ]
 }

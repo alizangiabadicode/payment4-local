@@ -80,6 +80,11 @@
     {
       "q": "API anahtarımı nereden alabilirim?",
       "a": "Her ağ geçidini oluşturduğunuzda, o ağ geçidinin özel API anahtarını kullanma hakkına sahip olursunuz. Bu API anahtarı, her ağ geçidinin ayarlar bölümünde mevcuttur."
+    },
+    {
+      "q": "API anahtarım ifşa olursa ne yapmalıyım?",
+      "a": "Hesap ayarları veya API yönetim bölümünden yeni bir API anahtarı oluşturun. Eski API anahtarını API'ye bağımlı olan tüm uygulamalarda, betiklerde veya hizmetlerde yeni anahtar ile değiştirin."
     }
+    
   ]
 }
