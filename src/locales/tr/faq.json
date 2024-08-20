@@ -24,12 +24,12 @@
       "a": "Giriş sayfasındaki “Şifremi Unuttum” bağlantısına tıklayın. Kayıtlı e-posta adresinizi girin ve şifrenizi sıfırlamak için talimatları izleyin."
     },
     {
-      "q": "Hesabım ne kadar güvenli?",
-      "a": "Hesabınızı korumak için iki faktörlü kimlik doğrulama (2FA), şifreleme ve güvenli depolama gibi gelişmiş güvenlik önlemleri kullanıyoruz. 2FA’yı etkinleştirmenizi ve güçlü, benzersiz şifreler kullanmanızı öneririz."
-    },
-    {
       "q": "İki faktörlü kimlik doğrulama (2FA) nedir ve nasıl etkinleştiririm?",
       "a": "2FA, şifrenize ek olarak mobil cihazınıza gönderilen bir kod gibi ikinci bir doğrulama şekli gerektirerek ek bir güvenlik katmanı ekler. Hesabınızın “Güvenlik Ayarları” bölümünden 2FA’yı etkinleştirebilirsiniz."
+    },
+    {
+      "q": "Hesabım ne kadar güvenli?",
+      "a": "Hesabınızı korumak için iki faktörlü kimlik doğrulama (2FA), şifreleme ve güvenli depolama gibi gelişmiş güvenlik önlemleri kullanıyoruz. 2FA’yı etkinleştirmenizi ve güçlü, benzersiz şifreler kullanmanızı öneririz."
     }
   ],
   "transactionsCommission": [

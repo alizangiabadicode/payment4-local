@@ -24,12 +24,12 @@
       "a": "Cliquez sur le lien « Mot de passe oublié » sur la page de connexion. Entrez votre adresse e-mail enregistrée et suivez les instructions pour réinitialiser votre mot de passe."
     },
     {
-      "q": "Mon compte est-il sécurisé?",
-      "a": "Nous employons des mesures de sécurité avancées telles que l'authentification à deux facteurs (2FA), le cryptage et le stockage sécurisé pour protéger votre compte. Nous recommandons d'activer la 2FA et d'utiliser des mots de passe forts et uniques."
-    },
-    {
       "q": "Qu'est-ce que l'authentification à deux facteurs (2FA) et comment l'activer?",
       "a": "La 2FA ajoute une couche supplémentaire de sécurité en exigeant une deuxième forme de vérification, telle qu'un code envoyé à votre appareil mobile, en plus de votre mot de passe. Vous pouvez activer la 2FA dans les « Paramètres de sécurité » de votre compte."
+    },
+    {
+      "q": "Mon compte est-il sécurisé?",
+      "a": "Nous employons des mesures de sécurité avancées telles que l'authentification à deux facteurs (2FA), le cryptage et le stockage sécurisé pour protéger votre compte. Nous recommandons d'activer la 2FA et d'utiliser des mots de passe forts et uniques."
     }
   ],
   "transactionsCommission": [
