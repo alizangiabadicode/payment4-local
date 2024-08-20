@@ -1,34 +1,85 @@
 {
-  "q1": {
-    "q": "What is a network transaction fee?",
-    "a": "In different blockchain networks, to transfer the balance from the source wallet to the destination wallet, you must pay a certain amount as a network transaction fee for the balance transfer to take place. This fee is calculated in the base currency unit of each network and varies in each network."
-  },
-  "q2": {
-    "q": "What is a transaction commission and how is it calculated?",
-    "a": "For each received transaction in Payment4, a small amount (about 1 percent) of the total transaction amount is considered as the Payment4 service fee, which is capped at 1 dollar. For example, a successful $50 payment incurs a 50 cent fee, a $100 transaction incurs a 1 dollar fee, and transactions over $100 (for example, a $200 transaction) will also have a 1 dollar fee."
-  },
-  "q3": {
-    "q": "How are the payer of the network transaction fee and the Payment4 fee determined?",
-    "a": "Each merchant can specify in the settings section of each gateway whether the payer of the network transaction fee and the Payment4 fee should be the merchant (themselves) or the paying user (the bill paying user). In the first case, after each payment, the above costs are considered and deducted from the total amount during the final settlement. But in the second case, the mentioned amounts are added to the final invoice, and the merchant will ultimately receive the full amount of the paid invoice without deduction in the final settlement. It is worth mentioning that it is possible to separate these two fees, for example, the user pays the network fee and the merchant pays the Payment4 fee."
-  },
-  "q4": {
-    "q": "How is the settlement done?",
-    "a": "After receiving multiple payments from your users, you can see the total balance based on the cryptocurrency and the network in which the payment was made in the balance section. Each new payment increases this balance. In the settlement section, only the total transactions that have been paid more than 24 hours ago are visible. You can request your settlement at any hour of the day, and it will be settled instantly (depending on network traffic). It is worth noting that only balances that are eligible for settlement can be settled to the wallet address of the same network."
-  },
-  "q5": {
-    "q": "Where can I enter my settlement wallet address?",
-    "a": "In the address book section of each gateway, you can proceed to register the settlement recipient wallet address. Please note that the balance eligible for settlement of each cryptocurrency can only be transferred to a wallet of the same cryptocurrency, and cryptocurrencies cannot be converted to others."
-  },
-  "q6": {
-    "q": "How can I equip my e-commerce website with the gateway?",
-    "a": "To read the documentation and how to connect the gateway to your e-commerce site, you can visit the official site https://payment4.com and proceed to equip your e-commerce site in the documentation section."
-  },
-  "q7": {
-    "q": "How can I activate the gateway for a WordPress site?",
-    "a": "For WordPress (WooCommerce) sites, you can visit the documentation section of the official site https://payment4.com and download the WordPress (WooCommerce) plugin from the plugins section."
-  },
-  "q8": {
-    "q": "Where can I get my API key?",
-    "a": "By creating each gateway, you will have the right to use the specific API key of that gateway. This API key is available in the settings section of each gateway."
-  }
+  "generalInformationTitle": "General Information",
+  "accountAndSecurityTitle": "Account and Security",
+  "transactionsCommissionTitle": "Transactions/commission",
+  "settlementTitle": "Settlement",
+  "developersTitle": "Developers",
+  "generalInformation": [
+    {
+      "q": "What is digital currency?",
+      "a": "Digital currency is a form of money that exists only in digital form and is not tangible like physical banknotes and coins. Examples include cryptocurrencies like Bitcoin, Ethereum, and digital versions of traditional currencies."
+    },
+    {
+      "q": "How does digital currency work?",
+      "a": "Digital currency uses blockchain technology to record transactions across a distributed network. Each transaction is secured and verified by network nodes, ensuring transparency and security."
+    },
+    {
+      "q": "How do I buy digital currency?",
+      "a": "You can buy digital currency by linking your bank account or credit card to your account, selecting the currency you wish to purchase, and confirming the transaction."
+    }
+  ],
+  "accountAndSecurity": [
+    {
+      "q": "What should I do if I forget my password?",
+      "a": "Click on the “Forgot Password” link on the login page. Enter your registered email, and follow the instructions to reset your password."
+    },
+    {
+      "q": "How secure is my account?",
+      "a": "We employ advanced security measures such as two-factor authentication (2FA), encryption, and secure storage to protect your account. We recommend enabling 2FA and using strong, unique passwords."
+    },
+    {
+      "q": "What is two-factor authentication (2FA) and how do I enable it?",
+      "a": "2FA adds an extra layer of security by requiring a second form of verification, such as a code sent to your mobile device, in addition to your password. You can enable 2FA in the “Security Settings” of your account."
+    }
+  ],
+  "transactionsCommission": [
+    {
+      "q": "What is a transaction commission and how is it calculated?",
+      "a": "For every transaction you receive through Payment4, a small fee (1 percent) of the total transaction amount is charged as the Payment4 fee, with a cap of $10. The maximum fee per transaction is set at $10. For example, for payments under $100, such as a $50 payment, the fee would be $0.50. For transactions over $100, such as a $500 transaction, the fee would be $10. Transactions exceeding $500, like a $2000 transaction, will also incur a fee of $10."
+    },
+    {
+      "q": "What is a network transaction fee?",
+      "a": "In different blockchain networks, to transfer the balance from the   source wallet to the destination wallet, you must pay a certain amount as a network transaction fee for the balance transfer to take place. This fee is calculated in the base currency unit of each network and varies in each network."
+    },
+    {
+      "q": "How are the payer of the network transaction fee and the Payment4 fee determined?",
+      "a": "Each merchant can specify in the settings section of each gateway whether the payer of the network transaction fee and the Payment4 fee should be the merchant (themselves) or the paying user (the bill paying user). In the first case, after each payment, the above costs are considered and deducted from the total amount during the final settlement. But in the second case, the mentioned amounts are added to the final invoice, and the merchant will ultimately receive the full amount of the paid invoice without deduction in the final settlement. It is worth mentioning that it is possible to separate these two fees, for example, the user pays the network fee and the merchant pays the Payment4 fee."
+    },
+    {
+      "q": "How long does it take for transactions to process?",
+      "a": "Transaction times vary depending on network congestion and the type of transaction. Generally, most transactions are processed within a few minutes to an hour."
+    },
+    {
+      "q": "What should you do if a transaction is shown as expired but was successful from the user's side and deducted from the user's account?",
+      "a": "If your transaction status is shown as expired but you believe it was successfully processed, you can request a review to ensure the transaction is properly accounted for. To do this, go to the details section of the relevant transaction and click on 'Request Review'. Enter the cryptocurrency used for the payment and the transaction hash, then confirm. Your request will be reviewed promptly, and we will ensure that your transaction is correctly recorded."
+    }
+  ],
+  "settlement": [
+    {
+      "q": "How is the settlement done?",
+      "a": "After receiving multiple payments from your users, you can see the total balance based on the cryptocurrency and the network in which the payment was made in the balance section. Each new payment increases this balance. In the settlement section, only the total transactions that have been paid more than 24 hours ago are visible. You can request your settlement at any hour of the day, and it will be settled instantly (depending on network traffic). It is worth noting that only balances that are eligible for settlement can be settled to the wallet address of the same network."
+    },
+    {
+      "q": "Where can I enter my settlement wallet address?",
+      "a": "In the wallet section of each gateway, you can proceed to register the settlement recipient wallet address. Please note that the balance eligible for settlement of each cryptocurrency can only be transferred to a wallet of the same cryptocurrency, and cryptocurrencies cannot be converted to others."
+    },
+    {
+      "q": "What is the minimum amount for settlement, and when can I withdraw payments?",
+      "a": "Any payment you receive will be subject to a 24-hour processing period before it becomes withdrawable. During this time, you can view the entire amount in your balance page. Please note that the minimum amount you can withdraw from your account is $10. This ensures that smaller transactions accumulate to a practical amount before withdrawal, maintaining efficient processing and management of your funds."
+    }
+  ],
+  "developers": [
+    {
+      "q": "How can I equip my e-commerce website with the gateway?",
+      "a": "To read the documentation and how to connect the gateway to your e-commerce site, you can visit the official site https://payment4.com and proceed to equip your e-commerce site in the documentation section."
+    },
+    {
+      "q": "How can I activate the gateway for a WordPress site?",
+      "a": "For WordPress (WooCommerce) sites, you can visit the documentation section of the official site https://payment4.com and download the WordPress (WooCommerce) plugin from the plugins section."
+    },
+    {
+      "q": "Where can I get my API key?",
+      "a": "By creating each gateway, you will have the right to use the specific API key of that gateway. This API key is available in the settings section of each gateway."
+    }
+  ]
 }

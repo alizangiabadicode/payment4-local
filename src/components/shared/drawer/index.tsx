@@ -20,6 +20,7 @@ export const Drawer: FC<DrawerProps> = ({
   className,
 }) => {
   const { t, i18n } = useTranslation();
+  const direction = i18n.dir();
   const drawerRef = useRef<HTMLDivElement>(null);
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
@@ -46,6 +47,22 @@ export const Drawer: FC<DrawerProps> = ({
       document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen, onClose]);
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+      i18n.language
+    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+      utm_medium ? `&utm_campaign=${utm_medium}` : ""
+    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    window.open(redirectUrl, "_blank");
+  };
+  const handleLoginClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
+      i18n.language
+    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+      utm_medium ? `&utm_campaign=${utm_medium}` : ""
+    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    window.open(redirectUrl, "_blank");
+  };
 
   return (
     <>
@@ -57,10 +74,11 @@ export const Drawer: FC<DrawerProps> = ({
       )}
       <div
         ref={drawerRef}
-        className={`fixed flex flex-col justify-between inset-y-0 left-0 w-64 bg-gray-200 z-50 transform transition duration-300
-         dark:bg-black bg-white ${
-           isOpen ? "translate-x-0" : "-translate-x-full"
-         } ${className} md:hidden`}
+        className={`fixed flex flex-col justify-between inset-y-0 ${
+          direction === 'rtl' ? 'right-0' : 'left-0'
+        } w-64 bg-gray-200 z-50 transform transition duration-300 dark:bg-black bg-white ${
+          isOpen ? "translate-x-0" : direction === 'rtl' ? "translate-x-full" : "-translate-x-full"
+        } ${className} lg:hidden`}
       >
         <div className="flex flex-col">
           <div className="p-4 flex justify-between">
@@ -79,34 +97,18 @@ export const Drawer: FC<DrawerProps> = ({
         </div>
         <div className="px-4 mb-6 flex flex-col gap-y-[10px]">
           <Button
+            onClick={handleLoginClick}
             variant="outlined"
             style={{ paddingTop: "6px", paddingBottom: "6px" }}
             className="w-full h-[44px] flex justify-center items-center"
           >
-            <Link
-              className="w-full"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_campaign=${utm_medium}` : ""
-              }${utm_source ? `&utm_campaign=${utm_source}` : ""}`}
-              target="_blank"
-            >
-              {t("logIn")}
-            </Link>
+            <p className="w-full">{t("logIn")}</p>
           </Button>
-          <Button className="w-full h-[44px] flex justify-center items-center">
-            <Link
-              className="w-full"
-              target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
-            >
-              {t("signup")}
-            </Link>
+          <Button
+            onClick={handleSignupClick}
+            className="w-full h-[44px] flex justify-center items-center"
+          >
+            <p className="w-full">{t("signup")}</p>
           </Button>
         </div>
       </div>

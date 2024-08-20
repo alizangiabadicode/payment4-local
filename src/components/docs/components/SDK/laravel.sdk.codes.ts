@@ -1,9 +1,9 @@
-export const configurationCode = `'apiKey' => env('PAYMENT4_API_KEY', '')`
+export const configurationCode = `\n'apiKey' => env('PAYMENT4_API_KEY', '')`
 
-export const callbackUrlCode = `'callbackUrl' => env('PAYMENT4_CALLBACK_URL', '')`
+export const callbackUrlCode = `\n'callbackUrl' => env('PAYMENT4_CALLBACK_URL', '')`
 
 
-export const webhookUrlCode = `'webhookUrl' => env('PAYMENT4_WEBHOOK_URL', '')`
+export const webhookUrlCode = `\n'webhookUrl' => env('PAYMENT4_WEBHOOK_URL', '')`
 
 
 export const instanceCode = `Example1
@@ -117,8 +117,7 @@ $options = [
 $response = $paymentInstance->verifyPayment($paymentUid, $amount, $options);
 `
 
-export const requirementCode = `- php " ^7.2|^8.0 "
-
+export const requirementCode = `\n\n- php " ^7.2|^8.0 "
 - laravel-framework " ^7.0|^8.0|^9.0|^10.0 "
 
 - Register for Free or Login on the https://payment4.com

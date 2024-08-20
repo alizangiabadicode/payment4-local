@@ -31,24 +31,12 @@ export const LaravelSDKSection = () => {
           {t("runTheFollowingCommand")}
         </span>
         <CodeBox
-          code="composer require payment4/cryptogateway"
+          code={`\ncomposer require payment4/cryptogateway`}
           style={{ height: "auto" }}
         />
       </div>
 
       <p className={`text-[17px] font-normal mt-5`}>{t("requirements")}</p>
-      {/* <p
-        className={`text-base font-normal mt-2 ${
-          isDark === "dark"
-            ? "text-[#FFFFFFC7] opacity-[78%]"
-            : "text-[#121212C7] opacity-[78%]"
-        }`}
-      >
-        <CodeBox
-          style={{ height: "14dvh", textAlign: "left" }}
-          code={requirementCode}
-        />
-      </p> */}
       <CodeBox
         style={{ height: "14dvh", textAlign: "left" }}
         code={requirementCode}
@@ -69,7 +57,7 @@ export const LaravelSDKSection = () => {
       </p>
       <CodeBox
         style={{ height: "7dvh" }}
-        code="PAYMENT4_API_KEY = __YOUR_API_KEY"
+        code={`\nPAYMENT4_API_KEY = __YOUR_API_KEY`}
       />
       <p
         className={`text-[15px] font-normal my-[20px] dark:text-[#FFFFFFC7]
