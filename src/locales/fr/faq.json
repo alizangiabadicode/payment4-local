@@ -80,6 +80,11 @@
     {
       "q": "Où puis-je obtenir ma clé API?",
       "a": "En créant chaque passerelle, vous aurez le droit d'utiliser la clé API spécifique à cette passerelle. Cette clé API est disponible dans la section des paramètres de chaque passerelle."
+    },
+    {
+      "q": "Que dois-je faire si ma clé API est compromise?",
+      "a": "Créez une nouvelle clé API via les paramètres de votre compte ou la section de gestion des API. Remplacez l'ancienne clé API par la nouvelle dans toutes les applications, scripts ou services qui dépendent de l'API."
     }
+    
   ]
 }
