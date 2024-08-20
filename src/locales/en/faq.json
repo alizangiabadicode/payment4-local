@@ -24,12 +24,12 @@
       "a": "Click on the “Forgot Password” link on the login page. Enter your registered email, and follow the instructions to reset your password."
     },
     {
-      "q": "How secure is my account?",
-      "a": "We employ advanced security measures such as two-factor authentication (2FA), encryption, and secure storage to protect your account. We recommend enabling 2FA and using strong, unique passwords."
-    },
-    {
       "q": "What is two-factor authentication (2FA) and how do I enable it?",
       "a": "2FA adds an extra layer of security by requiring a second form of verification, such as a code sent to your mobile device, in addition to your password. You can enable 2FA in the “Security Settings” of your account."
+    },
+    {
+      "q": "How secure is my account?",
+      "a": "We employ advanced security measures such as two-factor authentication (2FA), encryption, and secure storage to protect your account. We recommend enabling 2FA and using strong, unique passwords."
     }
   ],
   "transactionsCommission": [
