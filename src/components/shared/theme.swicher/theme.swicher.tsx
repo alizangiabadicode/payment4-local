@@ -25,7 +25,10 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === "dark") {
     return (
-      <div onClick={() => setTheme("light")}>
+      <div
+        className="bg-[#272727] w-[40px] h-[40px] flex justify-center items-center rounded-[4px]"
+        onClick={() => setTheme("light")}
+      >
         <LightModeIcon />
       </div>
     );
@@ -33,7 +36,14 @@ export default function ThemeSwitch() {
 
   if (resolvedTheme === "light") {
     return (
-      <div onClick={() => setTheme("dark")}>
+      <div
+        style={{
+          boxShadow:
+            "0px 4px 4px 0px rgba(199, 211, 214, 0.5), 0px -2px 4px 0px rgba(199, 211, 214, 0.25)",
+        }}
+        className="bg-white w-[40px] h-[40px] flex justify-center items-center rounded-[4px] shadow-[]"
+        onClick={() => setTheme("dark")}
+      >
         <DarkModeIcon />
       </div>
     );

@@ -30,7 +30,7 @@ export const NodeSDKSection = () => {
         {t("nodeSdkStart")}
       </p>
       <div className="command-box mt-2" style={{ textAlign: "left" }}>
-        <CodeBox code="npm install payment4" style={{ height: "auto" }} />
+        <CodeBox code={`\nnpm install payment4`} style={{ height: "auto" }} />
       </div>
 
       <p

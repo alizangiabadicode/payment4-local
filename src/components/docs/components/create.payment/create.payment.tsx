@@ -1,8 +1,7 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import React, { useRef, useState } from "react";
 import ErrorsTable from "../shared/error.table";
-import { errors } from "./errors.array";
 import { useTranslation } from "react-i18next";
 // import Prism from "prismjs";
 // require("prismjs/components/prism-javascript");
@@ -10,7 +9,7 @@ import { Highlight, themes } from "prism-react-renderer";
 // import theme from "prism-react-renderer/themes/dracula";
 
 import "./code.css";
-import { Tabs } from "@/components/shared";
+import { Snackbar, Tabs } from "@/components/shared";
 import ShowCreatePaymentTabs from "../../utils/show.payment.api.tabs";
 import {
   cs,
@@ -25,6 +24,7 @@ import {
   tsCode,
 } from "./create.payment.tabs";
 import { useTheme } from "next-themes";
+import { CreatePaymentErrors } from "./errors.array";
 // require("prismjs/themes/prism-dark.css");
 // require("prismjs/themes/prism.css")
 // const importDarkTheme = () => require("prismjs/themes/prism-dark.css");
@@ -37,6 +37,7 @@ interface CodeRefs {
 }
 
 export const CreatePayment = () => {
+  const errors = CreatePaymentErrors();
   const { resolvedTheme } = useTheme();
   const { t } = useTranslation();
   const tabs = [
@@ -51,6 +52,7 @@ export const CreatePayment = () => {
     { label: "Python", content: <ShowCreatePaymentTabs code={pythonCode} /> },
     { label: "Dart", content: <ShowCreatePaymentTabs code={dartCode} /> },
   ];
+  const [isOpenSnackBar, setIsOpenSnackBar] = useState(false);
   const codeRefs: CodeRefs = {
     paymentCode: useRef<HTMLPreElement | null>(null),
     apiKeyCode: useRef<HTMLPreElement | null>(null),
@@ -60,6 +62,7 @@ export const CreatePayment = () => {
     const codeElement = ref.current;
     if (codeElement) {
       navigator.clipboard.writeText(codeElement.textContent || "");
+      setIsOpenSnackBar(true);
     }
   };
   // useEffect(() => {
@@ -83,6 +86,12 @@ export const CreatePayment = () => {
   // }, [resolvedTheme]);
   return (
     <div className="space-y-5">
+      <Snackbar
+        isOpen={isOpenSnackBar}
+        message={t('text copied to clipboard')}
+        onClose={() => setIsOpenSnackBar(false)}
+        variant="success"
+      />
       <div className="flex flex-col my-5">
         <p
           className={`text-base leading-8 

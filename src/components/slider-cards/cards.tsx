@@ -57,16 +57,6 @@ const SliderCards = () => {
         className="hidden xl:grid md:grid-cols-2 xl:grid-cols-4 md:gap-x-[210px] 
       md:gap-y-[20px] mt-[50px] md:px-[20px] xl:gap-x-[50px]"
       >
-        {/* {cardsArray.map((card) => (
-          <SliderCard
-            desc={card.desc}
-            lightImageUrl={card.lightImageUrl}
-            darkImageUrl={card.darkImageUrl}
-            logo={card.logo}
-            title={card.title}
-            key={card.title}
-          />
-        ))} */}
         <div
           className={`
          dark:bg-[#17171a] 
@@ -247,10 +237,11 @@ const SliderCards = () => {
           }}
           modules={[Pagination]}
           breakpoints={{
-            0: { slidesPerView: 1.5, spaceBetween: 90 },
+            0: { slidesPerView: 1, spaceBetween: 30 },
             420: { slidesPerView: 1.5, spaceBetween: 30 },
-            490: { slidesPerView: 2.1, spaceBetween: 40 },
-            700: { slidesPerView: 2.5, spaceBetween: 10 },
+            490: { slidesPerView: 1.5, spaceBetween: 40 },
+            700: { slidesPerView: 2, spaceBetween: 30 },
+            900: { slidesPerView: 2.5, spaceBetween: 30 },
             1024: { slidesPerView: 3.5, spaceBetween: 10 },
           }}
         >

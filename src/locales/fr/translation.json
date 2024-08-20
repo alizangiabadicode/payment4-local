@@ -261,5 +261,27 @@
   "totalInvoicesCount": "Nombre total de factures",
   "verifyPaymentSamples": "exemples de code de vérification de paiement",
   "createPaymentSamples": "exemples de code de création de paiement",
-  "category": "Catégorie"
+  "category": "Catégorie",
+  "table": {
+    "descriptionColumn": {
+      "1001": "Cette erreur se produit lorsqu'il y a des problèmes de validation avec la demande.",
+      "1002": "Cette erreur indique que la clé API n'a pas été incluse dans la demande.",
+      "1003": "Cette erreur se produit lorsque la clé API fournie n'est pas trouvée ou reconnue par le système.",
+      "1004": "Cette erreur signifie que la passerelle sélectionnée n'est pas approuvée ou autorisée pour la transaction.",
+      "1012": "Cette erreur indique que la monnaie fournie est invalide ou non supportée."
+    },
+    "createPayment": {
+      "descriptionColumn": {
+        "1005": "Cette erreur est déclenchée lorsque les actifs demandés ne sont pas trouvés.",
+        "1011": "Cette erreur se produit lorsque le montant du paiement est inférieur à la limite minimale spécifiée.",
+        "1013": "Cette erreur se produit lorsque la langue spécifiée est invalide ou non supportée."
+      }
+    },
+    "verifyPayment": {
+      "descriptionColumn": {
+        "1006": "Cette erreur est soulevée lorsque le paiement spécifié n'a pas pu être trouvé dans le système. Assurez-vous de fournir les informations de paiement correctes.",
+        "1010": "Cette erreur est soulevée lorsque le montant du paiement fourni dans la demande est invalide ou n'est pas dans la plage acceptée. Assurez-vous que le montant est dans les limites spécifiées."
+      }
+    }
+  }
 }

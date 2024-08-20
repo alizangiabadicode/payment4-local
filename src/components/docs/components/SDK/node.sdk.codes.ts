@@ -1,4 +1,4 @@
-export const configurationCode = `const { Payment4 } = require("payment4")
+export const configurationCode = `\n\nconst { Payment4 } = require("payment4")
 
 // or
 

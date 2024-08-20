@@ -261,5 +261,27 @@
   "totalInvoicesCount": "Toplam fatura sayısı",
   "verifyPaymentSamples": "ödeme doğrulama kod örnekleri",
   "createPaymentSamples": "ödeme oluşturma kod örnekleri",
-  "category": "Kategori"
+  "category": "Kategori",
+  "table": {
+    "descriptionColumn": {
+      "1001": "Bu hata, taleple ilgili doğrulama sorunları olduğunda meydana gelir.",
+      "1002": "Bu hata, API anahtarının talepe dahil edilmediğini belirtir.",
+      "1003": "Bu hata, sağlanan API anahtarının sistem tarafından bulunmadığında veya tanınmadığında meydana gelir.",
+      "1004": "Bu hata, seçilen ağ geçidinin işlem için onaylanmadığını veya yetkilendirilmediğini belirtir.",
+      "1012": "Bu hata, sağlanan para biriminin geçersiz veya desteklenmediğini belirtir."
+    },
+    "createPayment": {
+      "descriptionColumn": {
+        "1005": "Bu hata, istenen varlıklar bulunamadığında tetiklenir.",
+        "1011": "Bu hata, ödeme miktarı belirtilen minimum sınırın altında olduğunda meydana gelir.",
+        "1013": "Bu hata, belirtilen dil geçersiz veya desteklenmediğinde meydana gelir."
+      }
+    },
+    "verifyPayment": {
+      "descriptionColumn": {
+        "1006": "Bu hata, belirtilen ödemenin sistemde bulunamadığında yükseltilir. Doğru ödeme bilgilerini sağladığınızdan emin olun.",
+        "1010": "Bu hata, talepe sağlanan ödeme miktarı geçersiz olduğunda veya kabul edilen aralıkta olmadığında yükseltilir. Miktarın belirtilen sınırlar içinde olduğundan emin olun."
+      }
+    }
+  }
 }

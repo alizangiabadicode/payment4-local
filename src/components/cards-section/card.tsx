@@ -34,25 +34,6 @@ const Card = (props: CardsType) => {
         >
           {props.desc}
         </p>
-        <div className="mb-[10px]">
-          <Button
-            onClick={() => {
-              window.open(
-                `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                  i18n.language
-                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                  utm_medium ? `&utm_medium=${utm_medium}` : ""
-                }${utm_source ? `&utm_source=${utm_source}` : ""}`,
-                "_blank"
-              );
-            }}
-            className="cursor-pointer hidden md:flex px-[10px] 
-            sm:px-10 sm:py-[10px] py-[7px] gap-x-2 mb-5 md:mb-0"
-          >
-            {props.buttonText}
-            {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
-          </Button>
-        </div>
       </div>
       <div className="-order-last md:order-1 sm:w-[384px] md:rtl:pr-[30px]">
         <Image
