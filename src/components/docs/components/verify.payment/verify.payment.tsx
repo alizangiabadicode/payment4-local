@@ -1,10 +1,9 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import ErrorsTable from "../shared/error.table";
-import { errors } from "./errors.array";
 import { useTranslation } from "react-i18next";
 import "./code.css";
-import { Tabs } from "@/components/shared";
+import { Snackbar, Tabs } from "@/components/shared";
 import ShowVerifyPaymentTabs from "../../utils/show.payment.api.tabs";
 import {
   csCode,
@@ -20,6 +19,7 @@ import {
 } from "./verify.payment.tabs";
 import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
+import { VerifyPaymentErrors } from "./errors.array";
 
 interface CodeRefs {
   paymentCode: React.RefObject<HTMLPreElement>;
@@ -42,6 +42,7 @@ export const VerifyPayment = () => {
     { label: "Python", content: <ShowVerifyPaymentTabs code={pythonCode} /> },
     { label: "Dart", content: <ShowVerifyPaymentTabs code={dartCode} /> },
   ];
+  const [isOpenSnackBar, setIsOpenSnackBar] = useState(false);
   const codeRefs: CodeRefs = {
     paymentCode: useRef<HTMLPreElement | null>(null),
     apiKeyCode: useRef<HTMLPreElement | null>(null),
@@ -51,11 +52,19 @@ export const VerifyPayment = () => {
     const codeElement = ref.current;
     if (codeElement) {
       navigator.clipboard.writeText(codeElement.textContent || "");
+      setIsOpenSnackBar(true);
     }
   };
+  const errors = VerifyPaymentErrors();
 
   return (
     <div className="px-4 py-6">
+       <Snackbar
+        isOpen={isOpenSnackBar}
+        message={t('text copied to clipboard')}
+        onClose={() => setIsOpenSnackBar(false)}
+        variant="success"
+      />
       <div className="my-5">
         <p
           className={`text-base leading-8 

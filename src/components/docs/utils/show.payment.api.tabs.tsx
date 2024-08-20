@@ -2,15 +2,20 @@ import React, { useEffect, useRef, useState } from "react";
 import "../components/create.payment/code.css";
 import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
+import { Snackbar } from "@/components/shared";
+import { useTranslation } from "react-i18next";
 
 const ShowPaymentApiTabs = ({ code }: { code: string }) => {
   const [mounted, setMounted] = useState(false);
+  const { t } = useTranslation();
+  const [isOpenSnackBar, setIsOpenSnackBar] = useState(false);
   const { resolvedTheme } = useTheme();
   const codeRefs = useRef<HTMLPreElement | null>(null);
   const handleCopyClick = (ref: React.RefObject<HTMLPreElement>) => {
     const codeElement = ref.current;
     if (codeElement) {
       navigator.clipboard.writeText(codeElement.textContent || "");
+      setIsOpenSnackBar(true);
     }
   };
   useEffect(() => setMounted(true), []);
@@ -19,6 +24,12 @@ const ShowPaymentApiTabs = ({ code }: { code: string }) => {
       className={`pb-4 rounded-lg 
         dark:bg-[#FFFFFF08] bg-[#f6f8fa] relative`}
     >
+      <Snackbar
+        isOpen={isOpenSnackBar}
+        message={t('text copied to clipboard')}
+        onClose={() => setIsOpenSnackBar(false)}
+        variant="success"
+      />
       <Highlight
         theme={
           resolvedTheme === "dark" && mounted ? themes.oneDark : themes.oneLight

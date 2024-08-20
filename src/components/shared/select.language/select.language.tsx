@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { ReactNode, useEffect, useRef, useState } from "react";
 import { supportedLanguages } from "./supported.language";
 import { useTranslation } from "react-i18next";
 import LanguageLightIcon from "../../../icons/svg/language-light-icon";
@@ -24,22 +24,27 @@ const LanguageSelector: React.FC = () => {
   const router = useRouter();
   const currentPathname = usePathname();
 
-  const handleLanguageChange = (lang: string) => {
-    // set cookie for next-i18n-router
+  const handleLanguageChange = (lang: {
+    value: string;
+    label: string;
+    icon: ReactNode;
+  }) => {
     const days = 30;
     const date = new Date();
     date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    document.cookie = `NEXT_LOCALE=${lang};expires=${date.toUTCString()};path=/`;
-    // redirect to the new locale path
+    document.cookie = `NEXT_LOCALE=${
+      lang.value
+    };expires=${date.toUTCString()};path=/`;
     if (
       currentLocale === i18nConfig.defaultLocale &&
       !i18nConfig.prefixDefault
     ) {
-      router.push("/" + lang + currentPathname);
+      router.push("/" + lang.value + currentPathname);
     } else {
-      router.push(currentPathname.replace(`/${currentLocale}`, `/${lang}`));
+      router.push(
+        currentPathname.replace(`/${currentLocale}`, `/${lang.value}`)
+      );
     }
-
     router.refresh();
     setIsOpen(false);
   };
@@ -60,7 +65,9 @@ const LanguageSelector: React.FC = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, []);
-
+  const selectedLanguage = supportedLanguages.find(
+    (language) => i18n.language === language.value
+  );
   useEffect(() => setMounted(true), []);
   if (!mounted)
     return (
@@ -83,7 +90,21 @@ const LanguageSelector: React.FC = () => {
       md:ltr:ml-2 md:rtl:mr-2"
     >
       <div className="cursor-pointer" onClick={toggleMenu}>
-        {isDark === "dark" ? <LanguageDarkIcon /> : <LanguageLightIcon />}
+        {isDark === "dark" ? (
+          <div className="w-[40px] h-[40px] flex justify-center items-center bg-[#272727] rounded-[4px]">
+            <div className="w-[22px] h-[22px]">{selectedLanguage?.icon}</div>
+          </div>
+        ) : (
+          <div
+            style={{
+              boxShadow:
+                "0px 4px 4px 0px rgba(199, 211, 214, 0.5), 0px -2px 4px 0px rgba(199, 211, 214, 0.25)",
+            }}
+            className="w-[40px] h-[40px] flex justify-center items-center rounded-[4px]"
+          >
+            <div className="w-[22px] h-[22px]">{selectedLanguage?.icon}</div>
+          </div>
+        )}
       </div>
       {isOpen && (
         <div
@@ -102,7 +123,7 @@ const LanguageSelector: React.FC = () => {
             {supportedLanguages.map((lang) => (
               <button
                 key={lang.value}
-                onClick={() => handleLanguageChange(lang.value)}
+                onClick={() => handleLanguageChange(lang)}
                 className={`px-4 py-2 text-sm text-gray-700 
                   dark:hover:bg-[#111115] hover:bg-[#F6F6F6]
                   ${
@@ -116,6 +137,7 @@ const LanguageSelector: React.FC = () => {
                   <p
                     className={`
                       dark:text-white text-black
+                      w-[16px]
                     `}
                   >
                     {lang.label}

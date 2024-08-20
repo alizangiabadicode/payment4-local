@@ -261,5 +261,27 @@
   "totalInvoicesCount": "Cantidad total de facturas",
   "verifyPaymentSamples": "ejemplos de código de verificación de pago",
   "createPaymentSamples": "ejemplos de código de creación de pago",
-  "category": "Categoría"
+  "category": "Categoría",
+  "table": {
+    "descriptionColumn": {
+      "1001": "Este error ocurre cuando hay problemas de validación con la solicitud.",
+      "1002": "Este error indica que la clave de API no se incluyó en la solicitud.",
+      "1003": "Este error ocurre cuando la clave de API proporcionada no se encuentra o no es reconocida por el sistema.",
+      "1004": "Este error significa que la gateway seleccionada no está aprobada o autorizada para la transacción.",
+      "1012": "Este error indica que la moneda proporcionada no es válida o no es compatible."
+    },
+    "createPayment": {
+      "descriptionColumn": {
+        "1005": "Este error se dispara cuando no se encuentran los activos solicitados.",
+        "1011": "Este error ocurre cuando el monto del pago está por debajo del límite mínimo especificado.",
+        "1013": "Este error ocurre cuando el idioma especificado no es válido o no es compatible."
+      }
+    },
+    "verifyPayment": {
+      "descriptionColumn": {
+        "1006": "Este error se genera cuando no se puede encontrar el pago especificado en el sistema. Asegúrate de proporcionar la información de pago correcta.",
+        "1010": "Este error se genera cuando el monto del pago proporcionado en la solicitud no es válido o no está dentro del rango aceptado. Asegúrate de que el monto esté dentro de los límites especificados."
+      }
+    }
+  }
 }

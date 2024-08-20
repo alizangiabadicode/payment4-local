@@ -4,13 +4,18 @@ import React, { useState } from "react";
 import {
   ClockIcon,
   EmailIcon,
+  Instagram,
+  Linkedin,
   LocationIcon,
   PhoneIcon,
+  X,
+  Youtube,
 } from "../../../icons/svg";
 import ContactForm from "../../../components/forms/contact-form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/shared/button";
 
 const ContactUs = () => {
   const { t, i18n } = useTranslation();
@@ -293,8 +298,8 @@ const ContactUs = () => {
           className="flex gap-x-[20px] md:gap-x-[30px] lg:gap-x-[60px] 
         justify-center px-[15px]"
         >
-          <div
-            className="cursor-pointer"
+          <Button
+            className="rounded-[63px] w-[65px] h-[45px] md:w-[100px] md:h-[52px] flex justify-center items-center"
             onClick={() => {
               window.open(
                 i18n.language === "fa"
@@ -304,23 +309,10 @@ const ContactUs = () => {
               );
             }}
           >
-            <Image
-              width={80}
-              height={40}
-              src="/images/youtube-contact.png"
-              alt=""
-              className="dark:hidden block"
-            />
-            <Image
-              width={80}
-              height={40}
-              src="/images/youtube-contact-dark.png"
-              alt=""
-              className="hidden dark:block"
-            />
-          </div>
-          <div
-            className="cursor-pointer"
+            <Youtube />
+          </Button>
+          <Button
+           className="rounded-[63px] w-[65px] h-[45px] md:w-[100px] md:h-[52px] flex justify-center items-center"
             onClick={() => {
               window.open(
                 "https://www.linkedin.com/company/payment4/",
@@ -328,23 +320,10 @@ const ContactUs = () => {
               );
             }}
           >
-            <Image
-              width={80}
-              height={40}
-              src="/images/linkedin-contact.png"
-              alt=""
-              className="dark:hidden block"
-            />
-            <Image
-              width={80}
-              height={40}
-              src="/images/linkedin-contact-dark.png"
-              alt=""
-              className="hidden dark:block"
-            />
-          </div>
-          <div
-            className="cursor-pointer"
+            <Linkedin />
+          </Button>
+          <Button
+            className="rounded-[63px] w-[65px] h-[45px] md:w-[100px] md:h-[52px] flex justify-center items-center"
             onClick={() => {
               window.open(
                 i18n.language === "fa"
@@ -354,23 +333,10 @@ const ContactUs = () => {
               );
             }}
           >
-            <Image
-              width={80}
-              height={40}
-              src="/images/x-contact.png"
-              alt=""
-              className="dark:hidden block"
-            />
-            <Image
-              width={80}
-              height={40}
-              src="/images/x-contact-dark.png"
-              alt=""
-              className="hidden dark:block"
-            />
-          </div>
-          <div
-            className="cursor-pointer"
+            <X />
+          </Button>
+          <Button
+            className="rounded-[63px] w-[65px] h-[45px] md:w-[100px] md:h-[52px] flex justify-center items-center"
             onClick={() => {
               window.open(
                 i18n.language === "fa"
@@ -380,21 +346,8 @@ const ContactUs = () => {
                 "_blank";
             }}
           >
-            <Image
-              width={80}
-              height={40}
-              src="/images/instagram-contact.png"
-              alt=""
-              className="dark:hidden block"
-            />
-            <Image
-              width={80}
-              height={40}
-              src="/images/instagram-contact-dark.png"
-              alt=""
-              className="dark:block hidden"
-            />
-          </div>
+            <Instagram />
+          </Button>
         </div>
       </div>
       <div className="flex flex-col gap-10 items-center md:flex-row justify-center px-[30px]">

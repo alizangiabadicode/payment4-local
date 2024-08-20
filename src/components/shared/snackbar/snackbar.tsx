@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
+import { DarkCrossIcon } from "../../../icons/svg";
 
 type Variant = "success" | "warning";
 interface SnackbarProps {
@@ -33,7 +33,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
   return (
     <>
       {isOpen && (
-        <div className="fixed top-0 ltr:left-0 rtl:right-0 flex items-end 
+        <div className="fixed top-0 ltr:right-0 rtl:left-0 flex items-end 
         justify-center px-4 py-6 
         pointer-events-none sm:p-6 sm:items-start sm:justify-end">
           <div
@@ -44,25 +44,8 @@ export const Snackbar: React.FC<SnackbarProps> = ({
             <div className="rounded-lg shadow-xs overflow-hidden">
               <div className="p-4">
                 <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <svg
-                      className="h-6 w-6 text-green-400"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  </div>
                   <div className="mx-3 flex-1 pt-0.5">
-                    <p className="text-sm font-medium text-gray-900">
+                    <p className="text-sm font-medium text-white">
                       {message}
                     </p>
                   </div>
@@ -71,8 +54,7 @@ export const Snackbar: React.FC<SnackbarProps> = ({
                       onClick={onClose}
                       className="inline-flex text-gray-400 focus:outline-none focus:text-gray-500 transition ease-in-out duration-150"
                     >
-                      <DarkCrossIcon className="hidden dark:block" />
-                      <LightCrossIcon className="dark:hidden block" />
+                      <DarkCrossIcon />
                     </button>
                   </div>
                 </div>

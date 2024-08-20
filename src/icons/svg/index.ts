@@ -46,3 +46,7 @@ export * from "./check.icon.dark";
 export * from "./check-icon-contact-us";
 export * from "./download-icon";
 export * from "./left-arrow-navigate";
+export * from "./youtube";
+export * from "./linkedin";
+export * from "./x";
+export * from "./instagram";

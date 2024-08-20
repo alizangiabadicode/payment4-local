@@ -262,5 +262,27 @@
   "totalInvoicesCount": "Total invoices count",
   "verifyPaymentSamples": "verify payment code samples",
   "createPaymentSamples": "create payment code samples",
-  "category": "Category"
+  "category": "Category",
+  "table": {
+    "descriptionColumn": {
+      "1001": "This error occurs when there are validation issues with the request.",
+      "1002": "This error indicates that the API key was not included in the request.",
+      "1003": "This error occurs when the provided API key is not found or recognized by the system.",
+      "1004": "This error signifies that the selected gateway is not approved or authorized for the transaction.",
+      "1012": "This error indicates that the provided currency is invalid or not supported."
+    },
+    "createPayment": {
+      "descriptionColumn": {
+        "1005": "This error is triggered when the requested assets are not found.",
+        "1011": "This error occurs when the payment amount is below the specified minimum limit.",
+        "1013": "This error occurs when the specified language is invalid or not supported."
+      }
+    },
+    "verifyPayment": {
+      "descriptionColumn": {
+        "1006": "This error is raised when the specified payment could not be found in the system. Ensure that you are providing the correct payment information.",
+        "1010": "This error is raised when the payment amount provided in the request is invalid or not within the accepted range. Ensure that the amount is within the specified limits."
+      }
+    }
+  }
 }
