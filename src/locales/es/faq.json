@@ -80,6 +80,10 @@
     {
       "q": "¿Dónde puedo obtener mi clave API?",
       "a": "Al crear cada pasarela de pago, tendrás derecho a utilizar la clave API específica de esa pasarela. Esta clave API está disponible en la sección de configuración de cada pasarela de pago."
+    },
+    {
+      "q": "¿Qué debo hacer si mi clave API se ha visto comprometida?",
+      "a": "Cree una nueva clave API a través de la configuración de su cuenta o la sección de gestión de API. Reemplace la antigua clave API por la nueva en todas las aplicaciones, scripts o servicios que dependen de la API."
     }
   ]
 }
