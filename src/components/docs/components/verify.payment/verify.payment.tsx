@@ -20,6 +20,7 @@ import {
 import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
 import { VerifyPaymentErrors } from "./errors.array";
+import { Button } from "@/components/shared/button";
 
 interface CodeRefs {
   paymentCode: React.RefObject<HTMLPreElement>;
@@ -59,9 +60,9 @@ export const VerifyPayment = () => {
 
   return (
     <div className="px-4 py-6">
-       <Snackbar
+      <Snackbar
         isOpen={isOpenSnackBar}
-        message={t('text copied to clipboard')}
+        message={t("toast.successCopy")}
         onClose={() => setIsOpenSnackBar(false)}
         variant="success"
       />
@@ -107,12 +108,12 @@ export const VerifyPayment = () => {
             </pre>
           )}
         </Highlight>
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="absolute top-2 right-2 px-3 py-[5px] bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.paymentCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p
         className={`text-base leading-8 
@@ -152,12 +153,12 @@ export const VerifyPayment = () => {
             </pre>
           )}
         </Highlight>
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="absolute top-2 right-2 px-3 py-[5px] bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.apiKeyCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p
         className={`text-base leading-8 
@@ -221,12 +222,12 @@ export const VerifyPayment = () => {
             </pre>
           )}
         </Highlight>
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="absolute top-2 right-2 px-3 py-[5px] bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.responseCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p
         className={`text-base leading-8 

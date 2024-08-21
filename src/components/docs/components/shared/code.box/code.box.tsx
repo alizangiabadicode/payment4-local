@@ -26,7 +26,7 @@ export const CodeBox: React.FC<CodeBoxProps> = ({ code, style }) => {
     <>
       <Snackbar
         isOpen={isOpenSnackBar}
-        message={t("text copied to clipboard")}
+        message={t("toast.successCopy")}
         onClose={() => setIsOpenSnackBar(false)}
         variant="success"
       />
@@ -45,7 +45,7 @@ export const CodeBox: React.FC<CodeBoxProps> = ({ code, style }) => {
           style={{ ...style }}
         />
         <Button
-          className="mt-[5px] cursor-pointer text-white absolute top-1 right-4 !py-[2px]"
+          className="mt-[5px] cursor-pointer text-white absolute top-1 right-10 !py-[2px]"
           onClick={handleCopy}
         >
           copy

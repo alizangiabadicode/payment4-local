@@ -283,5 +283,8 @@
         "1010": "Cette erreur est soulevée lorsque le montant du paiement fourni dans la demande est invalide ou n'est pas dans la plage acceptée. Assurez-vous que le montant est dans les limites spécifiées."
       }
     }
+  },
+  "toast": {
+    "successCopy": "Texte copié dans le presse-papiers"
   }
 }

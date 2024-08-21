@@ -6,13 +6,21 @@ import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { SwiperSection } from "./swiper";
-import Link from "next/link";
 import useQueryParams from "@/hooks/useQueryParams";
 
 const HeroSection = () => {
+  const { t, i18n } = useTranslation();
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
-  const { t, i18n } = useTranslation();
+
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+      i18n.language
+    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+      utm_medium ? `&utm_campaign=${utm_medium}` : ""
+    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    window.open(redirectUrl, "_blank");
+  };
   return (
     <div className="overflow-x-hidden">
       <div className="flex flex-col items-center mt-10 gap-y-10">
@@ -110,21 +118,13 @@ const HeroSection = () => {
         </div>
         <div>
           <Button
+            onClick={handleSignupClick}
             style={{ paddingTop: "10px", paddingBottom: "10px" }}
             className="px-10 py-2 flex gap-x-2"
           >
-            <Link
-              target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
-            >
-              {i18n.language === "fa"
-                ? t("heroSectionLetsGetStarted")
-                : t("letsGetStarted")}
-            </Link>
+            {i18n.language === "fa"
+              ? t("heroSectionLetsGetStarted")
+              : t("letsGetStarted")}
             {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
           </Button>
         </div>

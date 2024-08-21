@@ -25,6 +25,7 @@ import {
 } from "./create.payment.tabs";
 import { useTheme } from "next-themes";
 import { CreatePaymentErrors } from "./errors.array";
+import { Button } from "@/components/shared/button";
 // require("prismjs/themes/prism-dark.css");
 // require("prismjs/themes/prism.css")
 // const importDarkTheme = () => require("prismjs/themes/prism-dark.css");
@@ -88,7 +89,7 @@ export const CreatePayment = () => {
     <div className="space-y-5">
       <Snackbar
         isOpen={isOpenSnackBar}
-        message={t('text copied to clipboard')}
+        message={t("toast.successCopy")}
         onClose={() => setIsOpenSnackBar(false)}
         variant="success"
       />
@@ -144,12 +145,12 @@ export const CreatePayment = () => {
           )}
         </Highlight>
 
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="py-[5px] absolute top-2 right-2 px-3 bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.paymentCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p
         className={`text-base leading-8 
@@ -191,28 +192,12 @@ export const CreatePayment = () => {
             </pre>
           )}
         </Highlight>
-        {/* <pre
-          className="ml-5 overflow-x-auto !bg-transparent"
-          style={{ direction: "ltr" }}
-        >
-          <code
-            ref={codeRefs.apiKeyCode}
-            className="dark:text-white text-black language-javascript"
-            style={{ textShadow: "none" }}
-          >
-            {`
-{
-    "x-api-key" : {api_key}
-}
-`}
-          </code>
-        </pre> */}
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="absolute top-2 right-2 px-3 py-[5px] bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.apiKeyCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p
         className={`text-base leading-8 
@@ -342,7 +327,6 @@ export const CreatePayment = () => {
               {tokens.map((line, i) => (
                 <div key={i} {...getLineProps({ line, key: i })}>
                   {line
-                    // .filter((token) => !token.types.includes("plain"))
                     .map((token, key) => (
                       <span key={key} {...getTokenProps({ token, key })}></span>
                     ))}
@@ -351,12 +335,12 @@ export const CreatePayment = () => {
             </pre>
           )}
         </Highlight>
-        <button
-          className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+        <Button
+          className="py-[5px] absolute top-2 right-2 px-3 bg-gray-300 text-gray-700 rounded-md text-sm"
           onClick={() => handleCopyClick(codeRefs.responseCode)}
         >
           Copy
-        </button>
+        </Button>
       </div>
       <p className={`text-base leading-8  my-5`}>
         {t("errorsTitleCreatePayment")}

@@ -4,6 +4,7 @@ import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
 import { Snackbar } from "@/components/shared";
 import { useTranslation } from "react-i18next";
+import { Button } from "@/components/shared/button";
 
 const ShowPaymentApiTabs = ({ code }: { code: string }) => {
   const [mounted, setMounted] = useState(false);
@@ -26,7 +27,7 @@ const ShowPaymentApiTabs = ({ code }: { code: string }) => {
     >
       <Snackbar
         isOpen={isOpenSnackBar}
-        message={t('text copied to clipboard')}
+        message={t("toast.successCopy")}
         onClose={() => setIsOpenSnackBar(false)}
         variant="success"
       />
@@ -53,12 +54,12 @@ const ShowPaymentApiTabs = ({ code }: { code: string }) => {
           </pre>
         )}
       </Highlight>
-      <button
-        className="absolute top-2 right-2 px-3 py-1 bg-gray-300 text-gray-700 rounded-md text-sm"
+      <Button
+        className="absolute top-1 right-2 px-3 py-[5px] bg-gray-300 text-gray-700 rounded-md text-sm"
         onClick={() => handleCopyClick(codeRefs)}
       >
         Copy
-      </button>
+      </Button>
     </div>
   );
 };

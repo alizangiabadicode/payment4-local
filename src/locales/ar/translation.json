@@ -284,5 +284,7 @@
       }
     }
   },
-  "textCopiedToClipboard": "text copied to clipboard"
+  "toast": {
+    "successCopy": "تم نسخ النص إلى الحافظة"
+  }
 }

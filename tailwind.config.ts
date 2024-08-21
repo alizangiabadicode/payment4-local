@@ -30,8 +30,8 @@ const config: Config = {
     },
     extend: {
       screens: {
-        'xs':'420 px',
-        'x': "857px",
+        xs: "420 px",
+        x: "857px",
       },
       backgroundImage: {
         "light-gradient":
@@ -56,6 +56,10 @@ const config: Config = {
           "linear-gradient(to bottom left, #F5F1FF, #FAF7FF,#F3EAFE)",
         "dark-gradient-sidebar-post-rtl":
           "linear-gradient(to bottom left, #151518,#151518, #262033)",
+      },
+      boxShadow: {
+        "custom-light":
+          "0px 4px 4px 0px rgba(199, 211, 214, 0.5), 0px -2px 4px 0px rgba(199, 211, 214, 0.25)",
       },
     },
   },
