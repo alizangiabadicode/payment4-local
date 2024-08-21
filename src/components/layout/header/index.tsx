@@ -12,6 +12,7 @@ import useCurrentRoute from "@/hooks/useCurrentRoute";
 import useQueryParams from "@/hooks/useQueryParams";
 import Link from "next/link";
 
+
 const Header = () => {
   const currentRoute = useCurrentRoute();
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -116,7 +117,7 @@ const Header = () => {
             </Drawer>
             <div
               onClick={() => setIsDrawerOpen(true)}
-              className="lg:hidden cursor-pointer"
+              className="shadow-custom-light dark:shadow-none bg-white dark:bg-[#272727] lg:hidden cursor-pointer w-[40px] h-[40px] flex justify-center items-center rounded-[4px]"
             >
               <MenuItemIcon className="dark:hidden block" color={"#0B0B0E"} />
               <MenuItemIcon className="hidden dark:block" color={"white"} />

@@ -283,5 +283,8 @@
         "1010": "Este error se genera cuando el monto del pago proporcionado en la solicitud no es válido o no está dentro del rango aceptado. Asegúrate de que el monto esté dentro de los límites especificados."
       }
     }
+  },
+  "toast": {
+    "successCopy": "Texto copiado al portapapeles"
   }
 }

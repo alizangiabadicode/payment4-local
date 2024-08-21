@@ -4,13 +4,21 @@ import { Button } from "../shared/button";
 import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import { useTranslation } from "react-i18next";
 import Image from "next/image";
-import Link from "next/link";
 import useQueryParams from "@/hooks/useQueryParams";
 
 const AdvertisementCard = () => {
   const { t, i18n } = useTranslation();
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
+
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+      i18n.language
+    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+      utm_medium ? `&utm_campaign=${utm_medium}` : ""
+    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    window.open(redirectUrl, "_blank");
+  };
   return (
     <div
       className={`max-w-[639px]  sm:max-w-none w-full
@@ -41,17 +49,11 @@ const AdvertisementCard = () => {
             </p>
           </div>
           <div className="flex justify-start w-full">
-            <Button className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg">
-              <Link
-                target="_blank"
-                href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                  i18n.language
-                }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                  utm_medium ? `&utm_medium=${utm_medium}` : ""
-                }${utm_source ? `&utm_source=${utm_source}` : ""}`}
-              >
-                {t("letsGetStarted")}
-              </Link>
+            <Button
+              onClick={handleSignupClick}
+              className="px-[10px] sm:px-10 sm:py-[10px] py-[7px] flex gap-x-2 bg"
+            >
+              {t("letsGetStarted")}
               {i18n.dir() === "ltr" ? <RightArrowIcon /> : <LeftArrowIcon />}
             </Button>
           </div>

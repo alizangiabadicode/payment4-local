@@ -21,7 +21,7 @@ export const NavigationBar = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden lg:flex md:gap-x-5 lg:gap-x-10">
+      <div className="hidden lg:flex md:gap-x-5 lg:gap-x-5 xl:gap-x-10">
         {navbarItems.map((item) => {
           const isActive = currentRoute === item.path;
           if (item.path === "/blog") {
