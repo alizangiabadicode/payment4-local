@@ -283,5 +283,8 @@
         "1010": "Bu hata, talepe sağlanan ödeme miktarı geçersiz olduğunda veya kabul edilen aralıkta olmadığında yükseltilir. Miktarın belirtilen sınırlar içinde olduğundan emin olun."
       }
     }
+  },
+  "toast": {
+    "successCopy": "Metin panoya kopyalandı"
   }
 }

@@ -284,5 +284,8 @@
         "1010": "This error is raised when the payment amount provided in the request is invalid or not within the accepted range. Ensure that the amount is within the specified limits."
       }
     }
+  },
+  "toast": {
+    "successCopy": "text copied to clipboard"
   }
 }

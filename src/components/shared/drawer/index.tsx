@@ -6,6 +6,7 @@ import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
 import Link from "next/link";
 import useQueryParams from "@/hooks/useQueryParams";
 
+
 interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -47,6 +48,7 @@ export const Drawer: FC<DrawerProps> = ({
       document.body.classList.remove("overflow-hidden");
     };
   }, [isOpen, onClose]);
+
   const handleSignupClick = () => {
     const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
       i18n.language
@@ -75,9 +77,13 @@ export const Drawer: FC<DrawerProps> = ({
       <div
         ref={drawerRef}
         className={`fixed flex flex-col justify-between inset-y-0 ${
-          direction === 'rtl' ? 'right-0' : 'left-0'
+          direction === "rtl" ? "right-0" : "left-0"
         } w-64 bg-gray-200 z-50 transform transition duration-300 dark:bg-black bg-white ${
-          isOpen ? "translate-x-0" : direction === 'rtl' ? "translate-x-full" : "-translate-x-full"
+          isOpen
+            ? "translate-x-0"
+            : direction === "rtl"
+            ? "translate-x-full"
+            : "-translate-x-full"
         } ${className} lg:hidden`}
       >
         <div className="flex flex-col">
