@@ -14,10 +14,12 @@ jobs:
           port: 22
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/landing && git reset --hard 
-            git pull origin main
-             # Install `n` package manager if not installed
-            source ~/.bashrc
+            cd ~/landing 
+            # git reset --hard 
+            # git pull origin main
+            # Install `n` package manager if not installed
+            # source ~/.bashrc
+            nvm use
             node -v  # Verify Node.js version
             # Install end
             yarn install
