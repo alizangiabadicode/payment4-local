@@ -16,6 +16,7 @@ jobs:
           script: |
             cd ~/landing && git reset --hard 
             git pull origin main
+            nvm use 20
             node -v
             yarn install
             yarn build
