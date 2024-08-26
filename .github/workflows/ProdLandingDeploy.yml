@@ -14,9 +14,5 @@ jobs:
           port: 22
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/landing && git reset --hard 
-            git pull origin main
-            yarn install
-            yarn build
-            docker compose build
-            docker compose restart landing
+            cd /home/payment4
+            ./.build_script.sh
