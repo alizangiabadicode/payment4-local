@@ -16,6 +16,7 @@ jobs:
           script: |
             cd ~/landing && git reset --hard 
             git pull origin main
+            node -v
             yarn install
             yarn build
             docker compose build
