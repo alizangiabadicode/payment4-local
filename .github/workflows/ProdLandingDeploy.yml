@@ -16,8 +16,12 @@ jobs:
           script: |
             cd ~/landing && git reset --hard 
             git pull origin main
-            nvm use 20
-            node -v
+             # Install `n` package manager if not installed
+            curl -L https://raw.githubusercontent.com/tj/n/master/bin/n -o n
+            bash n 20.0.0  # Install Node.js v20.x
+            export PATH="$HOME/n/bin:$PATH"
+            node -v  # Verify Node.js version
+            # Install end
             yarn install
             yarn build
             docker compose build
