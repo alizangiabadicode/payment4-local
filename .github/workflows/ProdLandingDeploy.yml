@@ -14,16 +14,5 @@ jobs:
           port: 22
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            whoami
-            cd ~/landing 
-            # git reset --hard 
-            # git pull origin main
-            # Install `n` package manager if not installed
-            # source ~/.bashrc
-            nvm use
-            node -v  # Verify Node.js version
-            # Install end
-            yarn install
-            yarn build
-            docker compose build
-            docker compose restart landing
+            cd /home/payment4
+            ./.build_script.sh
