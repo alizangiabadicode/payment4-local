@@ -50,3 +50,4 @@ export * from "./youtube";
 export * from "./linkedin";
 export * from "./x";
 export * from "./instagram";
+export * from "./chevron.down.icon";

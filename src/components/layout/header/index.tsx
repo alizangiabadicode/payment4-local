@@ -48,7 +48,7 @@ const Header = () => {
       >
         <NavigationBar />
         <div className="flex items-center lg:gap-x-4 gap-x-4 md:gap-x-2">
-          <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2">
+          <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2 md:min-w-[100px]">
             <div className="cursor-pointer">
               <ThemeSwitch />
             </div>
