@@ -12,10 +12,12 @@ import useCurrentRoute from "@/hooks/useCurrentRoute";
 import useQueryParams from "@/hooks/useQueryParams";
 import Link from "next/link";
 
-
 const Header = () => {
   const currentRoute = useCurrentRoute();
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const [isDrawerOpen, setIsDrawerOpen] = useState<boolean>(false);
+  const [openDropdowns, setOpenDropdowns] = useState<{
+    [key: number]: boolean;
+  }>({});
   const { t, i18n } = useTranslation();
   const direction =
     i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
@@ -41,6 +43,13 @@ const Header = () => {
     }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
     window.open(redirectUrl, "_blank");
   };
+
+  const toggleDropdown = (index: number) => {
+    setOpenDropdowns((prevState) => ({
+      ...prevState,
+      [index]: !prevState[index],
+    }));
+  };
   return (
     <header style={{ direction: direction }}>
       <div
@@ -48,7 +57,7 @@ const Header = () => {
       >
         <NavigationBar />
         <div className="flex items-center lg:gap-x-4 gap-x-4 md:gap-x-2">
-          <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2">
+          <div className="flex gap-x-1 md:gap-x-0 lg:gap-x-2 md:min-w-[100px]">
             <div className="cursor-pointer">
               <ThemeSwitch />
             </div>
@@ -73,8 +82,10 @@ const Header = () => {
           </div>
           <div>
             <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
-              {navbarItems.map((item) => {
+              {navbarItems.map((item, index) => {
                 const isActive = currentRoute === item.path;
+                const hasDropdownItems =
+                  item.dropdownItems && item.dropdownItems.length > 0;
                 if (item.path === "/blog") {
                   return (
                     <Link
@@ -94,24 +105,55 @@ const Header = () => {
                   );
                 }
                 return (
-                  <Link
-                    key={item.title}
-                    style={{ fontSize: "15px" }}
-                    className={`${isActive && "font-bold"}
+                  <>
+                    <div className="flex justify-between">
+                      <Link
+                        key={item.title}
+                        style={{ fontSize: "15px" }}
+                        className={`${isActive && "font-bold"}
                     dark:text-white
                   }`}
-                    href={{
-                      pathname: item.path,
-                      query: {
-                        ...(utm_campaign && { utm_campaign }),
-                        ...(utm_medium && { utm_medium }),
-                        ...(utm_source && { utm_source }),
-                      },
-                    }}
-                    onClick={() => setIsDrawerOpen(false)}
-                  >
-                    {t(`${item.title.toLowerCase()}`)}
-                  </Link>
+                        href={{
+                          pathname: item.path,
+                          query: {
+                            ...(utm_campaign && { utm_campaign }),
+                            ...(utm_medium && { utm_medium }),
+                            ...(utm_source && { utm_source }),
+                          },
+                        }}
+                        onClick={() => setIsDrawerOpen(false)}
+                      >
+                        {t(`${item.title.toLowerCase()}`)}
+                      </Link>
+                      {hasDropdownItems && (
+                        <div
+                          onClick={() => toggleDropdown(index)}
+                          className="cursor-pointer"
+                        >
+                          {openDropdowns[index] ? "-" : "+"}
+                        </div>
+                      )}
+                    </div>
+                    {openDropdowns[index] && hasDropdownItems && (
+                      <div className="rtl:pr-10 ltr:pl-10 flex flex-col gap-y-5">
+                        {item.dropdownItems?.map(
+                          (dropDownItem, dropDownIndex) => (
+                            <div key={dropDownIndex}>
+                              <Link
+                                onClick={() => {
+                                  setIsDrawerOpen(false);
+                                  setOpenDropdowns({});
+                                }}
+                                href={dropDownItem.path}
+                              >
+                                {t(`${dropDownItem.title.toLowerCase()}`)}
+                              </Link>
+                            </div>
+                          )
+                        )}
+                      </div>
+                    )}
+                  </>
                 );
               })}
             </Drawer>

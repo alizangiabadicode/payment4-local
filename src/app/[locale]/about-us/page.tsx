@@ -100,7 +100,7 @@ const AboutUs = async ({
                 style={{ direction: "ltr" }}
                 className={`text-[23px] md:text-[28px] text-[#9E6DFF] font-bold`}
               >
-                +1000
+                +10000
               </p>
               <p className="text-[12px] md:text-[16px] text-center">
                 {t("dailyInvoiceCount")}
@@ -111,7 +111,7 @@ const AboutUs = async ({
                 style={{ direction: "ltr" }}
                 className={`text-[23px] md:text-[28px] text-[#9E6DFF] font-bold`}
               >
-                +20000
+                +500000
               </p>
               <p className="text-[12px] md:text-[16px] text-center">
                 {t("totalInvoicesCount")}
