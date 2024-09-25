@@ -65,6 +65,8 @@
   "privacyPolicyFooter": "Politique de confidentialité",
   "faq": "FAQ",
   "company": "Société",
+  "cooperation": "Coopération",
+  "plugin": "Plugin",
   "product": "Produit",
   "logIn": "Se connecter",
   "docIntro": "La passerelle de paiement Payment4 est un service basé sur le web conçu pour faciliter les paiements en cryptomonnaie et les transactions blockchain pour les entreprises et les particuliers. Elle vous permet d'intégrer des transactions blockchain et des paiements en cryptomonnaie dans votre boutique en ligne et vos services numériques, en utilisant les capacités de Payment4.",
@@ -286,5 +288,106 @@
   },
   "toast": {
     "successCopy": "Texte copié dans le presse-papiers"
+  },
+  "vendorPage": {
+    "pageTitle": "Gagner de l'argent avec Payment4",
+    "pageDescription": "Avec Payment4, de nombreuses opportunités de gagner de l'argent sont disponibles. Cette plateforme permet aux utilisateurs de fonctionner en tant qu'accepteurs, vendeurs ou référents. Grâce à ces rôles, les utilisateurs peuvent collaborer avec d'autres et générer des revenus. Les vendeurs, en particulier, bénéficient de la gestion des passerelles de paiement et gagnent des commissions.",
+    "cards": {
+      "invite": {
+        "title": "Invitation de sous-membres",
+        "description": "Les utilisateurs inscrits en tant qu'accepteurs sur Payment4 peuvent partager leur lien et leur code de parrainage pour ajouter des sous-membres et gagner des revenus grâce à leurs activités."
+      },
+      "businessPartner": {
+        "title": "Partenaire commercial",
+        "description": "Les vendeurs collaborent avec des entreprises et gagnent des frais en installant des passerelles de paiement en cryptomonnaie sur les sites des sous-membres."
+      },
+      "productPromotion": {
+        "title": "Promotion de produits",
+        "description": "Les utilisateurs peuvent gagner des commissions en faisant la promotion de produits sur des sites utilisant la passerelle Payment4, profitant ainsi des ventes."
+      }
+    },
+    "businessPartner": {
+      "title": "Partenaire commercial",
+      "intro": "Dans la section des vendeurs de Payment4, les utilisateurs agissent en tant que vendeurs indépendants et bénéficient de diverses fonctionnalités pour développer leur activité.",
+      "accessVendorPanel": {
+        "title": "Accès au panneau vendeur",
+        "description": "Après inscription, les vendeurs ont accès à un panneau spécial leur permettant de gérer leurs activités. Ce panneau offre des fonctionnalités telles que la création de passerelles de paiement, le suivi des transactions et la supervision de la performance financière."
+      },
+      "creatingPaymentGateway": {
+        "title": "Création d'une passerelle de paiement",
+        "description": "Les vendeurs peuvent créer des passerelles de paiement distinctes pour chaque entreprise ou marque. Avec la clé d'accès à la passerelle qu'ils créent, ils peuvent l'implémenter sur le site web de l'utilisateur."
+      },
+      "collaboratingOtherBrands": {
+        "title": "Collaboration avec d'autres marques",
+        "description": "Les vendeurs peuvent collaborer avec d'autres entreprises ou marques et implémenter leur passerelle de paiement en cryptomonnaie sur leurs sites. Cette collaboration élargit le réseau de ventes et augmente l'accès à de nouveaux clients."
+      },
+      "commissionTransactions": {
+        "title": "Commission basée sur les transactions",
+        "description": "Pour chaque transaction réalisée via les passerelles de paiement des vendeurs, une commission est créditée sur leur compte."
+      },
+      "benefitsCollaboration": {
+        "title": "Avantages de la collaboration",
+        "description": "En utilisant les fonctionnalités de Payment4, les vendeurs peuvent interagir plus largement avec leurs clients, améliorer leurs programmes de marketing et, en fin de compte, augmenter leur rentabilité."
+      },
+      "warning": {
+        "note": "Veuillez noter qu'après la suppression d'une passerelle spécifique, toutes les transactions, tickets et notifications liés seront supprimés!"
+      }
+    },
+    "cooperationForm": {
+      "title": "Prêt à devenir partenaire commercial?",
+      "description": "Complétez vos informations pour être contacté",
+      "phoneNumber": "Numéro de téléphone",
+      "validation": {
+        "phoneNumberIsRequired": "Le numéro de téléphone est requis"
+      }
+    }
+  },
+  "pluginPage": {
+    "pluginOptions": {
+      "openCart": {
+        "title": "Open Cart",
+        "description": "OpenCart est une plateforme de création de boutiques en ligne avec une gestion simple, un SEO puissant et un traitement rapide pour créer et gérer votre site e-commerce."
+      },
+      "woocommerce": {
+        "title": "Woocommerce",
+        "description": "Intégrez facilement les paiements en crypto-monnaie à votre boutique WooCommerce. Commencez à accepter Bitcoin et d'autres crypto-monnaies avec notre plugin facile à installer."
+      },
+      "whmcs": {
+        "title": "WHMCS",
+        "description": "Ce plugin est une intégration puissante qui étend les capacités de WHMCS pour gérer les transactions en crypto-monnaie, offrant une passerelle de paiement sécurisée et efficace pour vos services d'hébergement web."
+      }
+    },
+    "cryptoPaymentPlugins": "Plugins de Paiement en Cryptomonnaie",
+    "pluginHeader": {
+      "title": "Activer les Paiements en Cryptomonnaies sur votre Site Web",
+      "description": "Vous cherchez à offrir plus d'options de paiement et à développer votre base de clients ? Avec les plugins CMS de Payment4, vous pouvez accepter facilement le Bitcoin et d'autres cryptomonnaies de premier plan sur votre site web, rendant les transactions plus simples et plus sécurisées.",
+      "buttonText": "Commençons à Accepter la Crypto"
+    },
+    "cryptoAdvantages": {
+      "heading": "Avantages de l'utilisation d'une passerelle de paiement en cryptomonnaies",
+      "advantages": [
+        {
+          "title": "Processus d'intégration rapide et fluide",
+          "description": "Nos plugins sont conçus pour une installation rapide et une configuration simple, vous permettant de commencer à accepter les paiements en cryptomonnaies immédiatement."
+        },
+        {
+          "title": "Gérer facilement les transactions internationales",
+          "description": "Développez votre entreprise à l'échelle mondiale en permettant des transactions transfrontalières sans effort, atteignant des clients dans le monde entier."
+        },
+        {
+          "title": "Support de plus de 50 cryptomonnaies",
+          "description": "Nous offrons un support pour une large sélection de cryptomonnaies de premier plan, telles que le Bitcoin, l'Ethereum, le Litecoin et bien d'autres."
+        },
+        {
+          "title": "Développez votre entreprise avec des paiements mondiaux",
+          "description": "Développez votre entreprise à l'échelle mondiale en offrant des paiements transfrontaliers sans tracas, atteignant des clients dans le monde entier."
+        }
+      ]
+    },
+    "joinUsSection": {
+      "title": "Rejoignez-nous et Commencez à Accepter les Paiements en Cryptomonnaies",
+      "description": "Inscrivez-vous dès maintenant pour rejoindre Payment4 et intégrer facilement les paiements en cryptomonnaies sur votre site web.",
+      "buttonText": "Rejoindre Maintenant"
+    }
   }
 }
