@@ -289,5 +289,107 @@
   },
   "toast": {
     "successCopy": "text copied to clipboard"
+  },
+  "vendorPage": {
+    "pageTitle": "Earning Money through Payment4",
+    "pageDescription": "In Payment4, various opportunities for earning money are available. This platform allows users to operate as acceptors, vendors, or referrers. Through these roles, users can collaborate with others and generate income. Vendors, in particular, benefit from managing payment gateways and earning commissions.",
+    "cards": {
+      "invite": {
+        "title": "Inviting Sub-Members",
+        "description": "Users who register as acceptors on Payment4 can share their referral link and code to add sub-members and earn income from their activities."
+      },
+      "businessPartner": {
+        "title": "Business partner",
+        "description": "Vendors collaborate with companies and earn fees by installing cryptocurrency payment gateways on sub-members’ websites."
+      },
+      "productPromotion": {
+        "title": "Product Promotion",
+        "description": "Users can earn commissions by promoting products on websites that use the Payment4 gateway, profiting from sales."
+      }
+    },
+    "businessPartner": {
+      "title": "Business Partner",
+      "intro": "In the vendor section of Payment4, users act as independent vendors and benefit from various features to expand their business. Here, we provide more details on how the system works and the opportunities available for vendors on Payment4:",
+      "accessVendorPanel": {
+        "title": "Access to the Vendor Panel",
+        "description": "After registering on Payment4, vendors gain access to a special panel through which they can manage their activities. This panel offers features such as creating payment gateways, monitoring transactions, and overseeing financial performance."
+      },
+      "creatingPaymentGateway": {
+        "title": "Creating a Payment Gateway",
+        "description": "Vendors can create separate payment gateways for each company or brand. With the access key to the gateway they create, they can implement it on their user’s website. This feature helps them create and track transactions independently for each specific company or section. It’s important to note that vendors only earn fees from transactions made through the gateways they created. If an acceptor creates a new gateway and processes transactions, the vendor will not receive a commission."
+      },
+      "collaboratingOtherBrands": {
+        "title": "Collaborating with Other Brands",
+        "description": "Vendors can collaborate with other companies or brands and implement their cryptocurrency payment gateway on their websites. This collaboration expands the sales network and increases access to new customers."
+      },
+      "commissionTransactions": {
+        "title": "Commission Based on Transactions",
+        "description": "For every transaction made through the vendors’ payment gateways, a commission amount is credited to their account. This commission is usually a percentage of the total transaction and serves as a reward for attracting and retaining customers. It should be noted that the vendor’s commission includes all transactions with a successful, acceptable, or non-compliant status."
+      },
+      "benefitsCollaboration": {
+        "title": "Benefits of Collaboration",
+        "description": "By utilizing Payment4’s features, vendors can interact more broadly with customers, enhance their advertising and marketing programs, and ultimately increase their profitability. These features, in addition to improving cash flow, significantly contribute to brand strengthening and enhancing business reputation. These opportunities allow all users to benefit from the financial advantages of Payment4 alongside their commercial activities."
+      },
+      "warning": {
+        "note": "Please note that after deleting a specific gateway, all related transactions, tickets, and notifications will be removed!"
+      }
+    },
+    "cooperationForm": {
+      "title": "Ready to become a Business Partner?",
+      "description": "Complete your information to be contacted",
+      "phoneNumber": "Phone Number",
+      "validation": {
+        "phoneNumberIsRequired": "Phone number is required"
+      }
+    }
+  },
+  "pluginPage": {
+    "pluginOptions": {
+      "openCart": {
+        "title": "Open Cart",
+        "description": "OpenCart is a leading store builder with easy management, powerful SEO, and fast processing to create and manage your e-commerce site."
+      },
+      "woocommerce": {
+        "title": "Woocommerce",
+        "description": "Seamlessly integrate crypto payments into your WooCommerce store. Start accepting Bitcoin and other cryptocurrencies with our easy-to-install plugin."
+      },
+      "whmcs": {
+        "title": "WHMCS",
+        "description": "This plugin is a powerful integration that extends the capabilities of WHMCS to seamlessly handle cryptocurrency transactions, providing a secure and efficient payment gateway for your web hosting and services."
+      }
+    },
+    "cryptoPaymentPlugins": "Crypto Payment Plugins",
+    "pluginHeader": {
+      "title": "Enable Crypto Payments on Your Website",
+      "description": "Looking to offer more payment options and grow your customer base? With Payment4's CMS plugins, you can seamlessly accept Bitcoin and other leading cryptocurrencies on your website, making transactions easier and more secure.",
+      "buttonText": "Let’s Start Accepting Crypto"
+    },
+    "cryptoAdvantages": {
+      "heading": "Advantages of using a cryptocurrency payment gateway",
+      "title": "Seamless and fast Integration process",
+      "advantages": [
+        {
+          "title": "Seamless and fast Integration process",
+          "description": "Our plugins are built for quick installation and simple setup, allowing you to start accepting crypto payments instantly."
+        },
+        {
+          "title": "Effortlessly handle international transactions",
+          "description": "Expand your business globally by enabling seamless and hassle-free cross-border transactions, reaching customers worldwide."
+        },
+        {
+          "title": "Support for over 50 cryptocurrencies",
+          "description": "We offer support for a broad selection of leading cryptocurrencies, such as Bitcoin, Ethereum, Litecoin, and many others."
+        },
+        {
+          "title": "Expand your business with global payments",
+          "description": "Expand your business globally by offering smooth, hassle-free cross-border payments, reaching customers around the world."
+        }
+      ]
+    },
+    "joinUsSection": {
+      "title": "Join Us and Start Accepting Crypto Payments",
+      "description": "Sign up now to become part of Payment4 and easily integrate cryptocurrency payments into your website.",
+      "buttonText": "Join Now"
+    }
   }
 }

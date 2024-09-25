@@ -11,7 +11,7 @@ import {
   X,
   Youtube,
 } from "../../../icons/svg";
-import ContactForm from "../../../components/forms/contact-form";
+import ContactForm from "../../../components/forms/contact.form";
 import Image from "next/image";
 import { Snackbar } from "@/components/shared";
 import { useTranslation } from "react-i18next";

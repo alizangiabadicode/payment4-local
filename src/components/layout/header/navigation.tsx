@@ -1,5 +1,3 @@
-"use client";
-
 import { useTranslation } from "react-i18next";
 import { navbarItems } from "./navbar-items";
 import Link from "next/link";
@@ -8,11 +6,9 @@ import useCurrentRoute from "@/hooks/useCurrentRoute";
 import useQueryParams from "@/hooks/useQueryParams";
 import { useEffect, useRef, useState } from "react";
 import { ChevronDownIcon } from "@/icons/svg";
-import { useTheme } from "next-themes";
 
 export const NavigationBar = () => {
   const currentRoute = useCurrentRoute();
-  const { resolvedTheme: theme } = useTheme();
   const { t, i18n } = useTranslation();
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
@@ -51,7 +47,10 @@ export const NavigationBar = () => {
           </Link>
         </div>
       </div>
-      <div className="hidden lg:flex md:gap-x-5 lg:gap-x-5 xl:gap-x-10">
+      <div
+        className="hidden lg:flex md:gap-x-5 lg:gap-x-5 xl:gap-x-10 
+      ltr:lg:ml-[30px] ltr:xl:ml-[200px] rtl:lg:mr-[100px] rtl:xl:mr-[200px]"
+      >
         {navbarItems.map((item) => {
           const isActive = currentRoute === item.path;
           if (item.dropdownItems) {
@@ -71,9 +70,12 @@ export const NavigationBar = () => {
                   dark:text-white text-nowrap text-[13px] md:text-[15px]`}
                 >
                   {t(`${item.title.toLowerCase()}`)}
-                  <ChevronDownIcon
-                    color={theme === "dark" ? "white" : "#121212"}
-                  />
+                  <div className="dark:hidden">
+                    <ChevronDownIcon color="#121212" />
+                  </div>
+                  <div className="hidden dark:block">
+                    <ChevronDownIcon color="white" />
+                  </div>
                 </button>
                 {openDropdown === item.title && (
                   <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white dark:bg-[#18181A] z-10">

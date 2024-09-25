@@ -51,3 +51,7 @@ export * from "./linkedin";
 export * from "./x";
 export * from "./instagram";
 export * from "./chevron.down.icon";
+export * from "./transaction.globe.icon";
+export * from "./process.icon";
+export * from "./blockchain.icon";
+export * from "./world.icon";

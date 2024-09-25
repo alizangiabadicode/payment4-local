@@ -1,6 +1,4 @@
 import React from "react";
-import { Button } from "../shared/button";
-import { LeftArrowIcon, RightArrowIcon } from "../../icons/svg";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import useQueryParams from "@/hooks/useQueryParams";

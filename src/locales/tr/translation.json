@@ -288,5 +288,106 @@
   },
   "toast": {
     "successCopy": "Metin panoya kopyalandı"
+  },
+  "vendorPage": {
+    "pageTitle": "Payment4 ile Para Kazanma",
+    "pageDescription": "Payment4'te, para kazanmak için çeşitli fırsatlar mevcuttur. Bu platform, kullanıcıların alıcı, satıcı veya yönlendirici olarak faaliyet göstermesine olanak tanır. Bu roller aracılığıyla kullanıcılar, diğerleriyle iş birliği yaparak gelir elde edebilirler. Özellikle satıcılar, ödeme geçitlerini yönetmekten ve komisyon kazanmaktan faydalanır.",
+    "cards": {
+      "invite": {
+        "title": "Alt Üyeleri Davet Etme",
+        "description": "Payment4'te alıcı olarak kayıt olan kullanıcılar, alt üyeleri eklemek ve onların faaliyetlerinden gelir elde etmek için yönlendirme bağlantılarını ve kodlarını paylaşabilirler."
+      },
+      "businessPartner": {
+        "title": "İş Ortağı",
+        "description": "Satıcılar, şirketlerle iş birliği yaparak alt üyelerin sitelerine kripto para ödeme geçitleri kurarak ücret kazanırlar."
+      },
+      "productPromotion": {
+        "title": "Ürün Tanıtımı",
+        "description": "Kullanıcılar, Payment4 geçidini kullanan web sitelerinde ürün tanıtarak komisyon kazanabilir ve satışlardan kar elde edebilirler."
+      }
+    },
+    "businessPartner": {
+      "title": "İş Ortağı",
+      "intro": "Payment4'ün satıcı bölümünde, kullanıcılar bağımsız satıcılar olarak faaliyet gösterir ve işlerini genişletmek için çeşitli özelliklerden yararlanır. İşte Payment4'teki satıcılara sunulan fırsatlar ve sistemin işleyişine dair daha fazla ayrıntı:",
+      "accessVendorPanel": {
+        "title": "Satıcı Paneline Erişim",
+        "description": "Payment4'e kayıt olduktan sonra satıcılar, faaliyetlerini yönetebilecekleri özel bir panele erişim kazanırlar. Bu panel, ödeme geçitleri oluşturma, işlemleri izleme ve finansal performansı denetleme gibi özellikler sunar."
+      },
+      "creatingPaymentGateway": {
+        "title": "Ödeme Geçidi Oluşturma",
+        "description": "Satıcılar, her şirket veya marka için ayrı ödeme geçitleri oluşturabilirler. Oluşturdukları geçidin erişim anahtarı ile, kullanıcılarının sitelerinde uygulayabilirler. Bu özellik, her şirket veya bölüm için bağımsız olarak işlemleri izlemeyi ve takip etmeyi kolaylaştırır."
+      },
+      "collaboratingOtherBrands": {
+        "title": "Diğer Markalarla İş Birliği",
+        "description": "Satıcılar, diğer şirketler veya markalarla iş birliği yapabilir ve kendi kripto para ödeme geçitlerini sitelerinde uygulayabilirler. Bu iş birliği, satış ağını genişletir ve yeni müşterilere erişimi artırır."
+      },
+      "commissionTransactions": {
+        "title": "İşlemler Üzerinden Komisyon",
+        "description": "Satıcıların ödeme geçitleri aracılığıyla gerçekleştirilen her işlem için, hesaplarına bir komisyon miktarı eklenir. Bu komisyon genellikle toplam işlemin bir yüzdesi olarak belirlenir."
+      },
+      "benefitsCollaboration": {
+        "title": "İş Birliğinin Faydaları",
+        "description": "Payment4'ün özelliklerini kullanarak, satıcılar müşterilerle daha geniş bir şekilde etkileşimde bulunabilir, pazarlama ve reklam programlarını geliştirebilir ve karlılıklarını artırabilirler."
+      },
+      "warning": {
+        "note": "Belirli bir geçit silindikten sonra, ilgili tüm işlemler, biletler ve bildirimlerin silineceğini unutmayın!"
+      }
+    },
+    "cooperationForm": {
+      "title": "İş Ortağı Olmaya Hazır mısınız?",
+      "description": "İletişime geçmek için bilgilerinizi tamamlayın",
+      "phoneNumber": "Telefon Numarası",
+      "validation": {
+        "phoneNumberIsRequired": "Telefon numarası gereklidir"
+      }
+    }
+  },
+  "pluginPage": {
+    "pluginOptions": {
+      "openCart": {
+        "title": "Open Cart",
+        "description": "OpenCart, kolay yönetim, güçlü SEO ve hızlı işlem ile e-ticaret sitenizi oluşturmak ve yönetmek için önde gelen bir mağaza kurucusudur."
+      },
+      "woocommerce": {
+        "title": "Woocommerce",
+        "description": "Kripto ödemelerini WooCommerce mağazanıza sorunsuz bir şekilde entegre edin. Kolay kurulum eklentimiz ile Bitcoin ve diğer kripto para birimlerini kabul etmeye başlayın."
+      },
+      "whmcs": {
+        "title": "WHMCS",
+        "description": "Bu eklenti, WHMCS'nin yeteneklerini genişleterek kripto para işlemlerini sorunsuz bir şekilde yönetmek için güçlü bir entegrasyon sağlar ve web hosting ve hizmetleriniz için güvenli ve verimli bir ödeme geçidi sunar."
+      }
+    },
+    "cryptoPaymentPlugins": "Kripto Ödeme Eklentileri",
+    "pluginHeader": {
+      "title": "Web Sitenizde Kripto Ödemelerini Etkinleştirin",
+      "description": "Daha fazla ödeme seçeneği sunmak ve müşteri tabanınızı büyütmek mi istiyorsunuz? Payment4'ün CMS eklentileriyle, web sitenizde Bitcoin ve diğer önde gelen kripto para birimlerini sorunsuz bir şekilde kabul edebilir, işlemleri daha güvenli ve kolay hale getirebilirsiniz.",
+      "buttonText": "Kripto Kabul Etmeye Başlayalım"
+    },
+    "cryptoAdvantages": {
+      "heading": "Kripto para ödeme geçidi kullanmanın avantajları",
+      "advantages": [
+        {
+          "title": "Kolay ve hızlı entegrasyon süreci",
+          "description": "Eklentilerimiz hızlı kurulum ve basit ayarlar için tasarlanmıştır ve kripto para ödemelerini anında kabul etmeye başlamanızı sağlar."
+        },
+        {
+          "title": "Uluslararası işlemleri zahmetsizce yönetin",
+          "description": "Sorunsuz ve zahmetsiz sınır ötesi işlemleri etkinleştirerek işinizi global ölçekte genişletin, dünya genelinde müşterilere ulaşın."
+        },
+        {
+          "title": "50'den fazla kripto para birimi desteği",
+          "description": "Bitcoin, Ethereum, Litecoin ve birçok başka önde gelen kripto para birimi için geniş bir destek sunuyoruz."
+        },
+        {
+          "title": "Global ödemelerle işinizi büyütün",
+          "description": "Sınır ötesi ödemeleri sorunsuz bir şekilde sunarak işinizi global ölçekte genişletin ve dünya genelinde müşterilere ulaşın."
+        }
+      ]
+    },
+    "joinUsSection": {
+      "title": "Bize Katılın ve Kripto Ödemeleri Kabul Etmeye Başlayın",
+      "description": "Payment4'e katılmak ve web sitenize kripto para ödemelerini kolayca entegre etmek için hemen kaydolun.",
+      "buttonText": "Şimdi Katılın"
+    }
   }
 }
