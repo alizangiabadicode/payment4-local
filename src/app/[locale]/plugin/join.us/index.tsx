@@ -3,8 +3,11 @@ import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 
 const JoinUsSection: FC = () => {
-  const { t } = useTranslation();
-
+  const { t, i18n } = useTranslation();
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`;
+    window.open(redirectUrl, "_blank");
+  };
   return (
     <div className="dark:bg-dark-gradient-ad-card bg-light-gradient-ad-card py-[40px] px-4 mb-[120px]">
       <div className="flex flex-col gap-y-[24px] justify-center items-center">
@@ -17,7 +20,10 @@ const JoinUsSection: FC = () => {
           </p>
         </div>
         <div>
-          <Button className="px-[60px] rounded-[8px] py-[8px]">
+          <Button
+            onClick={handleSignupClick}
+            className="px-[60px] rounded-[8px] py-[8px]"
+          >
             {t("pluginPage.joinUsSection.buttonText")}
           </Button>
         </div>

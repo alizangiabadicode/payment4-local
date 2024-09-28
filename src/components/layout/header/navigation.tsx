@@ -82,10 +82,27 @@ export const NavigationBar = () => {
                     <div className="py-2">
                       {item.dropdownItems.map((dropdownItem) => {
                         const isActive = currentRoute === dropdownItem.path;
+
+                        if (dropdownItem.path === "/blog") {
+                          return (
+                            <Link
+                              key={dropdownItem.title}
+                              target="_blank"
+                              href={`https://${
+                                i18n.language === "fa" ? "fa." : ""
+                              }${process.env.NEXT_PUBLIC_BLOG_URL}`}
+                              className={`${
+                                isActive ? "font-bold" : ""
+                              } dark:text-white text-nowrap text-[13px] md:text-[15px] px-4 py-2 `}
+                            >
+                              {t(dropdownItem.title.toLowerCase())}
+                            </Link>
+                          );
+                        }
                         return (
                           <Link
-                            onClick={() => setOpenDropdown(null)}
                             key={dropdownItem.title}
+                            onClick={() => setOpenDropdown(null)}
                             href={{
                               pathname: dropdownItem.path,
                               query: {
@@ -94,11 +111,11 @@ export const NavigationBar = () => {
                                 ...(utm_source && { utm_source }),
                               },
                             }}
-                            className={` ${
+                            className={`block px-4 py-2 text-sm  dark:text-white ${
                               isActive ? "font-bold" : ""
-                            } block px-4 py-2 text-sm text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-900`}
+                            }`}
                           >
-                            {t(`${dropdownItem.title.toLowerCase()}`)}
+                            {t(dropdownItem.title.toLowerCase())}
                           </Link>
                         );
                       })}
@@ -106,22 +123,6 @@ export const NavigationBar = () => {
                   </div>
                 )}
               </div>
-            );
-          }
-
-          if (item.path === "/blog") {
-            return (
-              <Link
-                key={item.title}
-                target="_blank"
-                href={`https://${i18n.language === "fa" ? "fa." : ""}${
-                  process.env.NEXT_PUBLIC_BLOG_URL
-                }`}
-                className={`${isActive && "font-bold"}
-            dark:text-white text-nowrap text-[13px] md:text-[15px]`}
-              >
-                {t(`${item.title.toLowerCase()}`)}
-              </Link>
             );
           }
           return (
