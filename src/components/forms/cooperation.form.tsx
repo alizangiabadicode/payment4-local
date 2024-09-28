@@ -75,7 +75,7 @@ const CooperationForm = ({ setOpenSnackBar }: CooperationFormProps) => {
   return (
     <div
       className={`dark:bg-dark-gradient-card bg-light-gradient-card
-      px-[23px] lg:px-[48px] py-[40px] rounded-[8px] w-full md:w-[497px] md:h-max-[497px]`}
+      px-[23px] lg:px-[48px] py-[40px] rounded-[8px] w-full md:w-[497px] lg:w-[639px] md:h-max-[497px]`}
     >
       <form onSubmit={formik.handleSubmit}>
         <div className="flex flex-col gap-y-2">

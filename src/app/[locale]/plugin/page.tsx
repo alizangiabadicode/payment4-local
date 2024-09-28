@@ -8,12 +8,13 @@ import CryptoPlugins from "./crypto.plugins";
 import CryptoAdvantages from "./advantages";
 import JoinUsSection from "./join.us";
 
-
-
-
 const PluginPage = () => {
   const { t, i18n } = useTranslation();
   const isRtl = i18n.dir() === "rtl";
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}`;
+    window.open(redirectUrl, "_blank");
+  };
   return (
     <div className="container lg:px-[200px] p-1 lg:p-6">
       <div className="flex lg:flex-row flex-col justify-between items-center px-4">
@@ -25,6 +26,7 @@ const PluginPage = () => {
             {t("pluginPage.pluginHeader.description")}
           </p>
           <Button
+            onClick={handleSignupClick}
             className="lg:py-[13px] py-[10px] !px-[13px] rounded-md flex justify-center 
           items-center gap-x-2 lg:w-[318px] w-[255px] lg:!text-[16px] !text-[12px]"
           >

@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import useQueryParams from "@/hooks/useQueryParams";
+import { Button } from "../shared/button";
+import { LeftArrowIcon, RightArrowIcon } from "@/icons/svg";
 
 export interface CardsType {
   title: string;
@@ -14,8 +16,18 @@ export interface CardsType {
 
 const Card = (props: CardsType) => {
   const { i18n } = useTranslation();
+  const isRtl = i18n.dir() === "rtl";
   const queryParams = useQueryParams();
   const { utm_campaign, utm_medium, utm_source } = queryParams;
+
+  const handleSignupClick = () => {
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
+      i18n.language
+    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
+      utm_medium ? `&utm_campaign=${utm_medium}` : ""
+    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    window.open(redirectUrl, "_blank");
+  };
   return (
     <div
       className={`
@@ -28,10 +40,21 @@ const Card = (props: CardsType) => {
         </p>
         <p
           className={`text-[12px] sm:text-[14px]  sm:w-3/4 
-          dark:text-[#B5B5B5]  text-[#717171]`}
+          dark:text-[#B5B5B5]  text-[#717171] mb-[30px] md:mb-[10px]`}
         >
           {props.desc}
         </p>
+        <div className="hidden md:block mb-[10px]">
+          <Button
+            onClick={handleSignupClick}
+            className="px-[15px] h-[43px] !text-[16px] flex items-center justify-center"
+          >
+            {props.buttonText}
+            <div className="ml-2">
+              {isRtl ? <LeftArrowIcon /> : <RightArrowIcon />}
+            </div>
+          </Button>
+        </div>
       </div>
       <div className="-order-last md:order-1 sm:w-[384px] md:rtl:pr-[30px]">
         <Image
