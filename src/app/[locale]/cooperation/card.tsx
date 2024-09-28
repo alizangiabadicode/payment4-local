@@ -36,7 +36,7 @@ const Card: React.FC<CardProps> = ({
         </p>
         <Button
           onClick={handleSignupClick}
-          className="py-2 px-4 rounded-md lg:flex items-center gap-x-2 hidden "
+          className="py-2 px-4 rounded-md lg:flex items-center gap-x-2 hidden h-[43px]"
         >
           {buttonText}
           <div className="ml-2">
@@ -50,14 +50,14 @@ const Card: React.FC<CardProps> = ({
           alt={title}
           width={228}
           height={198}
-          className="object-contain hidden dark:block"
+          className="object-contain hidden dark:block max-h-[197px]"
         />
         <Image
           src={lightImageSrc}
           alt={title}
           width={228}
           height={198}
-          className="object-contain dark:hidden block"
+          className="object-contain dark:hidden block max-h-[197px]"
         />
       </div>
     </div>
