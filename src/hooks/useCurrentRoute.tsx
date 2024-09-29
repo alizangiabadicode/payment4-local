@@ -20,6 +20,10 @@ const useCurrentRoute = () => {
           return "/faq";
         case `/${i18n.language}/blog`:
           return "/blog";
+        case `/${i18n.language}/cooperation`:
+          return "/cooperation";
+        case `/${i18n.language}/plugin`:
+          return "/plugin";
         default:
           return pathname;
       }
