@@ -52,7 +52,12 @@ export const NavigationBar = () => {
       ltr:lg:ml-[30px] ltr:xl:ml-[200px] rtl:lg:mr-[100px] rtl:xl:mr-[200px]"
       >
         {navbarItems.map((item) => {
-          const isActive = currentRoute === item.path;
+          const isDropdownActive = item.dropdownItems
+            ? item.dropdownItems.some(
+                (dropdownItem) => currentRoute === dropdownItem.path
+              )
+            : false;
+          const isActive = currentRoute === item.path || isDropdownActive;
           if (item.dropdownItems) {
             return (
               <div

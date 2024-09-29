@@ -83,27 +83,14 @@ const Header = () => {
           <div>
             <Drawer isOpen={isDrawerOpen} onClose={toggleDrawer}>
               {navbarItems.map((item, index) => {
-                const isActive = currentRoute === item.path;
+                const isDropdownActive = item.dropdownItems
+                  ? item.dropdownItems.some(
+                      (dropdownItem) => currentRoute === dropdownItem.path
+                    )
+                  : false;
+                const isActive = currentRoute === item.path || isDropdownActive;
                 const hasDropdownItems =
                   item.dropdownItems && item.dropdownItems.length > 0;
-                if (item.path === "/blog") {
-                  return (
-                    <Link
-                      key={item.title}
-                      style={{ fontSize: "15px" }}
-                      className={`${isActive && "font-bold"}
-                  dark:text-white
-                }`}
-                      target="_blank"
-                      href={`https://${i18n.language === "fa" ? "fa." : ""}${
-                        process.env.NEXT_PUBLIC_BLOG_URL
-                      }`}
-                      onClick={() => setIsDrawerOpen(false)}
-                    >
-                      {t(`${item.title.toLowerCase()}`)}
-                    </Link>
-                  );
-                }
                 return (
                   <>
                     <div className="flex justify-between">
@@ -137,19 +124,43 @@ const Header = () => {
                     {openDropdowns[index] && hasDropdownItems && (
                       <div className="rtl:pr-10 ltr:pl-10 flex flex-col gap-y-5">
                         {item.dropdownItems?.map(
-                          (dropDownItem, dropDownIndex) => (
-                            <div key={dropDownIndex}>
-                              <Link
-                                onClick={() => {
-                                  setIsDrawerOpen(false);
-                                  setOpenDropdowns({});
-                                }}
-                                href={dropDownItem.path}
-                              >
-                                {t(`${dropDownItem.title.toLowerCase()}`)}
-                              </Link>
-                            </div>
-                          )
+                          (dropDownItem, dropDownIndex) => {
+                            const isActive = currentRoute === dropDownItem.path;
+                            if (dropDownItem.path === "/blog") {
+                              return (
+                                <Link
+                                  key={item.title}
+                                  style={{ fontSize: "15px" }}
+                                  className={`${isActive && "font-bold"}
+                              dark:text-white
+                            }`}
+                                  target="_blank"
+                                  href={`https://${
+                                    i18n.language === "fa" ? "fa." : ""
+                                  }${process.env.NEXT_PUBLIC_BLOG_URL}`}
+                                  onClick={() => setIsDrawerOpen(false)}
+                                >
+                                  {t(`${dropDownItem.title.toLowerCase()}`)}
+                                </Link>
+                              );
+                            }
+                            return (
+                              <div key={dropDownIndex}>
+                                <Link
+                                  onClick={() => {
+                                    setIsDrawerOpen(false);
+                                    setOpenDropdowns({});
+                                  }}
+                                  href={dropDownItem.path}
+                                  className={`${isActive && "font-bold"}
+                              dark:text-white
+                            }`}
+                                >
+                                  {t(`${dropDownItem.title.toLowerCase()}`)}
+                                </Link>
+                              </div>
+                            );
+                          }
                         )}
                       </div>
                     )}
