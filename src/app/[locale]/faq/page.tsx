@@ -44,12 +44,6 @@ const FAQ = async ({ params: { locale } }: { params: { locale: string } }) => {
             </div>
             <div>
                 <p className="font-bold mb-4">{t("developersTitle")}</p>
-                {[...Array(4).keys()].map((idx) => (
-                    <FaqItem key={idx} question={t(`developers.${idx}.q`)} answer={t(`developers.${idx}.a`)} />
-                ))}
-            </div>
-            <div>
-                <p className="font-bold mb-4">{t("developersTitle")}</p>
                 {[...Array(5).keys()].map((idx) => (
                     <FaqItem key={idx} question={t(`developers.${idx}.q`)} answer={t(`developers.${idx}.a`)} />
                 ))}
