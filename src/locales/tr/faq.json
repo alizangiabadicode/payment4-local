@@ -1,90 +1,93 @@
 {
-  "generalInformationTitle": "Genel Bilgi",
-  "accountAndSecurityTitle": "Hesap ve Güvenlik",
-  "transactionsCommissionTitle": "İşlemler/Komisyon",
-  "settlementTitle": "Ödeme",
-  "developersTitle": "Geliştiriciler",
-  "generalInformation": [
-    {
-      "q": "Dijital para nedir?",
-      "a": "Dijital para, yalnızca dijital formda var olan ve fiziksel banknotlar ve madeni paralar gibi elle tutulur olmayan bir para türüdür. Örnekler arasında Bitcoin, Ethereum gibi kripto paralar ve geleneksel para birimlerinin dijital versiyonları bulunur."
-    },
-    {
-      "q": "Dijital para nasıl çalışır?",
-      "a": "Dijital para, işlemleri dağıtılmış bir ağ üzerinde kaydetmek için blockchain teknolojisini kullanır. Her işlem, şeffaflık ve güvenlik sağlamak amacıyla ağ düğümleri tarafından güvence altına alınır ve doğrulanır."
-    },
-    {
-      "q": "Dijital para nasıl satın alabilirsiniz?",
-      "a": "Dijital para satın almak için banka hesabınızı veya kredi kartınızı hesabınıza bağlayabilir, satın almak istediğiniz para birimini seçip işlemi onaylayabilirsiniz."
-    }
-  ],
-  "accountAndSecurity": [
-    {
-      "q": "Şifremi unutursam ne yapmalıyım?",
-      "a": "Giriş sayfasındaki “Şifremi Unuttum” bağlantısına tıklayın. Kayıtlı e-posta adresinizi girin ve şifrenizi sıfırlamak için talimatları izleyin."
-    },
-    {
-      "q": "İki faktörlü kimlik doğrulama (2FA) nedir ve nasıl etkinleştiririm?",
-      "a": "2FA, şifrenize ek olarak mobil cihazınıza gönderilen bir kod gibi ikinci bir doğrulama şekli gerektirerek ek bir güvenlik katmanı ekler. Hesabınızın “Güvenlik Ayarları” bölümünden 2FA’yı etkinleştirebilirsiniz."
-    },
-    {
-      "q": "Hesabım ne kadar güvenli?",
-      "a": "Hesabınızı korumak için iki faktörlü kimlik doğrulama (2FA), şifreleme ve güvenli depolama gibi gelişmiş güvenlik önlemleri kullanıyoruz. 2FA’yı etkinleştirmenizi ve güçlü, benzersiz şifreler kullanmanızı öneririz."
-    }
-  ],
-  "transactionsCommission": [
-    {
-      "q": "İşlem komisyonu nedir ve nasıl hesaplanır?",
-      "a": "Payment4 üzerinden aldığınız her işlem için toplam işlem tutarının küçük bir yüzdesi (yüzde 1) Payment4 ücreti olarak alınır ve bu ücret 10$ ile sınırlandırılır. İşlem başına maksimum ücret 10$ olarak belirlenmiştir. Örneğin, 100$’ın altındaki ödemelerde, 50$’lık bir ödeme için ücret 0,50$ olacaktır. 100$’ın üzerindeki işlemler için, 500$’lık bir işlemde ücret 10$ olacaktır. 500$’ı aşan işlemlerde, 2000$’lık bir işlemde de ücret 10$ olacaktır."
-    },
-    {
-      "q": "Ağ işlem ücreti nedir?",
-      "a": "Farklı blockchain ağlarında, bakiyeyi kaynak cüzdandan hedef cüzdana aktarmak için bakiye transferinin gerçekleşmesi için belirli bir miktar ağ işlem ücreti ödemeniz gerekmektedir. Bu ücret, her ağın temel para biriminde hesaplanır ve her ağda farklılık gösterir."
-    },
-    {
-      "q": "Ağ işlem ücreti ve Payment4 ücreti kimin ödeyeceği nasıl belirlenir?",
-      "a": "Her tüccar, her ödeme ağ geçidinin ayarları bölümünde ağ işlem ücretini ve Payment4 ücretini kimin ödeyeceğini belirleyebilir: tüccar (kendileri) veya ödeme yapan kullanıcı (fatura ödeyen kullanıcı). İlk durumda, her ödemeden sonra belirtilen maliyetler dikkate alınır ve nihai hesaplaşma sırasında toplam tutardan düşülür. Ancak ikinci durumda, belirtilen tutarlar son faturaya eklenir ve tüccar, nihai hesaplaşmada kesinti olmaksızın faturanın tamamını alır. Ayrıca, bu iki ücretin ayrılması mümkündür, örneğin, kullanıcı ağ ücretini öderken tüccar Payment4 ücretini öder."
-    },
-    {
-      "q": "İşlemler ne kadar sürede işlenir?",
-      "a": "İşlem süreleri, ağ yoğunluğuna ve işlem türüne bağlı olarak değişir. Genel olarak, işlemlerin çoğu birkaç dakika ile bir saat arasında işlenir."
-    },
-    {
-      "q": "Bir işlem, kullanıcının tarafında başarılı olduğu halde süresi dolmuş olarak gösterilirse ne yapmalıyım?",
-      "a": "İşleminizin durumu süresi dolmuş olarak gösteriliyorsa ancak başarılı bir şekilde işlendiğine inanıyorsanız, işlemin doğru bir şekilde kaydedildiğinden emin olmak için inceleme talebinde bulunabilirsiniz. Bunu yapmak için, ilgili işlemin detaylar bölümüne gidin ve 'İnceleme Talep Et' düğmesine tıklayın. Ödeme için kullanılan kripto parayı ve işlem hash’ini girin, ardından onaylayın. Talebiniz hızla incelenecek ve işleminizin doğru bir şekilde kaydedildiğinden emin olacağız."
-    }
-  ],
-  "settlement": [
-    {
-      "q": "Ödeme işlemi nasıl yapılır?",
-      "a": "Kullanıcılarınızdan birden fazla ödeme aldıktan sonra, ödemeyi gerçekleştirdiğiniz ağ ve kripto para birimine göre toplam bakiyeyi bakiye bölümünde görebilirsiniz. Her yeni ödeme bu bakiyeyi artırır. Ödeme bölümünde, yalnızca 24 saatten fazla önce ödenmiş toplam işlemler görünür. Günün herhangi bir saatinde ödeme talebinde bulunabilirsiniz ve bu ödeme anında gerçekleştirilir (ağ trafiğine bağlı olarak). Yalnızca ödeme için uygun bakiyelerin aynı ağın cüzdan adresine aktarılabileceğini unutmamak gerekir."
-    },
-    {
-      "q": "Ödeme cüzdan adresimi nereden girebilirim?",
-      "a": "Her ödeme ağ geçidinin cüzdan bölümünde, ödeme alıcı cüzdan adresinizi kaydedebilirsiniz. Ödeme için uygun olan her kripto para biriminin bakiyesinin yalnızca aynı kripto para biriminin cüzdanına aktarılabileceğini ve kripto paraların diğerlerine dönüştürülemeyeceğini unutmayın."
-    },
-    {
-      "q": "Ödeme için minimum tutar nedir ve ödemeleri ne zaman çekebilirim?",
-      "a": "Aldığınız her ödeme, çekilebilir hale gelmeden önce 24 saatlik bir işleme tabi tutulur. Bu süre zarfında, toplam tutarı bakiye sayfanızda görebilirsiniz. Hesabınızdan çekebileceğiniz minimum tutarın 10$ olduğunu unutmayın. Bu, daha küçük işlemlerin çekilmeden önce pratik bir miktara kadar birikmesini sağlar ve fonlarınızın verimli bir şekilde işlenmesini ve yönetilmesini sağlar."
-    }
-  ],
-  "developers": [
-    {
-      "q": "E-ticaret sitemi ağ geçidi ile nasıl donatabilirim?",
-      "a": "Ağ geçidini e-ticaret sitenize nasıl bağlayacağınızla ilgili belgeleri okumak için, resmi site https://payment4.com adresini ziyaret edebilir ve belge bölümünde e-ticaret sitenizi donatmaya devam edebilirsiniz."
-    },
-    {
-      "q": "Bir WordPress sitesi için ağ geçidini nasıl etkinleştirebilirim?",
-      "a": "WordPress (WooCommerce) siteleri için, resmi site https://payment4.com adresindeki belge bölümünü ziyaret edebilir ve eklentiler bölümünden WordPress (WooCommerce) eklentisini indirebilirsiniz."
-    },
-    {
-      "q": "API anahtarımı nereden alabilirim?",
-      "a": "Her ağ geçidini oluşturduğunuzda, o ağ geçidinin özel API anahtarını kullanma hakkına sahip olursunuz. Bu API anahtarı, her ağ geçidinin ayarlar bölümünde mevcuttur."
-    },
-    {
-      "q": "API anahtarım ifşa olursa ne yapmalıyım?",
-      "a": "Hesap ayarları veya API yönetim bölümünden yeni bir API anahtarı oluşturun. Eski API anahtarını API'ye bağımlı olan tüm uygulamalarda, betiklerde veya hizmetlerde yeni anahtar ile değiştirin."
-    }
-    
-  ]
+    "generalInformationTitle": "Genel Bilgi",
+    "accountAndSecurityTitle": "Hesap ve Güvenlik",
+    "transactionsCommissionTitle": "İşlemler/Komisyon",
+    "settlementTitle": "Ödeme",
+    "developersTitle": "Geliştiriciler",
+    "generalInformation": [
+        {
+            "q": "Dijital para nedir?",
+            "a": "Dijital para, yalnızca dijital formda var olan ve fiziksel banknotlar ve madeni paralar gibi elle tutulur olmayan bir para türüdür. Örnekler arasında Bitcoin, Ethereum gibi kripto paralar ve geleneksel para birimlerinin dijital versiyonları bulunur."
+        },
+        {
+            "q": "Dijital para nasıl çalışır?",
+            "a": "Dijital para, işlemleri dağıtılmış bir ağ üzerinde kaydetmek için blockchain teknolojisini kullanır. Her işlem, şeffaflık ve güvenlik sağlamak amacıyla ağ düğümleri tarafından güvence altına alınır ve doğrulanır."
+        },
+        {
+            "q": "Dijital para nasıl satın alabilirsiniz?",
+            "a": "Dijital para satın almak için banka hesabınızı veya kredi kartınızı hesabınıza bağlayabilir, satın almak istediğiniz para birimini seçip işlemi onaylayabilirsiniz."
+        }
+    ],
+    "accountAndSecurity": [
+        {
+            "q": "Şifremi unutursam ne yapmalıyım?",
+            "a": "Giriş sayfasındaki “Şifremi Unuttum” bağlantısına tıklayın. Kayıtlı e-posta adresinizi girin ve şifrenizi sıfırlamak için talimatları izleyin."
+        },
+        {
+            "q": "İki faktörlü kimlik doğrulama (2FA) nedir ve nasıl etkinleştiririm?",
+            "a": "2FA, şifrenize ek olarak mobil cihazınıza gönderilen bir kod gibi ikinci bir doğrulama şekli gerektirerek ek bir güvenlik katmanı ekler. Hesabınızın “Güvenlik Ayarları” bölümünden 2FA’yı etkinleştirebilirsiniz."
+        },
+        {
+            "q": "Hesabım ne kadar güvenli?",
+            "a": "Hesabınızı korumak için iki faktörlü kimlik doğrulama (2FA), şifreleme ve güvenli depolama gibi gelişmiş güvenlik önlemleri kullanıyoruz. 2FA’yı etkinleştirmenizi ve güçlü, benzersiz şifreler kullanmanızı öneririz."
+        }
+    ],
+    "transactionsCommission": [
+        {
+            "q": "İşlem komisyonu nedir ve nasıl hesaplanır?",
+            "a": "Payment4 üzerinden aldığınız her işlem için toplam işlem tutarının küçük bir yüzdesi (yüzde 1) Payment4 ücreti olarak alınır ve bu ücret 10$ ile sınırlandırılır. İşlem başına maksimum ücret 10$ olarak belirlenmiştir. Örneğin, 100$’ın altındaki ödemelerde, 50$’lık bir ödeme için ücret 0,50$ olacaktır. 100$’ın üzerindeki işlemler için, 500$’lık bir işlemde ücret 10$ olacaktır. 500$’ı aşan işlemlerde, 2000$’lık bir işlemde de ücret 10$ olacaktır."
+        },
+        {
+            "q": "Ağ işlem ücreti nedir?",
+            "a": "Farklı blockchain ağlarında, bakiyeyi kaynak cüzdandan hedef cüzdana aktarmak için bakiye transferinin gerçekleşmesi için belirli bir miktar ağ işlem ücreti ödemeniz gerekmektedir. Bu ücret, her ağın temel para biriminde hesaplanır ve her ağda farklılık gösterir."
+        },
+        {
+            "q": "Ağ işlem ücreti ve Payment4 ücreti kimin ödeyeceği nasıl belirlenir?",
+            "a": "Her tüccar, her ödeme ağ geçidinin ayarları bölümünde ağ işlem ücretini ve Payment4 ücretini kimin ödeyeceğini belirleyebilir: tüccar (kendileri) veya ödeme yapan kullanıcı (fatura ödeyen kullanıcı). İlk durumda, her ödemeden sonra belirtilen maliyetler dikkate alınır ve nihai hesaplaşma sırasında toplam tutardan düşülür. Ancak ikinci durumda, belirtilen tutarlar son faturaya eklenir ve tüccar, nihai hesaplaşmada kesinti olmaksızın faturanın tamamını alır. Ayrıca, bu iki ücretin ayrılması mümkündür, örneğin, kullanıcı ağ ücretini öderken tüccar Payment4 ücretini öder."
+        },
+        {
+            "q": "İşlemler ne kadar sürede işlenir?",
+            "a": "İşlem süreleri, ağ yoğunluğuna ve işlem türüne bağlı olarak değişir. Genel olarak, işlemlerin çoğu birkaç dakika ile bir saat arasında işlenir."
+        },
+        {
+            "q": "Bir işlem, kullanıcının tarafında başarılı olduğu halde süresi dolmuş olarak gösterilirse ne yapmalıyım?",
+            "a": "İşleminizin durumu süresi dolmuş olarak gösteriliyorsa ancak başarılı bir şekilde işlendiğine inanıyorsanız, işlemin doğru bir şekilde kaydedildiğinden emin olmak için inceleme talebinde bulunabilirsiniz. Bunu yapmak için, ilgili işlemin detaylar bölümüne gidin ve 'İnceleme Talep Et' düğmesine tıklayın. Ödeme için kullanılan kripto parayı ve işlem hash’ini girin, ardından onaylayın. Talebiniz hızla incelenecek ve işleminizin doğru bir şekilde kaydedildiğinden emin olacağız."
+        }
+    ],
+    "settlement": [
+        {
+            "q": "Ödeme işlemi nasıl yapılır?",
+            "a": "Kullanıcılarınızdan birden fazla ödeme aldıktan sonra, ödemeyi gerçekleştirdiğiniz ağ ve kripto para birimine göre toplam bakiyeyi bakiye bölümünde görebilirsiniz. Her yeni ödeme bu bakiyeyi artırır. Ödeme bölümünde, yalnızca 24 saatten fazla önce ödenmiş toplam işlemler görünür. Günün herhangi bir saatinde ödeme talebinde bulunabilirsiniz ve bu ödeme anında gerçekleştirilir (ağ trafiğine bağlı olarak). Yalnızca ödeme için uygun bakiyelerin aynı ağın cüzdan adresine aktarılabileceğini unutmamak gerekir."
+        },
+        {
+            "q": "Ödeme cüzdan adresimi nereden girebilirim?",
+            "a": "Her ödeme ağ geçidinin cüzdan bölümünde, ödeme alıcı cüzdan adresinizi kaydedebilirsiniz. Ödeme için uygun olan her kripto para biriminin bakiyesinin yalnızca aynı kripto para biriminin cüzdanına aktarılabileceğini ve kripto paraların diğerlerine dönüştürülemeyeceğini unutmayın."
+        },
+        {
+            "q": "Ödeme için minimum tutar nedir ve ödemeleri ne zaman çekebilirim?",
+            "a": "Aldığınız her ödeme, çekilebilir hale gelmeden önce 24 saatlik bir işleme tabi tutulur. Bu süre zarfında, toplam tutarı bakiye sayfanızda görebilirsiniz. Hesabınızdan çekebileceğiniz minimum tutarın 10$ olduğunu unutmayın. Bu, daha küçük işlemlerin çekilmeden önce pratik bir miktara kadar birikmesini sağlar ve fonlarınızın verimli bir şekilde işlenmesini ve yönetilmesini sağlar."
+        }
+    ],
+    "developers": [
+        {
+            "q": "E-ticaret sitemi ağ geçidi ile nasıl donatabilirim?",
+            "a": "Ağ geçidini e-ticaret sitenize nasıl bağlayacağınızla ilgili belgeleri okumak için, resmi site https://payment4.com adresini ziyaret edebilir ve belge bölümünde e-ticaret sitenizi donatmaya devam edebilirsiniz."
+        },
+        {
+            "q": "Bir WordPress sitesi için ağ geçidini nasıl etkinleştirebilirim?",
+            "a": "WordPress (WooCommerce) siteleri için, resmi site https://payment4.com adresindeki belge bölümünü ziyaret edebilir ve eklentiler bölümünden WordPress (WooCommerce) eklentisini indirebilirsiniz."
+        },
+        {
+            "q": "Varsayılan ayarlardan Payment4 ödeme ağ geçidini nasıl kaldırabiliriz?",
+            "a": "Ödeme ağ geçitlerinin önceliği, WooCommerce ağ geçitleri listesine göre belirlenir. Önce eklenti sürümünüzü güncelleyin, ardından varsayılan ödeme ağ geçidini listenin en üstüne ve Payment4 ağ geçidini daha alt bir sıraya yerleştirin. Değişiklikleri uyguladıktan sonra kaydettiğinizden emin olun."
+        },
+        {
+            "q": "API anahtarımı nereden alabilirim?",
+            "a": "Her ağ geçidini oluşturduğunuzda, o ağ geçidinin özel API anahtarını kullanma hakkına sahip olursunuz. Bu API anahtarı, her ağ geçidinin ayarlar bölümünde mevcuttur."
+        },
+        {
+            "q": "API anahtarım ifşa olursa ne yapmalıyım?",
+            "a": "Hesap ayarları veya API yönetim bölümünden yeni bir API anahtarı oluşturun. Eski API anahtarını API'ye bağımlı olan tüm uygulamalarda, betiklerde veya hizmetlerde yeni anahtar ile değiştirin."
+        }
+    ]
 }

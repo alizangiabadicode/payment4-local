@@ -1,90 +1,93 @@
 {
-  "generalInformationTitle": "Informations Générales",
-  "accountAndSecurityTitle": "Compte et Sécurité",
-  "transactionsCommissionTitle": "Transactions/Commission",
-  "settlementTitle": "Règlement",
-  "developersTitle": "Développeurs",
-  "generalInformation": [
-    {
-      "q": "Qu'est-ce que la monnaie numérique?",
-      "a": "La monnaie numérique est une forme de monnaie qui n'existe que sous forme numérique et n'est pas tangible comme les billets et pièces physiques. Les exemples incluent les cryptomonnaies comme Bitcoin, Ethereum et les versions numériques des monnaies traditionnelles."
-    },
-    {
-      "q": "Comment fonctionne la monnaie numérique?",
-      "a": "La monnaie numérique utilise la technologie blockchain pour enregistrer les transactions à travers un réseau distribué. Chaque transaction est sécurisée et vérifiée par des nœuds du réseau, garantissant transparence et sécurité."
-    },
-    {
-      "q": "Comment puis-je acheter de la monnaie numérique?",
-      "a": "Vous pouvez acheter de la monnaie numérique en liant votre compte bancaire ou votre carte de crédit à votre compte, en sélectionnant la monnaie que vous souhaitez acheter et en confirmant la transaction."
-    }
-  ],
-  "accountAndSecurity": [
-    {
-      "q": "Que dois-je faire si j'oublie mon mot de passe?",
-      "a": "Cliquez sur le lien « Mot de passe oublié » sur la page de connexion. Entrez votre adresse e-mail enregistrée et suivez les instructions pour réinitialiser votre mot de passe."
-    },
-    {
-      "q": "Qu'est-ce que l'authentification à deux facteurs (2FA) et comment l'activer?",
-      "a": "La 2FA ajoute une couche supplémentaire de sécurité en exigeant une deuxième forme de vérification, telle qu'un code envoyé à votre appareil mobile, en plus de votre mot de passe. Vous pouvez activer la 2FA dans les « Paramètres de sécurité » de votre compte."
-    },
-    {
-      "q": "Mon compte est-il sécurisé?",
-      "a": "Nous employons des mesures de sécurité avancées telles que l'authentification à deux facteurs (2FA), le cryptage et le stockage sécurisé pour protéger votre compte. Nous recommandons d'activer la 2FA et d'utiliser des mots de passe forts et uniques."
-    }
-  ],
-  "transactionsCommission": [
-    {
-      "q": "Qu'est-ce qu'une commission de transaction et comment est-elle calculée?",
-      "a": "Pour chaque transaction que vous recevez via Payment4, un petit pourcentage (1 pour cent) du montant total de la transaction est prélevé en tant que frais Payment4, avec un plafond de 10 $. Le maximum de frais par transaction est fixé à 10 $. Par exemple, pour des paiements inférieurs à 100 $, comme un paiement de 50 $, les frais seront de 0,50 $. Pour des transactions supérieures à 100 $, comme une transaction de 500 $, les frais seront de 10 $. Les transactions supérieures à 500 $, comme une transaction de 2000 $, entraîneront également des frais de 10 $."
-    },
-    {
-      "q": "Qu'est-ce qu'un frais de transaction réseau?",
-      "a": "Dans différentes réseaux blockchain, pour transférer le solde du portefeuille source vers le portefeuille destinataire, vous devez payer un certain montant en tant que frais de transaction réseau pour que le transfert de solde ait lieu. Ces frais sont calculés dans l'unité de monnaie de base de chaque réseau et varient selon les réseaux."
-    },
-    {
-      "q": "Comment déterminer qui paie les frais de transaction réseau et les frais Payment4?",
-      "a": "Chaque commerçant peut spécifier dans la section des paramètres de chaque passerelle si le payeur des frais de transaction réseau et des frais Payment4 sera le commerçant (lui-même) ou l'utilisateur payeur (l'utilisateur qui paie la facture). Dans le premier cas, après chaque paiement, les coûts mentionnés sont pris en compte et déduits du montant total lors du règlement final. Mais dans le second cas, les montants mentionnés sont ajoutés à la facture finale, et le commerçant recevra finalement le montant total de la facture payée sans déduction lors du règlement final. Il est à noter qu'il est possible de séparer ces deux frais, par exemple, l'utilisateur paie les frais de réseau et le commerçant paie les frais Payment4."
-    },
-    {
-      "q": "Combien de temps faut-il pour traiter les transactions?",
-      "a": "Les temps de transaction varient en fonction de la congestion du réseau et du type de transaction. En général, la plupart des transactions sont traitées en quelques minutes à une heure."
-    },
-    {
-      "q": "Que faire si une transaction est affichée comme expirée mais qu'elle a réussi du côté de l'utilisateur et a été déduite du compte de l'utilisateur?",
-      "a": "Si l'état de votre transaction est affiché comme expiré mais que vous pensez qu'elle a été traitée avec succès, vous pouvez demander une révision pour vous assurer que la transaction est correctement enregistrée. Pour ce faire, allez dans la section des détails de la transaction concernée et cliquez sur 'Demander une révision'. Entrez la cryptomonnaie utilisée pour le paiement et le hash de la transaction, puis confirmez. Votre demande sera rapidement examinée et nous nous assurerons que votre transaction est correctement enregistrée."
-    }
-  ],
-  "settlement": [
-    {
-      "q": "Comment se déroule le règlement?",
-      "a": "Après avoir reçu plusieurs paiements de vos utilisateurs, vous pouvez voir le solde total basé sur la cryptomonnaie et le réseau dans lequel le paiement a été effectué dans la section du solde. Chaque nouveau paiement augmente ce solde. Dans la section de règlement, seules les transactions totales qui ont été payées il y a plus de 24 heures sont visibles. Vous pouvez demander votre règlement à toute heure de la journée, et il sera réglé instantanément (selon le trafic du réseau). Il est à noter que seuls les soldes éligibles au règlement peuvent être réglés sur l'adresse de portefeuille du même réseau."
-    },
-    {
-      "q": "Où puis-je entrer l'adresse de mon portefeuille de règlement?",
-      "a": "Dans la section du portefeuille de chaque passerelle, vous pouvez procéder à l'enregistrement de l'adresse du portefeuille récepteur du règlement. Veuillez noter que le solde éligible au règlement de chaque cryptomonnaie ne peut être transféré qu'à un portefeuille de la même cryptomonnaie, et les cryptomonnaies ne peuvent pas être converties en d'autres."
-    },
-    {
-      "q": "Quel est le montant minimum pour le règlement et quand puis-je retirer les paiements?",
-      "a": "Tout paiement que vous recevez sera soumis à une période de traitement de 24 heures avant de pouvoir être retiré. Pendant ce temps, vous pouvez voir le montant total sur votre page de solde. Veuillez noter que le montant minimum que vous pouvez retirer de votre compte est de 10 $. Cela garantit que les petites transactions s'accumulent jusqu'à un montant pratique avant le retrait, ce qui maintient une gestion et un traitement efficaces de vos fonds."
-    }
-  ],
-  "developers": [
-    {
-      "q": "Comment puis-je équiper mon site de commerce électronique avec la passerelle?",
-      "a": "Pour lire la documentation et savoir comment connecter la passerelle à votre site de commerce électronique, vous pouvez visiter le site officiel https://payment4.com et procéder à équiper votre site de commerce électronique dans la section documentation."
-    },
-    {
-      "q": "Comment puis-je activer la passerelle pour un site WordPress?",
-      "a": "Pour les sites WordPress (WooCommerce), vous pouvez visiter la section documentation du site officiel https://payment4.com et télécharger le plugin WordPress (WooCommerce) à partir de la section plugins."
-    },
-    {
-      "q": "Où puis-je obtenir ma clé API?",
-      "a": "En créant chaque passerelle, vous aurez le droit d'utiliser la clé API spécifique à cette passerelle. Cette clé API est disponible dans la section des paramètres de chaque passerelle."
-    },
-    {
-      "q": "Que dois-je faire si ma clé API est compromise?",
-      "a": "Créez une nouvelle clé API via les paramètres de votre compte ou la section de gestion des API. Remplacez l'ancienne clé API par la nouvelle dans toutes les applications, scripts ou services qui dépendent de l'API."
-    }
-    
-  ]
+    "generalInformationTitle": "Informations Générales",
+    "accountAndSecurityTitle": "Compte et Sécurité",
+    "transactionsCommissionTitle": "Transactions/Commission",
+    "settlementTitle": "Règlement",
+    "developersTitle": "Développeurs",
+    "generalInformation": [
+        {
+            "q": "Qu'est-ce que la monnaie numérique?",
+            "a": "La monnaie numérique est une forme de monnaie qui n'existe que sous forme numérique et n'est pas tangible comme les billets et pièces physiques. Les exemples incluent les cryptomonnaies comme Bitcoin, Ethereum et les versions numériques des monnaies traditionnelles."
+        },
+        {
+            "q": "Comment fonctionne la monnaie numérique?",
+            "a": "La monnaie numérique utilise la technologie blockchain pour enregistrer les transactions à travers un réseau distribué. Chaque transaction est sécurisée et vérifiée par des nœuds du réseau, garantissant transparence et sécurité."
+        },
+        {
+            "q": "Comment puis-je acheter de la monnaie numérique?",
+            "a": "Vous pouvez acheter de la monnaie numérique en liant votre compte bancaire ou votre carte de crédit à votre compte, en sélectionnant la monnaie que vous souhaitez acheter et en confirmant la transaction."
+        }
+    ],
+    "accountAndSecurity": [
+        {
+            "q": "Que dois-je faire si j'oublie mon mot de passe?",
+            "a": "Cliquez sur le lien « Mot de passe oublié » sur la page de connexion. Entrez votre adresse e-mail enregistrée et suivez les instructions pour réinitialiser votre mot de passe."
+        },
+        {
+            "q": "Qu'est-ce que l'authentification à deux facteurs (2FA) et comment l'activer?",
+            "a": "La 2FA ajoute une couche supplémentaire de sécurité en exigeant une deuxième forme de vérification, telle qu'un code envoyé à votre appareil mobile, en plus de votre mot de passe. Vous pouvez activer la 2FA dans les « Paramètres de sécurité » de votre compte."
+        },
+        {
+            "q": "Mon compte est-il sécurisé?",
+            "a": "Nous employons des mesures de sécurité avancées telles que l'authentification à deux facteurs (2FA), le cryptage et le stockage sécurisé pour protéger votre compte. Nous recommandons d'activer la 2FA et d'utiliser des mots de passe forts et uniques."
+        }
+    ],
+    "transactionsCommission": [
+        {
+            "q": "Qu'est-ce qu'une commission de transaction et comment est-elle calculée?",
+            "a": "Pour chaque transaction que vous recevez via Payment4, un petit pourcentage (1 pour cent) du montant total de la transaction est prélevé en tant que frais Payment4, avec un plafond de 10 $. Le maximum de frais par transaction est fixé à 10 $. Par exemple, pour des paiements inférieurs à 100 $, comme un paiement de 50 $, les frais seront de 0,50 $. Pour des transactions supérieures à 100 $, comme une transaction de 500 $, les frais seront de 10 $. Les transactions supérieures à 500 $, comme une transaction de 2000 $, entraîneront également des frais de 10 $."
+        },
+        {
+            "q": "Qu'est-ce qu'un frais de transaction réseau?",
+            "a": "Dans différentes réseaux blockchain, pour transférer le solde du portefeuille source vers le portefeuille destinataire, vous devez payer un certain montant en tant que frais de transaction réseau pour que le transfert de solde ait lieu. Ces frais sont calculés dans l'unité de monnaie de base de chaque réseau et varient selon les réseaux."
+        },
+        {
+            "q": "Comment déterminer qui paie les frais de transaction réseau et les frais Payment4?",
+            "a": "Chaque commerçant peut spécifier dans la section des paramètres de chaque passerelle si le payeur des frais de transaction réseau et des frais Payment4 sera le commerçant (lui-même) ou l'utilisateur payeur (l'utilisateur qui paie la facture). Dans le premier cas, après chaque paiement, les coûts mentionnés sont pris en compte et déduits du montant total lors du règlement final. Mais dans le second cas, les montants mentionnés sont ajoutés à la facture finale, et le commerçant recevra finalement le montant total de la facture payée sans déduction lors du règlement final. Il est à noter qu'il est possible de séparer ces deux frais, par exemple, l'utilisateur paie les frais de réseau et le commerçant paie les frais Payment4."
+        },
+        {
+            "q": "Combien de temps faut-il pour traiter les transactions?",
+            "a": "Les temps de transaction varient en fonction de la congestion du réseau et du type de transaction. En général, la plupart des transactions sont traitées en quelques minutes à une heure."
+        },
+        {
+            "q": "Que faire si une transaction est affichée comme expirée mais qu'elle a réussi du côté de l'utilisateur et a été déduite du compte de l'utilisateur?",
+            "a": "Si l'état de votre transaction est affiché comme expiré mais que vous pensez qu'elle a été traitée avec succès, vous pouvez demander une révision pour vous assurer que la transaction est correctement enregistrée. Pour ce faire, allez dans la section des détails de la transaction concernée et cliquez sur 'Demander une révision'. Entrez la cryptomonnaie utilisée pour le paiement et le hash de la transaction, puis confirmez. Votre demande sera rapidement examinée et nous nous assurerons que votre transaction est correctement enregistrée."
+        }
+    ],
+    "settlement": [
+        {
+            "q": "Comment se déroule le règlement?",
+            "a": "Après avoir reçu plusieurs paiements de vos utilisateurs, vous pouvez voir le solde total basé sur la cryptomonnaie et le réseau dans lequel le paiement a été effectué dans la section du solde. Chaque nouveau paiement augmente ce solde. Dans la section de règlement, seules les transactions totales qui ont été payées il y a plus de 24 heures sont visibles. Vous pouvez demander votre règlement à toute heure de la journée, et il sera réglé instantanément (selon le trafic du réseau). Il est à noter que seuls les soldes éligibles au règlement peuvent être réglés sur l'adresse de portefeuille du même réseau."
+        },
+        {
+            "q": "Où puis-je entrer l'adresse de mon portefeuille de règlement?",
+            "a": "Dans la section du portefeuille de chaque passerelle, vous pouvez procéder à l'enregistrement de l'adresse du portefeuille récepteur du règlement. Veuillez noter que le solde éligible au règlement de chaque cryptomonnaie ne peut être transféré qu'à un portefeuille de la même cryptomonnaie, et les cryptomonnaies ne peuvent pas être converties en d'autres."
+        },
+        {
+            "q": "Quel est le montant minimum pour le règlement et quand puis-je retirer les paiements?",
+            "a": "Tout paiement que vous recevez sera soumis à une période de traitement de 24 heures avant de pouvoir être retiré. Pendant ce temps, vous pouvez voir le montant total sur votre page de solde. Veuillez noter que le montant minimum que vous pouvez retirer de votre compte est de 10 $. Cela garantit que les petites transactions s'accumulent jusqu'à un montant pratique avant le retrait, ce qui maintient une gestion et un traitement efficaces de vos fonds."
+        }
+    ],
+    "developers": [
+        {
+            "q": "Comment puis-je équiper mon site de commerce électronique avec la passerelle?",
+            "a": "Pour lire la documentation et savoir comment connecter la passerelle à votre site de commerce électronique, vous pouvez visiter le site officiel https://payment4.com et procéder à équiper votre site de commerce électronique dans la section documentation."
+        },
+        {
+            "q": "Comment puis-je activer la passerelle pour un site WordPress?",
+            "a": "Pour les sites WordPress (WooCommerce), vous pouvez visiter la section documentation du site officiel https://payment4.com et télécharger le plugin WordPress (WooCommerce) à partir de la section plugins."
+        },
+        {
+            "q": "Comment supprimer la passerelle Payment4 des paramètres par défaut ?",
+            "a": "La priorité des passerelles de paiement est déterminée en fonction de la liste des passerelles WooCommerce. Mettez d'abord à jour votre version du plugin, puis placez la passerelle de paiement par défaut souhaitée en haut de la liste et placez la passerelle Payment4 plus bas. Assurez-vous de sauvegarder les modifications après les avoir appliquées."
+        },
+        {
+            "q": "Où puis-je obtenir ma clé API?",
+            "a": "En créant chaque passerelle, vous aurez le droit d'utiliser la clé API spécifique à cette passerelle. Cette clé API est disponible dans la section des paramètres de chaque passerelle."
+        },
+        {
+            "q": "Que dois-je faire si ma clé API est compromise?",
+            "a": "Créez une nouvelle clé API via les paramètres de votre compte ou la section de gestion des API. Remplacez l'ancienne clé API par la nouvelle dans toutes les applications, scripts ou services qui dépendent de l'API."
+        }
+    ]
 }
