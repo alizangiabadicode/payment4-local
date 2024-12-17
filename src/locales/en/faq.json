@@ -35,7 +35,7 @@
     "transactionsCommission": [
         {
             "q": "What is a transaction commission and how is it calculated?",
-            "a": "For every transaction you receive through Payment4, a small fee (1 percent) of the total transaction amount is charged as the Payment4 fee, with a cap of $10. The maximum fee per transaction is set at $10. For example, for payments under $100, such as a $50 payment, the fee would be $0.50. For transactions over $100, such as a $500 transaction, the fee would be $10. Transactions exceeding $500, like a $2000 transaction, will also incur a fee of $10."
+            "a": "For every transaction you receive through Payment4, a small fee (1 percent) of the total transaction amount is charged as the Payment4 fee, with a cap of $10. The maximum fee per transaction is set at $10. For example, for payments under $100, such as a $50 payment, the fee would be $0.50. For transactions over $100, such as a $1000 transaction, the fee would be $10. Transactions exceeding $1000, like a $1300 transaction, will also incur a fee of $10."
         },
         {
             "q": "What is a network transaction fee?",
