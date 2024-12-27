@@ -10,30 +10,11 @@ import { LayoutProvider } from "./layout.provider";
 import { GoogleTagManager, GoogleAnalytics } from "@next/third-parties/google";
 
 import { HotjarSnippet } from "@/components/tracking/hotjar.snippet";
+import { metaDataBuilder } from "@/components/metadata/metadata";
 
-export const metadata: Metadata = {
-    title: "Payment4 | Pay By Crypto",
-    description: "Pay By Crypto",
-    icons: {
-        icon: "/images/favicon.ico",
-    },
-    openGraph: {
-        type: "website",
-        siteName: "Payment4",
-        url: "https://payment4.com",
-        title: "Payment4 | Pay By Crypto",
-        description:
-            "Revolutionize your payments with Payment4, the crypto gateway for seamless and secure transactions. Pay conveniently with cryptocurrency.",
-        images: [
-            {
-                url: "https://storage.payment4.com/logos/payment4-logo.png",
-                type: "image/png",
-                alt: "Payment4 Logo",
-            },
-        ],
-    },
-};
-
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+    return await metaDataBuilder(params.locale);
+}
 const poppins = localFont({
     src: [
         {
