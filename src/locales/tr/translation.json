@@ -355,6 +355,10 @@
       "whmcs": {
         "title": "WHMCS",
         "description": "Bu eklenti, WHMCS'nin yeteneklerini genişleterek kripto para işlemlerini sorunsuz bir şekilde yönetmek için güçlü bir entegrasyon sağlar ve web hosting ve hizmetleriniz için güvenli ve verimli bir ödeme geçidi sunar."
+      },
+      "prestaShop": {
+        "title": "PrestaShop",
+        "description": "PrestaShop mağazanıza kripto para ödemelerini ekleyin. Bu eklentiyle, mağazanızı kolayca Bitcoin ve diğer dijital para birimlerini kabul eden güvenli, hızlı ve modern bir ödeme altyapısına bağlayabilirsiniz."
       }
     },
     "cryptoPaymentPlugins": "Kripto Ödeme Eklentileri",

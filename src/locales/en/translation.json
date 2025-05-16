@@ -356,6 +356,10 @@
       "whmcs": {
         "title": "WHMCS",
         "description": "This plugin is a powerful integration that extends the capabilities of WHMCS to seamlessly handle cryptocurrency transactions, providing a secure and efficient payment gateway for your web hosting and services."
+      },
+      "prestaShop": {
+        "title": "PrestaShop",
+        "description": "Add cryptocurrency payments to your PrestaShop store. With this plugin, you can easily and seamlessly connect your store to a secure, fast, and modern payment gateway for accepting Bitcoin and other digital currencies."
       }
     },
     "cryptoPaymentPlugins": "Crypto Payment Plugins",
