@@ -355,6 +355,10 @@
       "whmcs": {
         "title": "WHMCS",
         "description": "Este plugin es una integración poderosa que amplía las capacidades de WHMCS para gestionar transacciones con criptomonedas, proporcionando una pasarela de pago segura y eficiente para tus servicios de hosting."
+      },
+      "prestaShop": {
+        "title": "PrestaShop",
+        "description": "Agrega pagos con criptomonedas a tu tienda PrestaShop. Con este complemento, puedes conectar fácilmente tu tienda a una pasarela de pago segura, rápida y moderna para aceptar Bitcoin y otras monedas digitales."
       }
     },
     "cryptoPaymentPlugins": "Plugins de Pago con Criptomonedas",

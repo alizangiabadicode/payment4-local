@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": true,
+  "cSpell.words": ["aparat", "notistack", "paylink", "WIGO", "زبان"],
+  "git.ignoreLimitWarning": true,
+  "liveServer.settings.port": 5501,
+  "prettier.tabWidth": 2,
+  "prettier.printWidth": 100
+}
