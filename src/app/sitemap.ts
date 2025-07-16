@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import i18nConfig from "../../i18nConfig";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://payment4.com";
+  const baseUrl = process.env.NEXT_PUBLIC_URL;
 
   // Get all locales from your i18n config
   const locales = i18nConfig.locales;
@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   locales.forEach((locale) => {
     staticRoutes.forEach((route) => {
-      const url = `${baseUrl}/${locale}${route}`;
+      const url = `${baseUrl}/${locale === "en" ? "" : locale}${route}`;
       sitemapEntries.push({
         url,
         lastModified: new Date(),
