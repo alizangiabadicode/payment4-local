@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://payment4.com/sitemap.xml
+
+# Disallow specific paths (optional)
+# Disallow: /admin/
+# Disallow: /private/
+# Disallow: /api/
+
+# Allow all crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: / 
