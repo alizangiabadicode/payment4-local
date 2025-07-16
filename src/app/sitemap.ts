@@ -27,7 +27,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   locales.forEach((locale) => {
     staticRoutes.forEach((route) => {
-      const url = `${baseUrl}/${locale === "en" ? "" : locale}${route}`;
+      const url = `${baseUrl}${locale === "en" ? "" : "/" + locale}${route}`;
       sitemapEntries.push({
         url,
         lastModified: new Date(),
