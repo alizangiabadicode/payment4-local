@@ -18,14 +18,14 @@ const Card = (props: CardsType) => {
   const { i18n } = useTranslation();
   const isRtl = i18n.dir() === "rtl";
   const queryParams = useQueryParams();
-  const { utm_campaign, utm_medium, utm_source } = queryParams;
+  const { utm_campaign, utm_medium, utm_source, campaign_mode } = queryParams;
 
   const handleSignupClick = () => {
-    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-      i18n.language
-    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-      utm_medium ? `&utm_campaign=${utm_medium}` : ""
-    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${
+      utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+    }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+      utm_source ? `&utm_source=${utm_source}` : ""
+    }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`;
     window.open(redirectUrl, "_blank");
   };
   return (
@@ -35,9 +35,7 @@ const Card = (props: CardsType) => {
           grid grid-cols-1 md:grid-cols-2 rounded-md max-w-[400px] md:max-w-[850px] x:min-w-[850px] px-[20px]`}
     >
       <div className="flex flex-col  gap-y-5 sm:gap-y-17 md:pt-12 md:rtl:pr-[30px] pl-10 mt-[30px]">
-        <p className={`font-bold md:text-[24px] text-[20px] dark:text-white`}>
-          {props.title}
-        </p>
+        <p className={`font-bold md:text-[24px] text-[20px] dark:text-white`}>{props.title}</p>
         <p
           className={`text-[12px] sm:text-[14px]  sm:w-3/4 
           dark:text-[#B5B5B5]  text-[#717171] mb-[30px] md:mb-[10px]`}
@@ -50,9 +48,7 @@ const Card = (props: CardsType) => {
             className="px-[15px] h-[43px] !text-[16px] flex items-center justify-center"
           >
             {props.buttonText}
-            <div className="ml-2">
-              {isRtl ? <LeftArrowIcon /> : <RightArrowIcon />}
-            </div>
+            <div className="ml-2">{isRtl ? <LeftArrowIcon /> : <RightArrowIcon />}</div>
           </Button>
         </div>
       </div>
