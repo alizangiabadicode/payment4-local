@@ -17,11 +17,10 @@ import useQueryParams from "@/hooks/useQueryParams";
 const Footer = () => {
   const [mounted, setMounted] = useState(false);
   const queryParams = useQueryParams();
-  const { utm_campaign, utm_medium, utm_source } = queryParams;
+  const { utm_campaign, utm_medium, utm_source, campaign_mode } = queryParams;
   const { t, i18n } = useTranslation();
   const { resolvedTheme: isDark } = useTheme();
-  const direction =
-    i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
+  const direction = i18n.dir() === "rtl" || i18n.language === "ar" ? "rtl" : "ltr";
   useEffect(() => setMounted(true), []);
   return (
     <footer
@@ -103,10 +102,7 @@ const Footer = () => {
             </div>
             <div
               onClick={() => {
-                window.open(
-                  "https://www.linkedin.com/company/payment4/",
-                  "_blank"
-                );
+                window.open("https://www.linkedin.com/company/payment4/", "_blank");
               }}
               className="cursor-pointer"
             >
@@ -306,10 +302,7 @@ const Footer = () => {
           </div>
           <div
             onClick={() => {
-              window.open(
-                "https://www.linkedin.com/company/payment4/",
-                "_blank"
-              );
+              window.open("https://www.linkedin.com/company/payment4/", "_blank");
             }}
             className="cursor-pointer"
           >
@@ -410,11 +403,11 @@ const Footer = () => {
           <div className="flex flex-col gap-2">
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}${
+                utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+              }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+                utm_source ? `&utm_source=${utm_source}` : ""
+              }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}
@@ -423,11 +416,11 @@ const Footer = () => {
             </Link>
             <Link
               target="_blank"
-              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                i18n.language
-              }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-                utm_medium ? `&utm_medium=${utm_medium}` : ""
-              }${utm_source ? `&utm_source=${utm_source}` : ""}`}
+              href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${
+                utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+              }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+                utm_source ? `&utm_source=${utm_source}` : ""
+              }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`}
               style={{ fontSize: "12px" }}
               className={`text-sm text-[#5F5E5E] leading-6 
               dark:text-[#FFFFFFA1] `}

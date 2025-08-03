@@ -1,16 +1,10 @@
 import React, { ReactNode } from "react";
-import {
-  AttachIcon,
-  BackSlashIcon,
-  CheckCartIcon,
-  CheckIconContactUs,
-} from "../../../icons/svg";
+import { AttachIcon, BackSlashIcon, CheckCartIcon, CheckIconContactUs } from "../../../icons/svg";
 import { Button } from "../../../components/shared/button";
 import Image from "next/image";
 import initTranslations from "@/app/i18n";
 import TranslationsProvider from "@/configs/TranslationsProvider";
 import Link from "next/link";
-
 
 interface reasonsToChoosePayment4 {
   title: string;
@@ -54,15 +48,12 @@ const AboutUs = async ({
     utm_campaign: utmCampaign,
     utm_medium: utmMedium,
     utm_source: utmSource,
+    campaign_mode: campaignMode,
   } = searchParams as {
     [key: string]: string | undefined;
   };
   return (
-    <TranslationsProvider
-      namespaces={i18nNamespaces}
-      locale={locale}
-      resources={resources}
-    >
+    <TranslationsProvider namespaces={i18nNamespaces} locale={locale} resources={resources}>
       <div className="flex flex-col items-center container mt-[40px]">
         <div className="flex flex-col items-center max-w-[822px]">
           <div className="flex flex-col gap-y-[8px] px-5 md:px-0 max-w-[800px]">
@@ -102,9 +93,7 @@ const AboutUs = async ({
               >
                 +10000
               </p>
-              <p className="text-[12px] md:text-[16px] text-center">
-                {t("dailyInvoiceCount")}
-              </p>
+              <p className="text-[12px] md:text-[16px] text-center">{t("dailyInvoiceCount")}</p>
             </div>
             <div className="flex flex-col items-center">
               <p
@@ -113,9 +102,7 @@ const AboutUs = async ({
               >
                 +500000
               </p>
-              <p className="text-[12px] md:text-[16px] text-center">
-                {t("totalInvoicesCount")}
-              </p>
+              <p className="text-[12px] md:text-[16px] text-center">{t("totalInvoicesCount")}</p>
             </div>
           </div>
           <div
@@ -135,12 +122,7 @@ const AboutUs = async ({
               </p>
             </div>
             <div className="px-5">
-              <Image
-                width={300}
-                height={300}
-                src="/images/about-mission.png"
-                alt=""
-              />
+              <Image width={300} height={300} src="/images/about-mission.png" alt="" />
             </div>
           </div>
           <div className="px-5 md:px-3 flex flex-col gap-y-5 mt-5 items-center">
@@ -203,11 +185,11 @@ const AboutUs = async ({
               <div>
                 <Link
                   target="_blank"
-                  href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-                    i18n.language
-                  }${utmCampaign ? `&utm_campaign=${utmCampaign}` : ""}${
-                    utmMedium ? `&utm_campaign=${utmMedium}` : ""
-                  }${utmSource ? `&utm_campaign=${utmSource}` : ""}`}
+                  href={`${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${
+                    utmCampaign ? `&utm_campaign=${utmCampaign}` : ""
+                  }${utmMedium ? `&utm_medium=${utmMedium}` : ""}${
+                    utmSource ? `&utm_source=${utmSource}` : ""
+                  }${campaignMode ? `&campaign_mode=${campaignMode}` : ""}`}
                 >
                   <Button className="px-[64px] py-[10px] rounded-[8px] text-nowrap">
                     {t("joinUs")}

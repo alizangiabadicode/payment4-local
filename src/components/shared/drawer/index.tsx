@@ -6,7 +6,6 @@ import { DarkCrossIcon, LightCrossIcon } from "../../../icons/svg";
 import Link from "next/link";
 import useQueryParams from "@/hooks/useQueryParams";
 
-
 interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
@@ -14,23 +13,15 @@ interface DrawerProps {
   className?: string;
 }
 
-export const Drawer: FC<DrawerProps> = ({
-  isOpen,
-  onClose,
-  children,
-  className,
-}) => {
+export const Drawer: FC<DrawerProps> = ({ isOpen, onClose, children, className }) => {
   const { t, i18n } = useTranslation();
   const direction = i18n.dir();
   const drawerRef = useRef<HTMLDivElement>(null);
   const queryParams = useQueryParams();
-  const { utm_campaign, utm_medium, utm_source } = queryParams;
+  const { utm_campaign, utm_medium, utm_source, campaign_mode } = queryParams;
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (
-        drawerRef.current &&
-        !drawerRef.current.contains(event.target as Node)
-      ) {
+      if (drawerRef.current && !drawerRef.current.contains(event.target as Node)) {
         onClose();
       }
     };
@@ -50,40 +41,31 @@ export const Drawer: FC<DrawerProps> = ({
   }, [isOpen, onClose]);
 
   const handleSignupClick = () => {
-    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-      i18n.language
-    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-      utm_medium ? `&utm_campaign=${utm_medium}` : ""
-    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${
+      utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+    }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+      utm_source ? `&utm_source=${utm_source}` : ""
+    }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`;
     window.open(redirectUrl, "_blank");
   };
   const handleLoginClick = () => {
-    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${
-      i18n.language
-    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-      utm_medium ? `&utm_campaign=${utm_medium}` : ""
-    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signin?lang=${i18n.language}${
+      utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+    }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+      utm_source ? `&utm_source=${utm_source}` : ""
+    }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`;
     window.open(redirectUrl, "_blank");
   };
 
   return (
     <>
-      {isOpen && (
-        <div
-          className="fixed inset-0 bg-black opacity-50 z-40"
-          onClick={onClose}
-        ></div>
-      )}
+      {isOpen && <div className="fixed inset-0 bg-black opacity-50 z-40" onClick={onClose}></div>}
       <div
         ref={drawerRef}
         className={`fixed flex flex-col justify-between inset-y-0 ${
           direction === "rtl" ? "right-0" : "left-0"
         } w-64 bg-gray-200 z-50 transform transition duration-300 dark:bg-black bg-white ${
-          isOpen
-            ? "translate-x-0"
-            : direction === "rtl"
-            ? "translate-x-full"
-            : "-translate-x-full"
+          isOpen ? "translate-x-0" : direction === "rtl" ? "translate-x-full" : "-translate-x-full"
         } ${className} lg:hidden`}
       >
         <div className="flex flex-col">
@@ -91,10 +73,7 @@ export const Drawer: FC<DrawerProps> = ({
             <Link href="/">
               <Logo />
             </Link>
-            <button
-              onClick={onClose}
-              className="text-gray-700 w-[24px] h-[24px]"
-            >
+            <button onClick={onClose} className="text-gray-700 w-[24px] h-[24px]">
               <DarkCrossIcon className="hidden dark:block" />
               <LightCrossIcon className="dark:hidden block" />
             </button>

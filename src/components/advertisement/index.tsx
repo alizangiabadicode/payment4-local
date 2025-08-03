@@ -9,14 +9,14 @@ import useQueryParams from "@/hooks/useQueryParams";
 const AdvertisementCard = () => {
   const { t, i18n } = useTranslation();
   const queryParams = useQueryParams();
-  const { utm_campaign, utm_medium, utm_source } = queryParams;
+  const { utm_campaign, utm_medium, utm_source, campaign_mode } = queryParams;
 
   const handleSignupClick = () => {
-    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${
-      i18n.language
-    }${utm_campaign ? `&utm_campaign=${utm_campaign}` : ""}${
-      utm_medium ? `&utm_campaign=${utm_medium}` : ""
-    }${utm_source ? `&utm_campaign=${utm_source}` : ""}`;
+    const redirectUrl = `${process.env.NEXT_PUBLIC_DASHBOARD_URL}/signup?lang=${i18n.language}${
+      utm_campaign ? `&utm_campaign=${utm_campaign}` : ""
+    }${utm_medium ? `&utm_medium=${utm_medium}` : ""}${
+      utm_source ? `&utm_source=${utm_source}` : ""
+    }${campaign_mode ? `&campaign_mode=${campaign_mode}` : ""}`;
     window.open(redirectUrl, "_blank");
   };
   return (
