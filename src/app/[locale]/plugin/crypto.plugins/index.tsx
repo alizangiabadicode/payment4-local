@@ -26,8 +26,8 @@ const CryptoPlugins = () => {
     {
       title: t("pluginPage.pluginOptions.woocommerce.title"),
       description: t("pluginPage.pluginOptions.woocommerce.description"),
-      darkImageUrl: "/images/woocommerce.png",
-      lightImageUrl: "/images/woocommerce.png",
+      darkImageUrl: "/images/wp.png",
+      lightImageUrl: "/images/wp.png",
       // installLink: `${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`,
       installLink:
         "https://github.com/payment4-labs/wordpress_plugin/releases/download/V3.0.0/payment4_wp_plugin.zip",

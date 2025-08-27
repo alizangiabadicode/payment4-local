@@ -349,8 +349,8 @@
         "description": "OpenCart, kolay yönetim, güçlü SEO ve hızlı işlem ile e-ticaret sitenizi oluşturmak ve yönetmek için önde gelen bir mağaza kurucusudur."
       },
       "woocommerce": {
-        "title": "Woocommerce",
-        "description": "Kripto ödemelerini WooCommerce mağazanıza sorunsuz bir şekilde entegre edin. Kolay kurulum eklentimiz ile Bitcoin ve diğer kripto para birimlerini kabul etmeye başlayın."
+        "title": "WordPress",
+        "description": "WordPress eklentimiz WooCommerce, RCP, EDD ve Gravity Forms gibi popüler eklentilerle uyumludur ve farklı türdeki web sitelerinde kripto para ödemelerini kolayca kabul etmenizi sağlar."
       },
       "whmcs": {
         "title": "WHMCS",

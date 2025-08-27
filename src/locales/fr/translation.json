@@ -349,8 +349,8 @@
         "description": "OpenCart est une plateforme de création de boutiques en ligne avec une gestion simple, un SEO puissant et un traitement rapide pour créer et gérer votre site e-commerce."
       },
       "woocommerce": {
-        "title": "Woocommerce",
-        "description": "Intégrez facilement les paiements en crypto-monnaie à votre boutique WooCommerce. Commencez à accepter Bitcoin et d'autres crypto-monnaies avec notre plugin facile à installer."
+        "title": "WordPress",
+        "description": "Notre extension WordPress est compatible avec des plugins populaires tels que WooCommerce, RCP, EDD et Gravity Forms, ce qui vous permet d’accepter facilement les paiements en cryptomonnaie sur différents types de sites web."
       },
       "whmcs": {
         "title": "WHMCS",

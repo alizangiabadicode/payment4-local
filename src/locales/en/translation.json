@@ -350,8 +350,8 @@
         "description": "OpenCart is a leading store builder with easy management, powerful SEO, and fast processing to create and manage your e-commerce site."
       },
       "woocommerce": {
-        "title": "Woocommerce",
-        "description": "Seamlessly integrate crypto payments into your WooCommerce store. Start accepting Bitcoin and other cryptocurrencies with our easy-to-install plugin."
+        "title": "WordPress",
+        "description": "Our WordPress plugin is compatible with popular plugins like WooCommerce, RCP, EDD, and Gravity Forms, allowing you to easily accept cryptocurrency payments on different types of websites."
       },
       "whmcs": {
         "title": "WHMCS",
