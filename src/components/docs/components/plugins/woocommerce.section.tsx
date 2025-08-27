@@ -24,7 +24,9 @@ export const WoocommerceSection = () => {
         <a
           className="flex ltr:flex-row-reverse gap-x-2 
           dark:text-[#9E6DFF] text-[#9E6DFF] font-semibold"
-          href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`}
+          // href={`${process.env.NEXT_PUBLIC_APP_STORAGE_URL}/wp/payment4.zip`}
+          target="_blank"
+          href="https://github.com/payment4-labs/wordpress_plugin/releases/download/V3.0.0/payment4_wp_plugin.zip"
         >
           {t("downloadLink")} <DownloadIcon />
         </a>
@@ -43,10 +45,7 @@ export const WoocommerceSection = () => {
       >
         {t("fillInPluginSettings")}
       </p>
-      <ul
-        className="text-[15px] font-normal leading-8 ml-6 my-5"
-        style={{ listStyle: "outside" }}
-      >
+      <ul className="text-[15px] font-normal leading-8 ml-6 my-5" style={{ listStyle: "outside" }}>
         <li
           className={`dark:text-[#FFFFFFC7] 
           text-[#121212C7]`}
