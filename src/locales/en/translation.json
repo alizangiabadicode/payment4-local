@@ -366,7 +366,7 @@
     "pluginHeader": {
       "title": "Enable Crypto Payments on Your Website",
       "description": "Looking to offer more payment options and grow your customer base? With Payment4's CMS plugins, you can seamlessly accept Bitcoin and other leading cryptocurrencies on your website, making transactions easier and more secure.",
-      "buttonText": "Let’s Start Accepting Crypto"
+      "buttonText": "Let's Start Accepting Crypto"
     },
     "cryptoAdvantages": {
       "heading": "Advantages of using a cryptocurrency payment gateway",
@@ -395,5 +395,73 @@
       "description": "Sign up now to become part of Payment4 and easily integrate cryptocurrency payments into your website.",
       "buttonText": "Join Now"
     }
+  },
+  "heroSection": {
+    "title": "Partner with Payment4",
+    "subtitle": "A Simple Way to Earn from Crypto Payment Gateway",
+    "description": "The Payment4 affiliate program gives you the opportunity to earn by promoting our services. For every successful transaction made through your referral code, you will receive 20% of the transaction fee.",
+    "getStartedButton": "Get Started"
+  },
+  "stepsToGetStarted": {
+    "title": "Steps to Get Started with Payment4",
+    "subtitle": "Joining Payment4's affiliate program is quick and simple. Just follow these steps:",
+    "step1": {
+      "title": "1- Sign Up",
+      "description": "Register on our website and access your unique referral code in your user dashboard under the 'Affiliates' section"
+    },
+    "step2": {
+      "title": "2- Share Your Code",
+      "description": "Share your referral code through social media, websites, emails, or any channel you prefer and invite people to use Payment4"
+    },
+    "step3": {
+      "title": "3-Earn Commission",
+      "description": "For every successful transaction made via your referral code, you'll earn 20% of the transaction fee directly to your account"
+    }
+  },
+  "whyPartnerWithPayment4": {
+    "title": "Why Partner With Payment4?",
+    "securePayments": {
+      "title": "Secure & Transparent Payments",
+      "description": "Commissions are paid out regularly without delay, ensuring full transparency and security"
+    },
+    "unlimitedReferral": {
+      "title": "Unlimited Referral Code",
+      "description": "Share your code with unlimited users and generate continuous"
+    },
+    "commission": {
+      "title": "20% Commission",
+      "description": "Receive 20% of the transaction fee from every transaction referred by you"
+    },
+    "realTimeReporting": {
+      "title": "Real-Time Reporting",
+      "description": "Track your affiliates activity and your earnings in real time via your dashboard"
+    }
+  },
+  "calculateYourProfit": {
+    "title": "Calculate your profit",
+    "subtitle": "Let's see how much you can earn by referring users to Payment4",
+    "transactionVolume": "Transaction volume",
+    "maximumProfit": "Your maximum profit",
+    "defaultProfitValue": "0 BTC",
+    "startEarningButton": "Start earning"
+  },
+  "solutionsForIndustries": {
+    "title": "Payment4 Solutions for Different Industries",
+    "onlineGaming": "Online Gaming",
+    "realEstateAutomotive": "Real Estate & Automotive",
+    "ecommerceStores": "E-commerce Stores",
+    "itServiceProviders": "IT Service Providers",
+    "freelancersAndBusinesses": "Freelancers and Businesses",
+    "tradingPlatforms": "Trading Platforms",
+    "exploreAllSolutions": "Explore All Solutions"
+  },
+  "joinUsToday": {
+    "title": "Join Us Today",
+    "subtitle1": "Easily integrate our crypto payment gateway into your website.",
+    "subtitle2": "Registration is completely free!",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "phonePlaceholder": "Phone Number",
+    "joinUsButton": "Join us"
   }
 }
