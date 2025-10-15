@@ -1,9 +1,11 @@
 import React from "react";
 
-export const HandMobileBackground = () => {
+export const HandMobileBackground = (className: any) => {
   return (
 
-    <svg width="100%" height="100%" viewBox="0 0 393 367" fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
+    <svg width="100%" height="100%" viewBox="0 0 393 367" style={{
+      paddingTop: '60px'
+    }} fill="none" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink">
       <rect x="245" y="256.768" width="133.632" height="89.1313" transform="rotate(-25.613 245 256.768)" fill="url(#pattern0_75_2077)" />
       <rect x="23.9004" y="193" width="145.726" height="83.2515" transform="rotate(27.0816 23.9004 193)" fill="url(#pattern1_75_2077)" />
       <rect x="141.992" y="252" width="56.8041" height="77.8681" transform="rotate(19.4991 141.992 252)" fill="url(#pattern2_75_2077)" />
