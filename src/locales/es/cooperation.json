@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Colabora con nosotros ",
+    "description": "El programa de asociación de Payment4 es una excelente oportunidad para ganar dinero recomendando nuestros servicios. Por cada transacción exitosa, recibirás el 20% de la comisión. Comienza hoy y aumenta tus ingresos."
+  },
+  "hero": {
+    "title": "Asóciate con Payment4",
+    "subtitle": "Una manera sencilla de ganar dinero con una pasarela de pago cripto",
+    "description": "El programa de afiliados de Payment4 te ofrece la oportunidad de ganar dinero promocionando nuestros servicios. Por cada transacción exitosa realizada a través de tu código de referencia, recibirás el 20 % de la comisión de la transacción.",
+    "getStarted": "Comenzar"
+  },
+  "steps": {
+    "title": "Pasos para empezar con Payment4",
+    "description": "Unirse al programa de afiliados de Payment4 es rápido y sencillo. Solo sigue estos pasos:",
+    "step1": {
+      "title": "Regístrate",
+      "description": "Crea una cuenta en nuestro sitio web y accede a tu código de referencia único desde el panel de usuario en la sección «Afiliados»."
+    },
+    "step2": {
+      "title": "Comparte tu código",
+      "description": "Comparte tu código de referencia a través de redes sociales, sitios web, correos electrónicos o cualquier canal que prefieras, e invita a las personas a usar Payment4."
+    },
+    "step3": {
+      "title": "Gana comisión",
+      "description": "Por cada transacción exitosa realizada mediante tu código de referencia, recibirás el 20 % de la comisión de la transacción directamente en tu cuenta."
+    }
+  },
+  "whyPartner": {
+    "title": "¿Por qué asociarse con Payment4?",
+    "features": {
+      "securePayments": {
+        "title": "Pagos seguros y transparentes",
+        "description": "Las comisiones se pagan regularmente y sin retrasos, garantizando total seguridad y transparencia."
+      },
+      "unlimitedCodes": {
+        "title": "Código de referencia ilimitado",
+        "description": "Comparte tu código con usuarios ilimitados y genera ingresos continuos."
+      },
+      "commission": {
+        "title": "Comisión del 20 %",
+        "description": "Recibe el 20 % de la comisión de cada transacción referida por ti."
+      },
+      "reporting": {
+        "title": "Reporte en tiempo real",
+        "description": "Sigue la actividad de tus afiliados y tus ganancias en tiempo real desde tu panel de control."
+      }
+    }
+  },
+  "calculator": {
+    "title": "Calcula tus ganancias",
+    "description": "Descubre cuánto puedes ganar refiriendo usuarios a Payment4:",
+    "transactionVolume": "Volumen de transacciones",
+    "maximumProfit": "Ganancia máxima",
+    "startEarning": "Calcula tus ganancias y empieza a ganar ahora",
+    "btc": "BTC"
+  },
+  "industries": {
+    "title": "Payment4 – Soluciones para diferentes industrias",
+    "onlineGaming": "Juegos en línea",
+    "realEstate": "Bienes raíces y automóviles",
+    "ecommerce": "Tiendas de comercio electrónico",
+    "itServices": "Proveedores de servicios IT",
+    "freelancers": "Freelancers y empresas",
+    "trading": "Plataformas de trading",
+    "exploreAll": "Explorar todas las soluciones"
+  },
+  "joinUs": {
+    "title": "Únete a nosotros hoy",
+    "subtitle": "Integra fácilmente nuestra pasarela de pago con criptomonedas en tu sitio web.",
+    "description": "¡El registro es completamente gratuito!",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Número de teléfono",
+      "submit": "Únete ahora"
+    }
+  }
+}

@@ -1,13 +1,5 @@
-"use client";
-
-import Image from "next/image";
-import React, { useState, useEffect } from "react";
-import Cards from "./cards";
-import BusinessPartner from "./business.partner";
-import CooperationForm from "@/components/forms/cooperation.form";
-import { Snackbar } from "@/components/shared";
+import React from "react";
 import Input from "@/components/shared/textField";
-import { useTranslation } from "react-i18next";
 import { SignupIcon } from "@/icons/svg/signup";
 import { Share } from "@/icons/svg/share";
 import { EarnIcon } from "@/icons/svg/earn";
@@ -25,289 +17,190 @@ import { PurpleIt } from "@/icons/svg/purple_it";
 import { HandBackground } from '@/icons/svg/hands'
 import { Button } from "@/components/shared/button";
 import { HandMobileBackground } from "@/icons/svg/hands_mobile";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/pagination";
+import MobileStepsCarousel from "./mobile-steps-carousel";
+import initTranslations from "../../i18n";
 
-const CooperationPage = () => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const [isMobile, setIsMobile] = useState<boolean>(false);
-  const { t } = useTranslation();
+const i18nNamespaces = ["cooperation"];
 
-  useEffect(() => {
-    const handleResize = () => {
-      console.log(window.innerWidth)
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    // Set initial value
-    handleResize();
-
-    // Add event listener
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+async function CooperationPage ({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const { t } = await initTranslations(locale, i18nNamespaces);
   return (
     <div className="container lg:px-[100px] p-6 max-w-6xl overflow-x-hidden">
-      <style jsx global>{`
-        .swiper-pagination-bullet {
-          width: 8px;
-          height: 8px;
-          background: #D1D5DB;
-          opacity: 1;
-        }
-        .swiper-pagination-bullet-active {
-          background: #8B5CF6 !important;
-          width: 8px;
-          height: 8px;
-        }
-      `}</style>
-      {/* <Snackbar
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        message={t("successVendorRequest")}
-      />
-      <div className="flex lg:flex-row flex-col justify-between items-center">
-        <div className="md:max-w-[490px] flex flex-col gap-[10px] mb-3">
-          <p className="font-semibold text-[16px] lg:text-[24px] mb-[10px] text-center lg:text-start">
-            {t("vendorPage.pageTitle")}
-          </p>
-          <p className="text-[12px] lg:text-[16px] text-center lg:text-start text-[#121212CC] dark:text-[#FFFFFFDE]">
-            {t("vendorPage.pageDescription")}
-          </p>
-        </div>
-        <div>
-          <Image
-            className="hidden dark:block"
-            width={319}
-            height={274}
-            src={"/images/vendor.header.dark.png"}
-            alt="vendor image"
-          />
-          <Image
-            className="dark:hidden block"
-            width={319}
-            height={274}
-            src={"/images/vendor.header.light.png"}
-            alt="vendor image"
-          />
-        </div>
-      </div>
-      <Cards />
-      <BusinessPartner />
-      <div className="w-full flex justify-center">
-        <CooperationForm setOpenSnackBar={setIsOpen} />
-      </div> */}
+      <style dangerouslySetInnerHTML={{
+        __html: `
+          .swiper-pagination-bullet {
+            width: 8px;
+            height: 8px;
+            background: #D1D5DB;
+            opacity: 1;
+          }
+          .swiper-pagination-bullet-active {
+            background: #8B5CF6 !important;
+            width: 8px;
+            height: 8px;
+          }
+        `
+      }} />
+
       <div className="relative">
         {/* show different background in mobile and desktop view */}
-        {isMobile ? <HandMobileBackground /> : <HandBackground />}
+        <div className="hidden md:block">
+          <HandBackground />
+        </div>
+        <div className="block md:hidden">
+          <HandMobileBackground />
+        </div>
 
         <div className="absolute top-0 text-center text-xl md:text-2xl w-full font-semibold">
-
-          Partner with Payment4
-          {!isMobile && <br />} <span className="text-xs md:text-2xl block md:inline-block">
-            A Simple Way to Earn from Crypto Payment Gateway
+          <h1 className="all-unset">
+            {t("hero.title")}
+          </h1>
+          <br className="hidden md:block" />
+          <span className="text-xs md:text-2xl block md:inline-block">
+            {t("hero.subtitle")}
           </span>
 
           <div className="text-primary-text font-normal text-xs md:text-base mt-0.5 md:mt-5 dark:text-[#D9D9D9]">
-            The Payment4 affiliate program gives you the opportunity to earn by promoting our services. For every
-            successful transaction made through your referral code, you will receive 20% of the transaction fee.
+            {t("hero.description")}
           </div>
 
           <Button variant="contained" size="sm" className="w-auto mt-8 min-w-[208px] md:min-w-[218px]">
-            Get Started
+            {t("hero.getStarted")}
           </Button>
-
         </div>
       </div>
       <div className="mt-16 bg-transparent  md:dark:bg-dark-gradient-card md:bg-light-gradient-card md:p-6 rounded-md overflow-x-hidden">
         <div className="text-center mb-3 md:mb-12">
           <h2 className="text-xl md:text-2xl font-semibold text-black dark:text-white mb-4">
-            {t("stepsToGetStarted.title")}
+            {t("steps.title")}
           </h2>
           <p className="text-xs md:text-base text-[#121212CC] dark:text-[#D9D9D9] max-w-3xl mx-auto">
-            {t("stepsToGetStarted.subtitle")}
+            {t("steps.description")}
           </p>
         </div>
 
-        {/* Conditional rendering: Mobile Carousel or Desktop Grid */}
-        {isMobile ? (
-          <div className="w-full overflow-hidden">
-            <Swiper
-              modules={[Pagination]}
-              spaceBetween={20}
-              slidesPerView={1.125}
-              pagination={{
-                clickable: true,
-                bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#8B5CF6]',
-              }}
-              className="pb-12 h-auto"
-              style={{ height: 'auto' }}
-            >
-              {/* Step 1: Sign Up */}
-              <SwiperSlide>
-                <div className="text-center px-2 md:px-4 dark:bg-dark-gradient-card md:bg-transparent py-8 md:py-0 h-full flex flex-col justify-between min-h-[280px]">
-                  <div>
-                    <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                      <SignupIcon />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[#121212] dark:text-white mb-4">
-                      {t("stepsToGetStarted.step1.title")}
-                    </h3>
-                    <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                      {t("stepsToGetStarted.step1.description")}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
+        {/* Mobile Carousel - Hidden on desktop */}
+        <MobileStepsCarousel
+          step1Title={t("steps.step1.title")}
+          step1Description={t("steps.step1.description")}
+          step2Title={t("steps.step2.title")}
+          step2Description={t("steps.step2.description")}
+          step3Title={t("steps.step3.title")}
+          step3Description={t("steps.step3.description")}
+        />
 
-              {/* Step 2: Share Your Code */}
-              <SwiperSlide>
-                <div className="text-center px-2 md:px-4 dark:bg-dark-gradient-card md:bg-transparent py-8 md:py-0 h-full flex flex-col justify-between min-h-[280px]">
-                  <div>
-                    <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                      <Share />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[#121212] dark:text-white mb-4">
-                      {t("stepsToGetStarted.step2.title")}
-                    </h3>
-                    <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                      {t("stepsToGetStarted.step2.description")}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-
-              {/* Step 3: Earn Commission */}
-              <SwiperSlide>
-                <div className="text-center px-2 md:px-4 dark:bg-dark-gradient-card md:bg-transparent py-8 md:py-0 h-full flex flex-col justify-between min-h-[280px]">
-                  <div>
-                    <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                      <EarnIcon />
-                    </div>
-                    <h3 className="text-lg font-semibold text-[#121212] dark:text-white mb-4">
-                      {t("stepsToGetStarted.step3.title")}
-                    </h3>
-                    <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                      {t("stepsToGetStarted.step3.description")}
-                    </p>
-                  </div>
-                </div>
-              </SwiperSlide>
-            </Swiper>
+        {/* Desktop Grid - Hidden on mobile */}
+        <div className="hidden md:grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+          {/* Step 1: Sign Up */}
+          <div className="text-center">
+            <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
+              <SignupIcon />
+            </div>
+            <h3 className="text-lg font-semibold text-[#121212] dark:text-white mb-4">
+              {t("steps.step1.title")}
+            </h3>
+            <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
+              {t("steps.step1.description")}
+            </p>
           </div>
-        ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-            {/* Step 1: Sign Up */}
-            <div className="text-center">
-              <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                <SignupIcon />
-              </div>
-              <h3 className="text-lg font-semibold text-[#121212] dark:text-white mb-4">
-                {t("stepsToGetStarted.step1.title")}
-              </h3>
-              <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("stepsToGetStarted.step1.description")}
-              </p>
-            </div>
 
-            {/* Step 2: Share Your Code */}
-            <div className="text-center">
-              <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                <Share />
-              </div>
-              <h3 className="text-xl font-semibold text-[#121212] dark:text-white mb-4">
-                {t("stepsToGetStarted.step2.title")}
-              </h3>
-              <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("stepsToGetStarted.step2.description")}
-              </p>
+          {/* Step 2: Share Your Code */}
+          <div className="text-center">
+            <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
+              <Share />
             </div>
-
-            {/* Step 3: Earn Commission */}
-            <div className="text-center">
-              <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
-                <EarnIcon />
-              </div>
-              <h3 className="text-xl font-semibold text-[#121212] dark:text-white mb-4">
-                {t("stepsToGetStarted.step3.title")}
-              </h3>
-              <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("stepsToGetStarted.step3.description")}
-              </p>
-            </div>
+            <h3 className="text-xl font-semibold text-[#121212] dark:text-white mb-4">
+              {t("steps.step2.title")}
+            </h3>
+            <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
+              {t("steps.step2.description")}
+            </p>
           </div>
-        )}
+
+          {/* Step 3: Earn Commission */}
+          <div className="text-center">
+            <div className="w-28 h-28 mx-auto mb-6 flex items-center justify-center">
+              <EarnIcon />
+            </div>
+            <h3 className="text-xl font-semibold text-[#121212] dark:text-white mb-4">
+              {t("steps.step3.title")}
+            </h3>
+            <p className="text-sm lg:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
+              {t("steps.step3.description")}
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* Why Partner With Payment4? Section */}
       <div className="mt-20">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="text-xl md:text-2xl lg:text-[22px] font-semibold text-black dark:text-white mb-4">
-            {t("whyPartnerWithPayment4.title")}
+            {t("whyPartner.title")}
           </h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           {/* Secure & Transparent Payments */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 rtl:space-x-reverse">
             <div className=" flex-shrink-0 flex items-center justify-center">
               <ProcessIcon />
             </div>
             <div>
               <h3 className="text-sm md:text-base font-semibold text-[#121212] dark:text-white mb-1">
-                {t("whyPartnerWithPayment4.securePayments.title")}
+                {t("whyPartner.features.securePayments.title")}
               </h3>
               <p className="text-xs md:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("whyPartnerWithPayment4.securePayments.description")}
+                {t("whyPartner.features.securePayments.description")}
               </p>
             </div>
           </div>
 
           {/* Unlimited Referral Code */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 rtl:space-x-reverse">
             <div className=" flex-shrink-0 flex items-center justify-center">
               <WorldIcon />
             </div>
             <div>
               <h3 className="text-sm md:text-base font-semibold text-[#121212] dark:text-white mb-1">
-                {t("whyPartnerWithPayment4.unlimitedReferral.title")}
+                {t("whyPartner.features.unlimitedCodes.title")}
               </h3>
               <p className="text-xs md:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("whyPartnerWithPayment4.unlimitedReferral.description")}
+                {t("whyPartner.features.unlimitedCodes.description")}
               </p>
             </div>
           </div>
 
           {/* 20% Commission */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 rtl:space-x-reverse">
             <div className=" flex-shrink-0 flex items-center justify-center">
               <BlockchainIcon />
             </div>
             <div>
               <h3 className="text-sm md:text-base font-semibold text-[#121212] dark:text-white mb-1">
-                {t("whyPartnerWithPayment4.commission.title")}
+                {t("whyPartner.features.commission.title")}
               </h3>
               <p className="text-xs md:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("whyPartnerWithPayment4.commission.description")}
+                {t("whyPartner.features.commission.description")}
               </p>
             </div>
           </div>
 
           {/* Real-Time Reporting */}
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-4 rtl:space-x-reverse">
             <div className=" flex-shrink-0 flex items-center justify-center">
               <TransactionIcon />
             </div>
             <div>
               <h3 className="text-sm md:text-base font-semibold text-[#121212] dark:text-white mb-1">
-                {t("whyPartnerWithPayment4.realTimeReporting.title")}
+                {t("whyPartner.features.reporting.title")}
               </h3>
               <p className="text-xs md:text-base text-[#121212CC] dark:text-[#FFFFFFDE] leading-relaxed">
-                {t("whyPartnerWithPayment4.realTimeReporting.description")}
+                {t("whyPartner.features.reporting.description")}
               </p>
             </div>
           </div>
@@ -322,10 +215,10 @@ const CooperationPage = () => {
         <div className="relative z-10">
           <div className="text-center">
             <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-[#121212] dark:text-white mb-6 leading-tight">
-              {t("calculateYourProfit.title")}
+              {t("calculator.title")}
             </h2>
             <p className="text-base text-[#121212CC] dark:text-[#FFFFFFDE] max-w-2xl mx-auto leading-relaxed mb-7 md:mb-unset">
-              {t("calculateYourProfit.subtitle")}
+              {t("calculator.description")}
             </p>
           </div>
 
@@ -343,9 +236,9 @@ const CooperationPage = () => {
               <div>
                 <div>
                   <label className="block text-lg font-medium text-[#121212a6] dark:text-white mb-3">
-                    {t("calculateYourProfit.transactionVolume")}
+                    {t("calculator.transactionVolume")}
                   </label>
-                  <div className="flex items-center space-x-3">
+                  <div className="flex items-center space-x-3 rtl:space-x-reverse">
                     <div
                       className="flex-1"
                     >
@@ -354,24 +247,24 @@ const CooperationPage = () => {
                         placeholder="0"
                       />
                     </div>
-                    <span className="text-lg text-[#121212a6] font-medium text-[#121212] dark:text-white">BTC</span>
+                    <span className="text-lg text-[#121212a6] font-medium text-[#121212] dark:text-white">{t("calculator.btc")}</span>
                   </div>
                 </div>
 
                 {/* Maximum profit display */}
                 <div>
                   <label className="block text-sm font-medium text-[#121212] dark:text-white mb-3 text-[#121212a6]">
-                    {t("calculateYourProfit.maximumProfit")}
+                    {t("calculator.maximumProfit")}
                   </label>
                   <div className="text-xl font-semibold text-[#121212a6] dark:text-[#A5A5A6]">
-                    0 BTC
+                    0 {t("calculator.btc")}
                   </div>
                 </div>
 
               </div>
               {/* Start earning button */}
               <Button variant="contained" size="xs" className="w-full">
-                Start earning
+                {t("calculator.startEarning")}
               </Button>
             </div>
           </div>
@@ -382,7 +275,7 @@ const CooperationPage = () => {
       <div className="mt-20">
         <div className="text-center mb-6 md:mb-12">
           <h2 className="text-xl md:text-2xl  font-semibold text-[#121212] dark:text-white mb-4">
-            {t("solutionsForIndustries.title")}
+            {t("industries.title")}
           </h2>
         </div>
 
@@ -393,7 +286,7 @@ const CooperationPage = () => {
               <PurpleOnlineGame />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.onlineGaming")}
+              {t("industries.onlineGaming")}
             </h3>
           </div>
 
@@ -403,7 +296,7 @@ const CooperationPage = () => {
               <PurpleHouse />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.realEstateAutomotive")}
+              {t("industries.realEstate")}
             </h3>
           </div>
 
@@ -413,7 +306,7 @@ const CooperationPage = () => {
               <PurpleEcommerce />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.ecommerceStores")}
+              {t("industries.ecommerce")}
             </h3>
           </div>
 
@@ -423,7 +316,7 @@ const CooperationPage = () => {
               <PurpleIt />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.itServiceProviders")}
+              {t("industries.itServices")}
             </h3>
           </div>
 
@@ -433,7 +326,7 @@ const CooperationPage = () => {
               <PurpleFc />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.freelancersAndBusinesses")}
+              {t("industries.freelancers")}
             </h3>
           </div>
 
@@ -443,18 +336,15 @@ const CooperationPage = () => {
               <PurpleBtc />
             </div>
             <h3 className="text-xs md:text-lg font-semibold text-[#121212] dark:text-white">
-              {t("solutionsForIndustries.tradingPlatforms")}
+              {t("industries.trading")}
             </h3>
           </div>
         </div>
 
         {/* Explore All Solutions Button */}
         <div className="text-center mt-12">
-          {/* <button className="bg-[#8B5CF6] hover:bg-[#7C3AED] text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-200">
-            {t("solutionsForIndustries.exploreAllSolutions")}
-          </button> */}
           <Button variant="contained" size="xs" className="w-full md:w-auto">
-            {t("solutionsForIndustries.exploreAllSolutions")}
+            {t("industries.exploreAll")}
           </Button>
         </div>
       </div>
@@ -469,36 +359,36 @@ const CooperationPage = () => {
                 <h2 className="text-xl md:text-2xl font-semibold text-[#121212] dark:text-white">
                   🚀
                   &nbsp;
-                  {t("joinUsToday.title")}
+                  {t("joinUs.title")}
                 </h2>
               </div>
               <p className="text-sm text-[#121212] dark:text-[#FFFFFFDE] mb-2">
-                {t("joinUsToday.subtitle1")}
+                {t("joinUs.subtitle")}
               </p>
               <p className="text-sm md:text-base text-[#121212] dark:text-[#FFFFFFDE]">
-                {t("joinUsToday.subtitle2")}
+                {t("joinUs.description")}
               </p>
             </div>
 
             <form className="space-y-4">
               <Input
                 type="text"
-                placeholder={t("joinUsToday.namePlaceholder")}
+                placeholder={t("joinUs.form.name")}
               />
 
               <Input
                 type="email"
-                placeholder={t("joinUsToday.emailPlaceholder")}
+                placeholder={t("joinUs.form.email")}
               />
 
               <Input
                 type="tel"
-                placeholder={t("joinUsToday.phonePlaceholder")}
+                placeholder={t("joinUs.form.phone")}
               />
 
               <div className="flex justify-center">
                 <Button variant="contained" size="xs" className="w-full md:w-auto">
-                  {t("joinUsToday.joinUsButton")}
+                  {t("joinUs.form.submit")}
                 </Button>
               </div>
             </form>
@@ -508,5 +398,18 @@ const CooperationPage = () => {
     </div>
   );
 };
+
+export async function generateMetadata ({
+  params: { locale },
+}: {
+  params: { locale: string };
+}) {
+  const { t } = await initTranslations(locale, i18nNamespaces);
+
+  return {
+    title: `${t("meta.title")} | Payment4`,
+    description: t("meta.description"),
+  };
+}
 
 export default CooperationPage;

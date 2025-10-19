@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Bizimle İşbirliği  ",
+    "description": "Payment4 ortaklık programı, hizmetlerimizi tavsiye ederek para kazanmak için mükemmel bir fırsattır. Her başarılı işlem için işlem ücretinin %20'sini alacaksınız. Bugün başlayın ve gelirlerinizi artırın."
+  },
+  "hero": {
+    "title": "Payment4 ile Ortak Olun",
+    "subtitle": "Kripto ödeme geçidi ile para kazanmanın basit bir yolu",
+    "description": "Payment4 Ortaklık Programı, hizmetlerimizi tanıtarak para kazanma fırsatı sunar. Referans kodunuz aracılığıyla gerçekleşen her başarılı işlem için, işlem ücretinin %20'sini alırsınız.",
+    "getStarted": "Başlayın"
+  },
+  "steps": {
+    "title": "Payment4 ile Nasıl Başlanır",
+    "description": "Payment4 kripto ortaklık programına katılmak hızlı ve kolaydır:",
+    "step1": {
+      "title": "Kayıt Olun",
+      "description": "Sitemizde bir hesap oluşturun ve benzersiz referans kodunuza panonuzdaki «Affiliés» bölümünden erişin."
+    },
+    "step2": {
+      "title": "Kodunuzu Paylaşın",
+      "description": "Referans bağlantınızı veya kodunuzu sosyal medya, web siteniz, e-posta veya diğer tüm iletişim kanallarında paylaşın. Arkadaşlarınızı Payment4, en iyi kripto ödeme geçidini kullanmaya davet edin."
+    },
+    "step3": {
+      "title": "Komisyonunuzu Kazanın",
+      "description": "Referans kodunuz aracılığıyla onaylanan her işlem için, işlem ücretinin %20'sini doğrudan hesabınıza kazanırsınız."
+    }
+  },
+  "whyPartner": {
+    "title": "Neden Payment4 ile Ortak Olmalısınız?",
+    "features": {
+      "securePayments": {
+        "title": "Güvenli ve Şeffaf Ödemeler",
+        "description": "Komisyonlar düzenli olarak ve gecikmesiz ödenir, tam güvenlik ve şeffaflık sağlar."
+      },
+      "unlimitedCodes": {
+        "title": "Sınırsız Referans Kodu",
+        "description": "Kodunuzu sınırsız sayıda kullanıcı ile paylaşın ve sürekli pasif gelir elde edin."
+      },
+      "commission": {
+        "title": "%20 Komisyon",
+        "description": "Tavsiye ettiğiniz her işlemden %20 komisyon kazanın."
+      },
+      "reporting": {
+        "title": "Gerçek Zamanlı Takip",
+        "description": "Ortaklarınızın aktivitelerini ve kazançlarınızı gerçek zamanlı olarak panonuzdan takip edin."
+      }
+    }
+  },
+  "calculator": {
+    "title": "Kazancınızı Hesaplayın",
+    "description": "Payment4 ile ne kadar kazanç elde edebileceğinizi keşfedin:",
+    "transactionVolume": "İşlem Hacmi",
+    "maximumProfit": "Maksimum Kazancınız",
+    "startEarning": "Kazancınızı hesaplayın ve kazanmaya başlayın",
+    "btc": "BTC"
+  },
+  "industries": {
+    "title": "Payment4 – Tüm Sektörler için Çözümler",
+    "onlineGaming": "Online Oyunlar",
+    "realEstate": "Emlak & Otomotiv",
+    "ecommerce": "E-ticaret Mağazaları",
+    "itServices": "IT Hizmet Sağlayıcıları",
+    "freelancers": "Freelancerlar & İşletmeler",
+    "trading": "Ticaret Platformları",
+    "exploreAll": "Tüm Çözümleri Keşfet"
+  },
+  "joinUs": {
+    "title": "Bugün Bize Katılın",
+    "subtitle": "Kripto ödeme geçidimizi web sitenize kolayca entegre edin.",
+    "description": "Kayıt tamamen ücretsiz!",
+    "form": {
+      "name": "Adınız",
+      "email": "E-postanız",
+      "phone": "Telefon Numaranız",
+      "submit": "Şimdi Katılın"
+    }
+  }
+}

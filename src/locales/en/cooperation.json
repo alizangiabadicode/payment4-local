@@ -1,0 +1,74 @@
+{
+  "hero": {
+    "title": "Partner with Payment4",
+    "subtitle": "A Simple Way to Earn from Crypto Payment Gateway",
+    "description": "The Payment4 affiliate program gives you the opportunity to earn by promoting our services. For every successful transaction made through your referral code, you will receive 20% of the transaction fee.",
+    "getStarted": "Get Started"
+  },
+  "steps": {
+    "title": "Steps to Get Started",
+    "description": "Follow these simple steps to start earning with our affiliate program",
+    "step1": {
+      "title": "Sign Up",
+      "description": "Create your account and get your unique referral code"
+    },
+    "step2": {
+      "title": "Share Your Code",
+      "description": "Share your referral code with potential customers"
+    },
+    "step3": {
+      "title": "Earn Commission",
+      "description": "Get 20% commission on every successful transaction"
+    }
+  },
+  "whyPartner": {
+    "title": "Why Partner With Payment4?",
+    "features": {
+      "securePayments": {
+        "title": "Secure & Transparent Payments",
+        "description": "Our platform ensures secure transactions with complete transparency in all payment processes."
+      },
+      "unlimitedCodes": {
+        "title": "Unlimited Referral Code",
+        "description": "Generate unlimited referral codes and track your earnings across multiple campaigns."
+      },
+      "commission": {
+        "title": "20% Commission",
+        "description": "Earn 20% commission on every successful transaction made through your referral code."
+      },
+      "reporting": {
+        "title": "Real-Time Reporting",
+        "description": "Track your performance with real-time analytics and detailed reporting dashboard."
+      }
+    }
+  },
+  "calculator": {
+    "title": "Calculate Your Profit",
+    "description": "See how much you can earn with our affiliate program",
+    "transactionVolume": "Transaction Volume",
+    "maximumProfit": "Maximum Profit",
+    "startEarning": "Start earning",
+    "btc": "BTC"
+  },
+  "industries": {
+    "title": "Solutions for Different Industries",
+    "onlineGaming": "Online Gaming",
+    "realEstate": "Real Estate & Automotive",
+    "ecommerce": "E-commerce Stores",
+    "itServices": "IT Service Providers",
+    "freelancers": "Freelancers and Businesses",
+    "trading": "Trading Platforms",
+    "exploreAll": "Explore All Solutions"
+  },
+  "joinUs": {
+    "title": "Join Us Today",
+    "subtitle": "Ready to start earning with our affiliate program?",
+    "description": "Fill out the form below and we'll get back to you within 24 hours.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Your Phone Number",
+      "submit": "Join Us Now"
+    }
+  }
+}

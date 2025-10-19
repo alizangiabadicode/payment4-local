@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "title": "Collaboration avec nous  ",
+    "description": "Le programme de partenariat avec Payment4 est une excellente opportunité de gagner de l’argent en recommandant nos services. Pour chaque transaction réussie, vous recevrez 20 % des frais. Commencez dès aujourd’hui et augmentez vos revenus."
+  },
+  "hero": {
+    "title": "Partenaire avec Payment4",
+    "subtitle": "Une façon simple de gagner de l’argent avec une passerelle de paiement crypto",
+    "description": "Le programme d’affiliation Payment4 vous offre l’opportunité de gagner de l’argent en promouvant nos services. Pour chaque transaction réussie effectuée via votre code de parrainage, vous recevez 20 % des frais de transaction.",
+    "getStarted": "Commencer à gagner"
+  },
+  "steps": {
+    "title": "Comment commencer avec Payment4",
+    "description": "Rejoindre le programme d’affiliation crypto de Payment4 est rapide et facile",
+    "step1": {
+      "title": "Inscrivez-vous",
+      "description": "Créez un compte sur notre site et accédez à votre code de parrainage unique depuis votre tableau de bord, dans la section « Affiliés »."
+    },
+    "step2": {
+      "title": "Partagez votre code",
+      "description": "Diffusez votre lien ou code d’affiliation sur les réseaux sociaux, votre site web, vos e-mails, ou tout autre canal de communication. Invitez vos contacts à utiliser Payment4, la meilleure passerelle de paiement crypto."
+    },
+    "step3": {
+      "title": "Gagnez votre commission",
+      "description": " Pour chaque transaction validée via votre code, vous gagnez automatiquement 20 % des frais de transaction directement sur votre compte."
+    }
+  },
+  "whyPartner": {
+    "title": "Pourquoi devenir partenaire de Payment4 ?",
+    "features": {
+      "securePayments": {
+        "title": "Paiements sécurisés et transparents",
+        "description": " Les commissions sont versées régulièrement et sans retard, garantissant sécurité et transparence totale."
+      },
+      "unlimitedCodes": {
+        "title": "Code de parrainage illimité",
+        "description": " Partagez votre code avec un nombre illimité d’utilisateurs et générez des revenus passifs continus."
+      },
+      "commission": {
+        "title": "Commission de 20 %",
+        "description": "Recevez 20 % de commission sur chaque transaction effectuée grâce à vos recommandations."
+      },
+      "reporting": {
+        "title": "Suivi en temps réel",
+        "description": "Surveillez l’activité de vos affiliés et vos gains en temps réel depuis votre tableau de bord affilié."
+      }
+    }
+  },
+  "calculator": {
+    "title": "Calculez vos profits",
+    "description": "Découvrez combien vous pouvez gagner grâce à Payment4 ",
+    "transactionVolume": "Volume de transactions ",
+    "maximumProfit": "Votre profit maximum",
+    "startEarning": "Calculez vos profits et commencez à gagner",
+    "btc": "BTC"
+  },
+  "industries": {
+    "title": "Payment4 – Des solutions pour tous les secteurs",
+    "onlineGaming": "Jeux en ligne",
+    "realEstate": "Immobilier & Automobile  ",
+    "ecommerce": "Boutiques e-commerce",
+    "itServices": "Prestataires IT",
+    "freelancers": "Freelancers & entreprises",
+    "trading": "Plateformes de trading",
+    "exploreAll": "Voir toutes nos solutions"
+  },
+  "joinUs": {
+    "title": "Rejoignez-nous dès aujourd’hui",
+    "subtitle": "Intégrez facilement notre passerelle de paiement crypto à votre site web.",
+    "description": "L’inscription est entièrement gratuite ",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "phone": "Votre Numéro de Téléphone",
+      "submit": "Rejoignez-nous Maintenant"
+    }
+  }
+}
